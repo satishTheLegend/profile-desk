@@ -44,3 +44,5 @@ outside their proof.
 The current iOS engine callback/detach fixture passes 39 assertions ([result](ios-engine-result.json)); its input hashes still match. Android engine/application lint reports zero errors and 26 warnings ([summary](android-lint-summary.json)); these warnings remain documented.
 
 Optimized development build 5 is signed with a matching provisioning profile and verifies deeply ([artifact check](iphone-development-build5.json)). It is prepared locally; no installation or real-session verification is implied.
+
+Public Linux CI [passes at code commit 5440a55](https://github.com/satishTheLegend/profile-desk/actions/runs/39165398369), including clean-clone bootstrap, source analysis/tests, generated-code equality, an Android QA build and native tests ([metadata](github-ci-result.json)). Its first run exposed an ignored engine lockfile; that file is now tracked and enforced bootstrap passes. The initial failure is retained. This does not add real-account or physical-device certification.

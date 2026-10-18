@@ -1,8 +1,6 @@
 # Public repository preparation
 
-Publication to a public GitHub repository under the project owner's sole commit
-authorship is authorized. This note does not record a completed push or a device
-deployment.
+Published at [satishTheLegend/profile-desk](https://github.com/satishTheLegend/profile-desk) with the project owner as sole commit author and committer, without co-author trailers. Code commit `5440a55` passes public Linux CI. No device deployment or shutdown is recorded.
 
 Public text evidence replaces personal home-directory prefixes with
 `/Users/LOCAL_USER`, standalone local usernames with `LOCAL_USER`, and host names
@@ -36,8 +34,8 @@ its SIL Open Font License, and resolved dependency notices/inventory are
 preserved. Original project artwork follows the application's eventual licensing
 decision.
 
-The first public branch will be a clean snapshot with a single commit authored
+The initial public snapshot was a clean root commit authored
 and committed by the project owner. Earlier local development history contains
-machine-specific paths and will be preserved on a local-only history branch;
+machine-specific paths and is preserved on a local-only history branch;
 it is not part of the public branch. No existing remote history is replaced.
 Do not push that local history branch or use `git push --all` for publication.

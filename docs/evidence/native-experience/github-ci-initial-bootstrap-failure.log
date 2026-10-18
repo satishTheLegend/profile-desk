@@ -1,0 +1,33 @@
+check	Run ./scripts/bootstrap.sh	﻿2026-10-18T20:51:43.1849933Z ##[group]Run ./scripts/bootstrap.sh
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.1850317Z ^[[36;1m./scripts/bootstrap.sh^[[0m
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.1919979Z shell: /usr/bin/bash -e {0}
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.1920311Z env:
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.1920684Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.1921291Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.1921859Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.47.5-x64/flutter
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.1922313Z   PUB_CACHE: /home/runner/.pub-cache
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.1922646Z ##[endgroup]
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.3803854Z Flutter 3.47.5 • channel stable • https://github.com/flutter/flutter.git
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.3804728Z Framework • revision 6a19cca564 (4 weeks ago) • 2026-09-17 14:13:22 -0400
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.3806030Z Engine • hash ab598368592da0064197e2bc15c7f5b0a2c6bb1f (revision af7e796e16) (1 months ago) • 2026-09-16 18:35:09.000Z
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:43.3806813Z Tools • Dart 3.13.4 • DevTools 2.60.0
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:47.3890989Z Resolving dependencies...
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:47.5944336Z Downloading packages...
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:48.8832091Z   material_color_utilities 0.13.0 (0.13.1 available)
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:48.8832820Z   test_api 0.7.12 (0.7.15 available)
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:48.8833311Z Got dependencies!
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:48.8834515Z 2 packages have newer versions incompatible with dependency constraints.
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:48.8835290Z Try `flutter pub outdated` for more information.
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.1538205Z Resolving dependencies...
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.1772280Z Downloading packages...
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.1784348Z   material_color_utilities 0.13.0 (0.13.1 available)
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.1785179Z   test_api 0.7.12 (0.7.15 available)
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.1785740Z Got dependencies!
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.1786340Z 2 packages have newer versions incompatible with dependency constraints.
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.1787106Z Try `flutter pub outdated` for more information.
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.4096034Z Retrieving dependencies failed.
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.4096912Z Cannot do `--enforce-lockfile` without an existing `pubspec.lock`.
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.4103932Z 
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.4109152Z Try running `flutter pub get` to create `pubspec.lock`.
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.4250162Z Failed to update packages.
+check	Run ./scripts/bootstrap.sh	2026-10-18T20:51:49.4313952Z ##[error]Process completed with exit code 1.

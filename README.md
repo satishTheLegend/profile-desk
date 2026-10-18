@@ -29,4 +29,4 @@ Start with the [whole-design verification checklist](docs/DESIGN_VERIFICATION_CH
 - `docs/ARCHITECTURE.md`, `THREAT_MODEL.md`, `RELEASE_AND_SUPPORT.md`: design, privacy and operating decisions.
 - `docs/requirements.csv`, `acceptance.csv`, platform evidence and `REPORT.md`: actual implementation and validation dispositions.
 
-The supplied Word plan is preserved. No credentials, test accounts or live-service assertions are bundled. Do not treat synthetic isolation, a simulator run or an unsigned build as proof of supported live account behavior. CI files are prepared; remote execution requires a repository/runner. Apple CI uses an explicitly provisioned runner label for the tested toolchain.
+The supplied Word plan is preserved. No credentials, test accounts or live-service assertions are bundled. Do not treat synthetic isolation, a simulator run or an unsigned build as proof of supported live account behavior. [Source and Android CI](https://github.com/satishTheLegend/profile-desk/actions/workflows/check.yml) runs on GitHub. Apple CI uses an explicitly provisioned runner label for the tested toolchain.
