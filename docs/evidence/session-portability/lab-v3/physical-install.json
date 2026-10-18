@@ -1,0 +1,28 @@
+{
+  "result": "PASS",
+  "createdAt": "2026-10-18T19:01:14.528692+00:00",
+  "bundle": "dev.profiledesk.sessionPortabilityLab",
+  "installedVersion": "3",
+  "installedShortVersion": "0.1.0",
+  "installExitCode": 0,
+  "launchExitCode": 0,
+  "productAppRecordUnchanged": true,
+  "productBuild": "4",
+  "uninstalled": false,
+  "resetRequested": false,
+  "scope": "In-place diagnostic-only update. No account linking, storage clearing, messages, export or restore performed.",
+  "foregroundLaunchConfirmed": true,
+  "argumentsEmpty": true,
+  "terminateExistingInstances": false,
+  "earlierLaunchAttempt": {
+    "exitCode": 64,
+    "reason": "CLI option order rejected before device launch",
+    "retained": true
+  },
+  "labIdentityCodeUnchangedFromBuild1": true,
+  "manualScanResult": "pending",
+  "limits": [
+    "No scan result or linked-login retention was observed after this update",
+    "No session export, restore or cold-start authentication proof"
+  ]
+}

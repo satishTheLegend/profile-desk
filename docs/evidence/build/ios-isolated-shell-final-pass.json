@@ -1,0 +1,26 @@
+{
+  "test_ids": [
+    "AT-A01",
+    "AT-A02",
+    "AT-A10",
+    "AT-D01"
+  ],
+  "result": "PASS",
+  "context": "Dedicated iOS27 simulator and disposable QA app; synthetic alias, no pairing or page inspection",
+  "runner": "local Codex CLI",
+  "started_at": "2026-10-18T04:32:35.977697+05:30",
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+  "device_type": "com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro",
+  "simulator_id": "255C88F8-6889-4190-8BEC-32498FEE2468",
+  "command": [
+    "python3",
+    "tests/device_flows/run_shell_integration.py",
+    "-d",
+    "255C88F8-6889-4190-8BEC-32498FEE2468"
+  ],
+  "qa_marker_sha256": "2d8d9fa25465d00c7c9a4378043dff697881d977a29fc2ac36d3fa538bd77edc",
+  "fixture_test_sha256": "625169b35df589db52d8dbee9371b3f7e26158dabf71b9a943a68a91202b2ba0",
+  "owned_simulator_removed": true,
+  "duration_seconds": 107.084,
+  "finished_at": "2026-10-18T04:34:23.063181+05:30"
+}

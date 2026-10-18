@@ -1,0 +1,36 @@
+{
+  "result": "PASS_WITH_WARNINGS",
+  "reports": [
+    {
+      "module": "session_engine",
+      "report": "lint-results-debug.xml",
+      "severities": {
+        "Error": 0,
+        "Fatal": 0,
+        "Warning": 18
+      },
+      "warningIds": [
+        "AndroidGradlePluginVersion",
+        "NewerVersionAvailable",
+        "RequiresFeature",
+        "UseKtx"
+      ]
+    },
+    {
+      "module": "app",
+      "report": "lint-results-productionRelease.xml",
+      "severities": {
+        "Error": 0,
+        "Fatal": 0,
+        "Warning": 8
+      },
+      "warningIds": [
+        "AndroidGradlePluginVersion",
+        "IconLauncherShape",
+        "ObsoleteSdkInt",
+        "OldTargetApi"
+      ]
+    }
+  ],
+  "limits": "14 profile API feature warnings refer to existing centralized runtime capability guards; remaining warnings concern tooling versions, target level, KTX and launcher resources. No dependency/toolchain upgrades in this checkpoint."
+}

@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "sdk": "iphonesimulator",
+  "bundle": "dev.profiledesk.sessionPortabilityLab",
+  "app": "/Users/LOCAL_USER/Repos/webwhatsapp/build/session-portability-lab-v2-simulator/SessionPortabilityLab.app",
+  "deviceSigned": false,
+  "deployed": false,
+  "launched": false,
+  "classifierSHA256": "b504a9f8be483c24dc21cbd557a2e06ac2f24e89cc6b91fae1de02a24c6e0d86",
+  "scope": "Compilation only. Simulator builds are ad hoc signed; device builds remain unsigned. No device, simulator boot, installation or service access."
+}

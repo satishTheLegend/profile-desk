@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "bundle": "dev.profiledesk.sessionPortabilityLab",
+  "version": "0.1.0 (3)",
+  "artifact": "artifacts/session-portability-lab-v3-20261019/SessionPortabilityLab.app",
+  "createdAt": "2026-10-18T19:01:04.603300+00:00",
+  "signatureVerified": true,
+  "profileUnexpired": true,
+  "authorizedDeviceCovered": true,
+  "dedicatedAppEntitlementsVerified": true,
+  "appBoundDomainVerified": true,
+  "classifierChecks": 52,
+  "classifierSHA256": "935aa9fd45c6abf984a63e3f309d45ff95908e708b1c29028f3405728df0af5b",
+  "sourceInputsUnchanged": 4,
+  "deployed": false,
+  "launched": false,
+  "scope": "Locally signed separate diagnostic candidate only. No device operation, real account access, or authenticated restore.",
+  "files": {
+    "Info.plist": "22eb5a3919793078dc5f1568a85d8618a8f306f066589029a0843a0ce421ef69",
+    "SessionPortabilityLab": "fe68d45933364288981b22cfccaa48345f730f17f0645a8431adc48ea744ec8c",
+    "StorageClassifier.js": "935aa9fd45c6abf984a63e3f309d45ff95908e708b1c29028f3405728df0af5b",
+    "_CodeSignature/CodeResources": "3c26a844206867d8b9d8e6f982e491e55e44584a30ba434cb0b7e02e2a53d360",
+    "embedded.mobileprovision": "46d50091834521b2f4dc891d992d4e5bdd353e85cf430dda99944aa19d3492e0"
+  }
+}

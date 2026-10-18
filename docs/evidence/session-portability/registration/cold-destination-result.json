@@ -1,0 +1,84 @@
+{
+  "assertions" : 16,
+  "checks" : [
+    {
+      "name" : "Cold destination contains exactly two wrapper envelopes",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 0: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 0: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 0: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 0: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 0: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 0: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 1: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 1: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 1: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 1: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 1: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination wrapper 1: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination uses distinct per-payload wrapper keys",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination preserves the expected source-sentinel isolation",
+      "pass" : true
+    },
+    {
+      "name" : "Cold verification opens exactly the requested store and no other store",
+      "pass" : true
+    }
+  ],
+  "durationSeconds" : 2.0428301095962524,
+  "observations" : [
+
+  ],
+  "openedStoreLabels" : [
+    "destination"
+  ],
+  "osVersion" : "26.5",
+  "payloadOrKeyBytesInReport" : false,
+  "phase" : "cold-destination",
+  "processIdentifier" : 39615,
+  "realServiceAccessed" : false,
+  "recordedAt" : "2026-10-18T20:02:16Z",
+  "result" : "PASS",
+  "syntheticOnly" : true
+}

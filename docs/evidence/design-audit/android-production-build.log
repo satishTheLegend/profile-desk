@@ -1,0 +1,2 @@
+Running Gradle task 'assembleProductionRelease'...                  4.3s
+✓ Built build/app/outputs/flutter-apk/app-production-release.apk (54.5MB)

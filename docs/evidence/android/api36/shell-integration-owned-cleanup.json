@@ -1,0 +1,16 @@
+{
+  "context": "Only fixture identities verified absent before this isolated QA run are eligible for cleanup.",
+  "packages": {
+    "dev.profiledesk.shell_fixture": {
+      "present_after_flutter": false,
+      "absent_after_cleanup": true
+    },
+    "dev.profiledesk.shell_fixture.qa": {
+      "present_after_flutter": true,
+      "uninstall_output": "Success",
+      "absent_after_cleanup": true
+    }
+  },
+  "production_candidate_absent": true,
+  "result": "PASS"
+}

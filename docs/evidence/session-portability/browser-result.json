@@ -1,0 +1,135 @@
+{
+  "result": "PASS",
+  "count": 28,
+  "checks": [
+    {
+      "name": "owned loopback fixture is a secure WebCrypto context",
+      "pass": true
+    },
+    {
+      "name": "source context starts empty",
+      "pass": true
+    },
+    {
+      "name": "reload replaced the old document and reached complete readiness before reinjection",
+      "pass": true
+    },
+    {
+      "name": "IndexedDB retains a nonextractable CryptoKey across reload",
+      "pass": true
+    },
+    {
+      "name": "stored nonextractable key still signs and verifies in its source context",
+      "pass": true
+    },
+    {
+      "name": "WebCrypto rejects nonextractable key export with InvalidAccessError",
+      "pass": true
+    },
+    {
+      "name": "naive JSON serializes nonextractable CryptoKey as an empty object",
+      "pass": true
+    },
+    {
+      "name": "unsupported key aborts export before emitting any archive",
+      "pass": true
+    },
+    {
+      "name": "rereading after failed export confirms source record count and keys remain unchanged",
+      "pass": true
+    },
+    {
+      "name": "target uses a distinct browser storage context",
+      "pass": true
+    },
+    {
+      "name": "target has no source IndexedDB or web storage before restore",
+      "pass": true
+    },
+    {
+      "name": "oversized import is rejected without creating target records",
+      "pass": true
+    },
+    {
+      "name": "unsupported value tag rejects import before target writes",
+      "pass": true
+    },
+    {
+      "name": "supported tagged fixture archive remains within 128 KiB bound",
+      "pass": true
+    },
+    {
+      "name": "source context is destroyed before target restore",
+      "pass": true
+    },
+    {
+      "name": "target contains exactly the two supported fixture records",
+      "pass": true
+    },
+    {
+      "name": "target restores arrayBuffer with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "target restores uint8Array with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "target restores date with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "target restores map with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "target restores blob with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "target restores primitiveArray with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "target restores keyType with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "target restores local with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "target restores session with its type and value preserved",
+      "pass": true
+    },
+    {
+      "name": "restored exportable key reproduces source cryptographic challenge result",
+      "pass": true
+    },
+    {
+      "name": "loopback fixture was served without any external page request",
+      "pass": true
+    },
+    {
+      "name": "cleanup confirms owned browser exit, closed server and removed temporary profile",
+      "pass": true
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.84",
+    "revision": "@5869fe313571d75152b77813cf0a4ee26a4e6df0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.25"
+  },
+  "archiveBytes": 774,
+  "scope": "Test-only owned fixture in two isolated disposable Chrome storage contexts. Local loopback requests only; no WhatsApp, user browser profile, real session, chat, QR, or cookie was accessed.",
+  "limits": "Only a known IndexedDB database and selected web storage were covered. No native iOS or Android portability claim, full browser profile export, service-worker/cache/HTTP-only-cookie coverage, platform keystore access, or real WhatsApp authenticated restore is demonstrated. The transient archive contained an exportable synthetic key, stayed in process memory and was not written to disk. Nonextractable keys remain unsupported and cause export rejection.",
+  "servedRequests": 3,
+  "blockedRequests": 0,
+  "cleanup": {
+    "processExited": true,
+    "serverClosed": true,
+    "profileRemoved": true
+  }
+}

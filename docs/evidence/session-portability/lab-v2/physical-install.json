@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-10-18T18:44:00.056161+00:00",
+  "localDate": "2026-10-19",
+  "authorization": "Existing explicit approval to install Session Lab for testing; this is an in-place diagnostic-only update.",
+  "bundle": "dev.profiledesk.sessionPortabilityLab",
+  "version": "0.1.0",
+  "build": "2",
+  "installation": "VERIFIED_IN_PLACE_UPDATE_FROM_BUILD_1",
+  "automaticLaunch": "BLOCKED_DEVICE_LOCKED",
+  "launchError": {
+    "domain": "com.apple.dt.CoreDeviceError",
+    "code": 10002,
+    "underlyingReason": "Locked"
+  },
+  "profileDeskVersion": "0.1.0",
+  "profileDeskBuild": "4",
+  "profileDeskInstalledRecordUnchanged": true,
+  "labIdentityLogicUnchanged": true,
+  "noUninstallOrResetPerformed": true,
+  "linkedLabProfileRetentionRuntimeVerified": false,
+  "updatedStorageReport": "PENDING_OWNER",
+  "authenticatedRestore": "NOT_IMPLEMENTED_OR_VERIFIED",
+  "classifierChecks": 42,
+  "classifierSHA256": "b504a9f8be483c24dc21cbd557a2e06ac2f24e89cc6b91fae1de02a24c6e0d86",
+  "rawEvidenceDirectory": "artifacts/session-portability-lab-v2-deploy-20261019",
+  "scope": "Metadata/progress diagnostic update only. No account contents, key material or credentials exported."
+}

@@ -1,0 +1,50 @@
+{
+  "status": "NORMAL_BROWSER_FINAL_SALT_CALLSITE_CONFIRMED_WORM_AND_COMPLETE_MANUAL_SETTINGS_PENDING",
+  "sourceManifest": "lock-drawer-manifest.json",
+  "definitions": "retained-final-salt-manual-lock.json",
+  "backendLoader": "backend-loader-manifest.json",
+  "normalFinalSalt": {
+    "module": "WAWebHandleSuccess",
+    "flow": "success parser -> companion_enc_static string -> DbEncKeyStore.generateFinalDbEncryptionAndFtsKey -> CryptoEncKeyHelper.generateFinalDbEncryptionAndFtsKeyForInvoker",
+    "sourceAttribute": "companion_enc_static",
+    "missingAttributeBehavior": "The reviewed parser substitutes literal NULL if absent; that is official source behavior, not permission for a migration adapter to invent a salt.",
+    "readiness": "The handler launches final derivation calls; separate key-ready promises remain necessary.",
+    "sourceSHA256": "5fe49afb2c0b25be1817667048679573faa4e7b3bb402b0f694b358cd81e0906",
+    "evidenceAnchors": [
+      "companionEncStatic:e.maybeAttrString(\"companion_enc_static\")",
+      "var c=u.companionEncStatic",
+      "DbEncKeyStore.generateFinalDbEncryptionAndFtsKey(c)",
+      "generateFinalDbEncryptionAndFtsKeyForInvoker(c)"
+    ],
+    "implication": "The final salt source is now known to be successful-login protocol state. It was not read from a real account. Source alone does not prove it remains unchanged across registration/session migrations or can be replaced arbitrarily.",
+    "bootstrapConstraint": "Restoring plaintext under fresh bases requires destination final-key initialization after the official success path. That handler also changes identity/sync/passive-task state; a safe pre-bootstrap or staged-restore barrier remains unproved."
+  },
+  "manualLock": {
+    "module": "WAWebKeyboardRun",
+    "flow": "Reviewed keyboard action checks getScreenLockEnabled(); true calls lockScreenAndTriggerUnlockFlow, false opens ScreenLockDrawerLoadable.",
+    "implication": "This known manual shortcut does not directly relock an explicitly disabled profile, and exclusive official/native interaction prevents the native adapter from intentionally opening settings. It does not establish every menu/settings path or a mounted UI state getter.",
+    "sourceSHA256": "5f62844195f4acca2d035cf524ed5381778067493580218f424b7f719983a4f3",
+    "remaining": "Actual ScreenLockDrawer.react and all setters/menu callers are not present in the two completed assets; two mapped URLs remain unresolved under the size cap."
+  },
+  "worm": {
+    "finding": "No getWormEarKey consumer, Worm EAR envelope or media-cache mapping appears in these 3,479 additional module definitions.",
+    "scope": "This remains a bounded absence statement; it does not imply the key is optional or the state is reconstructable."
+  },
+  "retrieval": {
+    "anonymousFreshRoot": "Default HTTP-client User-Agent, no cookies, HTTP 200 unsupported-browser document without required anonymous metadata.",
+    "loaderPostAttempts": 0,
+    "loaderWorkaroundAttempted": false,
+    "staticCompletedAssets": 2,
+    "staticRetainedBytes": 8260344,
+    "staticCapBytes": 8388608,
+    "thirdStaticStreamCanceled": true,
+    "thirdPartialCached": false,
+    "fourthStaticRequested": false,
+    "noAccountOrClientExecution": true
+  },
+  "nextBoundary": [
+    "Complete exact mapped manual settings definitions if the remaining static budget is extended.",
+    "Use the known server-success salt input in synthetic HKDF fixtures; do not infer authenticated restoration from that fixture.",
+    "Worm EAR consumer/schema and consistent whole-state snapshot/restore remain required for complete payload support."
+  ]
+}

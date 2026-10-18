@@ -1,0 +1,31 @@
+{
+  "output": "/Users/LOCAL_USER/Repos/webwhatsapp/artifacts/profile-desk-0.1.0-local",
+  "artifacts": [
+    {
+      "file": "android-production-unsigned.apk",
+      "bytes": 54495809,
+      "sha256": "78ea0bf4aace35a6cef467715777fa84b8e41b56416dbbf6689022706b74aaed"
+    },
+    {
+      "file": "ios-production-device-unsigned.zip",
+      "bytes": 7762206,
+      "sha256": "8269ca7054ab04a79a698e59abb85714ca33cf2368b5a1776faae10be3b2bb28"
+    },
+    {
+      "file": "native-symbols-and-mapping.zip",
+      "bytes": 40770548,
+      "sha256": "fce692400bb31b335c5e198f690653fa2317e6402b8ce8ed5a06b530c3704c80"
+    }
+  ],
+  "ios_symbol_uuids": {
+    "Runner": {
+      "arm64": "1C279CF0-24B9-3567-A4F3-FAB4972D4AF8"
+    },
+    "App": {
+      "arm64": "17125BB4-0AB2-FBDF-4DA8-32C0C14A7C89"
+    },
+    "Flutter": {
+      "arm64": "4C4C4488-5555-3144-A16B-084E8F1F6CDB"
+    }
+  }
+}

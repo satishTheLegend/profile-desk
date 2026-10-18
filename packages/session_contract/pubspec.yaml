@@ -1,0 +1,14 @@
+name: session_contract
+description: Typed control contract for isolated native browser profiles.
+version: 0.1.0
+publish_to: none
+environment:
+  sdk: ^3.13.0
+dependencies:
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pigeon: 29.0.10
+  flutter_lints: ^6.0.0

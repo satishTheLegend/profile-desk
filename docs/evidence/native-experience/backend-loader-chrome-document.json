@@ -1,0 +1,25 @@
+{
+  "kind": "owned-genuine-chrome-document-only",
+  "scriptExecutionDisabledBeforeNavigation": true,
+  "uaOverridden": false,
+  "existingProfileAccess": false,
+  "documentRequestsAllowed": 1,
+  "subrequestsBlocked": 0,
+  "documentBytes": 600462,
+  "status": "DOCUMENT_RECEIVED",
+  "cleanup": {
+    "processExited": true,
+    "profileRemoved": true
+  },
+  "tokensRetained": false,
+  "rootRetained": false,
+  "httpStatus": 200,
+  "jsonScripts": 29,
+  "anonymousUserZero": true,
+  "metadataPresence": {
+    "CurrentUserInitialData": true,
+    "LSD": true,
+    "SiteData": true,
+    "WAWebBackendWorkerV2Resource": true
+  }
+}

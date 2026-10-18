@@ -1,0 +1,206 @@
+{
+  "count" : 21,
+  "measurements" : [
+    {
+      "contentWidth" : 440,
+      "document" : {
+        "right" : 980,
+        "width" : 440
+      },
+      "height" : 700,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "baseline-hidden-overflow-440",
+      "pageZoom" : 1,
+      "width" : 440,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 198,
+      "document" : {
+        "right" : 980,
+        "width" : 441
+      },
+      "height" : 700,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-hidden-overflow-440",
+      "pageZoom" : 0.44897959183673469,
+      "width" : 440,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 791,
+      "document" : {
+        "right" : 980,
+        "width" : 880
+      },
+      "height" : 700,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-width-880",
+      "pageZoom" : 0.89795918367346939,
+      "width" : 880,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 1366,
+      "document" : {
+        "right" : 980,
+        "width" : 1366
+      },
+      "height" : 700,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-width-1366",
+      "pageZoom" : 1,
+      "width" : 1366,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 105,
+      "document" : {
+        "right" : 980,
+        "width" : 980
+      },
+      "height" : 700,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-width-320",
+      "pageZoom" : 0.32653061224489793,
+      "width" : 320,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 198,
+      "document" : {
+        "right" : 980,
+        "width" : 980
+      },
+      "height" : 700,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-width-440",
+      "pageZoom" : 0.44897959183673469,
+      "width" : 440,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 198,
+      "document" : {
+        "right" : 980,
+        "width" : 441
+      },
+      "height" : 350,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "keyboard-height-user-zoom",
+      "pageZoom" : 0.44897959183673469,
+      "width" : 440,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 198,
+      "document" : {
+        "right" : 441,
+        "width" : 441
+      },
+      "height" : 350,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "responsive-with-desktop-viewport",
+      "pageZoom" : 0.44897959183673469,
+      "width" : 440,
+      "zoomScale" : 1
+    }
+  ],
+  "os" : "27.0",
+  "result" : "FAIL",
+  "scope" : "Actual production WorkspaceWebView with controlled local HTML, test-only DOM geometry. No service account, actual touch pinch, physical keyboard or device rotation.",
+  "tests" : [
+    {
+      "name" : "baseline reproduces clipped fixed child despite native contentSize matching host width",
+      "pass" : true
+    },
+    {
+      "name" : "desktop fit is applied before initial navigation",
+      "pass" : true
+    },
+    {
+      "name" : "site scale restrictions do not disable native pinch",
+      "pass" : true
+    },
+    {
+      "name" : "Flutter safe area is not applied a second time",
+      "pass" : true
+    },
+    {
+      "name" : "hidden fixed child fits phone without page inspection in production",
+      "pass" : false
+    },
+    {
+      "name" : "fitted phone content fills the host width",
+      "pass" : false
+    },
+    {
+      "name" : "pageZoom follows actual available width 880",
+      "pass" : true
+    },
+    {
+      "name" : "fixed child fits rotation\/tablet\/split width 880",
+      "pass" : false
+    },
+    {
+      "name" : "pageZoom follows actual available width 1366",
+      "pass" : true
+    },
+    {
+      "name" : "fixed child fits rotation\/tablet\/split width 1366",
+      "pass" : true
+    },
+    {
+      "name" : "pageZoom follows actual available width 320",
+      "pass" : true
+    },
+    {
+      "name" : "fixed child fits rotation\/tablet\/split width 320",
+      "pass" : true
+    },
+    {
+      "name" : "pageZoom follows actual available width 440",
+      "pass" : true
+    },
+    {
+      "name" : "fixed child fits rotation\/tablet\/split width 440",
+      "pass" : true
+    },
+    {
+      "name" : "repeated native layouts do not recursively shrink pageZoom",
+      "pass" : true
+    },
+    {
+      "name" : "native zoom range remains available on user-scalable=no fixture",
+      "pass" : true
+    },
+    {
+      "name" : "native pinch-equivalent zoom actually increases scale",
+      "pass" : true
+    },
+    {
+      "name" : "height-only keyboard resize preserves page fit and user zoom",
+      "pass" : false
+    },
+    {
+      "name" : "responsive document fills the explicit desktop viewport without overflow",
+      "pass" : true
+    },
+    {
+      "name" : "disposed fitting ignores later geometry changes",
+      "pass" : true
+    },
+    {
+      "name" : "fitting retains no observer\/task that leaks disposed web view",
+      "pass" : true
+    }
+  ]
+}

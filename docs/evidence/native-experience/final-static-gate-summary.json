@@ -1,0 +1,70 @@
+{
+  "status": "STATIC_REVIEW_COMPLETE_WITH_EXPLICIT_GAPS",
+  "newDrawerAssets": [
+    {
+      "url": "https://static.whatsapp.net/rsrc.php/v4iuNL4/yX/l/en_GB-j/VDTdTFh11Pt.js",
+      "sha256": "a3e0ebdf39cf5caa73825943d0e1a7d5e1c1a763a799be4f9ba2e776afcadbec",
+      "bytes": 349370,
+      "moduleCount": 113,
+      "cachePath": "source-cache/a3e0ebdf39cf5caa73825943d0e1a7d5e1c1a763a799be4f9ba2e776afcadbec.js"
+    },
+    {
+      "url": "https://static.whatsapp.net/rsrc.php/v4iL-f4/yU/l/en_GB-j/0y6_JZ9wb_V.js",
+      "sha256": "274891e261bf96be10a35eda495e8270b3744ed9244617b31d037f69f71ffd8c",
+      "bytes": 1284890,
+      "moduleCount": 548,
+      "cachePath": "source-cache/274891e261bf96be10a35eda495e8270b3744ed9244617b31d037f69f71ffd8c.js"
+    }
+  ],
+  "newDrawerTotalBytes": 1634260,
+  "definitions": "retained-disabled-lock-final.json",
+  "lockFindings": "disabled-lock-final-findings.json",
+  "anonymousDocumentEvidence": "backend-loader-chrome-document.json",
+  "anonymousPostEvidence": "backend-loader-anonymous-post.json",
+  "knownFacts": [
+    "Per-user lock duration raw numeric zero is synchronously read from localStorage/cache for a known PN user; false-only defaults are ambiguous.",
+    "Official disable writes zero only after successful passcode removal; asynchronous enable can leave old zero temporarily. Post-enable confirmation has an unguarded resolver call.",
+    "A fresh-document, disabled-only candidate with exclusive ownership and a permanent official-interaction/lock-transition fallback latch is stronger than current-value polling; this is a design recommendation, not live proof.",
+    "Generic reviewed remote setting mapping has no screen-lock field; dynamic backend completeness remains unknown.",
+    "Normal browser final key salt comes from official success stanza companion_enc_static, as previously mapped.",
+    "New drawer assets expose no WormEAR consumer/schema."
+  ],
+  "remainingGaps": [
+    "Complete encrypted payload inventory and WormEAR usage mapping",
+    "Consistent bootstrap/snapshot/migration ordering and real independent session restore",
+    "Live native privacy correctness under current official runtime"
+  ],
+  "loaderOutcome": {
+    "anonymousHTTPDocument": 200,
+    "documentBytes": 600462,
+    "scriptExecutionDisabled": true,
+    "subresourcesLoaded": 0,
+    "postAttempts": 1,
+    "postHTTPStatus": 400,
+    "postBytes": 6278,
+    "postStatus": "NON_JSON_RESPONSE_STOP",
+    "followedWorkerAssets": 0,
+    "noRetry": true,
+    "noAuthenticationInference": true,
+    "ownedBrowserCleanupComplete": true
+  },
+  "privacy": {
+    "noAccountProfileDeviceAccess": true,
+    "noClientExecution": true,
+    "noPrivateValuesRead": true,
+    "noRootBodyOrGeneratedMetadataRetained": true,
+    "noTokensRetained": true,
+    "publicStaticCodeOnlyInIgnoredCache": true
+  },
+  "limits": "HTTP 400 establishes rejection of this one anonymous request shape, not that authentication is required or complete migration is impossible. Static code absence is scoped to reviewed assets.",
+  "sourceHashesReverified": [
+    {
+      "sha256": "a3e0ebdf39cf5caa73825943d0e1a7d5e1c1a763a799be4f9ba2e776afcadbec",
+      "match": true
+    },
+    {
+      "sha256": "274891e261bf96be10a35eda495e8270b3744ed9244617b31d037f69f71ffd8c",
+      "match": true
+    }
+  ]
+}

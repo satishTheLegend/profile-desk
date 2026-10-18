@@ -1,0 +1,20 @@
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/refresh_races_test.dart
+00:00 +0: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/replacement_test.dart: unavailable replacement gets new identity and preserves alias only by choice
+00:00 +1: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/replacement_test.dart: available profiles cannot be destructively replaced through recovery
+00:00 +2: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/replacement_test.dart: failed or pending wipe cannot allocate a replacement
+00:00 +3: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/replacement_test.dart: post-wipe deferred container permits a fresh replacement
+00:00 +4: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/replacement_test.dart: tombstone alias remains reserved until actual wipe
+00:00 +5: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: timed-out allocation is reconciled from its real late result without replay
+00:00 +6: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: timed-out allocation is reconciled from its real late result without replay
+00:00 +7: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: timed-out allocation is reconciled from its real late result without replay
+00:00 +8: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: timed-out allocation is reconciled from its real late result without replay
+00:00 +9: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: timed-out allocation is reconciled from its real late result without replay
+00:00 +10: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: simultaneous adds all reach native capacity authority with no phantom rows
+00:00 +11: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +12: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +13: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +14: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +15: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +16: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +17: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +18: All tests passed!

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.DiagnosticsPrivacyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:33:38.438Z" hostname="LOCAL_HOST" time="0.028">
+  <properties/>
+  <testcase name="actualSharePayloadContainsTechnicalCountsButNoPrivateMarkers" classname="dev.profiledesk.session_engine.DiagnosticsPrivacyTest" time="0.027"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,73 @@
+package,version,source,license_file,license_sha256,used_by
+_fe_analyzer_shared,109.0.0,pub.dev resolved cache,LICENSE,efa31b5ac790016736fa9761642b0af16d37cd4fb483de2905adb5258cb89722,packages/session_contract
+analyzer,14.5.0,pub.dev resolved cache,LICENSE,7e124af6a556f045cb3a20cafbdaa31602ac2c82cbcb3c3b15faaaf514b06028,packages/session_contract
+archive,4.5.2,pub.dev resolved cache,LICENSE,32f97d332eae7453ec4079858e6f1d74be85beeb6d3881068b47d02a379cccea,apps/mobile
+args,2.7.0,pub.dev resolved cache,LICENSE,dfb09c74e29386cd3e2719f32d4995d59526179753931d31840757c77fbf2791,apps/mobile; packages/session_contract
+async,2.13.1,pub.dev resolved cache,LICENSE,ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+boolean_selector,2.1.2,pub.dev resolved cache,LICENSE,b71519245009a3b8f126196a5408ec031e216e8e0d985085958c6543f82a8a2a,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+built_collection,5.1.2,pub.dev resolved cache,LICENSE,4f1b0f444c862e8dc586122c00592538fb0e9dd6d81a5214882b25b8054f7dfa,packages/session_contract
+built_value,8.13.0,pub.dev resolved cache,LICENSE,4f1b0f444c862e8dc586122c00592538fb0e9dd6d81a5214882b25b8054f7dfa,packages/session_contract
+characters,1.4.1,pub.dev resolved cache,LICENSE,0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+clock,1.1.3,pub.dev resolved cache,LICENSE,58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+code_builder,4.13.0,pub.dev resolved cache,LICENSE,a4b5d7d31626e90b77e8696f1c47643aa31f52e17c1907c1ab60b068110e6e10,packages/session_contract
+collection,1.19.1,pub.dev resolved cache,LICENSE,ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+convert,3.1.2,pub.dev resolved cache,LICENSE,ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888,packages/session_contract
+crypto,3.0.7,pub.dev resolved cache,LICENSE,ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888,apps/mobile; packages/session_contract
+dart_style,3.1.14,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,packages/session_contract
+fake_async,1.3.3,pub.dev resolved cache,LICENSE,58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+ffi,2.2.0,pub.dev resolved cache,LICENSE,0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744,apps/mobile
+file,7.0.1,pub.dev resolved cache,LICENSE,f6df86b1412172537273e8e80ee2fb8a66aa7307ce0b39ea5ddab47ca41b8c49,packages/session_contract
+fixnum,1.1.1,pub.dev resolved cache,LICENSE,ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390,apps/mobile; packages/session_contract
+flutter,SDK/local,Flutter SDK,LICENSE,a598db94b6290ffbe10b5ecf911057b6a943351c727fdda9e5f2891d68700a20,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+flutter_lints,6.0.0,pub.dev resolved cache,LICENSE,89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+flutter_localizations,SDK/local,Flutter SDK,REVIEW_REQUIRED,,apps/mobile
+flutter_riverpod,3.4.3,pub.dev resolved cache,LICENSE,757d9c09a9a2a701144328c0fd596234ea287ff62952b39cd22f9ad4caed1171,apps/mobile
+flutter_svg,2.3.0,pub.dev resolved cache,LICENSE,dc54ae36c905edfbf3c6678ee34d8da5989d7ccc7b993857a9d89db06a67eb18,apps/mobile
+flutter_test,SDK/local,Flutter SDK,REVIEW_REQUIRED,,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+glob,2.2.0,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,packages/session_contract
+graphs,2.3.2,pub.dev resolved cache,LICENSE,ea97a7558a7bd7cee4e2355f7529e3cbebb0dcbb546ddb9a90f10c9eb6b08da5,packages/session_contract
+http,1.6.0,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,apps/mobile
+http_parser,4.1.2,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,apps/mobile
+intl,0.20.3,pub.dev resolved cache,LICENSE,7e124af6a556f045cb3a20cafbdaa31602ac2c82cbcb3c3b15faaaf514b06028,apps/mobile
+leak_tracker,11.0.2,pub.dev resolved cache,LICENSE,08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+leak_tracker_flutter_testing,3.0.10,pub.dev resolved cache,LICENSE,08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+leak_tracker_testing,3.0.2,pub.dev resolved cache,LICENSE,08a004aa8956c3cf3b24f7f69c966247233953e18e6afaa61191ea47b7eb70f6,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+lints,6.1.0,pub.dev resolved cache,LICENSE,421fe78c3b5df297f8b4ab2c74f2450a274ee6d245a113091f6b9f90570af193,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+listen,1.0.1,pub.dev resolved cache,LICENSE,420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d,apps/mobile
+local_registry,0.1.0,workspace,REVIEW_REQUIRED,,apps/mobile; packages/local_registry
+lottie,3.6.1,pub.dev resolved cache,LICENSE,002c2696d92b5c8cf956c11072baa58eaf9f6ade995c031ea635c6a1ee342ad1,apps/mobile
+matcher,0.12.20,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+material_color_utilities,0.13.0,pub.dev resolved cache,LICENSE,d103f246ef4c18dab8af0c1dcf6a8af884e5cff554da7261a48ac43c17d98f2e,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+meta,1.18.3,pub.dev resolved cache,LICENSE,b71519245009a3b8f126196a5408ec031e216e8e0d985085958c6543f82a8a2a,apps/mobile; packages/session_engine
+meta,1.19.0,pub.dev resolved cache,LICENSE,b71519245009a3b8f126196a5408ec031e216e8e0d985085958c6543f82a8a2a,packages/local_registry; packages/session_contract
+package_config,3.0.0,pub.dev resolved cache,LICENSE,0371d1da6a57fb791db29d29b95333429205f51f3cb2eb3a0c12d91838a38744,packages/session_contract
+path,1.9.1,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+path_parsing,1.1.0,pub.dev resolved cache,LICENSE,f4fc0fe1e273823b06540b3b948640ff81f3a5c5dc7088972eef662fe450ad77,apps/mobile
+petitparser,7.0.2,pub.dev resolved cache,LICENSE,d2e8ffdbe89acbc10d5d1f2b03e7dbddf0a9f1742e809176682b62ef3d573b3e,apps/mobile
+pigeon,29.0.10,pub.dev resolved cache,LICENSE,420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d,packages/session_contract
+posix,6.5.2,pub.dev resolved cache,LICENSE,aaf6271abd048deb3125828613f1797b7556472de6c7acd7103bd43e9cb6a84b,apps/mobile
+profile_desk,0.1.0+1,workspace,REVIEW_REQUIRED,,apps/mobile
+pub_semver,2.2.1,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,packages/session_contract
+riverpod,3.4.3,pub.dev resolved cache,LICENSE,757d9c09a9a2a701144328c0fd596234ea287ff62952b39cd22f9ad4caed1171,apps/mobile
+session_contract,0.1.0,workspace,REVIEW_REQUIRED,,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+session_engine,0.1.0,workspace,LICENSE,f1e3a1ab81e2f08744ea64639c6ecfcacfee47f1ac9c8d800611dc7148e04104,apps/mobile; packages/session_engine
+sky_engine,SDK/local,Flutter SDK,LICENSE,3c0040023a5789bf56d6bf41fd44f08b21758523d41f128fb7dd6beb398d1191,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+source_span,1.10.2,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+stack_trace,1.12.2,pub.dev resolved cache,LICENSE,ff0b91d4f3c32b25cb6ec84985e8da89b0ba2a2b2f7eef353cda5e5423a20390,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+state_notifier,1.0.0,pub.dev resolved cache,LICENSE,757d9c09a9a2a701144328c0fd596234ea287ff62952b39cd22f9ad4caed1171,apps/mobile
+stream_channel,2.1.4,pub.dev resolved cache,LICENSE,ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+string_scanner,1.4.1,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+term_glyph,1.2.2,pub.dev resolved cache,LICENSE,ea97a7558a7bd7cee4e2355f7529e3cbebb0dcbb546ddb9a90f10c9eb6b08da5,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+test_api,0.7.12,pub.dev resolved cache,LICENSE,ff1b9f0df9036c04be424b1e3ce12789bea880ad5ffc3a48e069ae2d40a087a4,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+typed_data,1.4.0,pub.dev resolved cache,LICENSE,ff15faa32a2e638107b7789592b14426162a75ba620044ee2340a20ec6ce5e73,apps/mobile; packages/session_contract
+uuid,4.6.0,pub.dev resolved cache,LICENSE,ad3e5523e51004e94ba9ce728805b1b4242dbccdb65e62b523800e35a8a7cfdc,apps/mobile
+vector_graphics,1.2.3,pub.dev resolved cache,LICENSE,420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d,apps/mobile
+vector_graphics_codec,1.1.13,pub.dev resolved cache,LICENSE,89519eca6f7b9529b35bdddd623a58c3af06a88c458dbd6531ddb4675acf75a9,apps/mobile
+vector_graphics_compiler,1.3.2,pub.dev resolved cache,LICENSE,420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d,apps/mobile
+vector_math,2.4.0,pub.dev resolved cache,LICENSE,420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d,apps/mobile; packages/session_engine
+vector_math,2.4.3,pub.dev resolved cache,LICENSE,420f7739f169097f0aad1242045169cd643c8f1d94e62866fad265ae4c369b7d,packages/local_registry; packages/session_contract
+vm_service,15.4.0,pub.dev resolved cache,LICENSE,ad6a71997da90924b2cfb1fb47ec46537f70faf469efe016168794ae45ed6888,apps/mobile; packages/local_registry; packages/session_contract; packages/session_engine
+watcher,1.2.1,pub.dev resolved cache,LICENSE,3c32b53167c7dae9190c38dab5dd9fe1789c53623ebc7d1babcb29914c5b3f16,packages/session_contract
+web,1.1.1,pub.dev resolved cache,LICENSE,aa913ff50d7542eb8cc35b9f48a80928ac6819ba9057f85d424655e3e8dc271c,apps/mobile
+xml,7.0.1,pub.dev resolved cache,LICENSE,0be767174b97278f17da4923a74169e8645631f03ea3d8482ec3523c9b1a0dd3,apps/mobile
+yaml,3.1.4,pub.dev resolved cache,LICENSE,d47b93335401b052d79a2f5a3710e4cf7b5aed782faedf84d40fbdd6eb934ec7,packages/session_contract

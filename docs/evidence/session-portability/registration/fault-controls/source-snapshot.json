@@ -1,0 +1,12 @@
+{
+  "tests/session_portability/registration/Info.plist": "ee902b890ce027c756efd493d4e2ff89e02c4820aa4deb577de5f1fb9941f300",
+  "tests/session_portability/registration/README.md": "e6d2c619ae88d45b6d8e7ace3937a5ca3a00841d20fe77bffd4fcff57049be48",
+  "tests/session_portability/registration/RegistrationProbe.xcodeproj/project.pbxproj": "10a4bc0b67c843e541864ecdde83974e5429de417d049ef9497eb913182c2224",
+  "tests/session_portability/registration/RegistrationProbe.xcodeproj/xcshareddata/xcschemes/ProfileDeskRegistrationProbe.xcscheme": "c87d10363a518e0cdc9d796ffdce50001341a246c96d7e64d338c1b2aa77e88d",
+  "tests/session_portability/registration/Simulator.entitlements": "505db931e578f2bd7e530a2b9047449bfa6346364d4345496946124a3d420e49",
+  "tests/session_portability/registration/main.swift": "de7c0c21371708c1cfaa02d8414fcbac1a2821a5f2e3b0746623366735fc0c66",
+  "tests/session_portability/registration/run.py": "eec6b9da05f53d42a6f7f85466e0252240804bd6bd6613888282e3467042378a",
+  "tests/session_portability/registration/server.py": "0f95c7a0b3468af6534dfe80e05f87674c7f65be4d9c0e7336e202330ec4ca70",
+  "tests/session_portability/registration/web/index.html": "367fb8c689876ee6d4d9a228dc681c373a417f730e9803436fa23667c1297b7a",
+  "tests/session_portability/registration/web/wrapper.js": "b13c517dd0e41ce98bb8b8e537278688d9e91618cd6807457e40d963fde52fc0"
+}

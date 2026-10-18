@@ -1,0 +1,103 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+w: [33m[1m⚠️ Deprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':app' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+
+> Configure project :session_engine
+w: [33m[1m⚠️ Deprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':session_engine' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :session_engine:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :session_engine:preBuild UP-TO-DATE
+> Task :session_engine:preDebugBuild UP-TO-DATE
+> Task :session_engine:generateDebugResources UP-TO-DATE
+> Task :session_engine:packageDebugResources UP-TO-DATE
+> Task :session_engine:processDebugNavigationResources UP-TO-DATE
+> Task :session_engine:parseDebugLocalResources UP-TO-DATE
+> Task :session_engine:generateDebugRFile UP-TO-DATE
+> Task :session_engine:compileDebugKotlin
+> Task :session_engine:javaPreCompileDebug UP-TO-DATE
+> Task :session_engine:compileDebugJavaWithJavac NO-SOURCE
+> Task :session_engine:bundleLibRuntimeToJarDebug
+> Task :session_engine:bundleLibCompileToJarDebug
+> Task :session_engine:preDebugUnitTestBuild UP-TO-DATE
+> Task :session_engine:writeDebugAarMetadata UP-TO-DATE
+> Task :session_engine:checkDebugUnitTestAarMetadata UP-TO-DATE
+> Task :session_engine:mapDebugSourceSetPaths UP-TO-DATE
+> Task :session_engine:compileDebugLibraryResources UP-TO-DATE
+> Task :session_engine:mapDebugUnitTestSourceSetPaths UP-TO-DATE
+> Task :session_engine:generateDebugUnitTestResources UP-TO-DATE
+> Task :session_engine:mergeDebugUnitTestResources UP-TO-DATE
+> Task :session_engine:extractDeepLinksDebug UP-TO-DATE
+> Task :session_engine:processDebugManifest UP-TO-DATE
+> Task :session_engine:processDebugUnitTestManifest UP-TO-DATE
+> Task :session_engine:processDebugUnitTestResources UP-TO-DATE
+> Task :session_engine:compileDebugUnitTestKotlin
+> Task :session_engine:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :session_engine:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :session_engine:generateDebugUnitTestAssets UP-TO-DATE
+> Task :session_engine:generateDebugAssets UP-TO-DATE
+> Task :session_engine:mergeDebugAssets UP-TO-DATE
+> Task :session_engine:mergeDebugUnitTestAssets UP-TO-DATE
+> Task :session_engine:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :session_engine:generateDebugUnitTestConfig UP-TO-DATE
+> Task :session_engine:processDebugJavaRes UP-TO-DATE
+> Task :session_engine:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :session_engine:testDebugUnitTest
+
+Gradle Test Executor 1 STANDARD_ERROR
+    [Robolectric] WARN: Android SDK 36 requires Java 21 (have Java 17). Tests won't be run on SDK 36 unless explicitly requested.
+
+WindowPrivacyCoverTest > aLockedCoverProvidesUnlockAndCannotDuplicateOrLeakAcrossWindows PASSED
+
+WindowPrivacyCoverTest > coversTheWholeWindowAndRestoresAccessibilityWithoutDart PASSED
+
+WindowPrivacyCoverTest > enginePauseAndLockCoverNativeContentWithoutAnyWebHost PASSED
+
+WindowPrivacyCoverTest > nativeCoverEndsInputAndInterceptsKeysWithoutChangingTheDraft PASSED
+
+FlutterAttachmentTest > lateOldPluginDetachAndLifecycleCallbacksCannotDetachReplacement PASSED
+
+FlutterAttachmentTest > queuedOldAttachmentMutationCannotChangeTheReplacementRegistry PASSED
+
+FlutterAttachmentTest > replacementFlutterEngineStartsFreshOrderingWithoutRetainingOldOwner PASSED
+
+WorkspaceLayoutOwnershipTest > repeatedModeCommandsKeepTheInstalledAdapterAndListReturnDismissesFocus PASSED
+
+WorkspaceLayoutOwnershipTest > currentTrustedAttachedViewAcceptsOnlyTypedCommands PASSED
+
+WorkspaceLayoutOwnershipTest > staleHandleCannotChangeNewerViewsMode PASSED
+
+WorkspaceLayoutOwnershipTest > lockBackgroundUntrustedNavigationAndDetachedHostRejectCommands PASSED
+
+[Incubating] Problems report is available at: file:///Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 12s
+33 actionable tasks: 5 executed, 28 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html

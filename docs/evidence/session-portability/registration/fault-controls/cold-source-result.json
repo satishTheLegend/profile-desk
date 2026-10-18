@@ -1,0 +1,84 @@
+{
+  "assertions" : 16,
+  "checks" : [
+    {
+      "name" : "Cold source contains exactly two wrapper envelopes",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 0: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 0: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 0: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 0: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 0: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 0: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 1: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 1: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 1: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 1: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 1: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source wrapper 1: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source uses distinct per-payload wrapper keys",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source preserves the expected source-sentinel isolation",
+      "pass" : true
+    },
+    {
+      "name" : "Cold verification opens exactly the requested store and no other store",
+      "pass" : true
+    }
+  ],
+  "durationSeconds" : 0.77428090572357178,
+  "observations" : [
+
+  ],
+  "openedStoreLabels" : [
+    "source"
+  ],
+  "osVersion" : "26.5",
+  "payloadOrKeyBytesInReport" : false,
+  "phase" : "cold-source",
+  "processIdentifier" : 46829,
+  "realServiceAccessed" : false,
+  "recordedAt" : "2026-10-18T20:32:18Z",
+  "result" : "PASS",
+  "syntheticOnly" : true
+}

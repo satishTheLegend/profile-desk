@@ -1,0 +1,156 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+w: [33m[1m⚠️ Deprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':app' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+
+> Configure project :session_engine
+w: [33m[1m⚠️ Deprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':session_engine' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :session_engine:preBuild UP-TO-DATE
+> Task :session_engine:preDebugBuild UP-TO-DATE
+> Task :session_engine:checkDebugAarMetadata UP-TO-DATE
+> Task :session_engine:mergeDebugJniLibFolders UP-TO-DATE
+> Task :session_engine:mergeDebugNativeLibs NO-SOURCE
+> Task :session_engine:stripDebugDebugSymbols NO-SOURCE
+> Task :session_engine:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :session_engine:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :session_engine:generateDebugResources UP-TO-DATE
+> Task :session_engine:packageDebugResources UP-TO-DATE
+> Task :session_engine:processDebugNavigationResources UP-TO-DATE
+> Task :session_engine:parseDebugLocalResources UP-TO-DATE
+> Task :session_engine:generateDebugRFile UP-TO-DATE
+> Task :session_engine:compileDebugKotlin UP-TO-DATE
+> Task :session_engine:extractDebugAnnotations
+> Task :session_engine:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :session_engine:generateDebugAssets UP-TO-DATE
+> Task :session_engine:mergeDebugAssets UP-TO-DATE
+> Task :session_engine:javaPreCompileDebug UP-TO-DATE
+> Task :session_engine:compileDebugJavaWithJavac NO-SOURCE
+> Task :session_engine:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :session_engine:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :session_engine:prepareDebugArtProfile UP-TO-DATE
+> Task :session_engine:prepareLintJarForPublish UP-TO-DATE
+> Task :session_engine:processDebugManifest UP-TO-DATE
+> Task :session_engine:processDebugJavaRes UP-TO-DATE
+> Task :session_engine:mergeDebugJavaResource UP-TO-DATE
+> Task :session_engine:syncDebugLibJars
+> Task :session_engine:writeDebugAarMetadata UP-TO-DATE
+> Task :session_engine:bundleDebugLocalLintAar
+> Task :session_engine:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :session_engine:createFullJarDebug
+> Task :session_engine:preDebugAndroidTestBuild UP-TO-DATE
+> Task :session_engine:writeDebugLintModelMetadata UP-TO-DATE
+> Task :session_engine:generateDebugAndroidTestLintModel
+> Task :session_engine:extractProguardFiles UP-TO-DATE
+> Task :session_engine:generateDebugLintReportModel
+> Task :session_engine:preDebugUnitTestBuild UP-TO-DATE
+> Task :session_engine:generateDebugUnitTestLintModel
+> Task :session_engine:lintAnalyzeDebug
+> Task :session_engine:lintAnalyzeDebugAndroidTest
+> Task :session_engine:lintAnalyzeDebugUnitTest
+
+> Task :session_engine:lintReportDebug
+Wrote HTML report to file:///Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/build/session_engine/reports/lint-results-debug.html
+
+> Task :session_engine:lintDebug
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:cleanMergeProductionReleaseAssets
+> Task :app:compileFlutterBuildProductionRelease
+> Task :app:generateProductionReleaseAssets UP-TO-DATE
+> Task :app:validateCompileSdkVersion
+> Task :app:preBuild
+> Task :app:preProductionReleaseBuild
+> Task :session_engine:generateReleaseAssets UP-TO-DATE
+> Task :session_engine:preReleaseBuild UP-TO-DATE
+> Task :session_engine:mergeReleaseAssets UP-TO-DATE
+> Task :app:mergeProductionReleaseAssets
+> Task :app:copyFlutterAssetsProductionRelease
+> Task :app:generateProductionReleaseResValues UP-TO-DATE
+> Task :app:generateProductionReleaseResources UP-TO-DATE
+> Task :app:packageProductionReleaseResources UP-TO-DATE
+> Task :session_engine:processReleaseNavigationResources UP-TO-DATE
+> Task :app:processProductionReleaseNavigationResources UP-TO-DATE
+> Task :app:parseProductionReleaseLocalResources UP-TO-DATE
+> Task :app:generateProductionReleaseRFile UP-TO-DATE
+> Task :session_engine:generateReleaseResources UP-TO-DATE
+> Task :session_engine:packageReleaseResources UP-TO-DATE
+> Task :session_engine:parseReleaseLocalResources UP-TO-DATE
+> Task :session_engine:generateReleaseRFile UP-TO-DATE
+> Task :session_engine:compileReleaseKotlin UP-TO-DATE
+> Task :session_engine:javaPreCompileRelease UP-TO-DATE
+> Task :session_engine:compileReleaseJavaWithJavac NO-SOURCE
+> Task :session_engine:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :app:compileProductionReleaseKotlin UP-TO-DATE
+> Task :app:javaPreCompileProductionRelease UP-TO-DATE
+> Task :app:compileProductionReleaseJavaWithJavac UP-TO-DATE
+> Task :app:extractProguardFiles UP-TO-DATE
+> Task :app:extractDeepLinksProductionRelease UP-TO-DATE
+> Task :session_engine:extractDeepLinksRelease UP-TO-DATE
+> Task :session_engine:processReleaseManifest UP-TO-DATE
+> Task :app:processProductionReleaseMainManifest UP-TO-DATE
+> Task :app:outputProductionReleaseAppLinkSettings UP-TO-DATE
+> Task :session_engine:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :session_engine:processReleaseJavaRes UP-TO-DATE
+> Task :session_engine:createFullJarRelease UP-TO-DATE
+> Task :session_engine:generateReleaseLintModel UP-TO-DATE
+> Task :app:generateProductionReleaseLintReportModel
+> Task :session_engine:checkReleaseAarMetadata UP-TO-DATE
+> Task :session_engine:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :session_engine:mergeReleaseNativeLibs NO-SOURCE
+> Task :session_engine:stripReleaseDebugSymbols NO-SOURCE
+> Task :session_engine:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :session_engine:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :session_engine:extractReleaseAnnotations UP-TO-DATE
+> Task :session_engine:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :session_engine:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :session_engine:prepareReleaseArtProfile UP-TO-DATE
+> Task :session_engine:mergeReleaseJavaResource UP-TO-DATE
+> Task :session_engine:syncReleaseLibJars UP-TO-DATE
+> Task :session_engine:writeReleaseAarMetadata UP-TO-DATE
+> Task :session_engine:bundleReleaseLocalLintAar UP-TO-DATE
+> Task :session_engine:lintAnalyzeRelease
+> Task :session_engine:writeReleaseLintModelMetadata UP-TO-DATE
+> Task :app:lintAnalyzeProductionRelease
+
+> Task :app:lintReportProductionRelease
+Wrote HTML report to file:///Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/build/app/reports/lint-results-productionRelease.html
+
+> Task :app:lintProductionRelease
+
+[Incubating] Problems report is available at: file:///Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 34s
+91 actionable tasks: 22 executed, 69 up-to-date

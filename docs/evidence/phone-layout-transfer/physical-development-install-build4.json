@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-18T15:59:52.680116+00:00",
+  "device": "authorized iPhone 17 Pro Max",
+  "os": "26.6.2",
+  "bundle": "dev.profiledesk.profileDesk.development",
+  "version": "0.1.0",
+  "build": "4",
+  "install": "PASS; in-place update from build3",
+  "installed_version_independently_verified": true,
+  "uninstalled_or_data_reset": false,
+  "launch": "BLOCKED: phone locked",
+  "launch_error": {
+    "domain": "com.apple.dt.CoreDeviceError",
+    "code": 10002,
+    "underlying": "FBSOpenApplicationErrorDomain 7 Locked"
+  },
+  "runtime_or_authenticated_acceptance": "NOT RUN",
+  "artifact_report": "ios-build-verification.json",
+  "raw_records": "artifacts/phone-layout-20261018/install.json, installed-app.json, launch.json"
+}

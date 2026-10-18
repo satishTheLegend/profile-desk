@@ -1,0 +1,128 @@
+Monitoring boot status for Profile Desk Isolated Shell Final (255C88F8-6889-4190-8BEC-32498FEE2468).
+[2026-10-17 23:02:37 +0000] Status=1, isTerminal=NO, Elapsed=00:01.
+	Waiting on BackBoard
+
+[2026-10-17 23:02:38 +0000] Status=2, isTerminal=NO, Elapsed=00:01.
+	Waiting on Data Migration
+		Reason:(null)
+		Migration Elapsed:00:00 seconds
+
+[2026-10-17 23:02:38 +0000] Status=2, isTerminal=NO, Elapsed=00:02.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.MobileContainerManager.ContainerMigrator (ContainerMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:00 seconds
+
+[2026-10-17 23:02:39 +0000] Status=2, isTerminal=NO, Elapsed=00:03.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:01 seconds
+
+[2026-10-17 23:02:40 +0000] Status=2, isTerminal=NO, Elapsed=00:04.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:02 seconds
+
+[2026-10-17 23:02:41 +0000] Status=2, isTerminal=NO, Elapsed=00:05.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:03 seconds
+
+[2026-10-17 23:02:42 +0000] Status=2, isTerminal=NO, Elapsed=00:06.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:04 seconds
+
+[2026-10-17 23:02:43 +0000] Status=2, isTerminal=NO, Elapsed=00:07.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:05 seconds
+
+[2026-10-17 23:02:44 +0000] Status=2, isTerminal=NO, Elapsed=00:08.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:06 seconds
+
+[2026-10-17 23:02:45 +0000] Status=2, isTerminal=NO, Elapsed=00:09.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:07 seconds
+
+[2026-10-17 23:02:46 +0000] Status=2, isTerminal=NO, Elapsed=00:10.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:08 seconds
+
+[2026-10-17 23:02:47 +0000] Status=2, isTerminal=NO, Elapsed=00:11.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:09 seconds
+
+[2026-10-17 23:02:48 +0000] Status=2, isTerminal=NO, Elapsed=00:12.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:10 seconds
+
+[2026-10-17 23:02:49 +0000] Status=2, isTerminal=NO, Elapsed=00:13.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:11 seconds
+
+[2026-10-17 23:02:50 +0000] Status=2, isTerminal=NO, Elapsed=00:14.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.WebBookmarks.migrator (WebBookmarks.migrator)
+		Migration Elapsed:00:12 seconds
+
+[2026-10-17 23:02:51 +0000] Status=2, isTerminal=NO, Elapsed=00:15.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.MobileSafari.migrator (MobileSafari.migrator)
+		Migration Elapsed:00:13 seconds
+
+[2026-10-17 23:02:52 +0000] Status=2, isTerminal=NO, Elapsed=00:16.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.PreferencesMigrator (PreferencesMigrator.migrator)
+		Migration Elapsed:00:14 seconds
+
+[2026-10-17 23:02:53 +0000] Status=4294967295, isTerminal=YES, Elapsed=00:17.
+	Finished
+
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  petitparser 7.0.2 (7.1.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+6 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing shell_native_test.dart...                             
+No issues found! (ran in 5.4s)
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart
+Running Xcode build...                                          
+Xcode build done.                                           34.8s
+00:00 +0: real native engine: cold shell, allocate, open, detach and scoped removal
+00:03 +1: (tearDownAll)
+00:04 +1: All tests passed!
+Verified disposable shell fixture identities are absent; the test may install/remove only those fixture identities.
+Verified both disposable fixture identities absent after cleanup.
+{
+  "test_ids": [
+    "AT-A01",
+    "AT-A02",
+    "AT-A10",
+    "AT-D01"
+  ],
+  "result": "PASS",
+  "context": "Dedicated iOS27 simulator and disposable QA app; synthetic alias, no pairing or page inspection",
+  "runner": "local Codex CLI",
+  "started_at": "2026-10-18T04:32:35.977697+05:30",
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+  "device_type": "com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro",
+  "simulator_id": "255C88F8-6889-4190-8BEC-32498FEE2468",
+  "qa_marker_sha256": "2d8d9fa25465d00c7c9a4378043dff697881d977a29fc2ac36d3fa538bd77edc",
+  "fixture_test_sha256": "625169b35df589db52d8dbee9371b3f7e26158dabf71b9a943a68a91202b2ba0",
+  "owned_simulator_removed": true,
+  "duration_seconds": 107.084,
+  "finished_at": "2026-10-18T04:34:23.063181+05:30"
+}

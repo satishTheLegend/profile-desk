@@ -1,0 +1,16 @@
+{
+  "NativeTests/EngineHarness/Info.plist": "4c5808fb23a727a58247ac0a952fb50add54ade7e54511bd34b4e65461de149b",
+  "NativeTests/EngineHarness/main.swift": "70705a534c85d18ff24d90bdee36e9ef5a9b2131ce86de8ede6828b448de1ca5",
+  "session_engine/Sources/session_engine/BoundWebSession.swift": "637c20860641a4493e2a30406718cdb7d4a58eb1fe37465ee32c7e2be0f075fb",
+  "session_engine/Sources/session_engine/InstallationBinding.swift": "e0b351473e5986e762f0c389301e0285024751b7a800c7e6176e53b9adcda338",
+  "session_engine/Sources/session_engine/Messages.g.swift": "222de9d78a7a45228687373cf8a1f8211e0c9bfe171b2c60a268df458c2ad4e4",
+  "session_engine/Sources/session_engine/NativeDiagnostics.swift": "25de8c7e119e013e78b04485e5af93549347b7f19a94a67ed3017caf0951f859",
+  "session_engine/Sources/session_engine/NativeLockState.swift": "21acf0e525d900606b4d49c077d538096a2eeca195d5fb10683d05d6752bbc8d",
+  "session_engine/Sources/session_engine/NativeTransfers.swift": "a31e26c90ec5199fb9fd59af7fa3648ddfcdff02f1a1d921903bfdc76837c8ba",
+  "session_engine/Sources/session_engine/ProfileRegistry.swift": "4db8203409a19fb6925c00a9b4edf276e219145b07ed6d19e7d3ef78169d9464",
+  "session_engine/Sources/session_engine/SessionEnginePlugin.swift": "5e67d4dad74f46d2d1670242abe5d028413b2a5ae73d0ae3cd2e78cf582fe202",
+  "session_engine/Sources/session_engine/TransferFiles.swift": "b6cbe946947c00d01f948a48cae506a1570c3a1342f56d61ca8d7d4bda67fcdc",
+  "session_engine/Sources/session_engine/WebKitBootstrap.swift": "513c05fc4e091ffe259449ec5e9b7797b16de750d795b2b5c9d8b5c24019bab4",
+  "session_engine/Sources/session_engine/WindowPrivacyCover.swift": "7316b5f9bf5e544bcdf34b8f9ae9b174c7e86a8771205aa4d17fda208b248033",
+  "session_engine/Sources/session_engine/WorkspaceURLPolicy.swift": "222d1bfb4ed63400389ff2068e2e37caae09bc2fe78ddb2f90ba75b18351976d"
+}

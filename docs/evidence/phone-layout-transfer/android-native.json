@@ -1,0 +1,12 @@
+{
+  "tests": 42,
+  "errors": 0,
+  "failures": 0,
+  "skipped": 0,
+  "scope": "Robolectric/JVM synthetic provider and lifecycle tests; no physical Android or real service",
+  "releaseKotlin": "PASS",
+  "releaseLint": {
+    "errors": 0,
+    "warnings": 18
+  }
+}

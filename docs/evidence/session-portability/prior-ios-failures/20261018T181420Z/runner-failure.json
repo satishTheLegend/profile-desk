@@ -1,0 +1,4 @@
+{
+  "type": "TimeoutExpired",
+  "message": "Command '['xcrun', 'simctl', 'bootstatus', 'EA778A09-49ED-4D0D-BE62-7EC4C1084DCA', '-b']' timed out after 60 seconds"
+}

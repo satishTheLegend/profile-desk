@@ -1,0 +1,9 @@
+{
+  "tests/session_portability/ios/Info.plist": "472d83f4f00587b9074bbf27741976393841f123ad8150dedfc7ac6dd3d0558b",
+  "tests/session_portability/ios/README.md": "2fd2fdd43e089e567b6e0a86e676a5b225724db3903b201cbada329773bbf177",
+  "tests/session_portability/ios/main.swift": "43cde904eecc8ee271aeabcb03b61e006deae03deb065acd17fafc115249eb4b",
+  "tests/session_portability/ios/run.py": "65f30dfd4f717c72daf9654fe0315365e06429d90657adcb01c74529bdfff36e",
+  "tests/session_portability/ios/server.py": "38a408663d2f98644f8848a867f7ac3bdba766365d077008f59a54eedf41f078",
+  "tests/session_portability/ios/web/index.html": "f5939a77c686d222ab0062631fcb3da1560155abf464596d505db873e20440f4",
+  "tests/session_portability/ios/web/worker.js": "f53588ed8e016279bdfc804c757b5abb8cb4c5941f63ccf3262db25a2a104797"
+}

@@ -1,0 +1,28 @@
+{
+  "assertions" : 2,
+  "checks" : [
+    {
+      "name" : "Owned source named store removed",
+      "pass" : true
+    },
+    {
+      "name" : "Owned destination named store removed",
+      "pass" : true
+    }
+  ],
+  "durationSeconds" : 0.081105947494506836,
+  "observations" : [
+
+  ],
+  "openedStoreLabels" : [
+
+  ],
+  "osVersion" : "26.5",
+  "payloadOrKeyBytesInReport" : false,
+  "phase" : "cleanup",
+  "processIdentifier" : 46880,
+  "realServiceAccessed" : false,
+  "recordedAt" : "2026-10-18T20:32:20Z",
+  "result" : "PASS",
+  "syntheticOnly" : true
+}

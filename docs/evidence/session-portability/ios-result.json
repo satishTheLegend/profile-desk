@@ -1,0 +1,277 @@
+{
+  "archiveBytesPersisted" : false,
+  "assertions" : 37,
+  "checks" : [
+    {
+      "name" : "Unsupported-type classifier accepts the known WebKit rejection",
+      "pass" : true
+    },
+    {
+      "name" : "Unsupported-type classifier rejects probe\/runtime failures",
+      "pass" : true
+    },
+    {
+      "name" : "Unsupported-type classifier rejects unrelated WebKit archive failures",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: secureContext",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: localStoragePresent",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: sessionStoragePresent",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: cookiePresent",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: indexedDBPresent",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: indexedDBRecordPresent",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: memoryKeyPresent",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: memoryKeyUsable",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: memoryKeyNonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: memoryExportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Source positive control: cachePresent",
+      "pass" : true
+    },
+    {
+      "name" : "Optional service-worker registration positive control is present",
+      "pass" : true
+    },
+    {
+      "name" : "Public LocalStorage archive produces a nonempty blob",
+      "pass" : true
+    },
+    {
+      "name" : "Public archive rejects unsupported requested type: IndexedDB",
+      "pass" : true
+    },
+    {
+      "name" : "Public archive rejects unsupported requested type: ServiceWorker",
+      "pass" : true
+    },
+    {
+      "name" : "Public archive rejects unsupported requested type: Cookies",
+      "pass" : true
+    },
+    {
+      "name" : "Public archive rejects unsupported requested type: LocalStorage+IndexedDB",
+      "pass" : true
+    },
+    {
+      "name" : "Public archive rejects unsupported requested type: AllWebsiteDataTypes",
+      "pass" : true
+    },
+    {
+      "name" : "Source contains only one owned synthetic cookie",
+      "pass" : true
+    },
+    {
+      "name" : "LocalStorage survives archive restore into a fresh named store",
+      "pass" : true
+    },
+    {
+      "name" : "LocalStorage archive does not transfer sessionStoragePresent",
+      "pass" : true
+    },
+    {
+      "name" : "LocalStorage archive does not transfer cookiePresent",
+      "pass" : true
+    },
+    {
+      "name" : "LocalStorage archive does not transfer indexedDBPresent",
+      "pass" : true
+    },
+    {
+      "name" : "LocalStorage archive does not transfer indexedDBRecordPresent",
+      "pass" : true
+    },
+    {
+      "name" : "LocalStorage archive does not transfer cachePresent",
+      "pass" : true
+    },
+    {
+      "name" : "LocalStorage archive does not transfer serviceWorkerPresent",
+      "pass" : true
+    },
+    {
+      "name" : "Public cookie API copies the owned cookie into the fresh store",
+      "pass" : true
+    },
+    {
+      "name" : "Restored LocalStorage persists after closing and reopening destination view",
+      "pass" : true
+    },
+    {
+      "name" : "Separately copied cookie persists after closing and reopening destination view",
+      "pass" : true
+    },
+    {
+      "name" : "IndexedDB and its seeded plain record remain absent after destination reopen",
+      "pass" : true
+    },
+    {
+      "name" : "Seeded cache remains absent after destination reopen",
+      "pass" : true
+    },
+    {
+      "name" : "Seeded service worker remains absent after destination reopen",
+      "pass" : true
+    },
+    {
+      "name" : "Owned synthetic named store removed",
+      "pass" : true
+    },
+    {
+      "name" : "Owned synthetic named store removed",
+      "pass" : true
+    }
+  ],
+  "conclusion" : "Observed LocalStorage plus separately copied cookies is incomplete browser-state migration. This is not a working signed-in session backup.",
+  "durationSeconds" : 4.0851700305938721,
+  "keyBytesExported" : false,
+  "limitations" : [
+    {
+      "capability" : "storedCryptoKeyPositiveControl",
+      "reason" : "DataCloneError in this disposable ad-hoc simulator app; no persisted-key roundtrip was proven.",
+      "status" : "UNAVAILABLE"
+    }
+  ],
+  "observations" : [
+    {
+      "errorName" : "DataCloneError",
+      "keyCloneSupported" : false,
+      "phase" : "optionalStoredCryptoKey"
+    },
+    {
+      "phase" : "sourceSeeded",
+      "state" : {
+        "cachePresent" : true,
+        "cookiePresent" : true,
+        "exportRejected" : false,
+        "indexedDBPresent" : true,
+        "indexedDBRecordPresent" : true,
+        "keyNonextractable" : false,
+        "keyPresent" : false,
+        "keyUsable" : false,
+        "localStoragePresent" : true,
+        "memoryExportRejected" : true,
+        "memoryKeyNonextractable" : true,
+        "memoryKeyPresent" : true,
+        "memoryKeyUsable" : true,
+        "secureContext" : true,
+        "serviceWorkerPresent" : true,
+        "serviceWorkerQueryAvailable" : true,
+        "sessionStoragePresent" : true
+      }
+    },
+    {
+      "errorCode" : 1,
+      "errorDomain" : "WKErrorDomain",
+      "matchesKnownUnsupportedTypeRejection" : true,
+      "phase" : "unsupportedArchive",
+      "type" : "IndexedDB"
+    },
+    {
+      "errorCode" : 1,
+      "errorDomain" : "WKErrorDomain",
+      "matchesKnownUnsupportedTypeRejection" : true,
+      "phase" : "unsupportedArchive",
+      "type" : "ServiceWorker"
+    },
+    {
+      "errorCode" : 1,
+      "errorDomain" : "WKErrorDomain",
+      "matchesKnownUnsupportedTypeRejection" : true,
+      "phase" : "unsupportedArchive",
+      "type" : "Cookies"
+    },
+    {
+      "errorCode" : 1,
+      "errorDomain" : "WKErrorDomain",
+      "matchesKnownUnsupportedTypeRejection" : true,
+      "phase" : "unsupportedArchive",
+      "type" : "LocalStorage+IndexedDB"
+    },
+    {
+      "errorCode" : 1,
+      "errorDomain" : "WKErrorDomain",
+      "matchesKnownUnsupportedTypeRejection" : true,
+      "phase" : "unsupportedArchive",
+      "type" : "AllWebsiteDataTypes"
+    },
+    {
+      "phase" : "afterLocalStorageRestore",
+      "state" : {
+        "cachePresent" : false,
+        "cookiePresent" : false,
+        "exportRejected" : false,
+        "indexedDBPresent" : false,
+        "indexedDBRecordPresent" : false,
+        "keyNonextractable" : false,
+        "keyPresent" : false,
+        "keyUsable" : false,
+        "localStoragePresent" : true,
+        "memoryExportRejected" : false,
+        "memoryKeyNonextractable" : false,
+        "memoryKeyPresent" : false,
+        "memoryKeyUsable" : false,
+        "secureContext" : true,
+        "serviceWorkerPresent" : false,
+        "serviceWorkerQueryAvailable" : true,
+        "sessionStoragePresent" : false
+      }
+    },
+    {
+      "phase" : "destinationClosedAndReopened",
+      "state" : {
+        "cachePresent" : false,
+        "cookiePresent" : true,
+        "exportRejected" : false,
+        "indexedDBPresent" : false,
+        "indexedDBRecordPresent" : false,
+        "keyNonextractable" : false,
+        "keyPresent" : false,
+        "keyUsable" : false,
+        "localStoragePresent" : true,
+        "memoryExportRejected" : false,
+        "memoryKeyNonextractable" : false,
+        "memoryKeyPresent" : false,
+        "memoryKeyUsable" : false,
+        "secureContext" : true,
+        "serviceWorkerPresent" : false,
+        "serviceWorkerQueryAvailable" : true,
+        "sessionStoragePresent" : false
+      }
+    }
+  ],
+  "osVersion" : "26.5",
+  "productionImplementation" : false,
+  "recordedAt" : "2026-10-18T18:20:54Z",
+  "result" : "PASS_WITH_LIMITATIONS",
+  "scope" : "Synthetic owned localhost HTTPS data on disposable iOS simulator; no WhatsApp data or actual linked-session restore."
+}

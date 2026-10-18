@@ -1,0 +1,10 @@
+{
+  "packages/session_engine/layout/workspace_layout.js": "d0fb52b6fad839ecf3110ba7a5993a8c27e7dc18603b120013a6311c233ee980",
+  "packages/session_engine/ios/session_engine/Sources/session_engine/workspace_layout.js": "d0fb52b6fad839ecf3110ba7a5993a8c27e7dc18603b120013a6311c233ee980",
+  "tests/workspace_layout/run.mjs": "061c5e52d1a506914b2fef4efe078325e51ab6bf08ca08c5248956bc32455294",
+  "tests/workspace_layout/fixture.html": "dabec55855db33565000a1a8dfd23d0900b00dc1afa465fd03447cbd800f9dc5",
+  "packages/session_engine/android/src/main/kotlin/dev/profiledesk/session_engine/AndroidSessionEngine.kt": "ea38aba25e68499b379d2a891a8549a0a5b4dc5ca6557e14bec9ad5fd342242c",
+  "packages/session_engine/android/src/test/kotlin/dev/profiledesk/session_engine/WorkspaceLayoutOwnershipTest.kt": "d4b28ee12c4fe3c21901d932287aa47d5681954c983d46029e1a431f2cf0c7e5",
+  "packages/session_engine/ios/session_engine/Sources/session_engine/WorkspaceWebView.swift": "156bf97b9f5a1914e5e69b0f666be41869d0778af3d6a28ca066a36076332e94",
+  "packages/session_engine/ios/NativeTests/ViewportHarness/main.swift": "b93dd633c030f70d4b97f7293a69ec9d460a0eed5e1a9e0a6b4cc01f2b0d138d"
+}

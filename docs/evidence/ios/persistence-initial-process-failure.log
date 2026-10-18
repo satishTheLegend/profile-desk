@@ -1,0 +1,29 @@
+/Users/LOCAL_USER/Repos/webwhatsapp/build/ios-storage-harness-persistence/ProfileDeskHarness.app: replacing existing signature
+dev.profiledesk.synthetic-ios-harness: 41439
+{
+  "assertions" : 7,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 28.593329071998596,
+  "fixtureTeardown" : "Runner shuts down and deletes its disposable simulator.",
+  "mode" : "persistence",
+  "osVersion" : "27.0",
+  "profiles" : 2,
+  "recordedAt" : "2026-10-17T22:35:54Z",
+  "result" : "PASS",
+  "stage" : "seed",
+  "testIds" : [
+    "IOS-SYNTH-PROCESS-01",
+    "IOS-SYNTH-REBOOT-01"
+  ]
+}dev.profiledesk.synthetic-ios-harness: 42003
+{
+  "assertions" : 5,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 10.030862927436829,
+  "error" : "Error Domain=HarnessAssertion Code=1 \"Persistence process_relaunch marker mismatch for profile 1\" UserInfo={NSLocalizedDescription=Persistence process_relaunch marker mismatch for profile 1}",
+  "fixtureTeardown" : "Runner shuts down and deletes its disposable simulator.",
+  "osVersion" : "27.0",
+  "recordedAt" : "2026-10-17T22:36:08Z",
+  "requestedMode" : "--persistence-process",
+  "result" : "FAIL"
+}

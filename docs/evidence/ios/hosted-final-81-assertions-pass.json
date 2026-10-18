@@ -1,0 +1,31 @@
+{
+  "assertions" : 81,
+  "cleanupAttempts" : 2,
+  "cleanupInitiallyPending" : true,
+  "coldInventoryAfterEphemeralBootstrap" : true,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "deletionDuringServiceWorkerWrites" : true,
+  "durationSeconds" : 83.575492024421692,
+  "fixtureTeardown" : "Runner shuts down and deletes its disposable simulator.",
+  "messaging" : {
+    "broadcastChannel" : "PASS",
+    "crossProfileDelivery" : false,
+    "sameProfilePositiveControl" : true,
+    "sharedWorker" : "PASS",
+    "sharedWorkerSupported" : true
+  },
+  "oneLiveViewInStorageScenario" : true,
+  "osVersion" : "27.0",
+  "profiles" : 10,
+  "recordedAt" : "2026-10-17T22:42:49Z",
+  "result" : "PASS",
+  "stores" : [
+    "readableCookie",
+    "serverVerifiedHttpOnlyCookie",
+    "localStorage",
+    "indexedDB",
+    "cacheStorage",
+    "serviceWorker"
+  ],
+  "testOnlyMessagingViews" : 2
+}

@@ -1,0 +1,161 @@
+{
+  "result": "PASS",
+  "mode": "persistence",
+  "profiles": 2,
+  "phases": [
+    {
+      "assertions": 7,
+      "context": "synthetic iOS simulator; no actual service accounts",
+      "durationSeconds": 4.298395991325378,
+      "fixtureTeardown": "Runner shuts down and deletes its disposable simulator.",
+      "mode": "persistence",
+      "osVersion": "27.0",
+      "profiles": 2,
+      "recordedAt": "2026-10-17T22:39:31Z",
+      "result": "PASS",
+      "stage": "seed",
+      "terminationPath": "UIKit background event before process termination",
+      "testIds": [
+        "IOS-SYNTH-PROCESS-01",
+        "IOS-SYNTH-REBOOT-01"
+      ]
+    },
+    {
+      "assertions": 6,
+      "context": "synthetic iOS simulator; no actual service accounts",
+      "durationSeconds": 9.212650060653687,
+      "fixtureTeardown": "Runner shuts down and deletes its disposable simulator.",
+      "mode": "persistence",
+      "oneOwnedView": true,
+      "osVersion": "27.0",
+      "persistenceChecks": [
+        {
+          "profileIndex": 0,
+          "storageResult": {
+            "expected": "synthetic-0",
+            "origin": "https://localhost:8445",
+            "recordedAt": "2026-10-17T22:39:47.394Z",
+            "result": "MATCH",
+            "stores": {
+              "cacheStorage": "synthetic-0",
+              "httpOnlyCookie": "synthetic-0",
+              "indexedDB": "synthetic-0",
+              "localStorage": "synthetic-0",
+              "readableCookie": "synthetic-0",
+              "serviceWorker": "synthetic-0"
+            }
+          }
+        },
+        {
+          "profileIndex": 1,
+          "storageResult": {
+            "expected": "synthetic-1",
+            "origin": "https://localhost:8445",
+            "recordedAt": "2026-10-17T22:39:49.404Z",
+            "result": "MATCH",
+            "stores": {
+              "cacheStorage": "synthetic-1",
+              "httpOnlyCookie": "synthetic-1",
+              "indexedDB": "synthetic-1",
+              "localStorage": "synthetic-1",
+              "readableCookie": "synthetic-1",
+              "serviceWorker": "synthetic-1"
+            }
+          }
+        }
+      ],
+      "profiles": 2,
+      "recordedAt": "2026-10-17T22:39:49Z",
+      "result": "PASS",
+      "stage": "process_relaunch",
+      "stores": [
+        "readableCookie",
+        "serverVerifiedHttpOnlyCookie",
+        "localStorage",
+        "indexedDB",
+        "cacheStorage",
+        "serviceWorker"
+      ],
+      "terminationPath": "UIKit background event before process termination",
+      "testIds": [
+        "IOS-SYNTH-PROCESS-01",
+        "IOS-SYNTH-REBOOT-01"
+      ]
+    },
+    {
+      "assertions": 6,
+      "context": "synthetic iOS simulator; no actual service accounts",
+      "durationSeconds": 10.357551097869873,
+      "fixtureTeardown": "Runner shuts down and deletes its disposable simulator.",
+      "mode": "persistence",
+      "oneOwnedView": true,
+      "osVersion": "27.0",
+      "persistenceChecks": [
+        {
+          "profileIndex": 0,
+          "storageResult": {
+            "expected": "synthetic-0",
+            "origin": "https://localhost:8445",
+            "recordedAt": "2026-10-17T22:40:16.661Z",
+            "result": "MATCH",
+            "stores": {
+              "cacheStorage": "synthetic-0",
+              "httpOnlyCookie": "synthetic-0",
+              "indexedDB": "synthetic-0",
+              "localStorage": "synthetic-0",
+              "readableCookie": "synthetic-0",
+              "serviceWorker": "synthetic-0"
+            }
+          }
+        },
+        {
+          "profileIndex": 1,
+          "storageResult": {
+            "expected": "synthetic-1",
+            "origin": "https://localhost:8445",
+            "recordedAt": "2026-10-17T22:40:18.544Z",
+            "result": "MATCH",
+            "stores": {
+              "cacheStorage": "synthetic-1",
+              "httpOnlyCookie": "synthetic-1",
+              "indexedDB": "synthetic-1",
+              "localStorage": "synthetic-1",
+              "readableCookie": "synthetic-1",
+              "serviceWorker": "synthetic-1"
+            }
+          }
+        }
+      ],
+      "profiles": 2,
+      "recordedAt": "2026-10-17T22:40:18Z",
+      "result": "PASS",
+      "stage": "simulator_reboot",
+      "stores": [
+        "readableCookie",
+        "serverVerifiedHttpOnlyCookie",
+        "localStorage",
+        "indexedDB",
+        "cacheStorage",
+        "serviceWorker"
+      ],
+      "terminationPath": "UIKit background event before process termination",
+      "testIds": [
+        "IOS-SYNTH-PROCESS-01",
+        "IOS-SYNTH-REBOOT-01"
+      ]
+    }
+  ],
+  "scope": "Synthetic simulator process termination/relaunch and same-simulator shutdown/boot; not real service or elapsed-day retention.",
+  "backgroundEvents": [
+    {
+      "viewAttached": true,
+      "recordedAt": "2026-10-17T22:39:51Z",
+      "event": "sceneDidEnterBackground"
+    },
+    {
+      "recordedAt": "2026-10-17T22:39:38Z",
+      "viewAttached": true,
+      "event": "sceneDidEnterBackground"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+Compiled from "Profile.java"
+public interface androidx.webkit.Profile {
+  public static final java.lang.String DEFAULT_PROFILE_NAME;
+  public abstract java.lang.String getName();
+  public abstract android.webkit.CookieManager getCookieManager();
+  public abstract android.webkit.WebStorage getWebStorage();
+  public default androidx.webkit.PrefetchCache getPrefetchCache();
+  public abstract android.webkit.GeolocationPermissions getGeolocationPermissions();
+  public abstract android.webkit.ServiceWorkerController getServiceWorkerController();
+  public abstract void prefetchUrlAsync(java.lang.String, android.os.CancellationSignal, java.util.concurrent.Executor, androidx.webkit.WebViewOutcomeReceiver<java.lang.Void, androidx.webkit.PrefetchException>);
+  public abstract void prefetchUrlAsync(java.lang.String, android.os.CancellationSignal, java.util.concurrent.Executor, androidx.webkit.SpeculativeLoadingParameters, androidx.webkit.WebViewOutcomeReceiver<java.lang.Void, androidx.webkit.PrefetchException>);
+  public abstract void setSpeculativeLoadingConfig(androidx.webkit.SpeculativeLoadingConfig);
+  public default void setMaxPrerenders(int);
+  public default int getMaxPrerenders();
+  public default void clearMaxPrerenders();
+  public abstract void warmUpRendererProcess();
+  public default void addCustomHeader(androidx.webkit.CustomHeader);
+  public default boolean hasCustomHeader(java.lang.String);
+  public default java.util.Set<androidx.webkit.CustomHeader> getCustomHeaders();
+  public default java.util.Set<androidx.webkit.CustomHeader> getCustomHeaders(java.lang.String);
+  public default java.util.Set<androidx.webkit.CustomHeader> getCustomHeaders(java.lang.String, java.lang.String);
+  public default void clearCustomHeader(java.lang.String);
+  public default void clearCustomHeader(java.lang.String, java.lang.String);
+  public default void clearAllCustomHeaders();
+  public default void preconnect(java.lang.String);
+  public default void enqueuePreconnect(java.lang.String);
+  public default void addQuicHints(java.util.Set<java.lang.String>);
+  public default androidx.webkit.HttpCache getHttpCache();
+}
+Compiled from "ProfileStore.java"
+public interface androidx.webkit.ProfileStore {
+  public static androidx.webkit.ProfileStore getInstance();
+  public abstract androidx.webkit.Profile getOrCreateProfile(java.lang.String);
+  public abstract androidx.webkit.Profile getProfile(java.lang.String);
+  public abstract java.util.List<java.lang.String> getAllProfileNames();
+  public abstract boolean deleteProfile(java.lang.String);
+}
+Compiled from "WebStorageCompat.java"
+public final class androidx.webkit.WebStorageCompat {
+  public static void deleteBrowsingData(android.webkit.WebStorage, java.util.concurrent.Executor, java.lang.Runnable);
+  public static void deleteBrowsingData(android.webkit.WebStorage, java.lang.Runnable);
+  public static java.lang.String deleteBrowsingDataForSite(android.webkit.WebStorage, java.lang.String, java.util.concurrent.Executor, java.lang.Runnable);
+  public static java.lang.String deleteBrowsingDataForSite(android.webkit.WebStorage, java.lang.String, java.lang.Runnable);
+}

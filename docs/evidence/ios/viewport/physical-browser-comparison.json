@@ -1,0 +1,180 @@
+{
+  "date": "2026-10-18",
+  "timezone": "Asia/Kolkata",
+  "device": "iPhone 17 Pro Max",
+  "os": "iOS26.6.2",
+  "authorization": "User explicitly selected Test Safari-compatible identification. Final policy is limited to exact development bundle identity; QA/production retain default identity.",
+  "scope": "Owned disposable native probe on connected physical phone. Public native geometry and navigator.userAgent read on owned inline fixture only. No service DOM inspection, script injection, pairing, messages, credential export or QR retention. Safari trials used a native opaque evidence mask over pairing-code area.",
+  "observations": [
+    {
+      "probe_metadata": {
+        "current_host": "web.whatsapp.com",
+        "mode": "desktop",
+        "owned_fixture_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+        "page_zoom": 1,
+        "scroll_content_height": 812,
+        "scroll_content_width": 440,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "view_height": 812,
+        "view_width": 440
+      },
+      "visual_observation": "Default desktop mode: Safari 15+ warning and horizontally clipped card"
+    },
+    {
+      "probe_metadata": {
+        "current_host": "web.whatsapp.com",
+        "mode": "recommended",
+        "owned_fixture_user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148",
+        "page_zoom": 1,
+        "scroll_content_height": 812,
+        "scroll_content_width": 440,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "view_height": 812,
+        "view_width": 440
+      },
+      "visual_observation": "Recommended mode: mobile landing with instructions to use a computer"
+    },
+    {
+      "probe_metadata": {
+        "current_host": "web.whatsapp.com",
+        "mode": "desktop",
+        "owned_fixture_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+        "page_zoom": 0.4489795918367347,
+        "scroll_content_height": 812,
+        "scroll_content_width": 198,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "view_height": 812,
+        "view_width": 440
+      },
+      "visual_observation": "Rejected pageZoom approach: visible page width shrinks to about198 of440 points"
+    },
+    {
+      "probe_metadata": {
+        "canvas_width": 440,
+        "current_host": "web.whatsapp.com",
+        "displayed_width": 440,
+        "mode": "desktop",
+        "owned_fixture_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko)",
+        "page_zoom": 1,
+        "safari_identification": false,
+        "scroll_content_height": 1809,
+        "scroll_content_width": 980,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "view_height": 1808.5454545454545,
+        "view_width": 980
+      },
+      "visual_observation": "980-point native layout scaled to440 points: entire compatibility card fits"
+    },
+    {
+      "probe_metadata": {
+        "canvas_width": 440,
+        "current_host": "web.whatsapp.com",
+        "displayed_width": 440,
+        "mode": "desktop",
+        "owned_fixture_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6 Safari/605.1.15 ProfileDesk/0.1",
+        "page_zoom": 1,
+        "safari_identification": true,
+        "scroll_content_height": 1809,
+        "scroll_content_width": 980,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "view_height": 1808.5454545454545,
+        "view_width": 980
+      },
+      "visual_observation": "Branded Safari26.6 suffix: Safari15+ warning remains"
+    },
+    {
+      "probe_metadata": {
+        "canvas_width": 440,
+        "current_host": "web.whatsapp.com",
+        "displayed_width": 440,
+        "identifier_variant": "suffix-last",
+        "mode": "desktop",
+        "owned_fixture_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) ProfileDesk/0.1 Version/26.6 Safari/605.1.15",
+        "page_zoom": 1,
+        "safari_identification": true,
+        "scroll_content_height": 1809,
+        "scroll_content_width": 980,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "url_path": "/",
+        "view_height": 1808.5454545454545,
+        "view_width": 980
+      },
+      "visual_observation": "App token before Safari26.6 suffix: warning remains in nonpersistent store"
+    },
+    {
+      "probe_metadata": {
+        "canvas_width": 440,
+        "current_host": "web.whatsapp.com",
+        "displayed_width": 440,
+        "identifier_variant": "suffix-last",
+        "mode": "desktop",
+        "owned_fixture_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) ProfileDesk/0.1 Version/26.6 Safari/605.1.15",
+        "page_zoom": 1,
+        "persistent_store": true,
+        "safari_identification": true,
+        "scroll_content_height": 1809,
+        "scroll_content_width": 980,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "url_path": "/",
+        "view_height": 1808.5454545454545,
+        "view_width": 980
+      },
+      "visual_observation": "App token before Safari26.6 suffix: warning remains with fresh named persistent store"
+    },
+    {
+      "probe_metadata": {
+        "canvas_width": 440,
+        "current_host": "web.whatsapp.com",
+        "displayed_width": 440,
+        "identifier_variant": "safari18",
+        "mode": "desktop",
+        "owned_fixture_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7 Safari/605.1.15",
+        "page_zoom": 1,
+        "persistent_store": true,
+        "safari_identification": true,
+        "scroll_content_height": 1809,
+        "scroll_content_width": 980,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "url_path": "/",
+        "view_height": 1808.5454545454545,
+        "view_width": 980
+      },
+      "visual_observation": "Standard Safari18.7 suffix: download landing and Continue in browser offer"
+    },
+    {
+      "probe_metadata": {
+        "canvas_width": 440,
+        "current_host": "web.whatsapp.com",
+        "displayed_width": 440,
+        "identifier_variant": "safari-only",
+        "mode": "desktop",
+        "owned_fixture_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6 Safari/605.1.15",
+        "page_zoom": 1,
+        "persistent_store": true,
+        "safari_identification": true,
+        "scroll_content_height": 1809,
+        "scroll_content_width": 980,
+        "scroll_zoom_scale": 1,
+        "stage": "official-page",
+        "url_path": "/",
+        "view_height": 1808.5454545454545,
+        "view_width": 980
+      },
+      "visual_observation": "Standard Safari26.6 suffix matching OS major/minor: download landing and Continue in browser offer"
+    }
+  ],
+  "limits": [
+    "Continue in browser was visible; the button and pairing were not automated.",
+    "Authenticated messaging, composer keyboard, actual pinch gestures and physical rotation not verified by this comparison.",
+    "Device IDs, signing identity and personal profile alias omitted.",
+    "Development installation is recorded separately."
+  ]
+}

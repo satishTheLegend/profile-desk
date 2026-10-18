@@ -1,0 +1,1 @@
+../../../session_engine/Sources/session_engine/NativeDiagnostics.swift

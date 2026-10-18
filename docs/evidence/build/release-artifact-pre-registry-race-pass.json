@@ -1,0 +1,86 @@
+{
+  "scope": "Unsigned production artifact metadata, known fixture markers, packaged configuration and DEX class inventory; no runtime proof or release approval.",
+  "verifier_sha256": "38987a7d68c72bb97441f8a676b4e2dcef153770b3270e6eede54c581e6537d3",
+  "known_fixture_markers": [
+    "FakeSessionEngine",
+    "profiledesk_harness_ca",
+    "profiledesk_test_network_security",
+    "harness.profiledesk.invalid",
+    "harness_http_only",
+    "harness_readable",
+    "synthetic-journal-test",
+    "ProfileIsolationInstrumentedTest",
+    "IntegrationTestPlugin",
+    "FLTIntegrationTestRunner",
+    "IntegrationTestIosTest",
+    "plugins.flutter.io/integration_test",
+    "https://10.0.2.2:8443",
+    "https://127.0.0.1:8443",
+    "https://localhost:8443",
+    "https://localhost:8445"
+  ],
+  "artifact_inputs": {
+    "android_apk_sha256": "370e6c515cb4d3f61a0516736f793171f5cd1a3983dcec6f0d4f1349f7839b9f",
+    "ios_executable_sha256": "ec58872236b245424cf8f244c019d06d9df1ffec695df6b820ec3aa965865119"
+  },
+  "android": {
+    "artifact": "apps/mobile/build/app/outputs/flutter-apk/app-production-release.apk",
+    "sha256": "370e6c515cb4d3f61a0516736f793171f5cd1a3983dcec6f0d4f1349f7839b9f",
+    "bytes": 54495809,
+    "package": "dev.profiledesk.profile_desk",
+    "debuggable": false,
+    "allow_backup": false,
+    "cleartext": false,
+    "backup_resources": {
+      "backup_rules": "res/Qq.xml",
+      "data_extraction_rules": "res/4j.xml"
+    },
+    "signature": "unsigned (expected)",
+    "known_fixture_marker_scan": "PASS",
+    "zip_entries_scanned": 89,
+    "dex_test_class_scan": "PASS",
+    "dex_mapping_used": true,
+    "mapping_sha256": "c4bee1f6d1ecef45aff8b4170c474532dc7e142f47de422e7925a55f79bef549",
+    "aot_library_present": true
+  },
+  "ios": {
+    "artifact": "apps/mobile/build/ios/iphoneos/Runner.app",
+    "tree_sha256": "d2fb0263481254357bab6d606ab742a10a7a266d1ab3554f36a94fc6d8188640",
+    "executable_sha256": "ec58872236b245424cf8f244c019d06d9df1ffec695df6b820ec3aa965865119",
+    "aot_sha256": "68a74004088a9ddd0db00a1120fa7a35929ffaeda9702d554516b0d0a0748767",
+    "bundle_id": "dev.profiledesk.profileDesk",
+    "minimum_os": "17.0",
+    "signature": "unsigned (expected); final distribution entitlements not evaluated",
+    "files_scanned": 70,
+    "known_fixture_marker_scan": "PASS",
+    "privacy_manifests": {
+      "Frameworks/Flutter.framework/PrivacyInfo.xcprivacy": {
+        "NSPrivacyTracking": false,
+        "NSPrivacyTrackingDomains": [],
+        "NSPrivacyCollectedDataTypes": [],
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryFileTimestamp",
+            "NSPrivacyAccessedAPITypeReasons": [
+              "0A2A.1",
+              "C617.1"
+            ]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategorySystemBootTime",
+            "NSPrivacyAccessedAPITypeReasons": [
+              "35F9.1"
+            ]
+          }
+        ]
+      },
+      "session_engine_session_engine.bundle/PrivacyInfo.xcprivacy": {
+        "NSPrivacyTrackingDomains": [],
+        "NSPrivacyAccessedAPITypes": [],
+        "NSPrivacyCollectedDataTypes": [],
+        "NSPrivacyTracking": false
+      }
+    }
+  },
+  "result": "PASS"
+}

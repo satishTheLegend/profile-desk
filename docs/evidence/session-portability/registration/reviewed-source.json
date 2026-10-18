@@ -1,0 +1,54 @@
+{
+  "modules": [
+    {
+      "name": "WAWebSignalCommonUtils",
+      "path": "build/session-state-public-review/modules/WAWebSignalCommonUtils.js",
+      "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+      "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+      "moduleSHA256": "5727ea9ffce6b96ab084c5efaed90b5ce2f34603b4e7515ef966c19418f2937c",
+      "utf16Offset": 3287912,
+      "utf8ByteOffset": 3287912,
+      "utf8Bytes": 2201,
+      "dependencies": [
+        "WAByteBuffer",
+        "WAWebSignalAddress",
+        "err"
+      ]
+    },
+    {
+      "name": "WAWebSignalStoreApi",
+      "path": "build/session-state-public-review/modules/WAWebSignalStoreApi.js",
+      "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+      "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+      "moduleSHA256": "56ccf8d2fdf5374129800b2cbad834f0fc4980a0fe2fab00c4bc1176b98fd9f1",
+      "utf16Offset": 3311250,
+      "utf8ByteOffset": 3311250,
+      "utf8Bytes": 9852,
+      "dependencies": [
+        "Promise",
+        "WALogger",
+        "WASignalKeys",
+        "WAWebNoop",
+        "WAWebSignalCommonUtils",
+        "WAWebSignalConst",
+        "WAWebSignalStorage",
+        "WAWebSignalStorageUtils",
+        "asyncToGeneratorRuntime",
+        "err"
+      ]
+    }
+  ],
+  "algorithm": {
+    "name": "AES-CTR",
+    "keyLengthBits": 128,
+    "counterLengthBits": 128,
+    "counter": "16 zero bytes",
+    "extractable": false,
+    "usages": [
+      "encrypt",
+      "decrypt"
+    ],
+    "keyLifetime": "A distinct generated key per encryptRegistrationMaterial call"
+  },
+  "executedServiceCode": false
+}

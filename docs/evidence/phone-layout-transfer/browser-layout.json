@@ -1,0 +1,303 @@
+{
+  "result": "PASS",
+  "count": 59,
+  "checks": [
+    {
+      "name": "isolated-world controls are unavailable to website scripts",
+      "pass": true
+    },
+    {
+      "name": "adapter starts without modifying page presentation",
+      "pass": true
+    },
+    {
+      "name": "phone mode starts with list and a valid structural layout",
+      "pass": true
+    },
+    {
+      "name": "375px list preserves 16px text, menu rail, and viewport width",
+      "pass": true
+    },
+    {
+      "name": "conversation is not visible or interactive in initial list",
+      "pass": true
+    },
+    {
+      "name": "width-independent structural probe reports a recognized layout",
+      "pass": true
+    },
+    {
+      "name": "trusted row selection opens full-width detail after service handler",
+      "pass": true
+    },
+    {
+      "name": "detail fills phone and keeps native font size",
+      "pass": true
+    },
+    {
+      "name": "composer remains focusable and editable",
+      "pass": true
+    },
+    {
+      "name": "native Back command restores list",
+      "pass": true
+    },
+    {
+      "name": "reselecting the same existing conversation opens detail again",
+      "pass": true
+    },
+    {
+      "name": "search input keeps list mode",
+      "pass": true
+    },
+    {
+      "name": "row action keeps a usable menu in list mode",
+      "pass": true
+    },
+    {
+      "name": "menu item is not misclassified as chat selection",
+      "pass": true
+    },
+    {
+      "name": "known side replacement retains readable settings and menu rail",
+      "pass": true
+    },
+    {
+      "name": "settings image is constrained to actual available side width",
+      "pass": true
+    },
+    {
+      "name": "repeated phone command preserves known menu state",
+      "pass": true
+    },
+    {
+      "name": "real service Back click restores a recognized chat list",
+      "pass": true
+    },
+    {
+      "name": "generic portal dialog remains above the mobile panes",
+      "pass": true
+    },
+    {
+      "name": "untrusted synthetic clicks never change the presentation pane",
+      "pass": true
+    },
+    {
+      "name": "reduced motion switches immediately without layout animations",
+      "pass": true
+    },
+    {
+      "name": "resize preserves detail and fills keyboard-sized available height",
+      "pass": true
+    },
+    {
+      "name": "tablet width falls back to untouched original layout",
+      "pass": true
+    },
+    {
+      "name": "structural probe remains true at tablet width without forcing phone mode",
+      "pass": true
+    },
+    {
+      "name": "returning to phone width safely starts from list",
+      "pass": true
+    },
+    {
+      "name": "duplicate structural hook removes adapter styling and reports fallback",
+      "pass": true
+    },
+    {
+      "name": "valid structural layout can recover after ambiguity is removed",
+      "pass": true
+    },
+    {
+      "name": "unknown layout is left untouched",
+      "pass": true
+    },
+    {
+      "name": "list remains usable before any conversation container exists",
+      "pass": true
+    },
+    {
+      "name": "row click cannot reveal a nonexistent conversation",
+      "pass": true
+    },
+    {
+      "name": "asynchronously created conversation completes trusted selection",
+      "pass": true
+    },
+    {
+      "name": "removing the active detail returns to list",
+      "pass": true
+    },
+    {
+      "name": "structural probe recognizes a desktop980 viewport without changing it",
+      "pass": true
+    },
+    {
+      "name": "phone mode replaces desktop viewport metadata and uses device width",
+      "pass": true
+    },
+    {
+      "name": "original mode exactly restores desktop viewport metadata",
+      "pass": true
+    },
+    {
+      "name": "missing viewport metadata can be supplied for recognized phone layout",
+      "pass": true
+    },
+    {
+      "name": "original mode restores absence of viewport metadata",
+      "pass": true
+    },
+    {
+      "name": "wide viewport without metadata does not create an observer animation loop",
+      "pass": true
+    },
+    {
+      "name": "viewport metadata with absent content and existing name casing is restored",
+      "pass": true
+    },
+    {
+      "name": "unknown menu replacement is left untouched with adapter styling removed",
+      "pass": true
+    },
+    {
+      "name": "recognized list can recover after a menu replacement returns",
+      "pass": true
+    },
+    {
+      "name": "re-injection 1 owns exactly one style",
+      "pass": true
+    },
+    {
+      "name": "original mode 1 removes all adapter classes and style",
+      "pass": true
+    },
+    {
+      "name": "re-injection 2 owns exactly one style",
+      "pass": true
+    },
+    {
+      "name": "original mode 2 removes all adapter classes and style",
+      "pass": true
+    },
+    {
+      "name": "re-injection 3 owns exactly one style",
+      "pass": true
+    },
+    {
+      "name": "original mode 3 removes all adapter classes and style",
+      "pass": true
+    },
+    {
+      "name": "re-injection 4 owns exactly one style",
+      "pass": true
+    },
+    {
+      "name": "original mode 4 removes all adapter classes and style",
+      "pass": true
+    },
+    {
+      "name": "re-injection 5 owns exactly one style",
+      "pass": true
+    },
+    {
+      "name": "original mode 5 removes all adapter classes and style",
+      "pass": true
+    },
+    {
+      "name": "dispose removes API, styles, classes and selection listeners",
+      "pass": true
+    },
+    {
+      "name": "all layout flows work with content, input, storage and network access blocked",
+      "pass": true
+    },
+    {
+      "name": "foreign origin cannot install adapter controls",
+      "pass": true
+    },
+    {
+      "name": "HTTP origin cannot install adapter controls",
+      "pass": true
+    },
+    {
+      "name": "nondefault port cannot install adapter controls",
+      "pass": true
+    },
+    {
+      "name": "explicit default HTTPS port is accepted",
+      "pass": true
+    },
+    {
+      "name": "subframes cannot install adapter controls",
+      "pass": true
+    },
+    {
+      "name": "every browser request was intercepted locally",
+      "pass": true
+    }
+  ],
+  "scope": "Owned synthetic HTML in isolated Chrome world. All URL requests are locally fulfilled with DNS blocked. No real service, account, QR, message or network response was used.",
+  "limits": "WhatsApp structural selectors and actual authenticated mobile behavior remain unverified. Android JavaScript-world isolation and iOS WKWebView behavior require platform checks.",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.84",
+    "revision": "@5869fe313571d75152b77813cf0a4ee26a4e6df0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.25"
+  },
+  "requests": [
+    {
+      "url": "https://web.whatsapp.com/",
+      "local": true,
+      "resourceType": "Document"
+    },
+    {
+      "url": "https://web.whatsapp.com/favicon.ico",
+      "local": true,
+      "resourceType": "Other"
+    },
+    {
+      "url": "https://example.invalid/",
+      "local": true,
+      "resourceType": "Document"
+    },
+    {
+      "url": "https://example.invalid/favicon.ico",
+      "local": true,
+      "resourceType": "Other"
+    },
+    {
+      "url": "http://web.whatsapp.com/",
+      "local": true,
+      "resourceType": "Document"
+    },
+    {
+      "url": "http://web.whatsapp.com/favicon.ico",
+      "local": true,
+      "resourceType": "Other"
+    },
+    {
+      "url": "https://web.whatsapp.com:444/",
+      "local": true,
+      "resourceType": "Document"
+    },
+    {
+      "url": "https://web.whatsapp.com:444/favicon.ico",
+      "local": true,
+      "resourceType": "Other"
+    },
+    {
+      "url": "https://web.whatsapp.com/",
+      "local": true,
+      "resourceType": "Document"
+    },
+    {
+      "url": "https://web.whatsapp.com/favicon.ico",
+      "local": true,
+      "resourceType": "Other"
+    }
+  ]
+}

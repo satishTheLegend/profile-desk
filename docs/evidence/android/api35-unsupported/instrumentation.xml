@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="1" errors="0" skipped="0" time="0.962" timestamp="2026-10-17T21:28:07" hostname="localhost">
+  <testsuite name="dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest" tests="1" failures="1" errors="0" skipped="0" time="0.459" timestamp="2026-10-17T21:28:07" hostname="localhost">
+    <properties>
+      <property name="device" value="profile_desk_qa_api35(AVD) - 15" />
+      <property name="flavor" value="" />
+      <property name="project" value=":session_engine" />
+    </properties>
+    <testcase name="tenProfilesRetainSeparateSameOriginMarkersAndMiddleWipe" classname="dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest" time="0.459">
+      <failure>java.lang.AssertionError: Provider lacks DELETE_BROWSING_DATA
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.assertTrue(Assert.java:42)
+at dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest.tenProfilesRetainSeparateSameOriginMarkersAndMiddleWipe$lambda$0(ProfileIsolationInstrumentedTest.kt:71)
+at dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest$$ExternalSyntheticLambda0.invoke(D8$$SyntheticClass:0)
+at dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest.main$lambda$0(ProfileIsolationInstrumentedTest.kt:30)
+at dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest$$ExternalSyntheticLambda5.run(D8$$SyntheticClass:0)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at android.app.Instrumentation$SyncRunnable.run(Instrumentation.java:2612)
+at android.os.Handler.handleCallback(Handler.java:959)
+at android.os.Handler.dispatchMessage(Handler.java:100)
+at android.os.Looper.loopOnce(Looper.java:232)
+at android.os.Looper.loop(Looper.java:317)
+at android.app.ActivityThread.main(ActivityThread.java:8705)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

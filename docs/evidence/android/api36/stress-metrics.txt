@@ -1,0 +1,14 @@
+10-18 03:41:08.831  4914  4930 I ProfileDeskEvidence: renderer_termination=owned_failure_view_disposed_reopen_and_six_store_retention_pass
+10-18 03:41:15.845  4914  4930 I ProfileDeskEvidence: broadcast_channel=same_profile_delivery_and_cross_profile_isolation_pass
+10-18 03:43:26.743  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=20/200
+10-18 03:44:22.198  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=40/200
+10-18 03:45:19.012  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=60/200
+10-18 03:46:17.143  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=80/200
+10-18 03:47:09.113  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=100/200
+10-18 03:48:05.375  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=120/200
+10-18 03:49:02.620  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=140/200
+10-18 03:49:59.242  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=160/200
+10-18 03:50:54.345  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=180/200
+10-18 03:51:50.144  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=200/200
+10-18 03:51:50.165  4914  4930 I ProfileDeskEvidence: synthetic_switches=200 p95_navigation_and_six_store_verification_ms=3187 first_pss_kb=99778 final_pss_kb=102950
+10-18 03:52:17.348  4914  4930 I ProfileDeskEvidence: shared_worker=unavailable_on_this_webview_provider;isolation_not_claimed

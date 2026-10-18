@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+* { box-sizing:border-box; }
+html, body { margin:0; height:100%; font:16px system-ui; color:#15231e; }
+#workspace { position:relative; display:flex; width:980px; min-width:980px; height:100%; }
+nav { display:flex; flex-direction:column; flex:0 0 56px; width:56px; height:100%; background:#e0e9e2; }
+nav button { width:48px; height:48px; margin:4px; }
+#side { display:flex; flex-direction:column; flex:0 0 360px; width:360px; height:100%; background:#f8faf8; }
+#side header { padding:16px; height:110px; }
+#side input { width:100%; font:inherit; }
+#pane-side { overflow-y:auto; min-height:0; flex:1; }
+[role=row], [role=listitem] { display:flex; align-items:center; justify-content:space-between; min-height:72px; padding:16px; border-bottom:1px solid #dae3db; cursor:pointer; }
+#main { display:flex; flex-direction:column; flex:1; min-width:560px; height:100%; background:#eaf0e8; }
+#main header { height:64px; padding:20px; background:#fff; }
+#conversation { flex:1; min-height:0; overflow:auto; padding:20px; }
+#composer { display:block; min-height:60px; margin:12px; padding:12px; background:#fff; font:inherit; }
+[role=dialog] { position:fixed; top:100px; left:16px; width:340px; padding:24px; background:#fff; border:2px solid #21675e; z-index:99; }
+[role=menu] { position:absolute; top:72px; left:80px; width:220px; padding:12px; background:white; z-index:10; }
+[hidden] { display:none !important; }
+</style></head><body>
+<div id="workspace">
+  <nav aria-label="Workspace menu"><button id="settings">Menu</button><button id="dialog-button">Info</button></nav>
+  <section id="side"><header><strong>Fixture chats</strong><input id="search" placeholder="Search fixture"></header>
+    <div id="pane-side" role="list"><div role="row" id="row-a"><span>Fixture account A</span><button id="row-action">More</button></div><div role="listitem" id="row-b"><span>Fixture account B</span></div></div>
+  </section>
+  <main id="main"><header>Owned fixture conversation</header><div id="conversation"><p>This is synthetic content, never a real conversation.</p></div><div id="composer" contenteditable="true" role="textbox" aria-label="Compose fixture"></div></main>
+</div>
+<div id="fixture-dialog" role="dialog" aria-modal="true" hidden>Owned overlay <button id="close-dialog">Close</button></div>
+<script>
+window.fixtureSelected = 0;
+for (const row of document.querySelectorAll('#pane-side [role=row], #pane-side [role=listitem]')) {
+  row.addEventListener('click', (event) => {
+    if (event.target.closest('button')) return;
+    window.fixtureSelected += 1;
+  });
+}
+function menu() {
+  const existing = document.querySelector('[role=menu]');
+  if (existing) { existing.remove(); return; }
+  const panel = document.createElement('div');
+  panel.setAttribute('role', 'menu');
+  const item = document.createElement('button');
+  item.setAttribute('role', 'menuitem');
+  item.id = 'menu-item'; item.textContent = 'Fixture option';
+  item.onclick = () => {
+    panel.remove();
+    const list = document.querySelector('#pane-side');
+    const settings = document.createElement('section');
+    settings.id = 'fixture-settings';
+    settings.style.overflowY = 'auto';
+    const back = document.createElement('button');
+    back.id = 'settings-back'; back.textContent = 'Back to fixture chats';
+    back.style.minHeight = '48px';
+    back.onclick = () => { settings.replaceWith(list); };
+    const image = document.createElement('img');
+    image.id = 'settings-image'; image.width = 640; image.height = 240;
+    image.src = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240"><rect width="640" height="240" fill="#c4daca"/></svg>');
+    image.alt = 'Owned fixture geometric image';
+    settings.append(back, image); list.replaceWith(settings);
+  };
+  panel.appendChild(item); document.querySelector('#side').appendChild(panel);
+}
+document.querySelector('#settings').onclick = menu;
+document.querySelector('#row-action').onclick = menu;
+document.querySelector('#dialog-button').onclick = () => { document.querySelector('#fixture-dialog').hidden = false; };
+document.querySelector('#close-dialog').onclick = () => { document.querySelector('#fixture-dialog').hidden = true; };
+</script></body></html>

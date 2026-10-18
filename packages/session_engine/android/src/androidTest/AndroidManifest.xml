@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application android:networkSecurityConfig="@xml/profiledesk_test_network_security" android:usesCleartextTraffic="false">
+        <activity android:name="dev.profiledesk.session_engine.SyntheticHostActivity" android:exported="false" />
+    </application>
+</manifest>

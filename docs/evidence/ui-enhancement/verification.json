@@ -1,0 +1,47 @@
+{
+  "checked_at": "2026-10-18T10:14:44.886336+00:00",
+  "scope": "Flutter shell UI and motion enhancement",
+  "repository_checks": "PASS",
+  "dart_tests": {
+    "session_contract": 25,
+    "local_registry": 18,
+    "mobile": 26,
+    "total": 69
+  },
+  "python_tests": 49,
+  "shell_capture_scenarios": 15,
+  "motion_capture": {
+    "frames": 30,
+    "seconds": 2,
+    "distinct_frames": 18
+  },
+  "ios": {
+    "configuration": "Release-development",
+    "version": "0.1.0",
+    "build": 3,
+    "signed": true,
+    "install": "PASS_INSTALLED_AND_FOREGROUND_LAUNCHED",
+    "previous_successfully_installed_build": 3,
+    "prior_install_attempt": {
+      "status": "BLOCKED_DEVICE_UNAVAILABLE",
+      "error": "CoreDeviceError4016"
+    },
+    "deployment_evidence": "physical-development-install-build3.json"
+  },
+  "android": {
+    "configuration": "development release",
+    "version": "0.1.0",
+    "build": 3,
+    "unsigned_verified": true
+  },
+  "production_source_inputs_unchanged_across_builds": 72,
+  "physical_service_validation": "not performed; prior gaps remain open",
+  "review_fixes": [
+    "Standard touch density and48px header selector",
+    "Material settings surface preserves ink feedback",
+    "Tablet footer selector uses safe default position",
+    "Large text/short-height selector scrolls header and Add action with accounts",
+    "Landscape workspace introduction uses compact row",
+    "Test-only full body font supplies arrow glyphs; app body font unchanged"
+  ]
+}

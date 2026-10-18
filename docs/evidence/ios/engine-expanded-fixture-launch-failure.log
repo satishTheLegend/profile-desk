@@ -1,0 +1,7 @@
+An error was encountered processing the command (domain=NSPOSIXErrorDomain, code=3):
+Simulator device failed to launch dev.profiledesk.engine-regression.
+No such process
+Underlying error (domain=NSPOSIXErrorDomain, code=3):
+	Application launch for 'dev.profiledesk.engine-regression' did not return a process handle nor launch error.
+	No such process
+iOS engine regression evidence: /Users/LOCAL_USER/Repos/webwhatsapp/build/ios-engine-20261017T232041Z

@@ -1,0 +1,365 @@
+{
+  "@@locale": "en",
+  "allProfileSlotsAreInUse": "All 10 profile slots are in use. Remove a local profile before adding another.",
+  "chooseADifferentNameThatAccount": "Choose a different name. That account label is already in use.",
+  "useANameBetweenAndCharacters": "Use a name between 1 and 40 characters.",
+  "thisBrowserProviderDoesNotSupport": "This browser provider does not support isolated profiles and cleanup. Check compatibility details.",
+  "unlockProfileDeskBeforeOpeningAn": "Unlock Profile Desk before opening an account.",
+  "finishOrCancelTheOpenFile": "Finish or cancel the open file picker before switching accounts.",
+  "thisProfileSStorageIsUnavailable": "This profile’s storage is unavailable. Review the account and relink when ready.",
+  "localAccessIsBlockedCleanupIs": "Local access is blocked. Cleanup is still pending; retry it in account management.",
+  "setUpDeviceAuthenticationInSystem": "Set up device authentication in system settings, then try again.",
+  "theOperationDidNotFinishIn": "The operation did not finish in time. Its result is uncertain; refresh account management before trying again.",
+  "thisActionCouldNotFinishYour": "This action could not finish. Your other profiles are preserved. Try again or check compatibility details.",
+  "cancel": "Cancel",
+  "beforeYouSwitch": "Before you switch",
+  "switchingClosesTheCurrentWebPage": "Switching closes the current web page. Unsent drafts, scroll position and ongoing page activity may be lost. Finish any message or file action first.",
+  "switchAccount": "Switch account",
+  "aFileActionIsOpen": "A file action is open",
+  "cancelTheCurrentFileActionBefore": "Cancel the current file action before switching. The file will not be delivered to the next account.",
+  "cancelFileAndSwitch": "Cancel file and switch",
+  "privacyAppearance": "Privacy & appearance",
+  "localAccessYourControl": "Local access.\nYour control.",
+  "anyoneWhoCanUnlockThisApp": "Anyone who can unlock this app can access every saved profile. Device authentication protects access to the app; it does not create separate identities for each account.",
+  "requireDeviceAuthentication": "Require device authentication",
+  "lockWhenTheAppLeavesThe": "Lock when the app leaves the foreground.",
+  "setUpSupportedAuthenticationInDevice": "Set up supported authentication in device settings first.",
+  "appearance": "Appearance",
+  "deviceSetting": "Device setting",
+  "light": "Light",
+  "dark": "Dark",
+  "whatStaysOnThisDevice": "What stays on this device",
+  "profileNamesPreferencesAndBrowserSessions": "Profile names, preferences and browser sessions are stored locally. You can explicitly export account names and appearance as a setup file. There is no app-owned messaging server or chat backup. The embedded website communicates with its service providers.",
+  "backgroundProtection": "Background protection",
+  "aNativePrivacyCoverHidesAccount": "A native privacy cover hides account content when the app leaves the foreground. This is not a promise that screenshots or recordings can always be prevented.",
+  "permissionsAndFiles": "Permissions and files",
+  "fileAccessIsRequestedWhenYou": "File access is requested when you choose a file. Camera and microphone actions stay unavailable until their actual flows are validated. Files you explicitly save or share elsewhere are not removed when a profile is deleted.",
+  "reviewAndShareSafeDiagnostics": "Review and share safe diagnostics",
+  "diagnosticsContainTechnicalVersionsCapabilityFlags": "Diagnostics contain technical versions, capability flags and error categories. They exclude account names, messages, phone numbers, QR values and attachment paths.",
+  "yourAccountsAreLocked": "Your accounts are locked",
+  "useDeviceAuthenticationToReturnTo": "Use device authentication to return to your workspace.",
+  "authenticationDidNotCompleteYourAccounts": "Authentication did not complete. Your accounts remain covered.",
+  "authenticationIsUnavailableCheckDeviceSettings": "Authentication is unavailable. Check device settings and try again.",
+  "authenticating": "Authenticating…",
+  "unlock": "Unlock",
+  "profileDesk": "Profile Desk",
+  "selectAccountValue": "Select account. {value1}",
+  "@selectAccountValue": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "yourAccounts": "Your accounts",
+  "lockApp": "Lock app",
+  "appMenu": "App menu",
+  "reloadThisAccount": "Reload this account?",
+  "reloadingClosesTheCurrentPageAnd": "Reloading closes the current page and can lose unsent drafts. If a previous send is uncertain, check its status on the official page before sending again.",
+  "reload": "Reload",
+  "manageAccounts": "Manage accounts",
+  "reloadSelectedPage": "Reload selected page",
+  "helpCompatibility": "Help & compatibility",
+  "couldnTStartTheSessionEngine": "Couldn’t start the session engine",
+  "tryAgain": "Try again",
+  "thisBrowserNeedsAnUpdate": "This browser needs an update",
+  "isolatedProfilesAndScopedCleanupAre": "Isolated profiles and scoped cleanup are required on this device. Existing profiles remain protected.",
+  "compatibilityDetails": "Compatibility details",
+  "thisAccountNeedsAttention": "This account needs attention",
+  "anEarlierOperationIsStillBeing": "An earlier operation is still being reconciled. Keep this account covered until it finishes, or restart the app.",
+  "thePageCouldNotFinishOpening": "The page could not finish opening. Check the connection, then retry. Other saved accounts are preserved.",
+  "retryThisAccount": "Retry this account",
+  "openingValue": "Opening {value1}",
+  "@openingValue": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "preparingThisAccountSSeparateBrowser": "Preparing this account’s separate browser session.",
+  "linkWithYourPrimaryPhoneThen": "Link with your primary phone, then check the account shown.",
+  "details": "Details",
+  "addAccount": "Add account",
+  "yourAccountsKeptSeparate": "Your accounts,\nkept separate.",
+  "aQuietWorkspaceForUpTo": "A quiet workspace for up to ten separately linked accounts. Choose one at a time from the selector above.",
+  "separateSessions": "Separate sessions",
+  "eachProfileHasItsOwnPersistent": "Each profile has its own persistent browser storage on this device.",
+  "linkWithYourPrimaryPhone": "Link with your primary phone",
+  "accountOwnersApproveLinkingInThe": "Account owners approve linking in the official WhatsApp app. A separate device is normally needed to scan the QR.",
+  "oneAccountOpenAtATime": "One account open at a time",
+  "inactiveAccountsAreNotMonitoredSwitching": "Inactive accounts are not monitored. Switching may lose drafts or other temporary page activity.",
+  "setUpYourWorkspace": "Set up your workspace",
+  "independentCompanionPrototypeEmbeddedServiceCompatibility": "Independent companion prototype. Embedded service compatibility and distribution permission are being validated. Use only accounts you are authorized to access.",
+  "aPlaceForEveryAccount": "A place for every account",
+  "chooseYourWorkspace": "Choose your workspace",
+  "startWithOneAccountGiveIt": "Start with one account. Give it a name, then link it using the official page. You can add up to ten separate profiles.",
+  "yourSavedProfilesAreReadyTo": "Your saved profiles are ready to select. Each opens in its own browser context.",
+  "linkYourFirstAccount": "Link your first account",
+  "selectAccount": "Select account",
+  "settingUp": "Setting up",
+  "removalPending": "Removal pending",
+  "storageUnavailable": "Storage unavailable",
+  "needsReview": "Needs review",
+  "userConfirmed": "User confirmed",
+  "relinkRequested": "Relink requested",
+  "savedLinkingMayBeNeeded": "Saved · linking may be needed",
+  "addAnAccount": "Add an account",
+  "editAccountLabel": "Edit account label",
+  "giveThisProfileANameYou": "Give this profile a name you will recognize. You’ll link the account on the official website next.",
+  "changingThisLabelKeepsTheSame": "Changing this label keeps the same browser profile and session.",
+  "accountName": "Account name",
+  "forExampleWorkOrPersonal": "For example, Work or Personal",
+  "enterAnAccountName": "Enter an account name.",
+  "useCharactersOrFewer": "Use 40 characters or fewer.",
+  "thatNameIsAlreadyInUse": "That name is already in use.",
+  "profileColor": "Profile color",
+  "colorValue": "Color {value1}",
+  "@colorValue": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "saving": "Saving…",
+  "createAndLinkAccount": "Create and link account",
+  "saveLabel": "Save label",
+  "valueOfAccounts": "{value1} of 10 accounts",
+  "@valueOfAccounts": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "labelsHelpYouFindYourAccounts": "Labels help you find your accounts. Each profile keeps a separate browser session on this device.",
+  "noSavedAccountsYet": "No saved accounts yet.",
+  "retryPendingCleanup": "Retry pending cleanup",
+  "removeAllLocalProfiles": "Remove all local profiles?",
+  "thisBlocksAccessAndRemovesSaved": "This blocks access and removes saved sessions from this installation. It does not remotely unlink devices or remove exported files.",
+  "removeAll": "Remove all",
+  "removeAllLocalProfiles116": "Remove all local profiles",
+  "selected": " · Selected",
+  "editValue": "Edit {value1}",
+  "@editValue": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "moveValueUp": "Move {value1} up",
+  "@moveValueUp": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "moveValueDown": "Move {value1} down",
+  "@moveValueDown": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "open": "Open",
+  "accountRemoved": "Account removed",
+  "thisLocalProfileHasBeenRemoved": "This local profile has been removed.",
+  "accountDetails": "Account details",
+  "localCleanupIsBeingTrackedAccess": "Local cleanup is being tracked. Access stays blocked until the required steps finish.",
+  "replaceUnavailableProfile": "Replace unavailable profile",
+  "createAFreshStoreAfterCleanup": "Create a fresh store after cleanup. An Android installation restored from backup requires a full app-storage reset in system settings.",
+  "replaceValue": "Replace “{value1}”?",
+  "@replaceValue": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "theUnavailableLocalStoreWillBe": "The unavailable local store will be removed before a fresh profile is created. Then approve a new link in the primary app. On Android, an untrusted restored installation requires resetting all app storage in system settings first.",
+  "replaceAndKeepLabel": "Replace and keep label",
+  "pauseAccountSetup": "Pause account setup",
+  "keepTheReservedProfileForLater": "Keep the reserved profile for later or remove this local setup.",
+  "renameOrChangeColor": "Rename or change color",
+  "confirmTheLinkedAccount": "Confirm the linked account",
+  "onlyAfterCheckingTheAccountShown": "Only after checking the account shown on the official page.",
+  "haveYouCheckedTheAccount": "Have you checked the account?",
+  "confirmThatTheOfficialWebsiteShows": "Confirm that the official website shows the account you intend to label “{value1}”. This records your confirmation; the app does not inspect its identity.",
+  "@confirmThatTheOfficialWebsiteShows": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "iCheckedTheAccount": "I checked the account",
+  "openToRelink": "Open to relink",
+  "usesTheExistingProfileWithoutClearing": "Uses the existing profile without clearing other accounts.",
+  "resetLocalPermissions": "Reset local permissions",
+  "removingThisProfileAffectsLocalAccess": "Removing this profile affects local access only. To revoke this device, use Linked devices in the primary WhatsApp app. Files saved elsewhere remain there.",
+  "removeValue": "Remove “{value1}”?",
+  "@removeValue": {
+    "placeholders": {
+      "value1": {
+        "type": "String"
+      }
+    }
+  },
+  "theLocalSessionWillBeBlocked": "The local session will be blocked and removed. Other accounts are preserved. Remote unlinking is a separate action in the primary app.",
+  "removeLocalProfile": "Remove local profile",
+  "pauseThisSetup": "Pause this setup?",
+  "keepForLaterReservesThisAccount": "Keep for later reserves this account slot and its browser data. Remove local setup blocks access and frees the slot only after cleanup succeeds. It does not remotely unlink a device.",
+  "keepForLater": "Keep for later",
+  "removeLocalSetup": "Remove local setup",
+  "linkWithTheOfficialApp": "Link with the official app",
+  "addAndNameAProfileHere": "1. Add and name a profile here.\n2. On the primary phone, open WhatsApp → Linked devices → Link a device.\n3. Scan the QR displayed inside this profile.\n4. Check the account shown on the official page, then confirm its label in account details.",
+  "usingTheSamePhone": "Using the same phone",
+  "youCannotScanAQROn": "You cannot scan a QR on the same screen with that phone’s camera. Use a separate primary device. Phone-number linking is not yet a supported promise in this embedded client. A QR opened in another browser links that browser, not this profile.",
+  "savedDoesNotMeanConnected": "Saved does not mean connected",
+  "onlyTheSelectedAccountHasA": "Only the selected account has a live web view. Inactive profiles are not monitored and do not provide reliable notifications or unread counts. Switching may lose unsent drafts and temporary page activity. Ten slots are this app’s capacity; each account’s linked-device allowance still applies.",
+  "whenSomethingStopsWorking": "When something stops working",
+  "checkYourConnectionAndReloadThe": "Check your connection and reload the affected profile. If a send’s status is uncertain, inspect it on the official page before sending again. A service outage is not a reason to remove all profiles. If storage is lost or the primary phone revokes access, link that profile again.",
+  "removeAccessRemotely": "Remove access remotely",
+  "inThePrimaryWhatsAppAppOpen": "In the primary WhatsApp app, open Linked devices and log out the relevant device. Removing a local profile here does not prove remote unlinking, especially offline. Never send support a QR, pairing code, session export or private conversation.",
+  "officialLinkingHelp": "Official linking help",
+  "officialLinkedDeviceHelp": "Official linked-device help",
+  "officialConnectionHelp": "Official connection help",
+  "thisDevice": "This device",
+  "platform": "Platform",
+  "browserProvider": "Browser provider",
+  "isolatedProfiles": "Isolated profiles",
+  "available": "Available",
+  "unavailable": "Unavailable",
+  "scopedCleanup": "Scoped cleanup",
+  "nativeDownloads": "Native downloads",
+  "availablePathsRequireServiceValidation": "Available paths require service validation",
+  "notSupportedByThisEngine": "Not supported by this engine",
+  "cameraMicrophoneAndCalls": "Camera, microphone and calls",
+  "notEnabled": "Not enabled",
+  "profileDeskIsAnIndependentCompanion": "Profile Desk is an independent companion prototype. Actual embedded WhatsApp compatibility, ten linked accounts, retention and distribution permission remain separate validation gates.",
+  "shareSafeDiagnostics": "Share safe diagnostics",
+  "noAccountSelected": "No account selected",
+  "restoreQuarantined": "This restored installation cannot safely reopen saved sessions. On Android, reset this app’s storage in system settings, then create fresh profiles and link again. Exported files are not removed by this reset.",
+  "openSourceLicenses": "Open-source licenses",
+  "networkOffline": "No network connection. Your saved profiles are kept.",
+  "fileActionInProgress": "File action in progress",
+  "fileProgress": "File transfer: {percent}%",
+  "@fileProgress": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelFileAction": "Cancel file action",
+  "networkPath": "Network path",
+  "networkUnknown": "Not established",
+  "networkDisconnected": "Offline",
+  "networkPathAvailable": "Available. Service connectivity is checked by the page.",
+  "linkingStepCreateProfile": "Add and name a profile here.",
+  "linkingStepOpenDevices": "On the primary phone, open WhatsApp → Linked devices → Link a device.",
+  "linkingStepScanProfile": "Scan the QR displayed inside this profile.",
+  "linkingStepConfirmLabel": "Check the account shown on the official page, then confirm its label in account details.",
+  "workspaceChatsMenu": "Chats & menu",
+  "workspaceOriginalLayout": "Original layout",
+  "workspacePhoneLayout": "Phone layout",
+  "accountSetupBackup": "Account setup backup",
+  "accountSetupHeading": "Take your account setup with you",
+  "accountSetupDisclosure": "Back up account names, colors, order and appearance. Chats and signed-in sessions are not included. Each imported account must be linked again.",
+  "exportAccountSetup": "Export account setup",
+  "importAccountSetup": "Import account setup",
+  "accountSetupExportNote": "Save account names, colors, order and appearance as a readable JSON file. It is not encrypted. Choose a location you trust.",
+  "accountSetupImportNote": "Preview a Profile Desk setup file and add its accounts to this device. Existing accounts stay in place.",
+  "accountSetupChooseFile": "Choose setup file",
+  "accountSetupPreview": "Review accounts to import",
+  "accountSetupSlots": "{count} accounts to add · {free} slots available",
+  "@accountSetupSlots": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      },
+      "free": {
+        "type": "String"
+      }
+    }
+  },
+  "accountSetupName": "Account {number} name",
+  "@accountSetupName": {
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "accountSetupCapacity": "There is not enough room for this file. No accounts will be replaced. Free up slots in Manage accounts, then try again.",
+  "accountSetupEmpty": "This setup file contains no accounts.",
+  "accountSetupApplyAppearance": "Use appearance from this file",
+  "accountSetupKeepLock": "Your device lock and security preferences stay the same.",
+  "accountSetupImportAccounts": "Import accounts",
+  "accountSetupImported": "Added {count} accounts. Open each account and link it with its primary phone.",
+  "@accountSetupImported": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "accountSetupExported": "Account setup file saved. Signed-in sessions were not exported.",
+  "accountSetupInvalidFile": "This is not a supported Profile Desk account setup file. Choose a version 1 setup file with up to ten accounts.",
+  "accountSetupFileTooLarge": "This setup file is too large. Use a Profile Desk setup file smaller than 64 KiB.",
+  "accountSetupFileUnavailable": "The setup file could not be opened or saved. Choose a different location and try again.",
+  "nativeMessagingChats": "Chats",
+  "nativeMessagingSearch": "Search chats",
+  "nativeMessagingRefresh": "Refresh chats",
+  "nativeMessagingOfficial": "Open official interface",
+  "nativeMessagingBack": "Back to chats",
+  "nativeMessagingEmpty": "No chats to show",
+  "nativeMessagingEmptyDetail": "Your available conversations will appear here.",
+  "nativeMessagingNoResults": "No matching chats",
+  "nativeMessagingNoResultsDetail": "Try another name.",
+  "nativeMessagingLoading": "Loading chats…",
+  "nativeMessagingLoadingMessages": "Loading messages…",
+  "nativeMessagingLoadFailed": "Chats could not be loaded",
+  "nativeMessagingMessageFailed": "Messages could not be loaded",
+  "nativeMessagingTryAgain": "Try again",
+  "nativeMessagingLink": "Link your account",
+  "nativeMessagingLinkDetail": "Open the official interface to scan the QR code with your primary phone.",
+  "nativeMessagingLocked": "Your conversation is protected",
+  "nativeMessagingLockedDetail": "Unlock your account to continue.",
+  "nativeMessagingOffline": "You are offline",
+  "nativeMessagingOfflineDetail": "Reconnect, then refresh your chats.",
+  "nativeMessagingUnsupported": "Native chats are unavailable",
+  "nativeMessagingUnsupportedDetail": "Continue in the official interface for this account.",
+  "nativeMessagingMessage": "Message",
+  "nativeMessagingSend": "Send message",
+  "nativeMessagingSending": "Sending…",
+  "nativeMessagingAccepted": "Submitted to WhatsApp. Delivery is not yet confirmed.",
+  "nativeMessagingRejected": "This message was not sent. Your draft is ready to edit or send again.",
+  "nativeMessagingUncertain": "Send status is unknown. Check the official conversation before composing again.",
+  "nativeMessagingClearUncertain": "I checked · clear draft",
+  "nativeMessagingReadOnly": "This conversation is read-only here. Open the official interface for available actions.",
+  "nativeMessagingUnsupportedMessage": "View this content in the official interface",
+  "nativeMessagingHistory": "Load earlier messages",
+  "nativeMessagingHistoryFailed": "Earlier messages could not be loaded.",
+  "nativeMessagingPartialHistory": "Only supported, available messages are shown. Open the official interface for complete conversation features.",
+  "nativeMessagingNoMessages": "No supported messages to show",
+  "nativeMessagingPending": "Pending",
+  "nativeMessagingSent": "Sent",
+  "nativeMessagingDelivered": "Delivered",
+  "nativeMessagingRead": "Read",
+  "nativeMessagingFailed": "Not sent",
+  "nativeMessagingUnread": "Unread messages",
+  "nativeMessagingDraftLimit": "Messages can contain up to 4,096 characters.",
+  "workspacePresentationListShown": "Chat list opened.",
+  "workspacePresentationMenuBackHint": "Use Back inside the open WhatsApp panel to return to chats.",
+  "workspacePresentationDetailUnchanged": "This conversation is still open. Try Original layout to reach its controls.",
+  "workspacePresentationOriginalSelected": "Original layout selected.",
+  "workspacePresentationUnavailable": "Phone layout is unavailable for this page. Use Original layout to continue.",
+  "workspacePresentationCheckFailed": "The page layout could not be checked. Try Original layout.",
+  "workspacePresentationBackCheckFailed": "The page could not be checked. Try Back again.",
+  "workspacePresentationUseOriginal": "Use Original layout"
+}

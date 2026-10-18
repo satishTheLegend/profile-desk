@@ -1,0 +1,32 @@
+{
+  "kind": "single-anonymous-public-code-loader",
+  "endpoint": "https://web.whatsapp.com/static_resources/webworker_v4/rsrc/?worker_module=WAWebBackendWorkerV2Bundle",
+  "postAttempts": 1,
+  "anonymousUserZero": true,
+  "credentialsSent": false,
+  "uaOverridden": false,
+  "clientCodeExecuted": false,
+  "responseRetained": false,
+  "tokensRetained": false,
+  "limitBytes": 33554432,
+  "responseBytes": 6278,
+  "status": "NON_JSON_RESPONSE_STOP",
+  "parameterNames": [
+    "__a",
+    "__ccg",
+    "__comet_req",
+    "__hs",
+    "__hsi",
+    "__req",
+    "__rev",
+    "__s",
+    "__spin_b",
+    "__spin_r",
+    "__spin_t",
+    "__user",
+    "dpr",
+    "jazoest",
+    "lsd"
+  ],
+  "httpStatus": 400
+}

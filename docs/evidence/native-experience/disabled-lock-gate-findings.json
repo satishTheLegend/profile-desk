@@ -1,0 +1,412 @@
+{
+  "status": "NARROWER_CANDIDATE_WITH_EXPLICIT_UNRESOLVED_AUTHORITY",
+  "scope": {
+    "sourceManifest": "source-manifest.json",
+    "fetchEvidence": "lock-pass-fetch.json",
+    "priorLockEvidence": "lock-readiness-findings.json",
+    "additionalRetainedDefinitions": "retained-disabled-lock-gate.json",
+    "verifiedScriptCount": 9,
+    "verifiedScriptBytes": 13751986,
+    "modulesIndexed": 6585,
+    "additionalDownloads": 0,
+    "clientExecution": false,
+    "accountOrDeviceAccess": false
+  },
+  "answer": {
+    "doesDisabledOnlyReduceKnownRace": true,
+    "canBooleanFalseAloneBePositiveEvidence": false,
+    "isExactNumericZeroAStrongerSourceBackedCandidate": true,
+    "isCompleteLiveAuthorityProven": false,
+    "remoteSettingChangeStatus": "Unknown within this bounded corpus; no screen-lock duration remote-sync action or setter caller definition is present. Absence is not proof no remote writer exists."
+  },
+  "facts": [
+    {
+      "id": "boolean-false-is-ambiguous",
+      "detail": "getScreenLockEnabled migrates a legacy preference, calls getUser(SCREEN_LOCK_DURATION_SECONDS), maps null/undefined to zero, parses with radix 10, and returns parsedValue!==0. getUser returns null if getMaybeMePnUser is absent. Base getter also returns missing after malformed JSON is removed.",
+      "evidence": [
+        {
+          "module": "WAWebUserPrefsScreenLock",
+          "path": "modules/WAWebUserPrefsScreenLock.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "d20a89c7cfd60195ef565b693087b7aafc4f0ea60462293353f760c0161179cb",
+          "anchors": [
+            {
+              "term": "function e()",
+              "moduleUTF16Offset": 234
+            },
+            {
+              "term": "function T(e,t)",
+              "moduleUTF16Offset": 4019
+            }
+          ]
+        },
+        {
+          "module": "WAWebUserPrefsStore",
+          "path": "modules/WAWebUserPrefsStore.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "b003f33dc0fd667d68b59d0f31054ab89506dae075bb70e4e0756397e2f38c58",
+          "anchors": [
+            {
+              "term": "n.getUser=function",
+              "moduleUTF16Offset": 1595
+            },
+            {
+              "term": "getMaybeMeDevicePn=function",
+              "moduleUTF16Offset": 430
+            },
+            {
+              "term": "Me has not loaded yet.",
+              "moduleUTF16Offset": 1997
+            }
+          ]
+        },
+        {
+          "module": "WAWebUserPrefsBase",
+          "path": "modules/WAWebUserPrefsBase.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "2fbabd008376191cbb4b5110e53030b08cc78c963e2f99b4751bb2156cfa2e01",
+          "anchors": [
+            {
+              "term": "JSON.parse",
+              "moduleUTF16Offset": 1034
+            },
+            {
+              "term": "a.removeItem(e);return",
+              "moduleUTF16Offset": 1256
+            }
+          ]
+        }
+      ],
+      "implication": "False does not distinguish an explicitly stored disabled value from missing identity, absent preference or parsing recovery. It also accepts zero-prefixed strings through parseInt."
+    },
+    {
+      "id": "strict-zero-narrows-config",
+      "detail": "getScreenLockDurationForLogging returns the actual stored per-user duration without substituting zero; require value===0 as a conservative explicit-disabled test and require getScreenLockEnabled()===false. getScreenLockDurationInSeconds substitutes zero when absent but otherwise returns the stored value unchanged.",
+      "evidence": {
+        "module": "WAWebUserPrefsScreenLock",
+        "path": "modules/WAWebUserPrefsScreenLock.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "d20a89c7cfd60195ef565b693087b7aafc4f0ea60462293353f760c0161179cb",
+        "anchors": [
+          {
+            "term": "function s()",
+            "moduleUTF16Offset": 458
+          },
+          {
+            "term": "function u()",
+            "moduleUTF16Offset": 637
+          },
+          {
+            "term": "function c(e)",
+            "moduleUTF16Offset": 836
+          }
+        ]
+      },
+      "implication": "Do not substitute durationInSeconds as positive explicit-zero evidence. A string value such as \"0\" passes boolean false but is not equal to numeric zero for the auto-lock condition. No runtime behavior was tested."
+    },
+    {
+      "id": "reviewed-auto-lock-path-excluded",
+      "detail": "Stream schedules its inactivity timer only when duration!==0, and the timer callback checks current duration!==0 again before invoking lockScreenAndTriggerUnlockFlow. Exact numeric zero excludes this reviewed automatic transition at the check.",
+      "evidence": {
+        "module": "WAWebStreamModel",
+        "path": "modules/WAWebStreamModel.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4igpM4/y-/l/en_GB-j/MuqONOAKuiW.js",
+        "sourceSHA256": "e4a501dcbc6e2befe325b30838f461f113e1493ddc05248e28acb879d06943ea",
+        "moduleSHA256": "4353cdfb3c5975206b7159911715065bf704f12b74118a061a28091e685bcb26",
+        "anchors": [
+          {
+            "term": "getScreenLockDurationInSeconds()!==0",
+            "moduleUTF16Offset": 2533
+          },
+          {
+            "term": "!e&&t!==0?this.unavailableAutoLockTimer",
+            "moduleUTF16Offset": 5979
+          }
+        ]
+      },
+      "implication": "This meaningfully reduces the earlier relock race for a duration that stays numeric zero. It does not revoke a relock operation that already started or prove all lazy/manual entry paths."
+    },
+    {
+      "id": "startup-unlock-config-branch",
+      "detail": "waNoiseInfo.get enters SCREEN_LOCKED and passcodeUnlockNoiseInfo only when getScreenLockEnabled resolves true. App startup sets screenLocked when configured enabled and the cached passcode key is absent.",
+      "evidence": [
+        {
+          "module": "WAWebUserPrefsInfoStore",
+          "path": "modules/WAWebUserPrefsInfoStore.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "c8453b65928b4dd07822db39fd867661c1a0ec613d3bf70c8408b48a3d041ddd",
+          "anchors": [
+            {
+              "term": "getScreenLockEnabled()",
+              "moduleUTF16Offset": 929
+            },
+            {
+              "term": "SOCKET_STATE.SCREEN_LOCKED",
+              "moduleUTF16Offset": 1064
+            },
+            {
+              "term": "passcodeUnlockNoiseInfo(t)",
+              "moduleUTF16Offset": 1179
+            }
+          ]
+        },
+        {
+          "module": "WAWebApp.react",
+          "path": "modules/WAWebApp.react.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "c64de989de17f8190bc067348cfb8e94a8b6e1687da1396d3a5f2d94082d7c10",
+          "anchors": [
+            {
+              "term": "getScreenLockEnabled()&&",
+              "moduleUTF16Offset": 14995
+            }
+          ]
+        }
+      ],
+      "implication": "The reviewed normal startup passcode branch is disabled by the config predicate. This describes source branching, not a new getter for already mounted screenLocked state."
+    },
+    {
+      "id": "different-storage-readiness-domains",
+      "detail": "The screen-lock duration is a per-user key hashed from the PN identity and stored through UserPrefsStore -> UserPrefsBase -> PermanentStorage. PermanentStorage reads localStorage synchronously and caches it. getAllCriticalDataSynced reads the separate userPrefsIdb cache; ModelStorage.initialize awaits its init. There is no initialPrefsLoaded export or field in the reviewed corpus.",
+      "evidence": [
+        {
+          "module": "WAWebUserPrefsStore",
+          "path": "modules/WAWebUserPrefsStore.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "b003f33dc0fd667d68b59d0f31054ab89506dae075bb70e4e0756397e2f38c58",
+          "anchors": [
+            {
+              "term": "o(\"WAMd5\").md5",
+              "moduleUTF16Offset": 941
+            },
+            {
+              "term": "n.getUser=function",
+              "moduleUTF16Offset": 1595
+            }
+          ]
+        },
+        {
+          "module": "WAWebPermanentStorage",
+          "path": "modules/WAWebPermanentStorage.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "159d53b56fb37f15c0c30b83e7c633a1f91187d0273fdb103550089dcdacf2de",
+          "anchors": [
+            {
+              "term": "this.dataStore={}",
+              "moduleUTF16Offset": 533
+            },
+            {
+              "term": "t.getItem=function",
+              "moduleUTF16Offset": 892
+            }
+          ]
+        },
+        {
+          "module": "WAWebUserPrefsAppStateSync",
+          "path": "modules/WAWebUserPrefsAppStateSync.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "a9d7d8f855ab72bdb0d922dc1857033cf69ec6d7bf8e32a8534155d08cd50506",
+          "anchors": [
+            {
+              "term": "userPrefsIdb.get",
+              "moduleUTF16Offset": 493
+            },
+            {
+              "term": "return e===!0",
+              "moduleUTF16Offset": 574
+            }
+          ]
+        },
+        {
+          "module": "WAWebModelStorage",
+          "path": "modules/WAWebModelStorage.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "bd59550e7102691dc9de8b52ba8700f3c64234234d88a099d6c4652d8ec1218f",
+          "anchors": [
+            {
+              "term": "userPrefsIdb.init()",
+              "moduleUTF16Offset": 455
+            }
+          ]
+        }
+      ],
+      "implication": "Critical-data sync alone cannot establish an explicit lock preference or eliminate a missing-user fallback. Do not invent an initialPrefsLoaded guard. A PN identity existence check may be boolean-only; no identity or preferences dump is needed. The strongest retained-source explicit-value predicate is getScreenLockDurationForLogging()===0 after getMaybeMePnUser()!=null, plus getScreenLockEnabled()===false. Both raw duration and identity stay inside the adapter; only eligibility leaves it. This distinguishes absence because the raw getter does not default."
+    },
+    {
+      "id": "update-coverage-not-complete",
+      "detail": "The setter setScreenLockDurationInSeconds writes the raw supplied value to the per-user preference. UserPrefsStore calls an optional setting-change handler. The handler module provides a single registration slot, not a reviewed multi-listener subscription API. No caller of the screen-lock setter or handler registration is present beyond definitions in these scripts.",
+      "evidence": [
+        {
+          "module": "WAWebUserPrefsScreenLock",
+          "path": "modules/WAWebUserPrefsScreenLock.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "d20a89c7cfd60195ef565b693087b7aafc4f0ea60462293353f760c0161179cb",
+          "anchors": [
+            {
+              "term": "function c(e)",
+              "moduleUTF16Offset": 836
+            }
+          ]
+        },
+        {
+          "module": "WAWebUserPrefsStore",
+          "path": "modules/WAWebUserPrefsStore.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "b003f33dc0fd667d68b59d0f31054ab89506dae075bb70e4e0756397e2f38c58",
+          "anchors": [
+            {
+              "term": "c==null||c(n,r)",
+              "moduleUTF16Offset": 1816
+            }
+          ]
+        },
+        {
+          "module": "WAWebUserPrefsSettingChangeHandler",
+          "path": "modules/WAWebUserPrefsSettingChangeHandler.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4imz-4/yW/l/en_GB-j/T-n5x5PN2o57rZQrzh2svrUQnf22PyoKBSH9dHNYl7qgZJJ4oEKtT5ZLT5t0WATbyDEh28TgjUDfNoww_ZssU3DXNl9ZYyREraxV9wpvQ5rsg59G50LRWEaoggf5ZzSkPy3NAg0zpqMTKfFWUUKocWarAuhRgxME01XdE_23LEffI1_Xv7S174gRZ7QsdNshI4fB_kBG5Pz7vmDjrTXOAFg98MFB7KJoSQKFgmFOYAuspDhlhzZk-PQqXYsbbfC5vFGT0p2_zdZJywGwzJ6fg7q9LM3qoVi9SaU-4ORb_j0YAvs-ocQZHvNqi3_soWikb0pXIL6h44.js",
+          "sourceSHA256": "858562e24c5773832d6b89fd6aad7902f25d44b0b0d0fe188f09efc2f57e39d1",
+          "moduleSHA256": "1bfac6bc2709be6a377c834a5393a4117f69766d14056cf566e61b3fbf23f089",
+          "anchors": [
+            {
+              "term": "function c(e){l=e}",
+              "moduleUTF16Offset": 135
+            },
+            {
+              "term": "registerUserSettingChangeHandler=c",
+              "moduleUTF16Offset": 251
+            }
+          ]
+        }
+      ],
+      "implication": "Do not register a replacement handler as an observer because it can displace official behavior. Missing lazy settings code means the complete configuration mutation and remote-sync paths are not established."
+    },
+    {
+      "id": "cached-setting-cross-context-limit",
+      "detail": "PermanentStorage.getItem normally returns dataStore cache when populated. App storage listener shown here handles app mutex takeover. No reviewed general storage-event invalidation of the lock duration cache was found.",
+      "evidence": [
+        {
+          "module": "WAWebPermanentStorage",
+          "path": "modules/WAWebPermanentStorage.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "159d53b56fb37f15c0c30b83e7c633a1f91187d0273fdb103550089dcdacf2de",
+          "anchors": [
+            {
+              "term": "this.dataStore[t]===void 0||n",
+              "moduleUTF16Offset": 938
+            },
+            {
+              "term": "return this.dataStore[t]",
+              "moduleUTF16Offset": 1093
+            }
+          ]
+        },
+        {
+          "module": "WAWebApp.react",
+          "path": "modules/WAWebApp.react.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "c64de989de17f8190bc067348cfb8e94a8b6e1687da1396d3a5f2d94082d7c10",
+          "anchors": [
+            {
+              "term": "a.add(window,\"storage\"",
+              "moduleUTF16Offset": 14082
+            },
+            {
+              "term": "storagePong(t)",
+              "moduleUTF16Offset": 14142
+            }
+          ]
+        },
+        {
+          "module": "WAWebUserPrefsTabMutex",
+          "path": "modules/WAWebUserPrefsTabMutex.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "a4eb3049b9eb527b3b74b7cdb509b4095fb371b64b34e6f55034d6c9421748c5",
+          "anchors": [
+            {
+              "term": "getPSIgnoringCache",
+              "moduleUTF16Offset": 241
+            }
+          ]
+        }
+      ],
+      "implication": "Single-owner isolated store/no second context matters; repeated calls to the same cached getter do not independently prove freshness against other writers. Do not read arbitrary storage or override official caches to guess freshness."
+    },
+    {
+      "id": "entry-functions-are-not-self-guarded",
+      "detail": "Cmd.openLockScreenModal and LockScreenResolvable.waitForPasscode do not check duration. lockScreenAndTriggerUnlockFlow checks active calls, cached key and comms, but does not first verify duration. Only its Stream caller in this corpus supplies the duration guard. Manual settings/lock components are absent.",
+      "evidence": [
+        {
+          "module": "WAWebCmd",
+          "path": "modules/WAWebCmd.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "cd6438b17b8c4781ea03d18574e204067f077e886e39d49cf190b5fb78fc8592",
+          "anchors": [
+            {
+              "term": "openLockScreenModal",
+              "moduleUTF16Offset": 17981
+            }
+          ]
+        },
+        {
+          "module": "WAWebLockScreenResolver",
+          "path": "modules/WAWebLockScreenResolver.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4igpM4/y-/l/en_GB-j/MuqONOAKuiW.js",
+          "sourceSHA256": "e4a501dcbc6e2befe325b30838f461f113e1493ddc05248e28acb879d06943ea",
+          "moduleSHA256": "97fd2496526bc508665d6083892488ce80ba63fb9a4e390a2db21f32dcb32ac0",
+          "anchors": [
+            {
+              "term": "t.waitForPasscode=function",
+              "moduleUTF16Offset": 468
+            },
+            {
+              "term": "function y()",
+              "moduleUTF16Offset": 1082
+            }
+          ]
+        }
+      ],
+      "implication": "Cannot assert a disabled profile can never enter screen lock through another path, or that a formerly started lock flow is canceled by duration becoming zero."
+    }
+  ],
+  "boundedSearch": {
+    "durationSymbolReferences": [
+      "WAWebUserPrefsKeys",
+      "WAWebUserPrefsScreenLock"
+    ],
+    "lockTransitionReferences": [
+      "WAWebStreamModel",
+      "WAWebLockScreenResolver"
+    ],
+    "openLockCommandReferences": [
+      "WAWebLockScreenResolver",
+      "WAWebCmd"
+    ],
+    "settingHandlerRegistrationReferences": [
+      "WAWebUserPrefsSettingChangeHandler"
+    ],
+    "initialPrefsLoadedSymbolMatches": []
+  },
+  "recommendation": {
+    "candidate": "If root proceeds with a constrained candidate, require actual stored numeric duration===0 AND enabled===false, known identity/main/sync readiness, exclusive official/native interaction, and generation checks immediately before projection and after each await. Enabled, absent, malformed, unknown, changed, failed or navigated state stays on official fallback; enabling/disabling settings must never be performed by the adapter.",
+    "clearBeforeFallback": true,
+    "proofBoundary": "This narrows the reviewed automatic path but is not a complete source proof of current frontend lock authority. Complete setters/manual entry paths, remote updates, pending relock resolution, and fresh cached state remain unresolved. Exclusive UI controls eliminate concurrent manual settings interaction inside ProfileDesk but not unknown background writers or pre-existing operations.",
+    "nextEvidenceIfNeeded": "Review the official lazy settings/lock authority or observe an authoritative current screen lifecycle before calling this gate complete. No additional source retrieval authorized/performed in this pass.",
+    "doNotInfer": "No conclusion here establishes supported session migration or guarantees the native adapter will work live."
+  }
+}

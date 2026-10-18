@@ -1,0 +1,16 @@
+{
+  "assertions" : 60,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 101.68334603309631,
+  "error" : "Error Domain=WKWebSiteDataStore Code=1 \"Data store is in use (by network process)\" UserInfo={NSLocalizedDescription=Data store is in use (by network process)}",
+  "messaging" : {
+    "broadcastChannel" : "PASS",
+    "crossProfileDelivery" : false,
+    "sameProfilePositiveControl" : true,
+    "sharedWorker" : "PASS",
+    "sharedWorkerSupported" : true
+  },
+  "osVersion" : "27.0",
+  "recordedAt" : "2026-10-17T22:09:56Z",
+  "result" : "FAIL"
+}

@@ -1,0 +1,44 @@
+{
+  "started_at_utc": "2026-10-17T23:24:28.484386+00:00",
+  "runner": "design_audit",
+  "context": "synthetic-profile Flutter/native shell smoke; official URL open only; no DOM/QR extraction, accounts, pairing, messages, screenshots or attachments",
+  "command": [
+    "python3",
+    "tests/device_flows/run_shell_integration.py",
+    "-d",
+    "F4D70E75-2232-41BA-8B1D-A1AF47F3E54F"
+  ],
+  "git_head": "44df481c7ae8b0e74f9b0d816e45f5bcc1502e7d",
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+  "os_version": "27.0",
+  "os_build": "24A434",
+  "device_type": "com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro",
+  "simulator_created_by_this_run": true,
+  "fixture_ids": [
+    "dev.profiledesk.shellFixture",
+    "dev.profiledesk.shellFixture.qa"
+  ],
+  "test_exit_code": 0,
+  "status": "PASS_LOCAL",
+  "cleanup": {
+    "fixture_ids_after_runner": [],
+    "fixture_ids_absent_verified": true,
+    "owned_simulator_absent_verified": true
+  },
+  "simulator_udid": "F4D70E75-2232-41BA-8B1D-A1AF47F3E54F",
+  "simulator_name": "ProfileDesk-DesignAudit-Shell-20261017T232428-9ba7d5",
+  "fixture_ids_absent_before": true,
+  "test_started_at_utc": "2026-10-17T23:24:50.398888+00:00",
+  "test_completed_at_utc": "2026-10-17T23:26:18.124814+00:00",
+  "source_snapshot_path": "docs/evidence/design-audit/ios-shell-source-snapshot.json",
+  "source_snapshot_sha256": "1dfac1e15cf11197392f3f04b4db408a6bd8a04ab5b89892bab7c31c35a4c96c",
+  "finished_at_utc": "2026-10-17T23:26:21.893768+00:00",
+  "log_path": "docs/evidence/design-audit/ios-shell-final.log",
+  "log_sha256": "cc4b07886a4cd25432017283189d8e1e8a2fd44f884eefc336996c10e93ad9a8",
+  "source_files_verified_after_run": 198,
+  "changed_source_files_after_run": [],
+  "tests_passed": 1,
+  "xcode_build_seconds": 40.7,
+  "test_reported_seconds": 4,
+  "snapshot_matches_current_source_after_run": true
+}

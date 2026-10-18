@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-18T18:51:22.977320+00:00",
+  "localDate": "2026-10-19",
+  "source": "User-confirmed visible updated report, captured on the authorized iPhone. Only fixed diagnostic values retained.",
+  "labVersion": "0.1.0 (2)",
+  "scanStatus": "inconclusive",
+  "reason": "scanLimit",
+  "progress": {
+    "databasesDiscovered": 11,
+    "databasesStarted": 5,
+    "databasesCompleted": 4,
+    "storesDiscovered": 24,
+    "storesStarted": 20,
+    "storesCompleted": 19,
+    "recordsDiscovered": 2462,
+    "recordsStarted": 2000,
+    "recordsCompleted": 2000
+  },
+  "counts": {
+    "extractableKeys": 0,
+    "nonextractableKeys": 0,
+    "unsupported": 0,
+    "localStorage": 83,
+    "sessionStorage": 2
+  },
+  "keyMetadataSummary": "None observed in the visited portion for algorithms, types or usages.",
+  "nativeReportVisible": true,
+  "screenshotRetained": false,
+  "credentialOrRecordContentsRetained": false,
+  "retentionWithoutRelinkingDirectlyVerified": false,
+  "interpretation": "The pass hit its record ceiling before visiting all discovered databases. Zero key observations do not contradict the earlier two nonextractable occurrences or establish their removal. Linking method, key role, consistent snapshot and restored authentication remain unverified."
+}

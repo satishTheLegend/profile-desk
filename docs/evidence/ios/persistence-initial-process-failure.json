@@ -1,0 +1,11 @@
+{
+  "assertions" : 5,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 10.030862927436829,
+  "error" : "Error Domain=HarnessAssertion Code=1 \"Persistence process_relaunch marker mismatch for profile 1\" UserInfo={NSLocalizedDescription=Persistence process_relaunch marker mismatch for profile 1}",
+  "fixtureTeardown" : "Runner shuts down and deletes its disposable simulator.",
+  "osVersion" : "27.0",
+  "recordedAt" : "2026-10-17T22:36:08Z",
+  "requestedMode" : "--persistence-process",
+  "result" : "FAIL"
+}

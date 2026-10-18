@@ -1,0 +1,2 @@
+Artifact checks: PASS. Report: /Users/LOCAL_USER/Repos/webwhatsapp/build/release-artifact-checks.json
+Signatures intentionally absent; candidate runtime and final signed checks remain separate.

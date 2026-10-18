@@ -1,0 +1,31 @@
+{
+  "recordedAt": "2026-10-18T18:35:08.370904+00:00",
+  "localDate": "2026-10-19",
+  "source": "User-authorized capture of the visible native Session Lab storage-observations report on the previously authorized iPhone.",
+  "bundle": "dev.profiledesk.sessionPortabilityLab",
+  "labVersion": "0.1.0 (1)",
+  "scanStatus": "inconclusive",
+  "reason": "deadline",
+  "counts": {
+    "databases": 4,
+    "stores": 23,
+    "records": 1075,
+    "extractableKeys": 0,
+    "nonextractableKeys": 2,
+    "unsupported": 0,
+    "localStorage": 23,
+    "sessionStorage": 2
+  },
+  "nativeReportVisible": true,
+  "screenshotRetained": false,
+  "credentialOrRecordContentsRetained": false,
+  "scope": "Partial counts only; key observations need not be unique keys. This does not establish which keys are required for login, a complete scan, a portable archive, or restored authentication.",
+  "nextStep": "Review bounded completion and key algorithm/usage diagnostics without exporting or using keys.",
+  "countSemantics": {
+    "databases": "opened, not necessarily completed",
+    "stores": "entered, not necessarily completed",
+    "records": "started before classification; final record may be partial",
+    "keys": "encountered occurrences, not necessarily unique identities",
+    "zeroCounts": "apply only to visited values"
+  }
+}

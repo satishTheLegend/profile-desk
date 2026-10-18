@@ -1,0 +1,25 @@
+{
+  "scope": "Only owned synthetic fixture IDs and exact candidate inspection endpoint on dedicated emulator5582.",
+  "unsigned_apk_sha256": "78ea0bf4aace35a6cef467715777fa84b8e41b56416dbbf6689022706b74aaed",
+  "packages": {
+    "dev.profiledesk.shell_fixture": {
+      "absent": true
+    },
+    "dev.profiledesk.shell_fixture.qa": {
+      "absent": true
+    },
+    "dev.profiledesk.profile_desk": {
+      "absent": true
+    },
+    "dev.profiledesk.session_engine.test": {
+      "absent": true
+    }
+  },
+  "native_test_uninstall": "Success",
+  "candidate_forward_absent": true,
+  "verified_avd": "profile_desk_qa_api36",
+  "shutdown_response": "OK: killing emulator, bye bye\nOK",
+  "emulator_stopped": true,
+  "data_wiped": false,
+  "result": "PASS"
+}

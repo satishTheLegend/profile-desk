@@ -1,0 +1,25 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  petitparser 7.0.2 (7.1.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+6 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing shell_native_test.dart...                             
+No issues found! (ran in 1.8s)
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart
+Running Gradle task 'assembleQaDebug'...                           11.8s
+✓ Built build/app/outputs/flutter-apk/app-qa-debug.apk
+Installing build/app/outputs/flutter-apk/app-qa-debug.apk...        302ms
+00:00 +0: real native engine: cold shell, allocate, open, detach and scoped removal
+00:04 +1: (tearDownAll)
+adb uninstall failed: ProcessException: Process exited abnormally with exit code 1:
+Failure [DELETE_FAILED_INTERNAL_ERROR]
+  Command: /Users/LOCAL_USER/Library/Android/sdk/platform-tools/adb -s emulator-5582 uninstall dev.profiledesk.shell_fixture
+00:04 +1: All tests passed!
+Verified disposable shell fixture identities are absent; the test may install/remove only those fixture identities.
+Verified both disposable fixture identities absent after cleanup.

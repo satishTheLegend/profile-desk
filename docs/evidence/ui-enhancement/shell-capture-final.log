@@ -1,0 +1,30 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  petitparser 7.0.2 (7.1.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+6 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/tests/release_assets/capture_shell.dart
+00:00 +0: (setUpAll)
+00:00 +0: render fictional welcome shell preview (variant: TargetPlatform.linux)
+00:00 +1: render fictional accounts shell preview (variant: TargetPlatform.linux)
+00:01 +2: render fictional selector shell preview (variant: TargetPlatform.linux)
+00:01 +3: render fictional privacy shell preview (variant: TargetPlatform.linux)
+00:01 +4: render fictional lock shell preview (variant: TargetPlatform.linux)
+00:01 +5: render fictional workspace shell preview (variant: TargetPlatform.linux)
+00:01 +6: render fictional help shell preview (variant: TargetPlatform.linux)
+00:01 +7: render fictional details shell preview (variant: TargetPlatform.linux)
+00:01 +8: render fictional accounts-dark shell preview (variant: TargetPlatform.linux)
+00:01 +9: render fictional accounts-tablet shell preview (variant: TargetPlatform.linux)
+00:02 +10: render fictional welcome-narrow shell preview (variant: TargetPlatform.linux)
+00:02 +11: render fictional privacy-large-text shell preview (variant: TargetPlatform.linux)
+00:02 +12: render fictional lock-reduced shell preview (variant: TargetPlatform.linux)
+00:02 +13: render fictional workspace-landscape shell preview (variant: TargetPlatform.linux)
+00:02 +14: render fictional selector-large-text shell preview (variant: TargetPlatform.linux)
+00:02 +15: (tearDownAll)
+00:02 +15: All tests passed!

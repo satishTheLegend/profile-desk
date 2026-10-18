@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-18T10:11:44.963940+00:00",
+  "version": "0.1.0",
+  "build": "3",
+  "bundle": "dev.profiledesk.profileDesk.development",
+  "minimum_os": "17.0",
+  "configuration": "Release-development",
+  "signature_verified": true,
+  "development_profile_covers_authorized_device": true,
+  "profile_expires": "2027-10-11T15:16:04",
+  "AOT_present": true,
+  "three_original_animations_match_sources": true,
+  "font_license_bundled": true,
+  "known_fixture_marker_scan": "PASS (bounded check, not an arbitrary-code absence proof)",
+  "source_inputs_unchanged": 72,
+  "ipa": "artifacts/ui-motion-20261018/ProfileDesk-Development-0.1.0-3.ipa",
+  "ipa_sha256": "9dc7e6ec6d29ba94f1f9bc1e5196ebcc27f7496f3ff14d8c98313730fe809e1f",
+  "install_status": "INSTALLED_AND_FOREGROUND_LAUNCHED: development0.1.0build3, in-place update frombuild2",
+  "device_connection": {
+    "paired": true,
+    "developer_mode": "enabled",
+    "tunnel": "connected",
+    "ddi_services_available": true
+  },
+  "previous_install_status": "NOT INSTALLED: authorized iPhone unavailable; install attempt failed with CoreDeviceError4016 before installation",
+  "deployment_evidence": "docs/evidence/ui-enhancement/physical-development-install-build3.json"
+}

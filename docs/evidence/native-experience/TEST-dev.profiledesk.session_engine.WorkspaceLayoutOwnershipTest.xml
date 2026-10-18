@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:33:38.757Z" hostname="LOCAL_HOST" time="2.156">
+  <properties/>
+  <testcase name="repeatedModeCommandsKeepTheInstalledAdapterAndListReturnDismissesFocus" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.01"/>
+  <testcase name="presentationCannotRegainOwnershipAfterLockUnlockRoundTrip" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.01"/>
+  <testcase name="presentationDiscardsReplyAfterModeRevisionOrAttachmentChanges" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.01"/>
+  <testcase name="presentationTimeoutReturnsUnavailableAndIgnoresLateCallback" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="2.032"/>
+  <testcase name="presentationCannotRegainOwnershipAfterBackgroundRoundTripWithoutAppLock" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.019"/>
+  <testcase name="presentationCannotRegainOwnershipAfterNavigationReturnsToTrustedOrigin" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.016"/>
+  <testcase name="presentationDiscardsReplyAfterViewOwnershipChanges" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.009"/>
+  <testcase name="currentTrustedAttachedViewAcceptsOnlyTypedCommands" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.007"/>
+  <testcase name="staleHandleCannotChangeNewerViewsMode" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.007"/>
+  <testcase name="presentationRejectsStaleLockedBackgroundUntrustedAndDetachedBeforeEvaluation" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.006"/>
+  <testcase name="lockBackgroundUntrustedNavigationAndDetachedHostRejectCommands" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.006"/>
+  <testcase name="presentationReturnsOnlyExactAllowlistedJsonStrings" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.012"/>
+  <testcase name="presentationDiscardsReplyAfterLockOrNavigationChanges" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

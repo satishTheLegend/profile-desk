@@ -1,0 +1,19 @@
+{
+  "assertions" : 13,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 8.1073009967803955,
+  "fixtureTeardown" : "Runner shuts down and deletes its disposable simulator.",
+  "messaging" : {
+    "broadcastChannel" : "PASS",
+    "crossProfileDelivery" : false,
+    "sameProfilePositiveControl" : true,
+    "sharedWorker" : "PASS",
+    "sharedWorkerSupported" : true
+  },
+  "mode" : "messaging",
+  "osVersion" : "27.0",
+  "profiles" : 2,
+  "recordedAt" : "2026-10-17T22:28:42Z",
+  "result" : "PASS",
+  "testOnlyMessagingViews" : 2
+}

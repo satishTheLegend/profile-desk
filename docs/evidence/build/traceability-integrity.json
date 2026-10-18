@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "requirements": 374,
+  "acceptance_scenarios": 70,
+  "source_id_text_sha256": "080d02ca81dc81d368b177facbe7680be0d86035dd1a4e5338f5f59e6db08533",
+  "all_cells_nonempty": true,
+  "source_scope": "374 original ID/source/requirement tuples preserved; 70 original scenario IDs retained"
+}

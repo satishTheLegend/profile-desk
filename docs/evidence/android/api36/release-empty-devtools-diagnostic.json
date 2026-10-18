@@ -1,0 +1,117 @@
+{
+  "scope": "Empty locally test-signed optimized candidate only; no profile created.",
+  "signed_sha256": "3ce29070bfe07c07cf44e4bdda4ebe556b7801a624e5e003fc2362283697aae9",
+  "steps": [
+    {
+      "command": [
+        "shell",
+        "pm",
+        "list",
+        "packages",
+        "dev.profiledesk.profile_desk"
+      ],
+      "elapsed_seconds": 0.136,
+      "exit": 0
+    },
+    {
+      "command": [
+        "install",
+        "build/android-production-smoke/production-local-test-signed.apk"
+      ],
+      "elapsed_seconds": 0.962,
+      "exit": 0
+    },
+    {
+      "command": [
+        "shell",
+        "am",
+        "start",
+        "-W",
+        "-n",
+        "dev.profiledesk.profile_desk/.MainActivity"
+      ],
+      "elapsed_seconds": 9.228,
+      "exit": 0
+    },
+    {
+      "command": [
+        "shell",
+        "pidof",
+        "dev.profiledesk.profile_desk"
+      ],
+      "elapsed_seconds": 0.976,
+      "exit": 0
+    },
+    {
+      "command": [
+        "shell",
+        "cat",
+        "/proc/net/unix"
+      ],
+      "elapsed_seconds": 0.357,
+      "exit": 0
+    },
+    {
+      "command": [
+        "forward",
+        "tcp:0",
+        "localabstract:webview_devtools_remote_4862"
+      ],
+      "elapsed_seconds": 0.027,
+      "exit": 0
+    },
+    {
+      "http": "json/version",
+      "elapsed_seconds": 0.215
+    },
+    {
+      "http": "json/list",
+      "elapsed_seconds": 0.007
+    },
+    {
+      "command": [
+        "shell",
+        "pidof",
+        "dev.profiledesk.profile_desk"
+      ],
+      "elapsed_seconds": 0.307,
+      "exit": 0
+    },
+    {
+      "command": [
+        "forward",
+        "--remove",
+        "tcp:52301"
+      ],
+      "elapsed_seconds": 0.023,
+      "exit": 0
+    },
+    {
+      "command": [
+        "uninstall",
+        "dev.profiledesk.profile_desk"
+      ],
+      "elapsed_seconds": 1.187,
+      "exit": 0
+    }
+  ],
+  "launch": "Starting: Intent { cmp=dev.profiledesk.profile_desk/.MainActivity }\nStatus: ok\nLaunchState: COLD\nActivity: dev.profiledesk.profile_desk/.MainActivity\nTotalTime: 8713\nWaitTime: 8870\nComplete",
+  "pid": "4862",
+  "exact_socket_present": true,
+  "candidate_substring_matches": [
+    "@webview_devtools_remote_4862"
+  ],
+  "json/version": {
+    "Android-Package": "dev.profiledesk.profile_desk",
+    "Browser": "Chrome/133.0.6943.137",
+    "Protocol-Version": "1.3",
+    "User-Agent": "Mozilla/5.0 (Linux; Android 16; sdk_gphone64_arm64 Build/BE2A.250530.026.F3; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/133.0.6943.137 Mobile Safari/537.36",
+    "V8-Version": "13.3.415.23",
+    "WebKit-Version": "537.36 (@49ec12cc413ffec766028509968b31d7d65fa0b7)",
+    "webSocketDebuggerUrl": "ws://127.0.0.1:52301/devtools/browser"
+  },
+  "json/list": [],
+  "alive_at_end": true,
+  "result": "OBSERVED",
+  "owned_installation_removed": true
+}

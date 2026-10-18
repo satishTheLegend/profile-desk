@@ -1,0 +1,33 @@
+{
+  "archiveBytesPersisted" : false,
+  "assertions" : 3,
+  "checks" : [
+    {
+      "name" : "Probe completed without an unexpected failure",
+      "pass" : false
+    },
+    {
+      "name" : "Owned synthetic named store removed",
+      "pass" : false
+    },
+    {
+      "name" : "Owned synthetic named store removed",
+      "pass" : true
+    }
+  ],
+  "conclusion" : "LocalStorage plus separately copied cookies is incomplete browser-state migration. This is not a working signed-in session backup.",
+  "durationSeconds" : 15.974260926246643,
+  "keyBytesExported" : false,
+  "observations" : [
+    {
+      "errorCode" : 1,
+      "errorDomain" : "ProbeNavigationTimeout",
+      "phase" : "unexpectedFailure"
+    }
+  ],
+  "osVersion" : "26.5",
+  "productionImplementation" : false,
+  "recordedAt" : "2026-10-18T18:05:12Z",
+  "result" : "FAIL",
+  "scope" : "Synthetic owned localhost HTTPS data on disposable iOS simulator; no WhatsApp data or actual linked-session restore."
+}

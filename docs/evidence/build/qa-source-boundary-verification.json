@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "production_ios_plugins": [
+    "session_engine"
+  ],
+  "isolated_qa_ios_plugins": [
+    "integration_test",
+    "session_engine"
+  ],
+  "production_pubspec_sha256": "c02538f2a5ca5eb5f5f72c13fbd735aa86390fbf4036886b72e49b007c2c4342",
+  "production_lock_sha256": "76407d98625feeba035c0f635118260521ac3401101f63f342d3a0bc429333d5",
+  "fixture_lock_sha256": "3c5116bf4ca8de667d242198d6a2ee0964fe41890eb67e135a402cffd7a4ddb0",
+  "qa_pubspec_difference": "only integration_test SDK dev dependency",
+  "qa_lock_matches_fixture": true,
+  "device_launched": false
+}

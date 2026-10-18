@@ -1,0 +1,55 @@
+{
+  "context": "Initial integrated iOS26.5 QA simulator launch before WebKit bootstrap fix",
+  "exception": {
+    "codes": "0x0000000000000001, 0x0000000000000040",
+    "rawCodes": [
+      1,
+      64
+    ],
+    "type": "EXC_BAD_ACCESS",
+    "signal": "SIGSEGV",
+    "subtype": "KERN_INVALID_ADDRESS at 0x0000000000000040"
+  },
+  "termination": {
+    "flags": 0,
+    "code": 11,
+    "namespace": "SIGNAL",
+    "indicator": "Segmentation fault: 11",
+    "byProc": "exc handler",
+    "byPid": 18006
+  },
+  "frames": [
+    {
+      "symbol": "os_unfair_lock_lock",
+      "symbolLocation": 12
+    },
+    {
+      "symbol": "WTF::RunLoop::dispatch(WTF::Function<void ()>&&)",
+      "symbolLocation": 40
+    },
+    {
+      "symbol": "WTF::Detail::CallableWrapper<WebKit::WebsiteDataStore::fetchAllDataStoreIdentifiers(WTF::CompletionHandler<void (WTF::Vector<WTF::UUID, 0ul, WTF::CrashOnOverflow, 16ul, WTF::FastMalloc>&&)>&&)::$_0, void>::call()",
+      "symbolLocation": 312
+    },
+    {
+      "symbol": "void WTF::dispatchWorkItem<WTF::(anonymous namespace)::DispatchWorkItem>(void*)",
+      "symbolLocation": 32
+    },
+    {
+      "symbol": "_dispatch_client_callout",
+      "symbolLocation": 12
+    },
+    {
+      "symbol": "_dispatch_lane_serial_drain",
+      "symbolLocation": 984
+    },
+    {
+      "symbol": "_dispatch_lane_invoke",
+      "symbolLocation": 396
+    },
+    {
+      "symbol": "_dispatch_root_queue_drain_deferred_wlh",
+      "symbolLocation": 288
+    }
+  ]
+}

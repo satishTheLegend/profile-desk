@@ -1,0 +1,13 @@
+name: local_registry
+description: Account use cases over the single native transactional registry.
+version: 0.1.0
+publish_to: none
+environment:
+  sdk: ^3.13.0
+dependencies:
+  session_contract:
+    path: ../session_contract
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "productionFilesScanned": 82,
+  "productionMarkerIssues": 0,
+  "positiveControlDetectsActualLab": true,
+  "scope": "Known fixture-marker exclusion only, not arbitrary code absence or runtime verification."
+}

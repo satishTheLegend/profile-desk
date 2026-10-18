@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="0" errors="0" skipped="0" time="58.359" timestamp="2026-10-17T21:38:47" hostname="localhost">
+  <testsuite name="dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest" tests="1" failures="0" errors="0" skipped="0" time="57.818" timestamp="2026-10-17T21:38:47" hostname="localhost">
+    <properties>
+      <property name="device" value="profile_desk_qa_api36(AVD) - 16" />
+      <property name="flavor" value="" />
+      <property name="project" value=":session_engine" />
+    </properties>
+    <testcase name="tenProfilesRetainSeparateSameOriginMarkersAndMiddleWipe" classname="dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest" time="57.818" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-18T10:13:29.209554+00:00",
+  "bundle": "dev.profiledesk.profile_desk.dev",
+  "version": "0.1.0",
+  "build": "3",
+  "minimum_sdk": 29,
+  "target_sdk": 36,
+  "debuggable": false,
+  "signed": false,
+  "signature_verifier_output": "DOES NOT VERIFY\nERROR: Missing META-INF/MANIFEST.MF",
+  "AOT_present": true,
+  "three_original_animations_match_sources": true,
+  "font_license_bundled": true,
+  "known_fixture_marker_scan": "PASS (bounded check)",
+  "source_inputs_unchanged": 72,
+  "apk": "artifacts/ui-motion-20261018/ProfileDesk-Development-0.1.0-3-unsigned.apk",
+  "sha256": "6227aabe093754af55be95230db407c431539a7530fe5321a72c30e2907fbead",
+  "installation": "not attempted; unsigned development release for build validation",
+  "unsigned_verified": true
+}

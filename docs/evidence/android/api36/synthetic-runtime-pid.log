@@ -1,0 +1,687 @@
+--------- beginning of system
+10-18 03:40:58.930  4914  4914 I DisplayManager: Implicitly registering for refresh rate
+--------- beginning of main
+10-18 03:40:59.000  4914  4958 E chromium: [ERROR:simple_version_upgrade.cc(151)] Failed to write a new fake index.
+10-18 03:40:59.001  4914  4971 E chromium: [ERROR:simple_file_enumerator.cc(21)] opendir /data/user/0/dev.profiledesk.session_engine.test/cache/WebView/Default/HTTP Cache/Code Cache/wasm: No such file or directory (2)
+10-18 03:40:59.001  4914  4971 E chromium: [ERROR:simple_index_file.cc(613)] Could not reconstruct index from disk
+10-18 03:40:59.097  4914  4979 I CameraManagerGlobal: Connecting to camera service
+10-18 03:40:59.146  4914  4963 W cr_media: BLUETOOTH_CONNECT permission is missing.
+10-18 03:40:59.148  4914  4963 W cr_media: getBluetoothAdapter() requires BLUETOOTH permission
+10-18 03:40:59.148  4914  4963 W cr_media: registerBluetoothIntentsIfNeeded: Requires BLUETOOTH permission
+10-18 03:40:59.309  4914  4984 W libc    : Access denied finding property "vendor.mesa.log"
+10-18 03:40:59.309  4914  4984 W libc    : Access denied finding property "vendor.mesa.log.file"
+10-18 03:40:59.309  4914  4984 E MESA    : Failed to open rendernode: No such file or directory
+10-18 03:40:59.382  4914  4984 W libc    : Access denied finding property "vendor.mesa.vk.trace.per.submit"
+10-18 03:40:59.382  4914  4984 W libc    : Access denied finding property "vendor.mesa.gallium.print.optio"
+10-18 03:40:59.382  4914  4984 W libc    : Access denied finding property "vendor.mesa.vk.trace.frame"
+10-18 03:40:59.393  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:40:59.395  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:40:59.397  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:40:59.401  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:40:59.401  4914  4984 W libc    : Access denied finding property "vendor.mesa.vk.wsi.headless.swa"
+10-18 03:40:59.407  4914  4984 I EGL_emulation: Opening libGLESv1_CM_emulation.so
+10-18 03:40:59.408  4914  4984 I EGL_emulation: Opening libGLESv2_emulation.so
+10-18 03:40:59.456  4914  4930 I TestRunner: finished: nativeCleanupJournalAcrossProcessRestart(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:40:59.462  4914  4930 I TestRunner: started: rendererTerminationDisposesOwnedViewAndRetainsPersistentStore(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:40:59.504  4914  4984 W chromium: [WARNING:viz_main_impl.cc(85)] VizNullHypothesis is disabled (not a warning)
+10-18 03:40:59.765  4914  4939 W cr_ChildProcessConn: onServiceDisconnected (crash or killed by oom): pid=5021 bindings:WV  
+10-18 03:40:59.859  4914  4914 D androidtc: Initializing SystemTextClassifier, type = System
+10-18 03:41:04.131  4914  5066 D ProfileInstaller: Installing profile for dev.profiledesk.session_engine.test
+10-18 03:41:05.004  4914  4914 D androidtc: Initializing SystemTextClassifier, type = System
+10-18 03:41:06.586  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5041) crash detected (code -1).
+10-18 03:41:08.831  4914  4930 I ProfileDeskEvidence: renderer_termination=owned_failure_view_disposed_reopen_and_six_store_retention_pass
+10-18 03:41:08.893  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5082) crash detected (code -1).
+10-18 03:41:08.933  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:08.933  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:41:08.934  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:41:08.937  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:41:08.975  4914  4930 I TestRunner: finished: rendererTerminationDisposesOwnedViewAndRetainsPersistentStore(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:41:08.978  4914  4930 I TestRunner: started: broadcastChannelHasSameProfileControlAndCrossProfileIsolation(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:41:15.845  4914  4930 I ProfileDeskEvidence: broadcast_channel=same_profile_delivery_and_cross_profile_isolation_pass
+10-18 03:41:15.853  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5108) crash detected (code -1).
+10-18 03:41:15.864  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5133) crash detected (code -1).
+10-18 03:41:15.900  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:15.905  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:41:15.908  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:41:15.954  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:15.955  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:41:15.957  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:41:15.958  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:41:16.008  4914  4930 I TestRunner: finished: broadcastChannelHasSameProfileControlAndCrossProfileIsolation(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:41:16.013  4914  4930 I TestRunner: started: tenProfilesRetainSeparateSameOriginMarkersAndMiddleWipe(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:41:51.272  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5158) crash detected (code -1).
+10-18 03:41:51.960  4914  4921 W ion_engine.test: Suspending all threads took: 13.882ms
+10-18 03:41:55.837  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5184) crash detected (code -1).
+10-18 03:42:00.771  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5210) crash detected (code -1).
+10-18 03:42:05.842  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5246) crash detected (code -1).
+10-18 03:42:10.870  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5272) crash detected (code -1).
+10-18 03:42:16.321  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5298) crash detected (code -1).
+10-18 03:42:32.342  4914  4930 I ion_engine.test: Using smaps_rollup for pss collection
+10-18 03:42:40.280  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5447) crash detected (code -1).
+10-18 03:42:46.110  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5489) crash detected (code -1).
+10-18 03:42:48.875  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5513) crash detected (code -1).
+10-18 03:42:51.443  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5534) crash detected (code -1).
+10-18 03:42:54.028  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5324) crash detected (code -1).
+10-18 03:42:56.647  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5350) crash detected (code -1).
+10-18 03:43:04.990  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5402) crash detected (code -1).
+10-18 03:43:15.585  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5570) crash detected (code -1).
+10-18 03:43:18.199  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5468) crash detected (code -1).
+10-18 03:43:26.743  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=20/200
+10-18 03:43:29.132  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5376) crash detected (code -1).
+10-18 03:43:31.336  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5591) crash detected (code -1).
+10-18 03:43:42.405  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5655) crash detected (code -1).
+10-18 03:44:02.457  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5676) crash detected (code -1).
+10-18 03:44:05.098  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5633) crash detected (code -1).
+10-18 03:44:12.833  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5612) crash detected (code -1).
+10-18 03:44:18.118  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5726) crash detected (code -1).
+10-18 03:44:22.198  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=40/200
+10-18 03:44:28.675  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5747) crash detected (code -1).
+10-18 03:44:40.308  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5701) crash detected (code -1).
+10-18 03:44:49.558  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5426) crash detected (code -1).
+10-18 03:44:52.249  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5789) crash detected (code -1).
+10-18 03:45:12.133  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5894) crash detected (code -1).
+10-18 03:45:18.450  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5831) crash detected (code -1).
+10-18 03:45:19.012  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=60/200
+10-18 03:45:21.532  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5852) crash detected (code -1).
+10-18 03:45:29.564  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5810) crash detected (code -1).
+10-18 03:45:32.233  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5873) crash detected (code -1).
+10-18 03:45:38.000  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5768) crash detected (code -1).
+10-18 03:45:43.771  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5915) crash detected (code -1).
+10-18 03:45:49.013  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5958) crash detected (code -1).
+10-18 03:45:59.441  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5937) crash detected (code -1).
+10-18 03:46:16.428  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6064) crash detected (code -1).
+10-18 03:46:17.143  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=80/200
+10-18 03:46:33.340  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6022) crash detected (code -1).
+10-18 03:46:35.980  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6000) crash detected (code -1).
+10-18 03:46:55.054  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6112) crash detected (code -1).
+10-18 03:46:57.773  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6134) crash detected (code -1).
+10-18 03:47:08.535  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6155) crash detected (code -1).
+10-18 03:47:09.113  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=100/200
+10-18 03:47:16.573  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (5979) crash detected (code -1).
+10-18 03:47:21.061  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6176) crash detected (code -1).
+10-18 03:47:25.348  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6233) crash detected (code -1).
+10-18 03:47:28.382  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6043) crash detected (code -1).
+10-18 03:47:41.795  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6318) crash detected (code -1).
+10-18 03:47:44.400  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6197) crash detected (code -1).
+10-18 03:47:47.296  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6269) crash detected (code -1).
+10-18 03:48:01.393  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6360) crash detected (code -1).
+10-18 03:48:05.375  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=120/200
+10-18 03:48:07.420  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6087) crash detected (code -1).
+10-18 03:48:15.381  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6381) crash detected (code -1).
+10-18 03:48:21.146  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6405) crash detected (code -1).
+10-18 03:48:29.581  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6426) crash detected (code -1).
+10-18 03:48:38.528  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6447) crash detected (code -1).
+10-18 03:49:01.464  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6489) crash detected (code -1).
+10-18 03:49:02.620  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=140/200
+10-18 03:49:04.134  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6512) crash detected (code -1).
+10-18 03:49:06.821  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6297) crash detected (code -1).
+10-18 03:49:32.656  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6554) crash detected (code -1).
+10-18 03:49:42.276  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6617) crash detected (code -1).
+10-18 03:49:53.187  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6533) crash detected (code -1).
+10-18 03:49:59.242  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=160/200
+10-18 03:50:07.273  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6638) crash detected (code -1).
+10-18 03:50:10.296  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6575) crash detected (code -1).
+10-18 03:50:16.024  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6659) crash detected (code -1).
+10-18 03:50:18.689  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6596) crash detected (code -1).
+10-18 03:50:31.941  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6722) crash detected (code -1).
+10-18 03:50:37.733  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6701) crash detected (code -1).
+10-18 03:50:54.276  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6339) crash detected (code -1).
+10-18 03:50:54.345  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=180/200
+10-18 03:50:56.846  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6468) crash detected (code -1).
+10-18 03:51:15.762  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6786) crash detected (code -1).
+10-18 03:51:27.433  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6680) crash detected (code -1).
+10-18 03:51:41.063  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6744) crash detected (code -1).
+10-18 03:51:44.252  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6851) crash detected (code -1).
+10-18 03:51:46.807  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6872) crash detected (code -1).
+10-18 03:51:50.144  4914  4930 I ProfileDeskEvidence: synthetic_switch_progress=200/200
+10-18 03:51:50.165  4914  4930 I ProfileDeskEvidence: synthetic_switches=200 p95_navigation_and_six_store_verification_ms=3187 first_pss_kb=99778 final_pss_kb=102950
+10-18 03:51:53.664  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6935) crash detected (code -1).
+10-18 03:51:53.682  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:51:53.686  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:51:53.688  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:51:53.691  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:51:57.333  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6765) crash detected (code -1).
+10-18 03:52:10.651  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6808) crash detected (code -1).
+10-18 03:52:13.000  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.000  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.001  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.025  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6830) crash detected (code -1).
+10-18 03:52:13.053  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.055  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.057  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.064  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.108  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.109  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.110  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.154  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6893) crash detected (code -1).
+10-18 03:52:13.162  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.163  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.167  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.168  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.201  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6979) crash detected (code -1).
+10-18 03:52:13.222  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.223  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.224  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.225  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.262  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (7004) crash detected (code -1).
+10-18 03:52:13.273  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.273  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.274  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.276  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.325  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.327  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.327  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.328  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.395  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.398  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.400  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.407  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.440  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6914) crash detected (code -1).
+10-18 03:52:13.447  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.448  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.455  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.455  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.482  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (6956) crash detected (code -1).
+10-18 03:52:13.487  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.489  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.491  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.492  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.529  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (7028) crash detected (code -1).
+10-18 03:52:13.537  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.539  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:13.556  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:13.593  4914  4930 I TestRunner: finished: tenProfilesRetainSeparateSameOriginMarkersAndMiddleWipe(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:52:13.598  4914  4930 I TestRunner: started: sharedWorkerHasSameProfileControlAndCrossProfileIsolationWhenSupported(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:52:17.348  4914  4930 I ProfileDeskEvidence: shared_worker=unavailable_on_this_webview_provider;isolation_not_claimed
+10-18 03:52:17.361  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (7059) crash detected (code -1).
+10-18 03:52:17.368  4914  4914 E chromium: [ERROR:aw_browser_terminator.cc(165)] Renderer process (7084) crash detected (code -1).
+10-18 03:52:17.381  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:17.381  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:17.381  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:17.382  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:17.434  4914  5004 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:17.435  4914  5005 E adservices: Failed binding to measurement service: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: Failed to delete measurement API data
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: com.android.adservices.shared.common.exception.ServiceUnavailableException: Service is not available.
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at com.android.adservices.AndroidServiceBinder.getService(AndroidServiceBinder.java:205)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getService(MeasurementCompatibleManager.java:119)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.getServiceWrapper(MeasurementCompatibleManager.java:687)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:532)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementCompatibleManager.deleteRegistrations(MeasurementCompatibleManager.java:581)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at android.adservices.measurement.MeasurementManager.deleteRegistrations(MeasurementManager.java:401)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.uB.b(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:1)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.nB.i(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:103)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.CS.f(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:5)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.Tj.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:106)
+10-18 03:52:17.437  4914  4914 W cr_AttributionManager: 	at WV.wh.run(chromium-TrichromeWebViewGoogle6432.aab-stable-694313732:91)
+10-18 03:52:17.462  4914  4930 E TestRunner: assumption failed: sharedWorkerHasSameProfileControlAndCrossProfileIsolationWhenSupported(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:52:17.463  4914  4930 E TestRunner: ----- begin exception -----
+10-18 03:52:17.463  4914  4930 E TestRunner: org.junit.AssumptionViolatedException: SharedWorker is not exposed by this WebView provider; isolation cannot be established
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.Assume.assumeTrue(Assume.java:68)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest.sharedWorkerHasSameProfileControlAndCrossProfileIsolationWhenSupported$lambda$0(ProfileIsolationInstrumentedTest.kt:117)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest$$ExternalSyntheticLambda9.invoke(D8$$SyntheticClass:0)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest.withConnectivityViews(ProfileIsolationInstrumentedTest.kt:88)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest.sharedWorkerHasSameProfileControlAndCrossProfileIsolationWhenSupported(ProfileIsolationInstrumentedTest.kt:114)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at java.lang.reflect.Method.invoke(Native Method)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:467)
+10-18 03:52:17.463  4914  4930 E TestRunner: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2597)
+10-18 03:52:17.463  4914  4930 E TestRunner: ----- end exception -----
+10-18 03:52:17.465  4914  4930 I TestRunner: finished: sharedWorkerHasSameProfileControlAndCrossProfileIsolationWhenSupported(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:52:17.469  4914  4930 I TestRunner: started: capabilityGateMatchesProviderAndRejectsUnsupportedAllocation(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:52:17.540  4914  4930 I TestRunner: finished: capabilityGateMatchesProviderAndRejectsUnsupportedAllocation(dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest)
+10-18 03:52:17.545  4914  4930 I TestRunner: run finished: 6 tests, 0 failed, 0 ignored

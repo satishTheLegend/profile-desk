@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profiledesk_workspace_protected">Workspace protected</string>
+    <string name="profiledesk_workspace_already_open">A workspace is already open in this application.</string>
+    <string name="profiledesk_unlock_title">Unlock Profile Desk</string>
+    <string name="profiledesk_unlock_subtitle">Use your device authentication</string>
+    <string name="profiledesk_export_diagnostics">Export diagnostics</string>
+</resources>

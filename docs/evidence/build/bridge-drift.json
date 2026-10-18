@@ -1,0 +1,8 @@
+{
+  "pass": true,
+  "sha256": {
+    "packages/session_contract/lib/src/messages.g.dart": "d02f2384fc4d010056578fc6b174be61d14e68cd722fb940292d7837a5bc3a76",
+    "packages/session_engine/android/src/main/kotlin/dev/profiledesk/session_engine/Messages.g.kt": "f49f0872dd510d3fc52d5b6c1f42c11211d4a271363b91f3df3386d30dbc4869",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/Messages.g.swift": "222de9d78a7a45228687373cf8a1f8211e0c9bfe171b2c60a268df458c2ad4e4"
+  }
+}

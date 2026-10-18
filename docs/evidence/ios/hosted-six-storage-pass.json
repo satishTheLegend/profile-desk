@@ -1,0 +1,18 @@
+{
+  "assertions" : 71,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 138.76510095596313,
+  "oneLiveView" : true,
+  "osVersion" : "27.0",
+  "profiles" : 10,
+  "recordedAt" : "2026-10-17T21:37:08Z",
+  "result" : "PASS",
+  "stores" : [
+    "readableCookie",
+    "serverVerifiedHttpOnlyCookie",
+    "localStorage",
+    "indexedDB",
+    "cacheStorage",
+    "serviceWorker"
+  ]
+}

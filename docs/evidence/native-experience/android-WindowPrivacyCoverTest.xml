@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.WindowPrivacyCoverTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:06:31.951Z" hostname="LOCAL_HOST" time="2.684">
+  <properties/>
+  <testcase name="aLockedCoverProvidesUnlockAndCannotDuplicateOrLeakAcrossWindows" classname="dev.profiledesk.session_engine.WindowPrivacyCoverTest" time="1.353"/>
+  <testcase name="coversTheWholeWindowAndRestoresAccessibilityWithoutDart" classname="dev.profiledesk.session_engine.WindowPrivacyCoverTest" time="0.026"/>
+  <testcase name="enginePauseAndLockCoverNativeContentWithoutAnyWebHost" classname="dev.profiledesk.session_engine.WindowPrivacyCoverTest" time="1.128"/>
+  <testcase name="nativeCoverEndsInputAndInterceptsKeysWithoutChangingTheDraft" classname="dev.profiledesk.session_engine.WindowPrivacyCoverTest" time="0.066"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

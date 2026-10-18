@@ -1,0 +1,16 @@
+{
+  "assertions" : 7,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 28.593329071998596,
+  "fixtureTeardown" : "Runner shuts down and deletes its disposable simulator.",
+  "mode" : "persistence",
+  "osVersion" : "27.0",
+  "profiles" : 2,
+  "recordedAt" : "2026-10-17T22:35:54Z",
+  "result" : "PASS",
+  "stage" : "seed",
+  "testIds" : [
+    "IOS-SYNTH-PROCESS-01",
+    "IOS-SYNTH-REBOOT-01"
+  ]
+}

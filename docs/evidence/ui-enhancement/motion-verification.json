@@ -1,0 +1,46 @@
+{
+  "rendered_frame_count": 30,
+  "distinct_rendered_frames": 18,
+  "media": {
+    "profile-desk-motion.mp4": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 480,
+          "r_frame_rate": "15/1",
+          "duration": "2.000000",
+          "nb_read_frames": "30"
+        }
+      ],
+      "format": {
+        "duration": "2.000000",
+        "size": "55090"
+      }
+    },
+    "profile-desk-motion.gif": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 810,
+          "height": 360,
+          "r_frame_rate": "15/1",
+          "duration": "2.000000",
+          "nb_read_frames": "30"
+        }
+      ],
+      "format": {
+        "duration": "2.000000",
+        "size": "142358"
+      }
+    }
+  },
+  "source_sha256": {
+    "tests/release_assets/capture_motion.dart": "c7894144aaf5d2334689508d1b4ab830f5c15baaf28aa04db91926ac03b4f281",
+    "apps/mobile/assets/animations/privacy.json": "3ddd50f26301eec839980dfbe1680c845937a3e2a268651c785a7404316a3a0f",
+    "apps/mobile/assets/animations/opening.json": "fbbfc72e4f82826d19a43aa0dff7a88755a513994ee6f0d61491780614295c96",
+    "apps/mobile/assets/animations/accounts.json": "f3ba41a24ead4e70623d738b781993259f093497e7e8862c1dfdf67dde1a091c"
+  }
+}

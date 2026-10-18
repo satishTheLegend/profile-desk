@@ -1,0 +1,18 @@
+{
+  "scope": "Dedicated emulator-5582 only; no general application logs.",
+  "boot_completed": {
+    "value": "1",
+    "elapsed_seconds": 0.273
+  },
+  "data_filesystem": {
+    "used_percent": 15,
+    "available_kb": 8601212,
+    "elapsed_seconds": 1.172
+  },
+  "adb_get_state": {
+    "value": "device",
+    "elapsed_seconds": 0.128
+  },
+  "candidate_before_check": "Not installed/running",
+  "result": "Responsive at diagnostic time; earlier timeouts do not establish persistent emulator failure."
+}

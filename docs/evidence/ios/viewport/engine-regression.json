@@ -1,0 +1,105 @@
+{
+  "count" : 24,
+  "os" : "27.0",
+  "result" : "PASS",
+  "scope" : "Actual production registration\/detach and picker callbacks; registrar\/presentation doubles; no service account or media delivery.",
+  "tests" : [
+    {
+      "name" : "first engine registers channel and platform view",
+      "pass" : true
+    },
+    {
+      "name" : "plugin publishes instance for Flutter detach callback",
+      "pass" : true
+    },
+    {
+      "name" : "second live engine cannot create another account view owner",
+      "pass" : true
+    },
+    {
+      "name" : "unrelated registrar cannot detach active engine",
+      "pass" : true
+    },
+    {
+      "name" : "owned detach removes old channel handlers",
+      "pass" : true
+    },
+    {
+      "name" : "detached old plugin rejects calls",
+      "pass" : true
+    },
+    {
+      "name" : "detached transfer control rejects stale caller",
+      "pass" : true
+    },
+    {
+      "name" : "detached help request cannot open external UI",
+      "pass" : true
+    },
+    {
+      "name" : "detached capability request rejects stale caller",
+      "pass" : true
+    },
+    {
+      "name" : "new engine registers after old engine detaches",
+      "pass" : true
+    },
+    {
+      "name" : "late old detach cannot clear new engine",
+      "pass" : true
+    },
+    {
+      "name" : "replacement engine detaches cleanly",
+      "pass" : true
+    },
+    {
+      "name" : "old picker cancellation completes exactly once",
+      "pass" : true
+    },
+    {
+      "name" : "stale cancellation cannot cancel replacement owner",
+      "pass" : true
+    },
+    {
+      "name" : "current picker delivers one result",
+      "pass" : true
+    },
+    {
+      "name" : "current result stays in replacement profile staging",
+      "pass" : true
+    },
+    {
+      "name" : "current file bytes preserved",
+      "pass" : true
+    },
+    {
+      "name" : "duplicate current callback cannot complete twice",
+      "pass" : true
+    },
+    {
+      "name" : "old picker cancellation completes exactly once",
+      "pass" : true
+    },
+    {
+      "name" : "stale result cannot complete replacement owner",
+      "pass" : true
+    },
+    {
+      "name" : "current picker delivers one result",
+      "pass" : true
+    },
+    {
+      "name" : "current result stays in replacement profile staging",
+      "pass" : true
+    },
+    {
+      "name" : "current file bytes preserved",
+      "pass" : true
+    },
+    {
+      "name" : "duplicate current callback cannot complete twice",
+      "pass" : true
+    }
+  ],
+  "timestamp" : "2026-10-18T08:10:31Z"
+}

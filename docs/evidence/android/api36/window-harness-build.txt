@@ -1,0 +1,95 @@
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+w: ⚠️ Deprecated 'org.jetbrains.kotlin.android' plugin usage
+The 'org.jetbrains.kotlin.android' plugin in project ':app' is no longer required for Kotlin support since AGP 9.0.
+Solution: Remove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.
+See https://kotl.in/gradle/agp-built-in-kotlin for more details.
+
+
+> Configure project :session_engine
+w: ⚠️ Deprecated 'org.jetbrains.kotlin.android' plugin usage
+The 'org.jetbrains.kotlin.android' plugin in project ':session_engine' is no longer required for Kotlin support since AGP 9.0.
+Solution: Remove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.
+See https://kotl.in/gradle/agp-built-in-kotlin for more details.
+
+
+> Task :session_engine:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :session_engine:preBuild UP-TO-DATE
+> Task :session_engine:preDebugBuild UP-TO-DATE
+> Task :session_engine:generateDebugResources UP-TO-DATE
+> Task :session_engine:packageDebugResources UP-TO-DATE
+> Task :session_engine:processDebugNavigationResources UP-TO-DATE
+> Task :session_engine:parseDebugLocalResources UP-TO-DATE
+> Task :session_engine:generateDebugRFile UP-TO-DATE
+> Task :session_engine:compileDebugKotlin UP-TO-DATE
+> Task :session_engine:javaPreCompileDebug UP-TO-DATE
+> Task :session_engine:compileDebugJavaWithJavac NO-SOURCE
+> Task :session_engine:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :session_engine:preDebugAndroidTestBuild UP-TO-DATE
+> Task :session_engine:generateDebugAndroidTestResources UP-TO-DATE
+> Task :session_engine:packageDebugAndroidTestResources UP-TO-DATE
+> Task :session_engine:processDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :session_engine:parseDebugAndroidTestLocalResources UP-TO-DATE
+> Task :session_engine:generateDebugAndroidTestRFile UP-TO-DATE
+> Task :session_engine:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :session_engine:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :session_engine:generateDebugAssets UP-TO-DATE
+> Task :session_engine:mergeDebugAssets UP-TO-DATE
+> Task :session_engine:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :session_engine:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :session_engine:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :session_engine:desugarDebugAndroidTestFileDependencies UP-TO-DATE
+> Task :session_engine:writeDebugAarMetadata UP-TO-DATE
+> Task :session_engine:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :session_engine:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :session_engine:compileDebugAndroidTestNavigationResources UP-TO-DATE
+> Task :session_engine:mapDebugSourceSetPaths UP-TO-DATE
+> Task :session_engine:compileDebugLibraryResources UP-TO-DATE
+> Task :session_engine:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :session_engine:extractDeepLinksDebug UP-TO-DATE
+> Task :session_engine:processDebugManifest UP-TO-DATE
+> Task :session_engine:processDebugAndroidTestManifest
+> Task :session_engine:processDebugJavaRes UP-TO-DATE
+> Task :session_engine:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :session_engine:mergeExtDexDebugAndroidTest UP-TO-DATE
+> Task :session_engine:bundleLibRuntimeToDirDebug UP-TO-DATE
+> Task :session_engine:mergeDebugJniLibFolders UP-TO-DATE
+> Task :session_engine:mergeDebugNativeLibs NO-SOURCE
+> Task :session_engine:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :session_engine:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :session_engine:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :session_engine:mergeLibDexDebugAndroidTest UP-TO-DATE
+> Task :session_engine:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :session_engine:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :session_engine:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :session_engine:processDebugAndroidTestResources
+> Task :session_engine:compileDebugAndroidTestKotlin
+> Task :session_engine:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :session_engine:dexBuilderDebugAndroidTest
+> Task :session_engine:mergeDebugAndroidTestGlobalSynthetics UP-TO-DATE
+> Task :session_engine:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :session_engine:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :session_engine:mergeProjectDexDebugAndroidTest
+> Task :session_engine:packageDebugAndroidTest
+> Task :session_engine:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :session_engine:assembleDebugAndroidTest
+
+[Incubating] Problems report is available at: file:///Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 1s
+52 actionable tasks: 6 executed, 46 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html

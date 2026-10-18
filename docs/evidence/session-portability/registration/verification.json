@@ -1,0 +1,89 @@
+{
+  "result": "PASS",
+  "assertions": 92,
+  "allChecksTrue": true,
+  "sameMainSwiftAndJSAsFailedDERControl": true,
+  "baseline": {
+    "keychainStatus": -34018,
+    "persistedCryptoKeyError": "DataCloneError"
+  },
+  "standardXcodeControl": {
+    "keychainAddReadDeleteStatuses": [
+      0,
+      0,
+      0
+    ],
+    "aesCTR128CryptoKeyPersists": true,
+    "aesGCM256CryptoKeyPersists": true,
+    "installedExecutableMatchesBuild": true
+  },
+  "processes": [
+    {
+      "phase": "baseline",
+      "processIdentifier": 39201,
+      "openedStoreLabels": [
+        "control"
+      ]
+    },
+    {
+      "phase": "identity",
+      "processIdentifier": 39361,
+      "openedStoreLabels": [
+        "control"
+      ]
+    },
+    {
+      "phase": "migrate",
+      "processIdentifier": 39411,
+      "openedStoreLabels": [
+        "source",
+        "destination",
+        "source"
+      ]
+    },
+    {
+      "phase": "cold-destination",
+      "processIdentifier": 39615,
+      "openedStoreLabels": [
+        "destination"
+      ]
+    },
+    {
+      "phase": "cold-source",
+      "processIdentifier": 39698,
+      "openedStoreLabels": [
+        "source"
+      ]
+    },
+    {
+      "phase": "cleanup",
+      "processIdentifier": 39751,
+      "openedStoreLabels": []
+    }
+  ],
+  "sourceHashesCurrentlyMatch": true,
+  "cleanup": {
+    "serverStopped": true,
+    "simulatorDeleted": true,
+    "temporaryCertificateDeleted": true
+  },
+  "diagnosis": "The prior standalone hand-packaged Simulator configuration caused a fixture-level Keychain/serialization failure. The unchanged Swift and JavaScript assertions pass with a clean ordinary Xcode-built Simulator installation. This run does not isolate which individual packaging/entitlement/cache difference caused the earlier error.",
+  "provenScope": "Two synthetic registration payloads migrate by authorized decrypt-to-memory and rewrap with distinct fresh nonextractable AES-CTR-128 keys in a separate named WKWebsiteDataStore. The destination decrypts the original synthetic identity bytes after full owned Simulator reboot in a fresh process opening only destination. Source envelopes remain unchanged and source survives its cold reopen.",
+  "notProven": [
+    "Complete WhatsApp session coverage",
+    "Service-authorized independent login after restore",
+    "Other key families and records",
+    "Live application lock/readiness gate",
+    "Production import/export",
+    "Physical-device deployment"
+  ],
+  "realServiceAccessed": false,
+  "physicalDeviceTouched": false,
+  "originalWrapperKeysExported": false,
+  "payloadOrKeyBytesInReport": false,
+  "preservedFailedRuns": [
+    "build/session-registration-20261018T194343Z",
+    "build/session-registration-20261018T194918Z",
+    "build/session-registration-20261018T195427Z"
+  ]
+}

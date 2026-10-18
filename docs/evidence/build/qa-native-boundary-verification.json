@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "scope": "Build/configuration and mocked inventory guards only; no device install or invocation",
+  "android_built_application_id": "dev.profiledesk.shell_fixture.qa",
+  "android_failed_build_fallback_namespace": "dev.profiledesk.shell_fixture",
+  "android_activity": "dev.profiledesk.profile_desk.MainActivity",
+  "android_qa_apk_sha256": "9bce38c607567bd848a33f6813bda62a54993f934877aa68b4305b997d9392d9",
+  "ios_effective_qa_bundle_id": "dev.profiledesk.shellFixture.qa",
+  "native_lock_sha256": "9c487eac3a8a80e2963378307366b3d06f7ff91f32af65eaefcdb00be771a48e",
+  "native_lock_no_write_build_pass": true,
+  "original_default_source_hashes_match": true,
+  "device_inventory_guard_tests": 10,
+  "source_marker": "build/qa-shell-workspace/.profiledesk-qa-workspace.json"
+}

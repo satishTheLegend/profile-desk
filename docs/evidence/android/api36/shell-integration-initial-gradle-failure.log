@@ -1,0 +1,93 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  petitparser 7.0.2 (7.1.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+6 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing shell_native_test.dart...                             
+No issues found! (ran in 2.5s)
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart
+Running Gradle task 'assembleQaDebug'...                        
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeQaDebugAssets'.
+> Could not resolve all files for configuration ':app:qaDebugRuntimeClasspath'.
+   > Resolved 'junit:junit:4.12' which is not part of the dependency lock state
+   > Resolved 'androidx.test.espresso:espresso-core:3.3.0' which is not part of the dependency lock state
+   > Resolved 'androidx.test.espresso:espresso-idling-resource:3.3.0' which is not part of the dependency lock state
+   > Resolved 'org.checkerframework:checker-compat-qual:2.5.5' which is not part of the dependency lock state
+   > Did not resolve 'io.flutter:armeabi_v7a_debug:1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded' which is part of the dependency lock state
+   > Resolved 'androidx.test:rules:1.2.0' which is not part of the dependency lock state
+   > Resolved 'com.squareup:javawriter:2.1.1' which is not part of the dependency lock state
+   > Resolved 'com.google.errorprone:error_prone_annotations:2.3.2' which is not part of the dependency lock state
+   > Did not resolve 'io.flutter:x86_64_debug:1.0.0-af7e796e161ae0bb1ff0758c71a7105418bd9ded' which is part of the dependency lock state
+   > Resolved 'com.google.j2objc:j2objc-annotations:1.3' which is not part of the dependency lock state
+   > Resolved 'com.google.guava:failureaccess:1.0.1' which is not part of the dependency lock state
+   > Resolved 'androidx.test:runner:1.3.0' which is not part of the dependency lock state
+   > Resolved 'org.codehaus.mojo:animal-sniffer-annotations:1.18' which is not part of the dependency lock state
+   > Resolved 'org.hamcrest:hamcrest-library:1.3' which is not part of the dependency lock state
+   > Resolved 'javax.inject:javax.inject:1' which is not part of the dependency lock state
+   > Resolved 'com.google.code.findbugs:jsr305:3.0.2' which is not part of the dependency lock state
+   > Resolved 'org.hamcrest:hamcrest-core:1.3' which is not part of the dependency lock state
+   > Resolved 'com.google.guava:guava:28.1-android' which is not part of the dependency lock state
+   > Resolved 'org.hamcrest:hamcrest-integration:1.3' which is not part of the dependency lock state
+   > Resolved 'androidx.test:monitor:1.3.0' which is not part of the dependency lock state
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 7s
+Running Gradle task 'assembleQaDebug'...                            7.7s
+
+┌─ Flutter Fix ─────────────────────────────────────────────────────────────────────────────────┐
+│ You need to update the lockfile, or disable Gradle dependency locking.                        │
+│ To regenerate the lockfiles run: `./gradlew :generateLockfiles` in                            │
+│ /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/android/build.gradle.kts │
+│ To remove dependency locking, remove the `dependencyLocking` from                             │
+│ /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/android/build.gradle.kts │
+└───────────────────────────────────────────────────────────────────────────────────────────────┘
+00:00 +0 -1: loading /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart [E]
+  Failed to load "/Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart": Gradle task assembleQaDebug failed with exit code 1
+  package:flutter_tools/src/base/common.dart 34:3                    throwToolExit
+  package:flutter_tools/src/android/gradle.dart 653:7                AndroidGradleBuilder.buildGradleApp
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/android/gradle.dart 246:5                AndroidGradleBuilder.buildApk
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/android/android_device.dart 571:7        AndroidDevice.startApp
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/integration_test_device.dart 59:39  IntegrationTestTestDevice.start
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/flutter_platform.dart 679:51        FlutterPlatform._startTest.<fn>
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/base/async_guard.dart 108:24             asyncGuard.<fn>
+  
+00:00 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart: loading /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart
+adb uninstall failed: ProcessException: Process exited abnormally with exit code 1:
+Failure [DELETE_FAILED_INTERNAL_ERROR]
+  Command: /Users/LOCAL_USER/Library/Android/sdk/platform-tools/adb -s emulator-5582 uninstall dev.profiledesk.profile_desk
+Traceback (most recent call last):
+  File "/Users/LOCAL_USER/Repos/webwhatsapp/tests/device_flows/run_shell_integration.py", line 123, in <module>
+    main()
+    ~~~~^^
+  File "/Users/LOCAL_USER/Repos/webwhatsapp/tests/device_flows/run_shell_integration.py", line 118, in main
+    subprocess.run(["flutter", "test", "--no-pub", "integration_test/shell_native_test.dart", "--flavor", "qa", "-d", args.device],
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   cwd=app, check=True, timeout=1200)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['flutter', 'test', '--no-pub', 'integration_test/shell_native_test.dart', '--flavor', 'qa', '-d', 'emulator-5582']' returned non-zero exit status 1.

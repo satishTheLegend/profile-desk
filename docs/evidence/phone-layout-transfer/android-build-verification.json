@@ -1,0 +1,86 @@
+{
+  "checked_at": "2026-10-18T15:55:18.637400+00:00",
+  "scope": "Development release build4; artifact metadata/source/resource/known-fixture checks only. No Android installation or physical runtime acceptance.",
+  "helper_sha256": "38987a7d68c72bb97441f8a676b4e2dcef153770b3270e6eede54c581e6537d3",
+  "helper_adaptations": [
+    "Expected package suffix .dev",
+    "Use developmentRelease R8 mapping"
+  ],
+  "verifier_sha256": "54f19be526045d5e68fc7165d3886e247aa5fcd74668cf00a2b86a12f3bf48d2",
+  "source_inputs": {
+    "count_before": 98,
+    "count_after": 98,
+    "changed": [],
+    "unchanged": true
+  },
+  "android": {
+    "artifact": "artifacts/phone-layout-20261018/ProfileDesk-Development-0.1.0-4-unsigned.apk",
+    "sha256": "4cc563ec9b4c8b8bc7d3c6de2baab054d3138329b72616c8f1f7a95eb099eb07",
+    "bytes": 57196105,
+    "package": "dev.profiledesk.profile_desk.dev",
+    "debuggable": false,
+    "allow_backup": false,
+    "cleartext": false,
+    "backup_resources": {
+      "backup_rules": "res/Qq.xml",
+      "data_extraction_rules": "res/4j.xml"
+    },
+    "signature": "unsigned (expected)",
+    "known_fixture_marker_scan": "PASS",
+    "zip_entries_scanned": 95,
+    "dex_test_class_scan": "PASS",
+    "dex_mapping_used": true,
+    "mapping_sha256": "d07eae09e6f6b282f6f311a27c75d557a58bc38433c36f465c9326d4e4e563fe",
+    "aot_library_present": true,
+    "version_code": "4",
+    "version_name": "0.1.0",
+    "minimum_sdk": 29,
+    "target_sdk": 36
+  },
+  "layout_script": {
+    "packaged_path": "assets/workspace_layout.js",
+    "sha256": "0c89a812256b864d032fc58c94e4413a342476ade80a077b35ebe4e25f6f0ecf",
+    "matches_canonical": true
+  },
+  "assets_matching_source": {
+    "assets/animations/accounts.json": "f3ba41a24ead4e70623d738b781993259f093497e7e8862c1dfdf67dde1a091c",
+    "assets/animations/opening.json": "fbbfc72e4f82826d19a43aa0dff7a88755a513994ee6f0d61491780614295c96",
+    "assets/animations/privacy.json": "3ddd50f26301eec839980dfbe1680c845937a3e2a268651c785a7404316a3a0f",
+    "assets/fonts/Manrope-OFL.txt": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+    "assets/fonts/Manrope-Variable.ttf": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+    "assets/icons/LICENSE": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+    "assets/icons/apps.svg": "377356a5484beb20fddbec59fd6b0022b94bf232e1c66957f2238a581a2f07e9",
+    "assets/icons/arrow-down.svg": "34efc2d5737ffa3f29f8056e6d861ea8218d8f40858539a959a9482811f6bd05",
+    "assets/icons/arrow-right.svg": "7e602a26d53e78ceb788f38cb89ec1d1091130c56d7829ca294b7ed0642277c6",
+    "assets/icons/arrow-up.svg": "c0a58436629c59996826b7980b0cbdfff51bfa289eefb2cceee494a964c5105e",
+    "assets/icons/check.svg": "e206067a7d570997b5b3a7d30ab287c0b15a492787649a8b96dff8fad2862fbe",
+    "assets/icons/chevron-down.svg": "5a2e5c2a155ce06264a3f7299073ed636142dfd0b324b747387d9cfbf9fb5e3e",
+    "assets/icons/device-mobile.svg": "2f9d4b1a140f3b9c9057efa5964bc8a7a135ce5d32dfe4752ebdad9d086d5413",
+    "assets/icons/dots-vertical.svg": "7f23a3911c7f4bddfb27c7b181ef0d483c14d3b1d2dea3a81573c2beeb9794d8",
+    "assets/icons/external-link.svg": "95de8d4e3e77d34b39a94e157ff26b5a860015c6ce3056794f63dd3a55805bbc",
+    "assets/icons/file-download.svg": "8ac9b8aab1264f8863020fe1431543333c2f409aa0837059bb048778d35e69e4",
+    "assets/icons/grip-vertical.svg": "d26d200e02c6d18fce0932230220d1988ab2fdea3f99342c7044e05ca34267a6",
+    "assets/icons/help-circle.svg": "c2ceac099c2cc1387661b0ddfb5be7fc8bc062d4b2f18c69ab9f07c7a72c5de9",
+    "assets/icons/lock.svg": "407856048124fdd63239f75a3640ca8f20a9acbc1f49cac9de0bcdb1cb42ec5f",
+    "assets/icons/pencil.svg": "422796681dab2177b958836952b0a581025013a78d8a8c9df9c1af43f62d0e97",
+    "assets/icons/plus.svg": "9cc497d4cc1eb38cf9daae18f41ffdc1a5e2a8431d70247b0854978f303f28d6",
+    "assets/icons/refresh.svg": "9dd8ab8cac268489501cbb0a106d93cc3f367add493d20c47ec1e1d9804c760a",
+    "assets/icons/settings.svg": "ef9cf42d822c00b4fad5bc5eeceddd4e1ec3774bb7ddd09891d0fba274bc3e95",
+    "assets/icons/shield-lock.svg": "9fc37c3b11a297a81371652d89407b2bd19c17dfdffe0ff500d3426d96236d13",
+    "assets/icons/trash.svg": "4b90fa07a6d980736951d9e83b91432972b2bcecf81be4578608a0983f2ebc9d"
+  },
+  "new_fixture_marker_scan": {
+    "result": "PASS",
+    "markers": [
+      "AccountSetupArchiveTest",
+      "AccountSetupImportTest",
+      "AccountSetupLifecycleTest",
+      "ImportAllocationJournalTest",
+      "WorkspaceLayoutOwnershipTest",
+      "profiledesk.setup.fixture",
+      "Synthetic export",
+      "FixtureDocumentProvider"
+    ]
+  },
+  "result": "PASS"
+}

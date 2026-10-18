@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "source_commit": "3cf85e7ea6b79c5ccb533adee217cedce5a38ff5",
+  "artifact_hashes_match": true,
+  "source_snapshot_files_match": 205,
+  "manifest_sha256": "a9e40e399259e374c1c137e52b22792364e917794fd65427d9dcf253d4c993f0",
+  "scope": "Packaged unsigned artifacts match the manifest and current source snapshot; not compiler-input attestation or a signed release."
+}

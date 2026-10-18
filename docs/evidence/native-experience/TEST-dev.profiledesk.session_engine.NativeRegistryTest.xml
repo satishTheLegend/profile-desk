@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.NativeRegistryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:33:38.504Z" hostname="LOCAL_HOST" time="0.054">
+  <properties/>
+  <testcase name="tenReservationsBlockTheEleventhBeforeNativeAllocation" classname="dev.profiledesk.session_engine.NativeRegistryTest" time="0.007"/>
+  <testcase name="aliasesAreUniqueAndRenamePreservesIdentity" classname="dev.profiledesk.session_engine.NativeRegistryTest" time="0.005"/>
+  <testcase name="cleanupForInactiveProfileCannotChangeAnotherProfile" classname="dev.profiledesk.session_engine.NativeRegistryTest" time="0.006"/>
+  <testcase name="tombstonePersistsAndUsesOriginalOperationId" classname="dev.profiledesk.session_engine.NativeRegistryTest" time="0.005"/>
+  <testcase name="capacityReleasesOnlyAfterScopedWipeAndAppCleanup" classname="dev.profiledesk.session_engine.NativeRegistryTest" time="0.008"/>
+  <testcase name="repeatedCleanupBacklogIsBounded" classname="dev.profiledesk.session_engine.NativeRegistryTest" time="0.01"/>
+  <testcase name="cleanupRequiresMatchingTombstoneAndOperation" classname="dev.profiledesk.session_engine.NativeRegistryTest" time="0.006"/>
+  <testcase name="reorderRejectsDuplicateOrIncompleteIdentityLists" classname="dev.profiledesk.session_engine.NativeRegistryTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,58 @@
+{
+  "observedLocalDate": "2026-10-19",
+  "build": "0.1.0 (3)",
+  "source": "User-authorized screenshot of owner-operated native Storage observations report",
+  "status": "inconclusive",
+  "reason": "scanLimit",
+  "databases": {
+    "full": 5,
+    "visited": 8,
+    "inventoried": 7,
+    "discovered": 12
+  },
+  "stores": {
+    "full": 61,
+    "sampled": 3,
+    "skipped": 82,
+    "visited": 64,
+    "inventoried": 64,
+    "discovered": 146
+  },
+  "records": {
+    "completed": 2000,
+    "started": 2000,
+    "countedAtVisits": 5691,
+    "countedInInventory": 5691
+  },
+  "schemaVersionChanges": 0,
+  "countChanges": 0,
+  "inventoryCapped": 1,
+  "readFailures": 0,
+  "extractableKeyObservations": 0,
+  "nonextractableKeyObservations": 2,
+  "unknownTypes": 0,
+  "localStorageEntries": 83,
+  "sessionStorageEntries": 2,
+  "keyAlgorithmCounts": {
+    "AES-CTR": 2
+  },
+  "keyTypeCounts": {
+    "Secret": 2
+  },
+  "permittedUsageCounts": {
+    "Encrypt": 2,
+    "Decrypt": 2
+  },
+  "limits": [
+    "Inventory truncated at 64 stores; 82 discovered stores skipped",
+    "Three visited stores sampled with unread records; 2000-record limit reached",
+    "Counts are observations and may repeat one underlying key",
+    "No authentication role, unique key identity, credential schema, stable snapshot, successful export or restored login established",
+    "Equal inventory/visit counts do not imply unchanged values",
+    "Linking method and retention without relinking were not independently observed"
+  ],
+  "rawScreenshotRetained": false,
+  "recordContentsRetained": false,
+  "keyMaterialRetained": false,
+  "productDeploymentStillHeld": true
+}

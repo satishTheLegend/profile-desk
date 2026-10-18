@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-18T18:31:13.510419+00:00",
+  "localDate": "2026-10-19",
+  "authorization": "User explicitly answered: Install Session Lab for testing.",
+  "scope": "Separate diagnostic app only; the product deployment hold remains.",
+  "bundle": "dev.profiledesk.sessionPortabilityLab",
+  "version": "0.1.0",
+  "build": "1",
+  "installation": "VERIFIED",
+  "automaticLaunch": "BLOCKED_DEVICE_LOCKED",
+  "launchError": {
+    "domain": "com.apple.dt.CoreDeviceError",
+    "code": 10002,
+    "underlyingReason": "Locked"
+  },
+  "profileDeskBefore": {
+    "version": "0.1.0",
+    "build": "4"
+  },
+  "profileDeskAfter": {
+    "version": "0.1.0",
+    "build": "4"
+  },
+  "profileDeskInstalledRecordUnchanged": true,
+  "noUninstallOrResetPerformed": true,
+  "manualLinking": "PENDING_OWNER",
+  "storageReport": "PENDING_OWNER",
+  "authenticatedRestore": "NOT_IMPLEMENTED_OR_VERIFIED",
+  "rawEvidenceDirectory": "artifacts/session-portability-lab-deploy-20261018",
+  "candidateManifestSHA256": "d4ecdc460d1f847357453b3b46f969279827c1a2ff70d13366c849d7ccf5377b",
+  "limits": "Installation does not establish app UI operation, real account compatibility, or authenticated session export/import. No real account contents were inspected."
+}

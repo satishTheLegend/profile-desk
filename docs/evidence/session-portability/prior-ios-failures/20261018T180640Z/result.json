@@ -1,0 +1,46 @@
+{
+  "archiveBytesPersisted" : false,
+  "assertions" : 6,
+  "checks" : [
+    {
+      "name" : "Unsupported-type classifier accepts the known WebKit rejection",
+      "pass" : true
+    },
+    {
+      "name" : "Unsupported-type classifier rejects probe\/runtime failures",
+      "pass" : true
+    },
+    {
+      "name" : "Unsupported-type classifier rejects unrelated WebKit archive failures",
+      "pass" : true
+    },
+    {
+      "name" : "Probe completed without an unexpected failure",
+      "pass" : false
+    },
+    {
+      "name" : "Owned synthetic named store removed",
+      "pass" : true
+    },
+    {
+      "name" : "Owned synthetic named store removed",
+      "pass" : true
+    }
+  ],
+  "conclusion" : "LocalStorage plus separately copied cookies is incomplete browser-state migration. This is not a working signed-in session backup.",
+  "durationSeconds" : 11.762527942657471,
+  "keyBytesExported" : false,
+  "observations" : [
+    {
+      "during" : "seedSyntheticStorage",
+      "errorCode" : 4,
+      "errorDomain" : "WKErrorDomain",
+      "phase" : "unexpectedFailure"
+    }
+  ],
+  "osVersion" : "26.5",
+  "productionImplementation" : false,
+  "recordedAt" : "2026-10-18T18:08:26Z",
+  "result" : "FAIL",
+  "scope" : "Synthetic owned localhost HTTPS data on disposable iOS simulator; no WhatsApp data or actual linked-session restore."
+}

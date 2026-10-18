@@ -1,0 +1,9 @@
+{
+  "scope": "Synthetic test package only; no user application state read.",
+  "provider": "com.google.android.webview 133.0.6943.137",
+  "observation": "Two freshly allocated rows became missing in the next process before any target profile getter. The installation binding passed; no cleanup journal entries existed.",
+  "initial_harness": "Production engine hosted by an unattached FrameLayout, without an Activity/window foreground lifecycle.",
+  "diagnostic": "Synthetic provider directories still existed; provider pref_store timestamp predated allocation. No private provider file was modified.",
+  "correction": "Test-only real Activity/window host, production disposeView and onPause, normal window finish, immediate shell force-stop and new instrumentation process. No sleep or private provider API.",
+  "result": "Real-window process and reboot verification passed. Headless abrupt-exit failure remains preserved; no power-loss or instant active-page crash guarantee."
+}

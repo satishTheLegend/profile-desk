@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-18T15:58:28.755979+00:00",
+  "version": "0.1.0",
+  "build": "4",
+  "configuration": "Release-development",
+  "bundle": "dev.profiledesk.profileDesk.development",
+  "minimum_os": "17.0",
+  "signature_verified": true,
+  "development_profile_covers_authorized_device": true,
+  "profile_expires": "2027-10-11T15:16:04",
+  "AOT_present": true,
+  "layout_resource": "session_engine_session_engine.bundle/workspace_layout.js",
+  "layout_matches_canonical_sha256": "0c89a812256b864d032fc58c94e4413a342476ade80a077b35ebe4e25f6f0ecf",
+  "animation_font_assets_match": true,
+  "font_license_bundled": true,
+  "privacy_manifests": {
+    "Frameworks/Flutter.framework/PrivacyInfo.xcprivacy": "tracking=false",
+    "session_engine_session_engine.bundle/PrivacyInfo.xcprivacy": "tracking=false"
+  },
+  "known_fixture_marker_scan": "PASS; bounded check, not arbitrary-code absence proof",
+  "bundle_files_scanned": 82,
+  "source_inputs_unchanged": 111,
+  "ipa": "artifacts/phone-layout-20261018/ProfileDesk-Development-0.1.0-4.ipa",
+  "ipa_sha256": "11123febaf73157e76fc243adb532b9b1f8cc5ec9b3f46a288273c54d97c48d1",
+  "install_status": "INSTALLED: version independently confirmed; launch blocked by locked device",
+  "deployment_evidence": "physical-development-install-build4.json"
+}

@@ -1,0 +1,9 @@
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_setup_archive_test.dart
+00:00 +0: zero through ten entries roundtrip with only portable fields
+00:00 +1: rejects unsupported, extra, secret and trust fields at every level
+00:00 +2: rejects unbounded, malformed, duplicate, control and invalid typed data
+00:00 +3: unicode scalar length counts emoji correctly and trims names
+00:00 +4: rejects repeated or escaped duplicate keys and deeply nested input
+00:00 +5: service imports fresh unknown profiles, preserving existing records and lock
+00:00 +6: timed out import is reconciled once, never replayed
+00:00 +7: All tests passed!

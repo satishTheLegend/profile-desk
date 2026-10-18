@@ -1,0 +1,98 @@
+{
+  "result": "FAIL",
+  "checks": [
+    {
+      "name": "isolated-world controls are unavailable to website scripts",
+      "pass": true
+    },
+    {
+      "name": "adapter starts without modifying page presentation",
+      "pass": true
+    },
+    {
+      "name": "phone mode starts with list and a valid structural layout",
+      "pass": true
+    },
+    {
+      "name": "375px list preserves 16px text, menu rail, and viewport width",
+      "pass": true
+    },
+    {
+      "name": "conversation is not visible or interactive in initial list",
+      "pass": true
+    },
+    {
+      "name": "width-independent structural probe reports a recognized layout",
+      "pass": true
+    },
+    {
+      "name": "trusted row selection opens full-width detail after service handler",
+      "pass": true
+    },
+    {
+      "name": "detail fills phone and keeps native font size",
+      "pass": true
+    },
+    {
+      "name": "composer remains focusable and editable",
+      "pass": true
+    },
+    {
+      "name": "native Back command restores list",
+      "pass": true
+    },
+    {
+      "name": "reselecting the same existing conversation opens detail again",
+      "pass": true
+    },
+    {
+      "name": "search input keeps list mode",
+      "pass": true
+    },
+    {
+      "name": "row action keeps a usable menu in list mode",
+      "pass": true
+    },
+    {
+      "name": "menu item is not misclassified as chat selection",
+      "pass": true
+    },
+    {
+      "name": "known side replacement retains readable settings and menu rail",
+      "pass": true
+    },
+    {
+      "name": "settings image is constrained to actual available side width",
+      "pass": true
+    },
+    {
+      "name": "repeated phone command preserves known menu state",
+      "pass": true
+    },
+    {
+      "name": "real service Back click restores a recognized chat list",
+      "pass": true
+    },
+    {
+      "name": "generic portal dialog remains above the mobile panes",
+      "pass": true
+    },
+    {
+      "name": "untrusted synthetic clicks never change the presentation pane",
+      "pass": true
+    }
+  ],
+  "error": "AssertionError [ERR_ASSERTION]: a full-row primary button can open the selected conversation",
+  "requests": [
+    {
+      "url": "https://web.whatsapp.com/",
+      "local": true,
+      "resourceType": "Document"
+    },
+    {
+      "url": "https://web.whatsapp.com/favicon.ico",
+      "local": true,
+      "resourceType": "Other"
+    }
+  ]
+}

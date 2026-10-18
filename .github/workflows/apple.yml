@@ -1,0 +1,38 @@
+name: Pinned Apple runner verification
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  apple:
+    # Register an approved isolated runner with this exact tested toolchain.
+    runs-on: [self-hosted, macOS, ARM64, profile-desk-xcode27-1]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: xcodebuild -version | grep -Fx 'Xcode 27.1'
+      - run: flutter --version | grep 'Flutter 3.47.5'
+      - run: ./scripts/bootstrap.sh && ./scripts/check.sh
+      - run: python3 scripts/check_generated.py
+      - run: ./scripts/build_ios.sh qa simulator
+      - run: ./scripts/build_ios.sh production device-unsigned
+      - run: swift test --package-path packages/session_engine/ios/NativeTests --skip NamedStoreTests
+      - run: packages/session_engine/ios/NativeTests/run-native-tests.sh
+      - run: packages/session_engine/ios/NativeTests/run-engine-tests.sh
+      - run: packages/session_engine/ios/NativeTests/run-viewport-tests.sh
+      - run: packages/session_engine/ios/NativeTests/run-storage-harness.sh
+      - name: Real Flutter shell in isolated QA workspace
+        shell: bash
+        run: |
+          set -euo pipefail
+          qa_simulator_id="$(xcrun simctl create 'Profile Desk CI Shell' com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro com.apple.CoreSimulator.SimRuntime.iOS-27-0)"
+          cleanup() {
+            xcrun simctl shutdown "$qa_simulator_id" 2>/dev/null || true
+            xcrun simctl delete "$qa_simulator_id"
+          }
+          trap cleanup EXIT
+          xcrun simctl boot "$qa_simulator_id"
+          python3 - "$qa_simulator_id" <<'PY'
+          import subprocess, sys
+          subprocess.run(['xcrun', 'simctl', 'bootstatus', sys.argv[1], '-b'], check=True, timeout=120)
+          PY
+          python3 tests/device_flows/run_shell_integration.py -d "$qa_simulator_id"

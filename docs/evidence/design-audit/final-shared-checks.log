@@ -1,0 +1,128 @@
+Formatted 32 files (0 changed) in 0.08 seconds.
+Analyzing session_contract...                                   
+No issues found! (ran in 3.1s)
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/coordinator_test.dart
+00:00 +0: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/privacy_races_test.dart: native lock failure remains covered and cannot unlock the Dart shell
+00:00 +1: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/privacy_races_test.dart: late authentication cannot cancel a newer manual lock
+00:00 +2: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/privacy_races_test.dart: timed out reveal is covered again when native completion arrives late
+00:00 +3: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/privacy_races_test.dart: timed out authentication is relocked after a late success
+00:00 +4: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/observations_test.dart: network observations never reveal content or imply authentication
+00:00 +5: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/observations_test.dart: progress belongs to the exact current view and clears after cancellation
+00:00 +6: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +7: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +8: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +9: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +10: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +11: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +12: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +13: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +14: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +15: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +16: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +17: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +18: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +19: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +20: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +21: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +22: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +23: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +24: /Users/LOCAL_USER/Repos/webwhatsapp/packages/session_contract/test/randomized_switches_test.dart: 200 seeded switches retain one live owner despite delayed disposal and stale callbacks
+00:00 +25: All tests passed!
+Analyzing local_registry...                                     
+No issues found! (ran in 1.4s)
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/refresh_races_test.dart
+00:00 +0: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: timed-out allocation is reconciled from its real late result without replay
+00:00 +1: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/replacement_test.dart: unavailable replacement gets new identity and preserves alias only by choice
+00:00 +2: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +3: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +4: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +5: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +6: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/timeout_test.dart: read deadline does not overwrite known metadata or replay reads
+00:00 +7: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/refresh_races_test.dart: add publishes its completed read while a later event read is pending
+00:00 +8: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/refresh_races_test.dart: a failed newer read does not suppress an earlier successful snapshot
+00:00 +9: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/refresh_races_test.dart: late registry reads do not replace newer cache or return unrelated cached data
+00:00 +10: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: validates aliases and leaves authoritative writes to native registry
+00:00 +11: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: simultaneous adds all reach native capacity authority with no phantom rows
+00:00 +12: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: native allocation failure never adds a Dart-only account
+00:00 +13: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: rename reorder and caller mutations preserve immutable backing identities
+00:00 +14: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: capacity is retained until actual wipe leaves only deferred container
+00:00 +15: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: capability loss keeps cleanup pending and later retry changes only target
+00:00 +16: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: removeAll continues independent cleanup and reports partial failure
+00:00 +17: /Users/LOCAL_USER/Repos/webwhatsapp/packages/local_registry/test/account_service_test.dart: confirmation is explicit and relink never replaces or wipes the store
+00:00 +18: All tests passed!
+Analyzing mobile...                                             
+No issues found! (ran in 1.9s)
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart
+00:00 +0: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +1: lock conceals account access and exposes explicit unlock (variant: TargetPlatform.linux)
+00:00 +2: small screen and large text welcome remains scrollable (variant: TargetPlatform.linux)
+00:00 +3: account manager rejects eleventh slot in visible controls (variant: TargetPlatform.linux)
+00:00 +4: partial setup keeps its reserved slot (variant: TargetPlatform.linux)
+00:00 +5: partial setup removes only that profile (variant: TargetPlatform.linux)
+00:00 +6: tablet landscape dark shell has labeled reachable controls (variant: TargetPlatform.linux)
+00:00 +7: All tests passed!
+Analyzing session_engine...                                     
+No issues found! (ran in 1.3s)
+test_assets_have_private_test_headers (test_server.HarnessTests.test_assets_have_private_test_headers) ... ok
+test_assets_never_allow_path_traversal (test_server.HarnessTests.test_assets_never_allow_path_traversal) ... ok
+test_clear_cookie_expires_only_fixture_cookie (test_server.HarnessTests.test_clear_cookie_expires_only_fixture_cookie) ... ok
+test_foreign_origin_cannot_seed_fixture (test_server.HarnessTests.test_foreign_origin_cannot_seed_fixture) ... ok
+test_http_only_cookie_is_synthetic_persistent_and_scoped (test_server.HarnessTests.test_http_only_cookie_is_synthetic_persistent_and_scoped) ... ok
+test_non_synthetic_or_unbounded_input_is_rejected (test_server.HarnessTests.test_non_synthetic_or_unbounded_input_is_rejected) ... ok
+test_only_valid_fixture_cookie_is_reflected (test_server.HarnessTests.test_only_valid_fixture_cookie_is_reflected) ... ok
+test_cache_has_no_server_retained_marker (test_transport.TransportTests.test_cache_has_no_server_retained_marker) ... ok
+test_cache_rejects_query_foreign_origin_and_unbounded_nonce (test_transport.TransportTests.test_cache_rejects_query_foreign_origin_and_unbounded_nonce) ... ok
+test_cache_uses_same_fixed_private_url_without_header_partitioning (test_transport.TransportTests.test_cache_uses_same_fixed_private_url_without_header_partitioning) ... ok
+test_download_upload_roundtrip_is_bounded_and_profile_owned (test_transport.TransportTests.test_download_upload_roundtrip_is_bounded_and_profile_owned) ... ok
+test_file_routes_reject_real_unbounded_and_foreign_inputs (test_transport.TransportTests.test_file_routes_reject_real_unbounded_and_foreign_inputs) ... ok
+test_helper_is_served_no_store_with_indexing_protection (test_transport.TransportTests.test_helper_is_served_no_store_with_indexing_protection) ... ok
+test_separate_transport_page_explicitly_allows_only_same_host_wss (test_transport.TransportTests.test_separate_transport_page_explicitly_allows_only_same_host_wss) ... ok
+test_websocket_identity_and_echo_are_connection_scoped (test_transport.TransportTests.test_websocket_identity_and_echo_are_connection_scoped) ... ok
+test_websocket_rejects_foreign_origin_and_invalid_handshake (test_transport.TransportTests.test_websocket_rejects_foreign_origin_and_invalid_handshake) ... ok
+test_websocket_rejects_unmasked_oversized_and_non_synthetic_payloads (test_transport.TransportTests.test_websocket_rejects_unmasked_oversized_and_non_synthetic_payloads) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 1.041s
+
+OK
+test_android_absent_fixture_is_allowed_on_exact_device (test_shell_runner.DisposableDeviceTests.test_android_absent_fixture_is_allowed_on_exact_device) ... ok
+test_android_failed_build_base_identity_is_protected (test_shell_runner.DisposableDeviceTests.test_android_failed_build_base_identity_is_protected) ... ok
+test_android_inventory_errors_fail_closed (test_shell_runner.DisposableDeviceTests.test_android_inventory_errors_fail_closed) ... ok
+test_android_inventory_matching_is_exact (test_shell_runner.DisposableDeviceTests.test_android_inventory_matching_is_exact) ... ok
+test_android_successful_build_qa_identity_is_protected (test_shell_runner.DisposableDeviceTests.test_android_successful_build_qa_identity_is_protected) ... ok
+test_device_id_must_match_exactly (test_shell_runner.DisposableDeviceTests.test_device_id_must_match_exactly) ... ok
+test_ios_absent_fixture_is_allowed (test_shell_runner.DisposableDeviceTests.test_ios_absent_fixture_is_allowed) ... ok
+test_ios_base_and_qa_identities_are_protected (test_shell_runner.DisposableDeviceTests.test_ios_base_and_qa_identities_are_protected) ... ok
+test_ios_inventory_must_be_dictionary (test_shell_runner.DisposableDeviceTests.test_ios_inventory_must_be_dictionary) ... ok
+test_physical_devices_are_rejected (test_shell_runner.DisposableDeviceTests.test_physical_devices_are_rejected) ... ok
+test_converter_failure_rejects_inventory (test_shell_runner.IOSInventoryParserTests.test_converter_failure_rejects_inventory) ... ok
+test_converter_timeout_rejects_inventory (test_shell_runner.IOSInventoryParserTests.test_converter_timeout_rejects_inventory) ... ok
+test_dictionary_with_non_metadata_value_is_rejected (test_shell_runner.IOSInventoryParserTests.test_dictionary_with_non_metadata_value_is_rejected) ... ok
+test_invalid_converted_output_rejects_inventory (test_shell_runner.IOSInventoryParserTests.test_invalid_converted_output_rejects_inventory) ... ok
+test_oversized_converted_output_rejected (test_shell_runner.IOSInventoryParserTests.test_oversized_converted_output_rejected) ... ok
+test_oversized_input_rejected_without_conversion (test_shell_runner.IOSInventoryParserTests.test_oversized_input_rejected_without_conversion) ... ok
+test_real_openstep_inventory_uses_system_plutil (test_shell_runner.IOSInventoryParserTests.test_real_openstep_inventory_uses_system_plutil) ... ok
+test_xml_and_binary_plists_do_not_require_conversion (test_shell_runner.IOSInventoryParserTests.test_xml_and_binary_plists_do_not_require_conversion) ... ok
+test_already_absent_fixture_is_verified_without_removal (test_shell_runner.OwnedCleanupTests.test_already_absent_fixture_is_verified_without_removal) ... ok
+test_android_removes_only_owned_flavored_fixture (test_shell_runner.OwnedCleanupTests.test_android_removes_only_owned_flavored_fixture) ... ok
+test_android_removes_owned_base_and_flavored_fixture (test_shell_runner.OwnedCleanupTests.test_android_removes_owned_base_and_flavored_fixture) ... ok
+test_cleanup_failure_fails_an_otherwise_passing_run (test_shell_runner.OwnedCleanupTests.test_cleanup_failure_fails_an_otherwise_passing_run) ... ok
+test_failed_removal_reports_failure_after_final_inventory (test_shell_runner.OwnedCleanupTests.test_failed_removal_reports_failure_after_final_inventory) ... ok
+test_ios_removes_only_owned_fixture_on_exact_simulator (test_shell_runner.OwnedCleanupTests.test_ios_removes_only_owned_fixture_on_exact_simulator) ... ok
+test_original_test_failure_survives_additional_cleanup_failure (test_shell_runner.OwnedCleanupTests.test_original_test_failure_survives_additional_cleanup_failure) ... ok
+test_production_identity_can_never_be_claimed_for_cleanup (test_shell_runner.OwnedCleanupTests.test_production_identity_can_never_be_claimed_for_cleanup) ... ok
+test_remaining_owned_identity_fails_cleanup (test_shell_runner.OwnedCleanupTests.test_remaining_owned_identity_fails_cleanup) ... ok
+test_test_failure_still_runs_cleanup (test_shell_runner.OwnedCleanupTests.test_test_failure_still_runs_cleanup) ... ok
+test_absolute_link_into_shared_source_is_rejected (test_shell_runner.SourceSymlinkTests.test_absolute_link_into_shared_source_is_rejected) ... ok
+test_relative_in_tree_source_link_is_preserved (test_shell_runner.SourceSymlinkTests.test_relative_in_tree_source_link_is_preserved) ... ok
+test_relative_link_leaving_original_source_is_rejected (test_shell_runner.SourceSymlinkTests.test_relative_link_leaving_original_source_is_rejected) ... ok
+test_source_in_tree_link_that_escapes_staged_layout_is_rejected (test_shell_runner.SourceSymlinkTests.test_source_in_tree_link_that_escapes_staged_layout_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.014s
+
+OK
+Production source exclusions passed. This is source inspection, not artifact/runtime validation.
+PASS: 374 exact prompt clauses, 70 exact acceptance cases, valid case references and current Markdown view.
+PASS: unchanged Word plan; 337 nonempty paragraphs, 214 data rows and 37 source hyperlinks mapped.
+Coverage verification only; does not certify requirement fulfillment.

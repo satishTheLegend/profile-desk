@@ -1,0 +1,177 @@
+{
+  "status": "DRAFT_FICTIONAL_SHELL_PREVIEWS_NOT_STORE_OR_SERVICE_EVIDENCE",
+  "updated_at": "2026-10-18T10:10:21.678329+00:00",
+  "flutter": "3.47.5",
+  "pixel_ratio": 2,
+  "font_source": "Bundled Manrope headings; local macOS Arial loaded as Roboto in the synthetic renderer for full arrow glyph coverage; Flutter MaterialIcons",
+  "builder": "tests/release_assets/capture_shell.dart",
+  "builder_sha256": "805675942370c777e4f5be590fb80df9cc646b6d3fb43cac602a6cf90312bc0f",
+  "artifacts": [
+    {
+      "file": "accounts-dark.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "cd67ceaebb68ecf5c97fd8653b80f0ec43229c5591b746c3860760cbcd894eef"
+    },
+    {
+      "file": "accounts-tablet.png",
+      "width": 2048,
+      "height": 1536,
+      "logical_viewport": [
+        1024,
+        768
+      ],
+      "sha256": "983c7b666f724aa75d1ab30a5519e9633f62e501dc4d59ac171cd2a91dad8b1a"
+    },
+    {
+      "file": "accounts.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "b429dbcb5abb25fca395e77ad04d4bf028de70af51b0dbe5b3891bd1768a6bf4"
+    },
+    {
+      "file": "details.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "cef7e217dc3700d50cd7cbb5abcbdeb9ef6da2e7c94d5eeeb565fff3c5a5463f"
+    },
+    {
+      "file": "help.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "024e00e79fae80332a38300d17d7dcb6fdafbacc5e07266b24801422e3832904"
+    },
+    {
+      "file": "lock-reduced.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "37b3c5a891f1e47307fd09d3b879c0c756d43bbbf33ea2aeb24e7afc231fa501"
+    },
+    {
+      "file": "lock.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "37b3c5a891f1e47307fd09d3b879c0c756d43bbbf33ea2aeb24e7afc231fa501"
+    },
+    {
+      "file": "privacy-large-text.png",
+      "width": 640,
+      "height": 1136,
+      "logical_viewport": [
+        320,
+        568
+      ],
+      "sha256": "cf9cf25a4a37ea7c25ea613cb69ff13a670b3c02ecee7d96eb22b5c3d3f80852"
+    },
+    {
+      "file": "privacy.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "2c082f5edbd122590a215364b984ac97ae9ac42ad6a65ab35d9105d6cf84445c"
+    },
+    {
+      "file": "selector-large-text.png",
+      "width": 640,
+      "height": 1136,
+      "logical_viewport": [
+        320,
+        568
+      ],
+      "sha256": "2e2c566248e6401ef954f554257f6fca09d8aa4c5bfd9559fb847e208871ecce"
+    },
+    {
+      "file": "selector.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "8a0750439a27ed6dbb17e62f7ecc07f94572c758d1ecaa59cc4a2f26170c83c8"
+    },
+    {
+      "file": "welcome-narrow.png",
+      "width": 640,
+      "height": 1136,
+      "logical_viewport": [
+        320,
+        568
+      ],
+      "sha256": "e106866bd5e8e19953565be2bc3396e355493f6dcd61f09c281f375efd349470"
+    },
+    {
+      "file": "welcome.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "b2aa7c82e7e879305f11531c1881fff9e3ee3dbb8664e1a1ab8d77d2e9af46b4"
+    },
+    {
+      "file": "workspace-landscape.png",
+      "width": 1864,
+      "height": 860,
+      "logical_viewport": [
+        932,
+        430
+      ],
+      "sha256": "a583ba494ff381a4d8e6cb3f8953a63b5546dd1a8bf40091e45789d9339196b2"
+    },
+    {
+      "file": "workspace.png",
+      "width": 860,
+      "height": 1864,
+      "logical_viewport": [
+        430,
+        932
+      ],
+      "sha256": "f1e9dcb5155e2d1f9aab8004885375b1cde1a3cf7cdf1196b836c0560b95fc11"
+    }
+  ],
+  "motion": {
+    "builder": "tests/release_assets/capture_motion.dart",
+    "builder_sha256": "c7894144aaf5d2334689508d1b4ab830f5c15baaf28aa04db91926ac03b4f281",
+    "frames": 30,
+    "seconds": 2,
+    "artifacts": [
+      {
+        "file": "profile-desk-motion.gif",
+        "sha256": "50e0050640ade08a9947838fe8e101c13d867ab9b08466f710c6dcba0101eea9"
+      },
+      {
+        "file": "profile-desk-motion.mp4",
+        "sha256": "ca35c36a8489b9af1b25cc0291131e5424426295beb522477b122089ab3e3cc4"
+      }
+    ]
+  }
+}

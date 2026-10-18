@@ -1,0 +1,9 @@
+{
+  "assertions" : 57,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 67.34760594367981,
+  "error" : "Error Domain=WKWebSiteDataStore Code=1 \"Data store is in use\" UserInfo={NSLocalizedDescription=Data store is in use}",
+  "osVersion" : "27.0",
+  "recordedAt" : "2026-10-17T21:50:08Z",
+  "result" : "FAIL"
+}

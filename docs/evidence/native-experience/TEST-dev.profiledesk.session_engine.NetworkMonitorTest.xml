@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.NetworkMonitorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:33:38.559Z" hostname="LOCAL_HOST" time="0.007">
+  <properties/>
+  <testcase name="captivePathStaysUnknownAndLateLossCannotEraseNewDefault" classname="dev.profiledesk.session_engine.NetworkMonitorTest" time="0.003"/>
+  <testcase name="startupWithoutPathIsOfflineAndRegistrationIsIdempotent" classname="dev.profiledesk.session_engine.NetworkMonitorTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

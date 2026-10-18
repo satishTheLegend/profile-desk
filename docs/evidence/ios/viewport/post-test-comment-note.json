@@ -1,0 +1,7 @@
+{
+  "change": "After the final31-assertion passing run, only two fixture comment lines were clarified: the getter returned an empty string, not a generated UA. Executable lines, assertions and production sources are unchanged.",
+  "tested_fixture_sha256": "97eea9eb11c69a724e0ad9fba59ddd360e58e1fce676b0f09a22076a2f135317",
+  "current_fixture_sha256": "35413a05eec12c8a2c4094275fcb583ddd402ed5b12f3b374b16680a74a2b082",
+  "noncomment_lines_identical": true,
+  "tested_source_snapshot": "final-development-regression.source-snapshot.json"
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-18",
+  "timezone": "Asia/Kolkata",
+  "device_model": "iPhone17ProMax",
+  "device_os": "26.6.2",
+  "result": "INSTALLED_AND_LAUNCHED",
+  "package": {
+    "result": "PASS",
+    "bundle_identifier": "dev.profiledesk.profileDesk.development",
+    "version": "0.1.0",
+    "build": "2",
+    "display_name": "Profile Desk",
+    "minimum_os": "17.0",
+    "configuration": "Release-development",
+    "signature_verified": true,
+    "existing_development_profile_includes_target_device": true,
+    "debugger_entitlement": true,
+    "flutter_aot_present": true,
+    "known_fixture_marker_scan_issues": [],
+    "source_hash_count": 41,
+    "source_hashes_stable_across_build": true,
+    "executable_sha256": "cb355e05411a1d2ceeda7e0a7ee0ff96d378eb451760c1af723586121f42aa3b",
+    "source_snapshot_sha256": "fc4fb828508781e96901b29b0023609c4a4b43b12c2ca6be0b6cf1cf7727d366",
+    "limits": "Bounded package/signature/source checks; not authenticated service verification."
+  },
+  "installed_version": "0.1.0",
+  "installed_build": "2",
+  "foreground_launch_confirmed": true,
+  "process_still_running_at_followup": true,
+  "installation_method": "In-place update of existing development bundle; no uninstall, profile reset, registry edit or migration change.",
+  "temporary_probe_removed_and_absence_verified": true,
+  "viewport_validation": "31 native assertions pass (27 geometry/lifecycle plus4 scoped browser-identity checks), with physical preauthentication comparison recorded separately.",
+  "existing_native_lifecycle_regression": "24 assertions passed on pre-identity final viewport sources.",
+  "browser_identity_scope": "Exact development bundle only; standard Safari-compatible suffix as user approved. Physical probe clears version warning to download landing with Continue in browser.",
+  "limits": [
+    "No account linked; Continue in browser and pairing were not automated.",
+    "No retained QR values, credentials or messages.",
+    "Actual touch pinch with software keyboard, physical rotation, VoiceOver and authenticated chat remain unverified.",
+    "The earlier unsigned production candidate predates this viewport change.",
+    "Device identifiers, signing identity, profile alias and container paths intentionally omitted."
+  ]
+}

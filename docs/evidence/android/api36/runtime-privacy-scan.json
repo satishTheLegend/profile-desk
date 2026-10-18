@@ -1,0 +1,8 @@
+{
+  "context": "Only adb logcat --pid=4914 for dev.profiledesk.session_engine.test during the synthetic six-test suite; no general user logs. Isolated renderer processes are outside this host-PID capture.",
+  "sha256": "e94f44c57bbff520a625b244d132beaf3b1fc31bb9acd2f0e20fda452a9cb3e0",
+  "bytes": 98454,
+  "known_private_synthetic_markers_found": {},
+  "result": "PASS",
+  "limitation": "Absence is scoped to these markers, process and run; this is not a universal no-logging proof."
+}

@@ -1,0 +1,49 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "arm64",
+        "deviceId" : "9283F692-B7EE-4121-BF11-A6FED68D2990",
+        "deviceName" : "ProfileDesk Native Regression",
+        "modelName" : "iPhone 18 Pro",
+        "osBuildNumber" : "24A434",
+        "osVersion" : "27.0",
+        "platform" : "iOS Simulator"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 0,
+      "passedTests" : 28,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "ProfileDeskNative · Built with macOS 27.0.1",
+  "expectedFailures" : 0,
+  "failedTests" : 0,
+  "finishTime" : 1792276049.529,
+  "passedTests" : 28,
+  "result" : "Passed",
+  "runtimeWarnings" : [
+
+  ],
+  "skippedTests" : 0,
+  "startTime" : 1792276027.904,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+
+  ],
+  "title" : "Test - ProfileDeskNative",
+  "topInsights" : [
+    {
+      "category" : "Longest Test Runs",
+      "impact" : "58% of duration",
+      "text" : "1 longest test run with outlier durations exceeding 0.91s (three standard deviations)"
+    }
+  ],
+  "totalTestCount" : 28
+}

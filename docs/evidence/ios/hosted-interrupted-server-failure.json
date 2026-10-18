@@ -1,0 +1,9 @@
+{
+  "assertions" : 14,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 17.895709037780762,
+  "error" : "Error Domain=WKErrorDomain Code=4 \"A JavaScript exception occurred\" UserInfo={WKJavaScriptExceptionLineNumber=0, WKJavaScriptExceptionMessage=TypeError: verify is not a function. (In 'verify()', 'verify' is an instance of HTMLButtonElement), WKJavaScriptExceptionColumnNumber=0, NSLocalizedDescription=A JavaScript exception occurred}",
+  "osVersion" : "27.0",
+  "recordedAt" : "2026-10-17T21:51:40Z",
+  "result" : "FAIL"
+}

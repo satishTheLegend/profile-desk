@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.ImportAllocationJournalTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:33:38.493Z" hostname="LOCAL_HOST" time="0.009">
+  <properties/>
+  <testcase name="failedDeletionRetainsProvenanceAndInvalidIdentifiersCannotAuthorizeDeletion" classname="dev.profiledesk.session_engine.ImportAllocationJournalTest" time="0.005"/>
+  <testcase name="recoveryDeletesOnlyUnassignedJournalOwnedProfilesAndKeepsCommittedProfiles" classname="dev.profiledesk.session_engine.ImportAllocationJournalTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

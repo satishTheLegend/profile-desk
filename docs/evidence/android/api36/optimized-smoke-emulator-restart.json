@@ -1,0 +1,61 @@
+{
+  "result": "BOOTED",
+  "elapsed_seconds": 20.359,
+  "attempts": [
+    {
+      "seconds": 0.012,
+      "value": "",
+      "exit": 1
+    },
+    {
+      "seconds": 0.019,
+      "value": "",
+      "exit": 1
+    },
+    {
+      "seconds": 0.012,
+      "value": "",
+      "exit": 1
+    },
+    {
+      "seconds": 0.011,
+      "value": "",
+      "exit": 1
+    },
+    {
+      "seconds": 0.013,
+      "value": "",
+      "exit": 1
+    },
+    {
+      "seconds": 0.033,
+      "value": "",
+      "exit": 0
+    },
+    {
+      "seconds": 0.024,
+      "value": "",
+      "exit": 0
+    },
+    {
+      "seconds": 0.037,
+      "value": "",
+      "exit": 0
+    },
+    {
+      "seconds": 0.017,
+      "value": "",
+      "exit": 0
+    },
+    {
+      "seconds": 0.049,
+      "value": "",
+      "exit": 0
+    },
+    {
+      "seconds": 0.056,
+      "value": "1",
+      "exit": 0
+    }
+  ]
+}

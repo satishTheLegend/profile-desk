@@ -1,0 +1,37 @@
+test_android_absent_fixture_is_allowed_on_exact_device (test_shell_runner.DisposableDeviceTests.test_android_absent_fixture_is_allowed_on_exact_device) ... ok
+test_android_failed_build_base_identity_is_protected (test_shell_runner.DisposableDeviceTests.test_android_failed_build_base_identity_is_protected) ... ok
+test_android_inventory_errors_fail_closed (test_shell_runner.DisposableDeviceTests.test_android_inventory_errors_fail_closed) ... ok
+test_android_inventory_matching_is_exact (test_shell_runner.DisposableDeviceTests.test_android_inventory_matching_is_exact) ... ok
+test_android_successful_build_qa_identity_is_protected (test_shell_runner.DisposableDeviceTests.test_android_successful_build_qa_identity_is_protected) ... ok
+test_device_id_must_match_exactly (test_shell_runner.DisposableDeviceTests.test_device_id_must_match_exactly) ... ok
+test_ios_absent_fixture_is_allowed (test_shell_runner.DisposableDeviceTests.test_ios_absent_fixture_is_allowed) ... ok
+test_ios_base_and_qa_identities_are_protected (test_shell_runner.DisposableDeviceTests.test_ios_base_and_qa_identities_are_protected) ... ok
+test_ios_inventory_must_be_dictionary (test_shell_runner.DisposableDeviceTests.test_ios_inventory_must_be_dictionary) ... ok
+test_physical_devices_are_rejected (test_shell_runner.DisposableDeviceTests.test_physical_devices_are_rejected) ... ok
+test_converter_failure_rejects_inventory (test_shell_runner.IOSInventoryParserTests.test_converter_failure_rejects_inventory) ... ok
+test_converter_timeout_rejects_inventory (test_shell_runner.IOSInventoryParserTests.test_converter_timeout_rejects_inventory) ... ok
+test_dictionary_with_non_metadata_value_is_rejected (test_shell_runner.IOSInventoryParserTests.test_dictionary_with_non_metadata_value_is_rejected) ... ok
+test_invalid_converted_output_rejects_inventory (test_shell_runner.IOSInventoryParserTests.test_invalid_converted_output_rejects_inventory) ... ok
+test_oversized_converted_output_rejected (test_shell_runner.IOSInventoryParserTests.test_oversized_converted_output_rejected) ... ok
+test_oversized_input_rejected_without_conversion (test_shell_runner.IOSInventoryParserTests.test_oversized_input_rejected_without_conversion) ... ok
+test_real_openstep_inventory_uses_system_plutil (test_shell_runner.IOSInventoryParserTests.test_real_openstep_inventory_uses_system_plutil) ... ok
+test_xml_and_binary_plists_do_not_require_conversion (test_shell_runner.IOSInventoryParserTests.test_xml_and_binary_plists_do_not_require_conversion) ... ok
+test_already_absent_fixture_is_verified_without_removal (test_shell_runner.OwnedCleanupTests.test_already_absent_fixture_is_verified_without_removal) ... ok
+test_android_removes_only_owned_flavored_fixture (test_shell_runner.OwnedCleanupTests.test_android_removes_only_owned_flavored_fixture) ... ok
+test_android_removes_owned_base_and_flavored_fixture (test_shell_runner.OwnedCleanupTests.test_android_removes_owned_base_and_flavored_fixture) ... ok
+test_cleanup_failure_fails_an_otherwise_passing_run (test_shell_runner.OwnedCleanupTests.test_cleanup_failure_fails_an_otherwise_passing_run) ... ok
+test_failed_removal_reports_failure_after_final_inventory (test_shell_runner.OwnedCleanupTests.test_failed_removal_reports_failure_after_final_inventory) ... ok
+test_ios_removes_only_owned_fixture_on_exact_simulator (test_shell_runner.OwnedCleanupTests.test_ios_removes_only_owned_fixture_on_exact_simulator) ... ok
+test_original_test_failure_survives_additional_cleanup_failure (test_shell_runner.OwnedCleanupTests.test_original_test_failure_survives_additional_cleanup_failure) ... ok
+test_production_identity_can_never_be_claimed_for_cleanup (test_shell_runner.OwnedCleanupTests.test_production_identity_can_never_be_claimed_for_cleanup) ... ok
+test_remaining_owned_identity_fails_cleanup (test_shell_runner.OwnedCleanupTests.test_remaining_owned_identity_fails_cleanup) ... ok
+test_test_failure_still_runs_cleanup (test_shell_runner.OwnedCleanupTests.test_test_failure_still_runs_cleanup) ... ok
+test_absolute_link_into_shared_source_is_rejected (test_shell_runner.SourceSymlinkTests.test_absolute_link_into_shared_source_is_rejected) ... ok
+test_relative_in_tree_source_link_is_preserved (test_shell_runner.SourceSymlinkTests.test_relative_in_tree_source_link_is_preserved) ... ok
+test_relative_link_leaving_original_source_is_rejected (test_shell_runner.SourceSymlinkTests.test_relative_link_leaving_original_source_is_rejected) ... ok
+test_source_in_tree_link_that_escapes_staged_layout_is_rejected (test_shell_runner.SourceSymlinkTests.test_source_in_tree_link_that_escapes_staged_layout_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 0.015s
+
+OK

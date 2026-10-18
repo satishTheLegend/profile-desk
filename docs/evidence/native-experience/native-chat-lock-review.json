@@ -1,0 +1,362 @@
+{
+  "status": "STATIC_REVIEW_COMPLETE_WITH_LIVE_GATE_BLOCKER",
+  "scope": {
+    "sourceManifest": "source-manifest.json",
+    "fetchEvidence": "lock-pass-fetch.json",
+    "retainedDefinitions": "retained-lock-readiness.json",
+    "scriptCount": 9,
+    "verifiedScriptBytes": 13751986,
+    "allExpectedSourceHashesMatched": true,
+    "modulesIndexed": 6585,
+    "noAdditionalDownloadsAfterResumption": true,
+    "noClientExecution": true,
+    "noAccountOrDeviceAccess": true,
+    "claimsLimitedToReviewedCorpus": true
+  },
+  "findings": [
+    {
+      "id": "frontend-current-screen-authority",
+      "fact": "WAWebApp.react owns screenLocked in its React component state; listeners set it true on open_lock_screen_modal and false on correct_passcode_lock_screen. Startup checks configured lock plus absent cached passcode key. getScreen receives this mounted state.",
+      "evidence": {
+        "module": "WAWebApp.react",
+        "path": "modules/WAWebApp.react.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "c64de989de17f8190bc067348cfb8e94a8b6e1687da1396d3a5f2d94082d7c10",
+        "anchors": [
+          {
+            "term": "screenLocked:!1",
+            "moduleUTF16Offset": 5574
+          },
+          {
+            "term": "open_lock_screen_modal",
+            "moduleUTF16Offset": 14738
+          },
+          {
+            "term": "correct_passcode_lock_screen",
+            "moduleUTF16Offset": 14830
+          },
+          {
+            "term": "getScreen(this.state)",
+            "moduleUTF16Offset": 22524
+          },
+          {
+            "term": "l.hasPendingActions=J,l.App=oe",
+            "moduleUTF16Offset": 27009
+          }
+        ]
+      },
+      "limit": "The module exports an App wrapper component and hasPendingActions, not a reviewed getter for the currently mounted state or screen. Access to a fresh fabricated state object does not establish current unlocked state."
+    },
+    {
+      "id": "decision-function-is-not-state-source",
+      "fact": "WAWebAppScreen.getScreen prioritizes screenLocked and other blocked states before normal modes; MAIN additionally depends on actual mainLoaded/stayInSync and build/feature branches.",
+      "evidence": {
+        "module": "WAWebAppScreen",
+        "path": "modules/WAWebAppScreen.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "afc7ea004a4ee1bd8b0193cc6414502f6eed1595fabbc67f10473dd7e2189ff2",
+        "anchors": [
+          {
+            "term": "s=e.screenLocked",
+            "moduleUTF16Offset": 218
+          },
+          {
+            "term": "if(s)return",
+            "moduleUTF16Offset": 661
+          },
+          {
+            "term": "case o(\"WAWebStreamModel\").StreamMode.MAIN",
+            "moduleUTF16Offset": 1705
+          },
+          {
+            "term": "l.getScreen=e",
+            "moduleUTF16Offset": 2088
+          }
+        ]
+      },
+      "limit": "A pure helper fed guessed fields must not be treated as a positive currently-unlocked gate."
+    },
+    {
+      "id": "relock-ordering",
+      "fact": "After active-call and comms checks, lockScreenAndTriggerUnlockFlow closes the active chat, awaits MsgCollection.encryptAndClearModels, then clears the cached passcode key and DB key caches, soft-closes the socket, awaits initEncSalt, and opens the socket loop.",
+      "evidence": {
+        "module": "WAWebLockScreenResolver",
+        "path": "modules/WAWebLockScreenResolver.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4igpM4/y-/l/en_GB-j/MuqONOAKuiW.js",
+        "sourceSHA256": "e4a501dcbc6e2befe325b30838f461f113e1493ddc05248e28acb879d06943ea",
+        "moduleSHA256": "97fd2496526bc508665d6083892488ce80ba63fb9a4e390a2db21f32dcb32ac0",
+        "anchors": [
+          {
+            "term": "lockScreenAndTriggerUnlockFlow",
+            "moduleUTF16Offset": 2014
+          },
+          {
+            "term": "yield o(\"WAWebMsgCollection\").MsgCollection.encryptAndClearModels()",
+            "moduleUTF16Offset": 2375
+          },
+          {
+            "term": "resetCachedPasscodeDerivedKey()",
+            "moduleUTF16Offset": 2484
+          },
+          {
+            "term": "t.softCloseSocket()",
+            "moduleUTF16Offset": 2641
+          },
+          {
+            "term": "t.openSocketLoop()",
+            "moduleUTF16Offset": 2851
+          }
+        ]
+      },
+      "inference": "A cached-key-presence or Socket/Stream-state gate can remain permissive during the first asynchronous relock step. A late event-only latch is not shown to cover this transition or attachment after prior events.",
+      "limit": "No key material was read or operated on. The exact race duration and runtime delivery were not measured."
+    },
+    {
+      "id": "unlock-and-lock-event-chain",
+      "fact": "LockScreenResolvable.waitForPasscode opens the lock modal; waitForPasscodeAfterIncorrectAttempt emits the incorrect command; correctPasscodeEntered emits the correct command and closes ModalManager. Stream auto-lock timer calls lockScreenAndTriggerUnlockFlow.",
+      "evidence": [
+        {
+          "module": "WAWebLockScreenResolver",
+          "path": "modules/WAWebLockScreenResolver.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4igpM4/y-/l/en_GB-j/MuqONOAKuiW.js",
+          "sourceSHA256": "e4a501dcbc6e2befe325b30838f461f113e1493ddc05248e28acb879d06943ea",
+          "moduleSHA256": "97fd2496526bc508665d6083892488ce80ba63fb9a4e390a2db21f32dcb32ac0",
+          "anchors": [
+            {
+              "term": "t.waitForPasscode=function",
+              "moduleUTF16Offset": 468
+            },
+            {
+              "term": "t.waitForPasscodeAfterIncorrectAttempt=function",
+              "moduleUTF16Offset": 592
+            },
+            {
+              "term": "t.correctPasscodeEntered=function",
+              "moduleUTF16Offset": 847
+            }
+          ]
+        },
+        {
+          "module": "WAWebCmd",
+          "path": "modules/WAWebCmd.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "cd6438b17b8c4781ea03d18574e204067f077e886e39d49cf190b5fb78fc8592",
+          "anchors": [
+            {
+              "term": "openLockScreenModal",
+              "moduleUTF16Offset": 17981
+            },
+            {
+              "term": "correctPasscodeLockScreen",
+              "moduleUTF16Offset": 18054
+            },
+            {
+              "term": "incorrectPasscodeLockScreen",
+              "moduleUTF16Offset": 18142
+            }
+          ]
+        },
+        {
+          "module": "WAWebStreamModel",
+          "path": "modules/WAWebStreamModel.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4igpM4/y-/l/en_GB-j/MuqONOAKuiW.js",
+          "sourceSHA256": "e4a501dcbc6e2befe325b30838f461f113e1493ddc05248e28acb879d06943ea",
+          "moduleSHA256": "4353cdfb3c5975206b7159911715065bf704f12b74118a061a28091e685bcb26",
+          "anchors": [
+            {
+              "term": "autoLockShiftTimer",
+              "moduleUTF16Offset": 2645
+            },
+            {
+              "term": "lockScreenAndTriggerUnlockFlow()",
+              "moduleUTF16Offset": 2726
+            }
+          ]
+        }
+      ],
+      "limit": "These are unsupported internal interfaces. None is an exported, positive current-unlocked state getter."
+    },
+    {
+      "id": "settings-and-readiness-not-unlock",
+      "fact": "getScreenLockEnabled is derived from configured lock duration. getAllCriticalDataSynced reports persisted sync status; BackendEventBus stores/transmits socket state. Conn is a connection model. These have distinct responsibilities from mounted frontend screen state.",
+      "evidence": [
+        {
+          "module": "WAWebUserPrefsScreenLock",
+          "path": "modules/WAWebUserPrefsScreenLock.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "d20a89c7cfd60195ef565b693087b7aafc4f0ea60462293353f760c0161179cb",
+          "anchors": [
+            {
+              "term": "getScreenLockEnabled=e",
+              "moduleUTF16Offset": 4220
+            },
+            {
+              "term": "function T(e,t)",
+              "moduleUTF16Offset": 4019
+            }
+          ]
+        },
+        {
+          "module": "WAWebUserPrefsAppStateSync",
+          "path": "modules/WAWebUserPrefsAppStateSync.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "a9d7d8f855ab72bdb0d922dc1857033cf69ec6d7bf8e32a8534155d08cd50506",
+          "anchors": [
+            {
+              "term": "getAllCriticalDataSynced=u",
+              "moduleUTF16Offset": 2532
+            }
+          ]
+        },
+        {
+          "module": "WAWebBackendEventBus",
+          "path": "modules/WAWebBackendEventBus.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4imz-4/yW/l/en_GB-j/T-n5x5PN2o57rZQrzh2svrUQnf22PyoKBSH9dHNYl7qgZJJ4oEKtT5ZLT5t0WATbyDEh28TgjUDfNoww_ZssU3DXNl9ZYyREraxV9wpvQ5rsg59G50LRWEaoggf5ZzSkPy3NAg0zpqMTKfFWUUKocWarAuhRgxME01XdE_23LEffI1_Xv7S174gRZ7QsdNshI4fB_kBG5Pz7vmDjrTXOAFg98MFB7KJoSQKFgmFOYAuspDhlhzZk-PQqXYsbbfC5vFGT0p2_zdZJywGwzJ6fg7q9LM3qoVi9SaU-4ORb_j0YAvs-ocQZHvNqi3_soWikb0pXIL6h44.js",
+          "sourceSHA256": "858562e24c5773832d6b89fd6aad7902f25d44b0b0d0fe188f09efc2f57e39d1",
+          "moduleSHA256": "362398082cf26040ba7f68e4dca4d4557347bebe7e91f109af918a8e1e548e6b",
+          "anchors": [
+            {
+              "term": "a.triggerSetSocketState=function",
+              "moduleUTF16Offset": 9683
+            },
+            {
+              "term": "this.socketState=t",
+              "moduleUTF16Offset": 9830
+            }
+          ]
+        },
+        {
+          "module": "WAWebConnModel",
+          "path": "modules/WAWebConnModel.js",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "moduleSHA256": "f09c82db0fd121331f77e6571ce87016b40710023aa2a745179343cdde9f8ebf",
+          "anchors": [
+            {
+              "term": "l.Conn=",
+              "moduleUTF16Offset": 3191
+            }
+          ]
+        }
+      ],
+      "limit": "The settings getter includes a legacy preference migration path; do not describe every dependency getter as a side-effect-free live UI inspection. Never project secret-bearing connection properties."
+    },
+    {
+      "id": "missing-lazy-authority",
+      "fact": "WAWebLockScreenLoadable obtains WAWebLockScreen.react through JSResourceForInteraction; its target definition is absent from the nine verified scripts.",
+      "evidence": {
+        "module": "WAWebLockScreenLoadable",
+        "path": "modules/WAWebLockScreenLoadable.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "3ad2c39cba94ce8d5373d7ccdeee374d778e18e30972e0fe6e02880bec18935e",
+        "anchors": [
+          {
+            "term": "WAWebLockScreen.react",
+            "moduleUTF16Offset": 320
+          },
+          {
+            "term": "load()",
+            "moduleUTF16Offset": 380
+          }
+        ]
+      },
+      "limit": "The bounded review did not download lazy resources or prove that absent material contains a useful authority."
+    },
+    {
+      "id": "requested-readiness-helper-definitions",
+      "fact": "The requested visible/hidden view-mode processors, BaseModel/Getters, time and ephemeral constants are retained with exact source provenance for independent contract review.",
+      "evidence": [
+        {
+          "module": "WAWebUserPrefsScreenLock",
+          "path": "modules/WAWebUserPrefsScreenLock.js"
+        },
+        {
+          "module": "WAWebBackendApi",
+          "path": "modules/WAWebBackendApi.js"
+        },
+        {
+          "module": "WAWebBackendEventBus",
+          "path": "modules/WAWebBackendEventBus.js"
+        },
+        {
+          "module": "WAWebBackendEventBusWorkerCompatible",
+          "path": "modules/WAWebBackendEventBusWorkerCompatible.js"
+        },
+        {
+          "module": "WAWebConnModel",
+          "path": "modules/WAWebConnModel.js"
+        },
+        {
+          "module": "WAWebUserPrefsAppStateSync",
+          "path": "modules/WAWebUserPrefsAppStateSync.js"
+        },
+        {
+          "module": "WAWebVisibleViewModeProcessor",
+          "path": "modules/WAWebVisibleViewModeProcessor.js"
+        },
+        {
+          "module": "WAWebHiddenViewModeProcessor",
+          "path": "modules/WAWebHiddenViewModeProcessor.js"
+        },
+        {
+          "module": "WATimeUtils",
+          "path": "modules/WATimeUtils.js"
+        },
+        {
+          "module": "WAWebGetters",
+          "path": "modules/WAWebGetters.js"
+        },
+        {
+          "module": "WAWebBaseModel",
+          "path": "modules/WAWebBaseModel.js"
+        },
+        {
+          "module": "WAWebEphemeralConstants",
+          "path": "modules/WAWebEphemeralConstants.js"
+        }
+      ],
+      "limit": "Definition availability does not prove the live native adapter is complete or safe; official per-item visibility, expiry and account-generation checks remain separate gates."
+    }
+  ],
+  "boundedSearch": {
+    "screenLockedOrCurrentScreenOrPasscodeReferences": [
+      "WAWebLockScreenResolver",
+      "WAWebAppScreen",
+      "WAWebPathfinderScreenName",
+      "WAWebPathfinderApp",
+      "WAWebPathfinderKeyboard",
+      "WAWebPathfinderUserTouch",
+      "WAWebApp.react",
+      "WAWebUserPrefsInfoStore"
+    ],
+    "appScreenDependencyCallers": [
+      "WAWebApp.react"
+    ],
+    "lockTransitionCallers": [
+      "WAWebStreamModel",
+      "WAWebLockScreenResolver"
+    ],
+    "lazyLockScreenDefinitionPresent": false
+  },
+  "implementationBoundary": {
+    "positiveGateNotEstablished": true,
+    "requiredEvidence": "A reviewed way to observe the current mounted frontend unlocked/main state on late attachment, and synchronously invalidate native projections at every relock entry before asynchronous work, with lifecycle/account generation checks.",
+    "doNotUseAsSufficient": [
+      "Lock setting disabled alone",
+      "Cached passcode key presence",
+      "Stream MAIN alone",
+      "Socket CONNECTED/OPEN alone",
+      "Main-loaded promise alone",
+      "Absence of an observed lock event",
+      "getScreen evaluated with fabricated screenLocked:false"
+    ],
+    "recommendedCurrentBehavior": "Keep live projections closed when authority is unknown; continue bounded synthetic adapter tests and retain the official surface fallback. Treat this as a temporary evidence gap, not proof of impossibility.",
+    "prohibitedInference": "Neither screen-lock metadata nor missing source in this corpus proves session migration impossible."
+  }
+}

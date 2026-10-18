@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "reviewer": "session_restore_audit",
+  "method": "Independent readonly source review",
+  "checks": [
+    "Incomplete inventory, schema changes, count changes, failures and sampled prefixes remain inconclusive",
+    "Native complete status independently requires full coverage and no limiting flags",
+    "Same-transaction readonly count and prefix traversal stop without cursor continuation at quota",
+    "Existing limits unchanged",
+    "Only numeric aggregates returned; temporary descriptors cleared and result copied against late mutation",
+    "Cancellation and lifecycle ownership guards retained"
+  ],
+  "limits": [
+    "Source review is not native runtime validation or authenticated restore proof",
+    "Final synthetic evidence reviewed separately"
+  ],
+  "sourceSHA256": {
+    "tests/session_portability/ios_lab/StorageClassifier.js": "935aa9fd45c6abf984a63e3f309d45ff95908e708b1c29028f3405728df0af5b",
+    "tests/session_portability/ios_lab/main.swift": "1113a0f466af3d6adebf7f4d4e453653dc9cd1f6af44668a3c804b80dcf6d7f5"
+  }
+}

@@ -1,0 +1,69 @@
+Building for debugging...
+[Computing dependencies]
+[1 / 4] ProfileRegistry
+Build complete! (1.52 secs)
+Test Suite 'Selected tests' started at 2026-10-18 03:29:57.230.
+Test Suite 'ProfileRegistryTests.xctest' started at 2026-10-18 03:29:57.233.
+Test Suite 'InstallationBindingTests' started at 2026-10-18 03:29:57.233.
+Test Case '-[ProfileRegistryTests.InstallationBindingTests testCompletedRemovalRedactsMetadataButKeepsMinimalIdentityTombstone]' started.
+Test Case '-[ProfileRegistryTests.InstallationBindingTests testCompletedRemovalRedactsMetadataButKeepsMinimalIdentityTombstone]' passed (0.014 seconds).
+Test Case '-[ProfileRegistryTests.InstallationBindingTests testCopiedRegistryAndAnchorCannotMigrateDeviceSecret]' started.
+Test Case '-[ProfileRegistryTests.InstallationBindingTests testCopiedRegistryAndAnchorCannotMigrateDeviceSecret]' passed (0.009 seconds).
+Test Case '-[ProfileRegistryTests.InstallationBindingTests testOrdinaryUpgradeKeepsVerifiedInstallation]' started.
+Test Case '-[ProfileRegistryTests.InstallationBindingTests testOrdinaryUpgradeKeepsVerifiedInstallation]' passed (0.006 seconds).
+Test Case '-[ProfileRegistryTests.InstallationBindingTests testReinstallWithoutExcludedAnchorQuarantinesMatchingUUIDs]' started.
+Test Case '-[ProfileRegistryTests.InstallationBindingTests testReinstallWithoutExcludedAnchorQuarantinesMatchingUUIDs]' passed (0.009 seconds).
+Test Suite 'InstallationBindingTests' passed at 2026-10-18 03:29:57.272.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.038 (0.039) seconds
+Test Suite 'NativeLockStateTests' started at 2026-10-18 03:29:57.272.
+Test Case '-[ProfileRegistryTests.NativeLockStateTests testCancelSetupDoesNotEnableLockAndInactiveInvalidatesTicket]' started.
+Test Case '-[ProfileRegistryTests.NativeLockStateTests testCancelSetupDoesNotEnableLockAndInactiveInvalidatesTicket]' passed (0.000 seconds).
+Test Case '-[ProfileRegistryTests.NativeLockStateTests testLateFailureFromUnlockedSetupCannotUndoNewerBackgroundLock]' started.
+Test Case '-[ProfileRegistryTests.NativeLockStateTests testLateFailureFromUnlockedSetupCannotUndoNewerBackgroundLock]' passed (0.000 seconds).
+Test Case '-[ProfileRegistryTests.NativeLockStateTests testLateSuccessCannotUndoNewerManualLock]' started.
+Test Case '-[ProfileRegistryTests.NativeLockStateTests testLateSuccessCannotUndoNewerManualLock]' passed (0.000 seconds).
+Test Case '-[ProfileRegistryTests.NativeLockStateTests testOnlyCurrentForegroundAuthenticationUnlocks]' started.
+Test Case '-[ProfileRegistryTests.NativeLockStateTests testOnlyCurrentForegroundAuthenticationUnlocks]' passed (0.000 seconds).
+Test Suite 'NativeLockStateTests' passed at 2026-10-18 03:29:57.274.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'NavigationPolicyTests' started at 2026-10-18 03:29:57.274.
+Test Case '-[ProfileRegistryTests.NavigationPolicyTests testOnlyExplicitExternalSchemesAreRoutable]' started.
+Test Case '-[ProfileRegistryTests.NavigationPolicyTests testOnlyExplicitExternalSchemesAreRoutable]' passed (0.000 seconds).
+Test Case '-[ProfileRegistryTests.NavigationPolicyTests testWorkspaceOnlyAcceptsExactSecureOrigin]' started.
+Test Case '-[ProfileRegistryTests.NavigationPolicyTests testWorkspaceOnlyAcceptsExactSecureOrigin]' passed (0.000 seconds).
+Test Suite 'NavigationPolicyTests' passed at 2026-10-18 03:29:57.274.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+Test Suite 'RegistryTests' started at 2026-10-18 03:29:57.274.
+Test Case '-[ProfileRegistryTests.RegistryTests testCapacityIncludesReservationsAndPendingCleanup]' started.
+Test Case '-[ProfileRegistryTests.RegistryTests testCapacityIncludesReservationsAndPendingCleanup]' passed (0.013 seconds).
+Test Case '-[ProfileRegistryTests.RegistryTests testMissingAndUnknownStoresNeverBecomeAuthenticatedProfiles]' started.
+Test Case '-[ProfileRegistryTests.RegistryTests testMissingAndUnknownStoresNeverBecomeAuthenticatedProfiles]' passed (0.012 seconds).
+Test Case '-[ProfileRegistryTests.RegistryTests testNormalizationAndRenameKeepBackingIdentity]' started.
+Test Case '-[ProfileRegistryTests.RegistryTests testNormalizationAndRenameKeepBackingIdentity]' passed (0.011 seconds).
+Test Case '-[ProfileRegistryTests.RegistryTests testOrderRejectsDuplicatesWithoutPartialMutation]' started.
+Test Case '-[ProfileRegistryTests.RegistryTests testOrderRejectsDuplicatesWithoutPartialMutation]' passed (0.007 seconds).
+Test Case '-[ProfileRegistryTests.RegistryTests testReorderExcludesCleanupRows]' started.
+Test Case '-[ProfileRegistryTests.RegistryTests testReorderExcludesCleanupRows]' passed (0.008 seconds).
+Test Case '-[ProfileRegistryTests.RegistryTests testTombstoneAndJournalSurviveRestartAndAreIdempotent]' started.
+Test Case '-[ProfileRegistryTests.RegistryTests testTombstoneAndJournalSurviveRestartAndAreIdempotent]' passed (0.016 seconds).
+Test Case '-[ProfileRegistryTests.RegistryTests testVersionOneReopenPreservesPreferencesAndObservation]' started.
+Test Case '-[ProfileRegistryTests.RegistryTests testVersionOneReopenPreservesPreferencesAndObservation]' passed (0.015 seconds).
+Test Suite 'RegistryTests' passed at 2026-10-18 03:29:57.358.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.083 (0.084) seconds
+Test Suite 'TransferFilesTests' started at 2026-10-18 03:29:57.358.
+Test Case '-[ProfileRegistryTests.TransferFilesTests testCanceledImportRemovesDirectoryBeforeReturning]' started.
+Test Case '-[ProfileRegistryTests.TransferFilesTests testCanceledImportRemovesDirectoryBeforeReturning]' passed (0.002 seconds).
+Test Case '-[ProfileRegistryTests.TransferFilesTests testDetachedChunkCopyPreservesContent]' started.
+Test Case '-[ProfileRegistryTests.TransferFilesTests testDetachedChunkCopyPreservesContent]' passed (0.004 seconds).
+Test Case '-[ProfileRegistryTests.TransferFilesTests testFailedSecondCopyRemovesEarlierOutput]' started.
+Test Case '-[ProfileRegistryTests.TransferFilesTests testFailedSecondCopyRemovesEarlierOutput]' passed (0.002 seconds).
+Test Case '-[ProfileRegistryTests.TransferFilesTests testImportProgressCountsBytesAcrossFiles]' started.
+Test Case '-[ProfileRegistryTests.TransferFilesTests testImportProgressCountsBytesAcrossFiles]' passed (0.007 seconds).
+Test Case '-[ProfileRegistryTests.TransferFilesTests testMultibyteFilenameHasSafeByteBudgetAndExtension]' started.
+Test Case '-[ProfileRegistryTests.TransferFilesTests testMultibyteFilenameHasSafeByteBudgetAndExtension]' passed (0.001 seconds).
+Test Suite 'TransferFilesTests' passed at 2026-10-18 03:29:57.374.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.016 (0.016) seconds
+Test Suite 'ProfileRegistryTests.xctest' passed at 2026-10-18 03:29:57.374.
+	 Executed 22 tests, with 0 failures (0 unexpected) in 0.138 (0.141) seconds
+Test Suite 'Selected tests' passed at 2026-10-18 03:29:57.374.
+	 Executed 22 tests, with 0 failures (0 unexpected) in 0.138 (0.144) seconds

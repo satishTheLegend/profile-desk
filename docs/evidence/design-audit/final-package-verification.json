@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-17T23:32:25.673654+00:00",
+  "result": "PASS",
+  "scope": "Final unsigned local package/source consistency, archive bytes and evidence snapshots; not compiler-input attestation or release approval.",
+  "git_head": "44df481c7ae8b0e74f9b0d816e45f5bcc1502e7d",
+  "git_working_tree_has_changes": true,
+  "source_files_verified": 213,
+  "source_snapshot_sha256": "d562f44961689e728e0fb9b32310770d159b748a064af03363ecc994f2ddb244",
+  "candidate_manifest_sha256": "8819a2c3ec8cd10fce2dba53a2846b47635f9a5ba7d1465a8747f5ecd0c9fdba",
+  "artifact_report_sha256": "fcd5ed4b5e886a6b9f8aad2835cc921d3530eaecb37d46d1cca3833ca94f23d4",
+  "artifacts": [
+    {
+      "file": "android-production-unsigned.apk",
+      "bytes": 54495809,
+      "sha256": "ca0f8a9e26efbada687e64d53b877fee20ccf9233da704045095ff3c8ba19545"
+    },
+    {
+      "file": "ios-production-device-unsigned.zip",
+      "bytes": 7771744,
+      "sha256": "74a99b6d08b1c9bb0cccf6b9552070423e43df066c6ecf6ec300267312332755"
+    },
+    {
+      "file": "native-symbols-and-mapping.zip",
+      "bytes": 40800206,
+      "sha256": "6e9e9866c38b05bd78cc5ab771525fdfc282d174b26b4edc1789f4ba85989e54"
+    }
+  ],
+  "ios_symbol_uuids": {
+    "Runner": {
+      "arm64": "844CA751-1891-30FB-95BE-B47DB1E34E67"
+    },
+    "App": {
+      "arm64": "17125BB4-0AB2-FBDF-4DA8-32C0C14A7C89"
+    },
+    "Flutter": {
+      "arm64": "4C4C4488-5555-3144-A16B-084E8F1F6CDB"
+    }
+  },
+  "ios_bundle_files_verified": 70,
+  "ios_fixture_source_files_verified": 198,
+  "ios_native_fixture_source_files_verified": 14,
+  "draft_preview_files_verified": 5,
+  "checks": [
+    "All packaged artifact sizes and SHA256 match manifest",
+    "All recorded source hashes match workspace",
+    "Packaged APK equals artifact-inspected APK",
+    "Packaged iOS ZIP entry bytes equal inspected device bundle",
+    "iOS deterministic file-tree digest matches artifact inspection",
+    "Packaged Android R8 mapping and iOS dSYM bytes match UUID-checked inputs",
+    "Both ZIP CRC checks pass",
+    "Native and integrated iOS fixture source snapshots still match",
+    "Five preview PNGs and capture builder match preview manifest"
+  ],
+  "verification_note": "The first ad-hoc consistency attempt compared QA symlink target-file bytes with hashes of symlink text and stopped. This rerun follows the QA runner manifest semantics (link text for links); all six unchanged source links match. No product source was changed for this correction.",
+  "limitations": [
+    "No release signing or store upload performed.",
+    "The source snapshot identifies files at packaging time, not an attestation of compiler inputs.",
+    "Artifact checks and runtime/device/service evidence are separate."
+  ]
+}

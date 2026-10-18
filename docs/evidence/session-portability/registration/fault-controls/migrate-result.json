@@ -1,0 +1,358 @@
+{
+  "assertions" : 84,
+  "checks" : [
+    {
+      "name" : "Source and destination use different named persistent stores",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted contains exactly two wrapper envelopes",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 0: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 0: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 0: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 0: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 0: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 0: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 1: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 1: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 1: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 1: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 1: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted wrapper 1: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Source persisted uses distinct per-payload wrapper keys",
+      "pass" : true
+    },
+    {
+      "name" : "Source has two bounded synthetic ciphertexts",
+      "pass" : true
+    },
+    {
+      "name" : "All thirty malformed-wrapper\/payload controls execute",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: missing-wrapper",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: extra-wrapper",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: null-wrapper",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: missing-key",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: extra-counter-field",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: counter-override",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: fake-key",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: typed-array-envelope",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: ciphertext-length-0",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: ciphertext-length-31",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: ciphertext-length-33",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: wrong-algorithm",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: wrong-key-length",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: extractable-key",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: missing-decrypt-usage",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: missing-encrypt-usage",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: shared-key-counter",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: cloned-shared-key-counter",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: ciphertext-corruption",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: null-transfer",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: missing-private-payload",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: extra-payload-field",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: payload-byte-negative",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: payload-byte-overflow",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: payload-byte-fractional",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: payload-byte-nan",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: payload-byte-string",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: sparse-payload",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: short-payload",
+      "pass" : true
+    },
+    {
+      "name" : "Invalid input rejected: typed-array-payload",
+      "pass" : true
+    },
+    {
+      "name" : "Rejected inputs preserve original encrypted bytes and readability",
+      "pass" : true
+    },
+    {
+      "name" : "Fault controls never encrypt two plaintexts using one CTR key\/counter",
+      "pass" : true
+    },
+    {
+      "name" : "In-memory transfer contains only synthetic identity payloads, no wrapper CryptoKeys",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh destination cannot read source IndexedDB or source-only LocalStorage",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted contains exactly two wrapper envelopes",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 0: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 0: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 0: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 0: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 0: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 0: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 1: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 1: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 1: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 1: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 1: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted wrapper 1: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Destination persisted uses distinct per-payload wrapper keys",
+      "pass" : true
+    },
+    {
+      "name" : "Destination ciphertexts differ while underlying synthetic identity bytes match",
+      "pass" : true
+    },
+    {
+      "name" : "Both fresh destination keys differ from both source keys through four wrong-key decryption controls",
+      "pass" : true
+    },
+    {
+      "name" : "Destination still cannot read source-only state after restore",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source contains exactly two wrapper envelopes",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 0: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 0: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 0: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 0: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 0: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 0: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 1: shape",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 1: nonextractable",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 1: exportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 1: algorithmMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 1: usagesMatch",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source wrapper 1: plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source uses distinct per-payload wrapper keys",
+      "pass" : true
+    },
+    {
+      "name" : "Source encrypted envelope bytes remain unchanged",
+      "pass" : true
+    },
+    {
+      "name" : "Source-only sentinel remains in source",
+      "pass" : true
+    }
+  ],
+  "durationSeconds" : 1.3940279483795166,
+  "observations" : [
+
+  ],
+  "openedStoreLabels" : [
+    "source",
+    "destination",
+    "source"
+  ],
+  "osVersion" : "26.5",
+  "payloadOrKeyBytesInReport" : false,
+  "phase" : "migrate",
+  "processIdentifier" : 46505,
+  "realServiceAccessed" : false,
+  "recordedAt" : "2026-10-18T20:32:00Z",
+  "result" : "PASS",
+  "syntheticOnly" : true
+}

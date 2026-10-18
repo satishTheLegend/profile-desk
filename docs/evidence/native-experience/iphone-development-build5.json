@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "scope": "Locally signed optimized development artifact; not installed or real-session verified",
+  "bundleId": "dev.profiledesk.profileDesk.development",
+  "version": "0.1.0",
+  "build": "5",
+  "deepSignatureValid": true,
+  "provisionMatchesBundle": true,
+  "developerDebugEntitlement": true,
+  "appBoundDomainMatches": true,
+  "runnerSHA256": "89fdfd5f6b926282ab227bf4a2de9ad8745d1a2b9a6079b98584877539f0681e",
+  "physicalDeviceTouched": false
+}

@@ -1,0 +1,5 @@
+{
+  "packages/session_engine/ios/session_engine/Package.swift": "0a679f44d08355bb520fb809d6408ad85e88eb30b34c784338760008ad9f3963",
+  "packages/session_engine/ios/session_engine/Sources/session_engine/WorkspaceWebView.swift": "156bf97b9f5a1914e5e69b0f666be41869d0778af3d6a28ca066a36076332e94",
+  "packages/session_engine/layout/workspace_layout.js": "d0fb52b6fad839ecf3110ba7a5993a8c27e7dc18603b120013a6311c233ee980"
+}

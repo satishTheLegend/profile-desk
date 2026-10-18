@@ -1,0 +1,905 @@
+{
+  "status": "SOURCE_BACKED_APPLICATION_REWRAP_PATH_WITH_INCOMPLETE_FULL_STATE_MAP",
+  "scope": {
+    "manifest": "retained-application-encryption.json",
+    "sourceManifest": "source-manifest.json",
+    "fetchEvidence": "source-cache-fetch.json",
+    "verifiedScriptCount": 9,
+    "verifiedScriptBytes": 13751986,
+    "modulesIndexed": 6585,
+    "network": "Only exact nine previously approved public URLs; all hashes matched; no bootstrap/root, lazy scripts, account or cookie requests.",
+    "sourceCache": "Verified public source bodies saved mode 0600 in ignored build/session-state-public-review/source-cache; future reviews can reuse without network.",
+    "clientCodeExecuted": false,
+    "realKeyOperations": false,
+    "accountProfileDeviceAccess": false,
+    "productChanges": false
+  },
+  "answer": {
+    "knownFieldSemanticMigration": "Yes in principle for a source-matched field: decrypt using its source key context, preserve logical plaintext type, initialize independent destination bases and derived keys, and pass plaintext through destination encryption. This is a static data-flow inference, not a runtime or authenticated-restore result.",
+    "fullSessionAndAllInformation": "Not established. The known schemas are neither the complete database inventory nor proof of minimum sufficient authentication state.",
+    "originalBaseKeyExportRequiredForKnownFields": false,
+    "supportedPublicMigrationInterface": false
+  },
+  "keyFamilies": [
+    {
+      "family": "initial-local-database-encryption",
+      "database": "wawc_db_enc",
+      "store": "keys",
+      "rows": "auto-increment id, key, optional _expiration; multiple generations may remain",
+      "root": {
+        "randomInputBytes": 128,
+        "algorithm": "HKDF",
+        "extractable": false,
+        "usages": [
+          "deriveKey"
+        ]
+      },
+      "derivation": {
+        "name": "HKDF",
+        "hash": "SHA-256",
+        "salt": "local web encryption salt bytes",
+        "info": "one zero byte",
+        "output": "AES-CBC 128-bit nonextractable key with encrypt/decrypt"
+      },
+      "consumers": "Noise outer envelope uses getEncKeys()[0]; legacy typed application envelopes select by _keyId. Generic encryption selects the final array element when initial-key mode is requested.",
+      "evidence": {
+        "module": "WAWebDbEncryptionKey",
+        "path": "modules/WAWebDbEncryptionKey.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "48dd69284fc7280ba823c91e21deb8f31a8e12b7b6486b56019f222b9885bf6d",
+        "anchors": [
+          {
+            "term": "this.$14=function",
+            "moduleUTF16Offset": 646
+          },
+          {
+            "term": "info:new Uint8Array(1)",
+            "moduleUTF16Offset": 1012
+          },
+          {
+            "term": "function L()",
+            "moduleUTF16Offset": 6581
+          }
+        ]
+      }
+    },
+    {
+      "family": "final-message-database-encryption",
+      "database": "wawc_db_enc",
+      "store": "same keys rows",
+      "derivation": {
+        "name": "HKDF",
+        "hash": "SHA-256",
+        "salt": "base64-decoded argument passed to generateFinalDbEncryptionAndFtsKey",
+        "info": "local web encryption salt bytes",
+        "output": "AES-CBC 128-bit nonextractable key with encrypt/decrypt"
+      },
+      "consumers": "Typed application encrypted columns normally use this key set. Current writes select latest array entry and preserve its destination id in envelope.",
+      "evidence": {
+        "module": "WAWebDbEncryptionKey",
+        "path": "modules/WAWebDbEncryptionKey.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "48dd69284fc7280ba823c91e21deb8f31a8e12b7b6486b56019f222b9885bf6d",
+        "anchors": [
+          {
+            "term": "this.$21=function",
+            "moduleUTF16Offset": 2916
+          },
+          {
+            "term": "info:new Uint8Array(t.$11||0)",
+            "moduleUTF16Offset": 3278
+          },
+          {
+            "term": "a.waitForFinalDbMsgEncKey=function",
+            "moduleUTF16Offset": 5911
+          }
+        ]
+      },
+      "limit": "Ordinary non-Windows source of the final derivation argument is not shown in this nine-script corpus. Reviewed Windows offline branch explicitly obtains a server encryption salt through its platform bridge; do not substitute a new arbitrary value and assume compatibility."
+    },
+    {
+      "family": "fts-hmac",
+      "database": "wawc_db_enc",
+      "store": "fts_hmac_keys",
+      "root": {
+        "randomInputBytes": 128,
+        "algorithm": "HKDF",
+        "extractable": false,
+        "usages": [
+          "deriveKey"
+        ]
+      },
+      "derivation": {
+        "name": "HKDF",
+        "hash": "SHA-256",
+        "salt": "same final decoded argument",
+        "info": "zero-length byte array",
+        "output": "HMAC SHA-256 nonextractable key, usage sign"
+      },
+      "evidence": {
+        "module": "WAWebDbEncryptionKey",
+        "path": "modules/WAWebDbEncryptionKey.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "48dd69284fc7280ba823c91e21deb8f31a8e12b7b6486b56019f222b9885bf6d",
+        "anchors": [
+          {
+            "term": "this.$20=",
+            "moduleUTF16Offset": 3702
+          },
+          {
+            "term": "a.getFtsHMACKey=function",
+            "moduleUTF16Offset": 6363
+          }
+        ]
+      },
+      "limit": "No consumer of this getter/key is present in the corpus. It is not proven how stored search tokens bind to the HMAC key. Changing it cannot safely be combined with copying potentially keyed indexes unchanged."
+    },
+    {
+      "family": "worm-ear",
+      "database": "wawc_db_enc",
+      "store": "worm_ear_keys",
+      "root": {
+        "randomInputBytes": 128,
+        "algorithm": "HKDF",
+        "extractable": false,
+        "usages": [
+          "deriveBits"
+        ]
+      },
+      "derivation": {
+        "name": "HKDF",
+        "hash": "SHA-256",
+        "salt": "same final decoded argument",
+        "info": "UTF-8 worm-ear-v1",
+        "output": "256 derived bits"
+      },
+      "evidence": {
+        "module": "WAWebDbEncryptionKey",
+        "path": "modules/WAWebDbEncryptionKey.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "48dd69284fc7280ba823c91e21deb8f31a8e12b7b6486b56019f222b9885bf6d",
+        "anchors": [
+          {
+            "term": "this.$22=",
+            "moduleUTF16Offset": 2399
+          },
+          {
+            "term": "a.getWormEarKey=function",
+            "moduleUTF16Offset": 6469
+          },
+          {
+            "term": "function E()",
+            "moduleUTF16Offset": 6713
+          }
+        ]
+      },
+      "limit": "No actual consumer, encrypted media mapping, envelope format or rebuild path was found. The name does not prove media purpose or cache dispensability."
+    }
+  ],
+  "envelope": {
+    "fields": [
+      "_data",
+      "iv",
+      "_keyId",
+      "_scheme"
+    ],
+    "cipher": "AES-CBC",
+    "ivBytes": 16,
+    "newIVPerEncryptCall": true,
+    "types": {
+      "String": "TextEncoder input and TextDecoder UTF-8 output",
+      "ArrayBuffer": "binary buffer retained as bytes"
+    },
+    "newKeySelection": "last entry in selected source/destination key array",
+    "keySelectionOnRead": {
+      "legacyTables": [
+        "poll-votes",
+        "chat",
+        "sync-keys",
+        "orphan-tc-token"
+      ],
+      "rule": "For the four legacy tables, _scheme===1 selects final-message keys and other scheme values select initial keys. Other tables use final-message keys when their table flag is true. A matching _keyId is required."
+    },
+    "tableDefault": "WAWebStorageTableBuilder defaults shouldUseDbMsgEncKeyForEncryptedCol=true; no explicit false override appears in the reviewed corpus.",
+    "evidence": [
+      {
+        "module": "WAWebIdbEncryption",
+        "path": "modules/WAWebIdbEncryption.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "c5c2791fef5fc38a9166594799e6cc7f19c36fa9b1aa9afc59327ea9df313829",
+        "anchors": [
+          {
+            "term": "var e=[",
+            "moduleUTF16Offset": 211
+          },
+          {
+            "term": "_scheme:a?1:0",
+            "moduleUTF16Offset": 1093
+          },
+          {
+            "term": "function d(t,n,r)",
+            "moduleUTF16Offset": 1272
+          },
+          {
+            "term": "l=i[i.length-1]",
+            "moduleUTF16Offset": 642
+          }
+        ]
+      },
+      {
+        "module": "WAWebStorageTableBuilder",
+        "path": "modules/WAWebStorageTableBuilder.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "f87745c3bb4e93fd01ebc1093b70452514bdc1b57c77bfd458dc75777d3936f9",
+        "anchors": [
+          {
+            "term": "this.shouldUseDbMsgEncKeyForEncryptedCol=!0",
+            "moduleUTF16Offset": 298
+          }
+        ]
+      }
+    ]
+  },
+  "tableMappings": [
+    {
+      "database": "worker-storage",
+      "table": "deferred_messages",
+      "module": "WAWebSchemaDeferredMessagesStorage",
+      "columns": [
+        {
+          "name": "plaintext",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaDeferredMessagesStorage",
+        "path": "modules/WAWebSchemaDeferredMessagesStorage.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "09f831273a6c36a7a75ef08fd96da77d6bbd8cb6770ed01e2d2e9e9155a53f35",
+        "anchors": [
+          {
+            "term": "\"plaintext\"",
+            "moduleUTF16Offset": 473
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "chat",
+      "module": "WAWebSchemaChat",
+      "columns": [
+        {
+          "name": "chatRowOpaqueData",
+          "type": "ArrayBuffer"
+        },
+        {
+          "name": "tcToken",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaChat",
+        "path": "modules/WAWebSchemaChat.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "9c3c284818e6898f88f167ae18948365d1a11581c5c04a5f6ddfa27ade0361a3",
+        "anchors": [
+          {
+            "term": "\"chatRowOpaqueData\"",
+            "moduleUTF16Offset": 916
+          },
+          {
+            "term": "\"tcToken\"",
+            "moduleUTF16Offset": 2077
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "message",
+      "module": "WAWebSchemaMessage",
+      "columns": [
+        {
+          "name": "msgRowOpaqueData",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaMessage",
+        "path": "modules/WAWebSchemaMessage.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "438e249a82242352e007938ee4894d039118906b2baef9ea7d24f94ee8cc8c77",
+        "anchors": [
+          {
+            "term": "\"msgRowOpaqueData\"",
+            "moduleUTF16Offset": 2970
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "comments",
+      "module": "WAWebCommentSchema",
+      "columns": [
+        {
+          "name": "msgRowOpaqueData",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebCommentSchema",
+        "path": "modules/WAWebCommentSchema.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "e4aa4c4dfb668841d38ee61f91e9c81713518b7059ec7464688ecb26bb03bc54",
+        "anchors": [
+          {
+            "term": "\"msgRowOpaqueData\"",
+            "moduleUTF16Offset": 521
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "event-responses",
+      "module": "WAWebEventResponsesSchema",
+      "columns": [
+        {
+          "name": "eventResponse",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebEventResponsesSchema",
+        "path": "modules/WAWebEventResponsesSchema.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "b5b9ed964f96ba210fdc8c0beb2cb37a2ff1a63cf1cadefb5bed43fc32d59643",
+        "anchors": [
+          {
+            "term": "\"eventResponse\"",
+            "moduleUTF16Offset": 563
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "sync-keys",
+      "module": "WAWebSchemaSyncKeys",
+      "columns": [
+        {
+          "name": "keyData",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaSyncKeys",
+        "path": "modules/WAWebSchemaSyncKeys.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "d1f713d47dbaae05eb97fcded7fda8167d10aea3b1f3049f2b8ccc566992873f",
+        "anchors": [
+          {
+            "term": "\"keyData\"",
+            "moduleUTF16Offset": 869
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "poll-pending-updates",
+      "module": "WAWebPollsPendingUpdatesSchema",
+      "columns": [
+        {
+          "name": "selectedOptionLocalIds",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebPollsPendingUpdatesSchema",
+        "path": "modules/WAWebPollsPendingUpdatesSchema.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "9ad75cbc54da9f193a76f6487d609790106d5d72fbe57c2dd51818b63ed367f3",
+        "anchors": [
+          {
+            "term": "\"selectedOptionLocalIds\"",
+            "moduleUTF16Offset": 637
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "poll-votes",
+      "module": "WAWebPollsVotesSchema",
+      "columns": [
+        {
+          "name": "selectedOptionLocalIds",
+          "type": "ArrayBuffer"
+        },
+        {
+          "name": "lastSuccessfulSelectedOptionLocalIds",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebPollsVotesSchema",
+        "path": "modules/WAWebPollsVotesSchema.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "50b7154814131d3d99ad70a2b6a5a4c8ea81a6c42c7ac0a2147404b8641e1211",
+        "anchors": [
+          {
+            "term": "\"selectedOptionLocalIds\"",
+            "moduleUTF16Offset": 499
+          },
+          {
+            "term": "\"lastSuccessfulSelectedOptionLocalIds\"",
+            "moduleUTF16Offset": 632
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "coexv2-bot-secret",
+      "module": "WAWebSchemaCoexV2BotSecret",
+      "columns": [
+        {
+          "name": "botMessageSecret",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaCoexV2BotSecret",
+        "path": "modules/WAWebSchemaCoexV2BotSecret.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "79d4386d1e51ea022a8b3a233b08c22d85c2547478733560ddfd37a2e9a1fb83",
+        "anchors": [
+          {
+            "term": "\"botMessageSecret\"",
+            "moduleUTF16Offset": 472
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "history-sync-notification",
+      "module": "WAWebSchemaHistorySyncNotification",
+      "columns": [
+        {
+          "name": "chunkEncryptionKey",
+          "type": "String"
+        },
+        {
+          "name": "directPath",
+          "type": "String"
+        },
+        {
+          "name": "filehash",
+          "type": "String"
+        },
+        {
+          "name": "encFilehash",
+          "type": "String"
+        },
+        {
+          "name": "initialHistBootstrapInlinePayload",
+          "type": "ArrayBuffer"
+        },
+        {
+          "name": "encHandle",
+          "type": "String"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaHistorySyncNotification",
+        "path": "modules/WAWebSchemaHistorySyncNotification.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "9d8572bbfc13cde508773eff01ca80aa1b5d9f853b3084caf5bc3a1ceeeb3415",
+        "anchors": [
+          {
+            "term": "\"chunkEncryptionKey\"",
+            "moduleUTF16Offset": 520
+          },
+          {
+            "term": "\"directPath\"",
+            "moduleUTF16Offset": 847
+          },
+          {
+            "term": "\"filehash\"",
+            "moduleUTF16Offset": 933
+          },
+          {
+            "term": "\"encFilehash\"",
+            "moduleUTF16Offset": 975
+          },
+          {
+            "term": "\"initialHistBootstrapInlinePayload\"",
+            "moduleUTF16Offset": 1078
+          },
+          {
+            "term": "\"encHandle\"",
+            "moduleUTF16Offset": 1431
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "orphan-tc-token",
+      "module": "WAWebSchemaOrphanTcToken",
+      "columns": [
+        {
+          "name": "tcToken",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaOrphanTcToken",
+        "path": "modules/WAWebSchemaOrphanTcToken.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "3f952cad284e79082d7cb15fcf20d65aff235815c6a5d42cacaae6c4f4bc3784",
+        "anchors": [
+          {
+            "term": "\"tcToken\"",
+            "moduleUTF16Offset": 453
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "pending-business-broadcast-message",
+      "module": "WAWebSchemaPendingBusinessBroadcastMessage",
+      "columns": [
+        {
+          "name": "messageBody",
+          "type": "String"
+        },
+        {
+          "name": "mediaData",
+          "type": "ArrayBuffer"
+        },
+        {
+          "name": "mediaMetadata",
+          "type": "String"
+        },
+        {
+          "name": "ctaButtonJson",
+          "type": "String"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaPendingBusinessBroadcastMessage",
+        "path": "modules/WAWebSchemaPendingBusinessBroadcastMessage.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "22c949131603fb29ec905f162ee337eb0eaa9b325bb09111b61a9a1f055b28b8",
+        "anchors": [
+          {
+            "term": "\"messageBody\"",
+            "moduleUTF16Offset": 523
+          },
+          {
+            "term": "\"mediaData\"",
+            "moduleUTF16Offset": 594
+          },
+          {
+            "term": "\"mediaMetadata\"",
+            "moduleUTF16Offset": 643
+          },
+          {
+            "term": "\"ctaButtonJson\"",
+            "moduleUTF16Offset": 690
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "quarantine-data",
+      "module": "WAWebSchemaQuarantineData",
+      "columns": [
+        {
+          "name": "originalProtobuf",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaQuarantineData",
+        "path": "modules/WAWebSchemaQuarantineData.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "6da228b1d0610d873abcb2e476a94ffb69cc088227e60c142e1b3fec2592349f",
+        "anchors": [
+          {
+            "term": "\"originalProtobuf\"",
+            "moduleUTF16Offset": 467
+          }
+        ]
+      }
+    },
+    {
+      "database": "model-storage",
+      "table": "reporting-info",
+      "module": "WAWebSchemaReportingInfo",
+      "columns": [
+        {
+          "name": "reportingTokenContentOpaqueData",
+          "type": "ArrayBuffer"
+        }
+      ],
+      "evidence": {
+        "module": "WAWebSchemaReportingInfo",
+        "path": "modules/WAWebSchemaReportingInfo.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "02495a3f26fabea95da4ce608dc2e759365f6bade60588eae7baff32376a9589",
+        "anchors": [
+          {
+            "term": "\"reportingTokenContentOpaqueData\"",
+            "moduleUTF16Offset": 546
+          }
+        ]
+      }
+    }
+  ],
+  "mappingLimits": [
+    "These 14 definitions contain 24 declared encrypted columns; version rollout determines which columns/tables exist in a given database.",
+    "WAWebSchemaVersions and StorageTableBuilder apply loaded schema/rollout versions. Static declarations are not a live schema inventory.",
+    "This mapping identifies local encryption wrappers, not whether plaintext payloads contain additional nested encryption, protocol secrets or expiry semantics.",
+    "Unencrypted columns, account preferences, mutable Signal stores, protocol queues, media/cache state and other databases remain separate preservation dependencies."
+  ],
+  "officialStoragePath": {
+    "read": "WAWebIdb get defaults decrypt=true; all invokes asyncViewMap with shouldDecrypt; asyncView decrypts declared encrypted fields then runs the table view.",
+    "write": "create/createOrReplace/bulkCreateOrReplace filter columns, encrypt declared encrypted fields, and perform table writes. Writes also invoke update listeners; these are not an isolated archive-restore API.",
+    "preflight": "preflightEncryptSingleRecord removes every non-encrypted property from the supplied object and encrypts the remainder. DBEncryptMultipleMsgs calls it on a cloned row then merges the encrypted subset back; it must not be used as whole-record serialization.",
+    "important": "Methods mutate supplied field envelopes/records, have logging/error paths, and depend on initialized schema/key singletons. All operations here were static inspection only.",
+    "evidence": [
+      {
+        "module": "WAWebIdb",
+        "path": "modules/WAWebIdb.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "9fe94b7f93fe3ad75e975bc36f45933849de47df083d8c47c421caf5d7abd4f7",
+        "anchors": [
+          {
+            "term": "a.asyncView=",
+            "moduleUTF16Offset": 1334
+          },
+          {
+            "term": "a.get=",
+            "moduleUTF16Offset": 7976
+          },
+          {
+            "term": "a.all=",
+            "moduleUTF16Offset": 14520
+          },
+          {
+            "term": "a.createOrReplace=",
+            "moduleUTF16Offset": 6837
+          },
+          {
+            "term": "a.preflightEncryptSingleRecord=",
+            "moduleUTF16Offset": 4619
+          }
+        ]
+      },
+      {
+        "module": "WAWebDBEncryptMultipleMsgs",
+        "path": "modules/WAWebDBEncryptMultipleMsgs.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yv/r/c5kcMtWKu5z.js",
+        "sourceSHA256": "a372ca6e403abc6446a707b85405891c7ee4308caac3c048cafb7ee196ad6335",
+        "moduleSHA256": "0631618eb01576a8090e1f2401b66353fc613a9207261ae4008f68ef107854ed",
+        "anchors": [
+          {
+            "term": "preflightEncryptSingleRecord(babelHelpers.extends({},l))",
+            "moduleUTF16Offset": 2193
+          }
+        ]
+      }
+    ]
+  },
+  "noise": {
+    "logicalFields": [
+      "recoveryToken",
+      "staticKeyPair.pubKey",
+      "staticKeyPair.privKey",
+      "optional certificateChainBuffer"
+    ],
+    "outerProtection": "waNoiseInfo.get decrypts with first initial-local key. set creates 64 random bytes, splits them into four independent 16-byte IVs and AES-CBC encrypts each present field using getEncKeys()[0].",
+    "validation": "get verifies a Curve25519 public key derived from the restored private bytes against stored public bytes before returning.",
+    "backing": "UserPrefsMultiDevice setters persist Noise envelope, IV list and local encryption salt through both LocalStorage and CacheStorage abstractions. Independent archive restoration must account for their consistency.",
+    "screenLock": "Configured screen lock adds a passcode-derived AES-GCM layer. get can enter the official passcode flow; set may use cached passcode-derived state. This review does not authorize bypassing it, clearing it, exporting passcodes or claiming locked-account portability.",
+    "evidence": [
+      {
+        "module": "WAWebUserPrefsInfoStore",
+        "path": "modules/WAWebUserPrefsInfoStore.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "c8453b65928b4dd07822db39fd867661c1a0ec613d3bf70c8408b48a3d041ddd",
+        "anchors": [
+          {
+            "term": "r.get=",
+            "moduleUTF16Offset": 671
+          },
+          {
+            "term": "r.set=",
+            "moduleUTF16Offset": 2169
+          },
+          {
+            "term": "new Uint8Array(64)",
+            "moduleUTF16Offset": 2681
+          },
+          {
+            "term": "DbEncKeyStore.getEncKeys()[0]",
+            "moduleUTF16Offset": 3910
+          },
+          {
+            "term": "r.$3=",
+            "moduleUTF16Offset": 4892
+          }
+        ]
+      },
+      {
+        "module": "WAWebUserPrefsMultiDevice",
+        "path": "modules/WAWebUserPrefsMultiDevice.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+        "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+        "moduleSHA256": "8885a2c762d8529e41b65f5c920b060c96cf4e5a37b6c944bd7699c8bb7e5167",
+        "anchors": [
+          {
+            "term": "setItemToCacheStorage",
+            "moduleUTF16Offset": 1110
+          },
+          {
+            "term": "l.setNoiseInfo=c",
+            "moduleUTF16Offset": 11316
+          },
+          {
+            "term": "l.setWebEncSalt=E",
+            "moduleUTF16Offset": 11591
+          }
+        ]
+      }
+    ]
+  },
+  "fts": {
+    "facts": "FtsClient exposes indexFull (worker command run), startIndexer, reInit, and other commands. FtsWorkerAdapter loads a separate worker resource. Reviewed schemas show fts-v3-index plus queues; its actual token generation, HMAC consumption and rebuild behavior are not included.",
+    "evidence": [
+      {
+        "module": "WAWebFtsClient",
+        "path": "modules/WAWebFtsClient.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4igpM4/y-/l/en_GB-j/MuqONOAKuiW.js",
+        "sourceSHA256": "e4a501dcbc6e2befe325b30838f461f113e1493ddc05248e28acb879d06943ea",
+        "moduleSHA256": "e0aed49a4af8903ccc89d54269707f9700310ad0ec33ee3fc996d487fdfa435f",
+        "anchors": [
+          {
+            "term": "t.indexFull=",
+            "moduleUTF16Offset": 1195
+          },
+          {
+            "term": "operation:\"run\"",
+            "moduleUTF16Offset": 1319
+          },
+          {
+            "term": "t.reInit=",
+            "moduleUTF16Offset": 1843
+          }
+        ]
+      },
+      {
+        "module": "WAWebFtsWorkerAdapter",
+        "path": "modules/WAWebFtsWorkerAdapter.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4igpM4/y-/l/en_GB-j/MuqONOAKuiW.js",
+        "sourceSHA256": "e4a501dcbc6e2befe325b30838f461f113e1493ddc05248e28acb879d06943ea",
+        "moduleSHA256": "8b1e2af547b52cdc4ddd4aa1660f8048f50df7ef8440e725435e6827e1d699f5",
+        "anchors": [
+          {
+            "term": "WAWebFtsWorkerResource",
+            "moduleUTF16Offset": 55
+          },
+          {
+            "term": "createDedicatedWebWorker",
+            "moduleUTF16Offset": 286
+          }
+        ]
+      },
+      {
+        "module": "WAWebSchemaFtsV3Index",
+        "path": "modules/WAWebSchemaFtsV3Index.js",
+        "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yv/r/c5kcMtWKu5z.js",
+        "sourceSHA256": "a372ca6e403abc6446a707b85405891c7ee4308caac3c048cafb7ee196ad6335",
+        "moduleSHA256": "db3efe74878d2bee8f4b377cda4890d0624fad23c9bd8d3727242796383c7627",
+        "anchors": [
+          {
+            "term": "\"fts-v3-index\"",
+            "moduleUTF16Offset": 290
+          },
+          {
+            "term": "\"prefixes\"",
+            "moduleUTF16Offset": 497
+          }
+        ]
+      }
+    ],
+    "inference": "If search tokens depend on the old HMAC key, a fresh root requires a proven full rebuild/reindex from retained source messages. The public command name alone does not prove completeness or safe restart."
+  },
+  "initializationBoundary": {
+    "fact": "generateFinalDbEncryptionAndFtsKey launches its asynchronous final-key derivations and returns a resolved Promise. Separate waitForFinalDbMsgEncKey and waitForFinalFtsHmacKey promises signal readiness; Worm wait may resolve even after a logged derive failure, so consumer getter validity matters.",
+    "evidence": {
+      "module": "WAWebDbEncryptionKey",
+      "path": "modules/WAWebDbEncryptionKey.js",
+      "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+      "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+      "moduleSHA256": "48dd69284fc7280ba823c91e21deb8f31a8e12b7b6486b56019f222b9885bf6d",
+      "anchors": [
+        {
+          "term": "this.generateFinalDbEncryptionAndFtsKey=function",
+          "moduleUTF16Offset": 1965
+        },
+        {
+          "term": "t.$20(i),t.$21(i),t.$22(i).catch",
+          "moduleUTF16Offset": 2122
+        },
+        {
+          "term": "a.waitForFinalFtsHmacKey=function",
+          "moduleUTF16Offset": 5972
+        },
+        {
+          "term": "a.waitForWormEarKey=function",
+          "moduleUTF16Offset": 6032
+        }
+      ]
+    },
+    "implication": "Awaiting only the generation call is insufficient in a synthetic adapter. No actual app initialization or keys were operated on."
+  },
+  "boundedSearch": {
+    "ftsOrWormKeyMentions": [
+      "WAWebDbErrors",
+      "WAWebDbEncryptionKey"
+    ],
+    "directKeyGetterConsumers": [],
+    "finalSaltReferences": [
+      "WAWebStartBackend"
+    ],
+    "ftsWorkerDefinitionPresent": false
+  },
+  "nextSyntheticGate": {
+    "scope": "Known HKDF/AES-CBC application envelopes and Noise fields only; independent native WebKit stores, fresh destination root per key family, no real service.",
+    "assertions": [
+      "Cover initial/final key selection, the four legacy-table scheme branches, multiple key ids/generations, strings/binary/null fields, and rejection of unknown key id/type/scheme/version.",
+      "Prove destination-generated HKDF CryptoKeys persist and derive correctly after independent cold reopening. The prior AES-CTR identity result does not prove this key family.",
+      "Preserve synthetic logical Noise fields and optional certificate bytes with fresh per-field IVs and destination initial key; prove key-pair validation on synthetic material.",
+      "Verify old ciphertext cannot be relabeled with destination key ids; replace envelopes only after successful decryption and independent re-encryption.",
+      "Do not mark FTS, Worm, caches, mutable protocol state, bootstrap completeness or authenticated restoration complete from this synthetic result."
+    ]
+  },
+  "completeBackupBlockers": [
+    "Unmapped FTS HMAC consumer/token and full rebuild contract.",
+    "Unmapped Worm EAR consumer/state/envelope and migration requirements.",
+    "Ordinary browser final-key salt source and pre-bootstrap restore ordering.",
+    "Complete required-state allowlist across protocol records, preferences, jobs, app-sync state and information/media retention.",
+    "A consistent cross-store snapshot/quiescence mechanism and independent authenticated restore proof."
+  ]
+}

@@ -1,0 +1,6 @@
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/integration_test/shell_native_test.dart
+Running Xcode build...                                          
+Xcode build done.                                           33.7s
+00:00 +0: real native engine: cold shell, allocate, open, detach and scoped removal
+00:03 +1: (tearDownAll)
+00:06 +1: All tests passed!

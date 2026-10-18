@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.AccountSetupLifecycleTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:33:37.775Z" hostname="LOCAL_HOST" time="0.663">
+  <properties/>
+  <testcase name="unavailablePickerUsesSafeErrorAndUnlockIsRequired" classname="dev.profiledesk.session_engine.AccountSetupLifecycleTest" time="0.448"/>
+  <testcase name="systemCancelReturnsNoArchiveAndUnrelatedActivityResultCannotFinishRequest" classname="dev.profiledesk.session_engine.AccountSetupLifecycleTest" time="0.025"/>
+  <testcase name="detachCancelsExportAndDoesNotRetainDestinationGrant" classname="dev.profiledesk.session_engine.AccountSetupLifecycleTest" time="0.02"/>
+  <testcase name="ordinaryBackgroundLocksAndCannotStartAnArchiveOperation" classname="dev.profiledesk.session_engine.AccountSetupLifecycleTest" time="0.026"/>
+  <testcase name="ownedPickerPauseKeepsImmediateCoverWithoutCancellingTheLegitimateHandoff" classname="dev.profiledesk.session_engine.AccountSetupLifecycleTest" time="0.034"/>
+  <testcase name="exportWritesOnlySetupMetadataToUserSelectedDestination" classname="dev.profiledesk.session_engine.AccountSetupLifecycleTest" time="0.052"/>
+  <testcase name="lockCancelsPickerAndLateResultCannotReturnPreview" classname="dev.profiledesk.session_engine.AccountSetupLifecycleTest" time="0.023"/>
+  <testcase name="selectedOwnedDocumentReadsValidatedMetadataWithoutImportingProfiles" classname="dev.profiledesk.session_engine.AccountSetupLifecycleTest" time="0.031"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

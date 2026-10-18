@@ -1,0 +1,78 @@
+{
+  "assertions" : 21,
+  "context" : "synthetic iOS simulator; no actual service accounts",
+  "durationSeconds" : 18.717105984687805,
+  "fileScope" : "JavaScript fetch byte\/hash roundtrip only; not native picker, WKDownload or actual service media.",
+  "fixtureTeardown" : "Runner shuts down and deletes its disposable simulator.",
+  "httpCachePositiveControl" : true,
+  "httpCacheSameUrlAcrossProfiles" : true,
+  "mode" : "transport",
+  "oneOwnedView" : true,
+  "osVersion" : "27.0",
+  "probes" : [
+    {
+      "fetchFile" : {
+        "bytes" : 10283,
+        "marker" : "synthetic-0",
+        "result" : "MATCH",
+        "sha256" : "a0e268efcec7609b3387e4634b49b2275197d016fef32e20eff0d31135c84eaa"
+      },
+      "httpCacheFirst" : {
+        "cacheHit" : false,
+        "marker" : "synthetic-0",
+        "requestNonce" : "probe-e31559ed-6cdc-447e-8817-068bcafbf67e",
+        "responseNonce" : "probe-e31559ed-6cdc-447e-8817-068bcafbf67e",
+        "result" : "MATCH"
+      },
+      "httpCacheRepeat" : {
+        "cacheHit" : true,
+        "marker" : "synthetic-0",
+        "requestNonce" : "probe-5fe49ec3-e342-41a0-abca-e2ffbe7689b6",
+        "responseNonce" : "probe-e31559ed-6cdc-447e-8817-068bcafbf67e",
+        "result" : "MATCH"
+      },
+      "profileIndex" : 0,
+      "websocket" : {
+        "echoedMarker" : "synthetic-0",
+        "echoedToken" : "synthetic-e52daeac-e216-4dba-acc9-7269a988b7e6",
+        "identity" : "synthetic-0",
+        "result" : "MATCH",
+        "token" : "synthetic-e52daeac-e216-4dba-acc9-7269a988b7e6"
+      }
+    },
+    {
+      "fetchFile" : {
+        "bytes" : 10283,
+        "marker" : "synthetic-1",
+        "result" : "MATCH",
+        "sha256" : "bef67626de467159ecb222479c3a2b2536535ce4494ca501be5cab58c8f37034"
+      },
+      "httpCacheFirst" : {
+        "cacheHit" : false,
+        "marker" : "synthetic-1",
+        "requestNonce" : "probe-d1be18c7-3827-4739-91f0-16e355a99f8e",
+        "responseNonce" : "probe-d1be18c7-3827-4739-91f0-16e355a99f8e",
+        "result" : "MATCH"
+      },
+      "httpCacheRepeat" : {
+        "cacheHit" : true,
+        "marker" : "synthetic-1",
+        "requestNonce" : "probe-72f7b394-ce7f-48a5-bf7b-3c6ca56a0b09",
+        "responseNonce" : "probe-d1be18c7-3827-4739-91f0-16e355a99f8e",
+        "result" : "MATCH"
+      },
+      "profileIndex" : 1,
+      "websocket" : {
+        "echoedMarker" : "synthetic-1",
+        "echoedToken" : "synthetic-e68ba1a8-4efb-4fda-8fc2-b0fb13c7d146",
+        "identity" : "synthetic-1",
+        "result" : "MATCH",
+        "token" : "synthetic-e68ba1a8-4efb-4fda-8fc2-b0fb13c7d146"
+      }
+    }
+  ],
+  "profiles" : 2,
+  "recordedAt" : "2026-10-17T22:31:22Z",
+  "result" : "PASS",
+  "wssHandshakeProfileCookies" : true
+}

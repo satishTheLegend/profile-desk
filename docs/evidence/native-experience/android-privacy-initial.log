@@ -1,0 +1,175 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy NO-SOURCE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+> Configure project :app
+WARNING: The option setting 'android.builtInKotlin=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+WARNING: The option setting 'android.newDsl=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 10.0 of the Android Gradle plugin.
+w: [33m[1m⚠️ Deprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':app' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+
+> Configure project :session_engine
+w: [33m[1m⚠️ Deprecated 'org.jetbrains.kotlin.android' plugin usage[0m[0m
+The 'org.jetbrains.kotlin.android' plugin in project ':session_engine' is no longer required for Kotlin support since AGP 9.0.
+[32m[1mSolution:[0m[0m
+[32m[3mRemove both `android.builtInKotlin=true` and `android.newDsl=false` from `gradle.properties`, then migrate to built-in Kotlin.[0m[0m
+[36mSee [0m[34mhttps://kotl.in/gradle/agp-built-in-kotlin[0m[36m for more details.[0m
+
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :session_engine:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :session_engine:preBuild UP-TO-DATE
+> Task :session_engine:preDebugBuild UP-TO-DATE
+> Task :session_engine:generateDebugResources UP-TO-DATE
+> Task :session_engine:packageDebugResources UP-TO-DATE
+> Task :session_engine:processDebugNavigationResources UP-TO-DATE
+> Task :session_engine:parseDebugLocalResources UP-TO-DATE
+> Task :session_engine:generateDebugRFile UP-TO-DATE
+> Task :session_engine:compileDebugKotlin
+> Task :session_engine:javaPreCompileDebug UP-TO-DATE
+> Task :session_engine:compileDebugJavaWithJavac NO-SOURCE
+> Task :session_engine:bundleLibRuntimeToJarDebug
+> Task :session_engine:bundleLibCompileToJarDebug
+> Task :session_engine:preDebugUnitTestBuild UP-TO-DATE
+> Task :session_engine:writeDebugAarMetadata UP-TO-DATE
+> Task :session_engine:checkDebugUnitTestAarMetadata UP-TO-DATE
+> Task :session_engine:mapDebugSourceSetPaths UP-TO-DATE
+> Task :session_engine:compileDebugLibraryResources UP-TO-DATE
+> Task :session_engine:mapDebugUnitTestSourceSetPaths UP-TO-DATE
+> Task :session_engine:generateDebugUnitTestResources UP-TO-DATE
+> Task :session_engine:mergeDebugUnitTestResources UP-TO-DATE
+> Task :session_engine:extractDeepLinksDebug UP-TO-DATE
+> Task :session_engine:processDebugManifest UP-TO-DATE
+> Task :session_engine:processDebugUnitTestManifest UP-TO-DATE
+> Task :session_engine:processDebugUnitTestResources UP-TO-DATE
+> Task :session_engine:compileDebugUnitTestKotlin
+> Task :session_engine:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :session_engine:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :session_engine:generateDebugUnitTestAssets UP-TO-DATE
+> Task :session_engine:generateDebugAssets UP-TO-DATE
+> Task :session_engine:mergeDebugAssets
+> Task :session_engine:mergeDebugUnitTestAssets
+> Task :session_engine:packageDebugUnitTestForUnitTest
+> Task :session_engine:generateDebugUnitTestConfig
+> Task :session_engine:processDebugJavaRes UP-TO-DATE
+> Task :session_engine:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :session_engine:testDebugUnitTest
+
+Gradle Test Executor 1 STANDARD_ERROR
+    [Robolectric] WARN: Android SDK 36 requires Java 21 (have Java 17). Tests won't be run on SDK 36 unless explicitly requested.
+
+WindowPrivacyCoverTest > aLockedCoverProvidesUnlockAndCannotDuplicateOrLeakAcrossWindows PASSED
+
+WindowPrivacyCoverTest > coversTheWholeWindowAndRestoresAccessibilityWithoutDart PASSED
+
+WindowPrivacyCoverTest > enginePauseAndLockCoverNativeContentWithoutAnyWebHost PASSED
+
+WorkspaceLayoutOwnershipTest > repeatedModeCommandsKeepTheInstalledAdapterAndListReturnDismissesFocus STANDARD_ERROR
+    System.logW: A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+    java.lang.Throwable: Explicit termination method 'release' not called
+    	at dalvik.system.CloseGuard.$$robo$$dalvik_system_CloseGuard$open(CloseGuard.java:237)
+    	at jdk.internal.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+    	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+    	at org.robolectric.shadows.ShadowCloseGuard$CloseGuardReflector$$Reflector26.open(Unknown Source)
+    	at org.robolectric.shadows.ShadowCloseGuard.open(ShadowCloseGuard.java:38)
+    	at dalvik.system.CloseGuard.open(CloseGuard.java)
+    	at android.view.Surface.$$robo$$android_view_Surface$setNativeObjectLocked(Surface.java:648)
+    	at android.view.Surface.setNativeObjectLocked(Surface.java)
+    	at android.view.Surface.$$robo$$android_view_Surface$copyFrom(Surface.java:533)
+    	at android.view.Surface.copyFrom(Surface.java)
+    	at android.view.ViewRootImpl.$$robo$$android_view_ViewRootImpl$relayoutWindow(ViewRootImpl.java:6938)
+    	at android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java)
+    	at android.view.ViewRootImpl.$$robo$$android_view_ViewRootImpl$performTraversals(ViewRootImpl.java:2264)
+    	at android.view.ViewRootImpl.performTraversals(ViewRootImpl.java)
+    	at android.view.ViewRootImpl.$$robo$$android_view_ViewRootImpl$doTraversal(ViewRootImpl.java:1721)
+    	at android.view.ViewRootImpl.doTraversal(ViewRootImpl.java)
+    	at android.view.ViewRootImpl$TraversalRunnable.$$robo$$android_view_ViewRootImpl_TraversalRunnable$run(ViewRootImpl.java:7598)
+    	at android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java)
+    	at android.view.Choreographer$CallbackRecord.$$robo$$android_view_Choreographer_CallbackRecord$run(Choreographer.java:966)
+    	at android.view.Choreographer$CallbackRecord.run(Choreographer.java)
+    	at android.view.Choreographer.$$robo$$android_view_Choreographer$doCallbacks(Choreographer.java:790)
+    	at android.view.Choreographer.doCallbacks(Choreographer.java)
+    	at android.view.Choreographer.$$robo$$android_view_Choreographer$doFrame(Choreographer.java:725)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+    	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+    	at org.robolectric.shadows.ShadowChoreographer$ChoreographerReflector$$Reflector34.doFrame(Unknown Source)
+    	at org.robolectric.shadows.ShadowChoreographer.lambda$doFrame$0(ShadowChoreographer.java:196)
+    	at org.robolectric.util.PerfStatsCollector.measure(PerfStatsCollector.java:83)
+    	at org.robolectric.shadows.ShadowChoreographer.doFrame(ShadowChoreographer.java:196)
+    	at android.view.Choreographer.doFrame(Choreographer.java)
+    	at android.view.Choreographer$FrameDisplayEventReceiver.$$robo$$android_view_Choreographer_FrameDisplayEventReceiver$run(Choreographer.java:951)
+    	at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java)
+    	at android.os.Handler.$$robo$$android_os_Handler$handleCallback(Handler.java:883)
+    	at android.os.Handler.handleCallback(Handler.java)
+    	at android.os.Handler.$$robo$$android_os_Handler$dispatchMessage(Handler.java:100)
+    	at android.os.Handler.dispatchMessage(Handler.java)
+    	at org.robolectric.shadows.ShadowPausedLooper$IdlingRunnable.doRun(ShadowPausedLooper.java:677)
+    	at org.robolectric.shadows.ShadowPausedLooper$ControlRunnable.run(ShadowPausedLooper.java:599)
+    	at org.robolectric.shadows.ShadowPausedLooper$HandlerExecutor.execute(ShadowPausedLooper.java:849)
+    	at org.robolectric.shadows.ShadowPausedLooper.executeOnLooper(ShadowPausedLooper.java:765)
+    	at org.robolectric.shadows.ShadowPausedLooper.idle(ShadowPausedLooper.java:109)
+    	at org.robolectric.shadows.ShadowPausedLooper.idleIfPaused(ShadowPausedLooper.java:193)
+    	at org.robolectric.android.controller.ActivityController.visible(ActivityController.java:233)
+    	at org.robolectric.android.controller.ActivityController.setup(ActivityController.java:340)
+    	at dev.profiledesk.session_engine.WindowPrivacyCoverTest.setup(WindowPrivacyCoverTest.kt:29)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+    	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+    	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+    	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+    	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+    	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+    	at org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+    	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+    	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+    	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+    	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:524)
+    	at org.robolectric.internal.SandboxTestRunner.executeInSandbox(SandboxTestRunner.java:494)
+    	at org.robolectric.internal.SandboxTestRunner.access$900(SandboxTestRunner.java:67)
+    	at org.robolectric.internal.SandboxTestRunner$7.evaluate(SandboxTestRunner.java:442)
+    	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+    	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+    	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+    	at org.robolectric.internal.SandboxTestRunner.access$600(SandboxTestRunner.java:67)
+    	at org.robolectric.internal.SandboxTestRunner$6.evaluate(SandboxTestRunner.java:333)
+    	at org.robolectric.internal.SandboxTestRunner$3.evaluate(SandboxTestRunner.java:233)
+    	at org.robolectric.internal.SandboxTestRunner$5.lambda$evaluate$0(SandboxTestRunner.java:317)
+    	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:101)
+    	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+    	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+    	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+    	at java.base/java.lang.Thread.run(Thread.java:840)
+
+
+WorkspaceLayoutOwnershipTest > repeatedModeCommandsKeepTheInstalledAdapterAndListReturnDismissesFocus PASSED
+
+WorkspaceLayoutOwnershipTest > currentTrustedAttachedViewAcceptsOnlyTypedCommands PASSED
+
+WorkspaceLayoutOwnershipTest > staleHandleCannotChangeNewerViewsMode PASSED
+
+WorkspaceLayoutOwnershipTest > lockBackgroundUntrustedNavigationAndDetachedHostRejectCommands PASSED
+
+[Incubating] Problems report is available at: file:///Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 15s
+33 actionable tasks: 9 executed, 24 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html

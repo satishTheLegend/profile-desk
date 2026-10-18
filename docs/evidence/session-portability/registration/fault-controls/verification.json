@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "assertions": 125,
+  "allChecksTrue": true,
+  "malformedInputControls": 30,
+  "distinctProcesses": 6,
+  "inputFileHashesMatch": true,
+  "installedExecutableHashesMatch": true,
+  "reviewedPublicModuleHashesMatch": true,
+  "destinationOpensOnlyDestination": true,
+  "sourceOpensOnlySourceOnColdRestart": true,
+  "cleanup": {
+    "serverStopped": true,
+    "simulatorDeleted": true,
+    "temporaryCertificateDeleted": true
+  },
+  "scope": "Synthetic registration-wrapper fixture only; no service session or physical device proof."
+}

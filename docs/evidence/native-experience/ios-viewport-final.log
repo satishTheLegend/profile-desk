@@ -1,0 +1,434 @@
+dev.profiledesk.viewport-regression: 41337
+{
+  "count" : 71,
+  "identityMeasurement" : {
+    "baseURL" : "https:\/\/harness.profiledesk.invalid\/",
+    "configuredApplicationName" : "Version\/27.0 Safari\/605.1.15",
+    "customUserAgentValue" : "",
+    "evaluationError" : null,
+    "expectedSuffix" : "Version\/27.0 Safari\/605.1.15",
+    "hasCustomUserAgent" : true,
+    "observedIdentity" : "Mozilla\/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\/605.1.15 (KHTML, like Gecko) Version\/27.0 Safari\/605.1.15",
+    "operatingSystemVersion" : "27.0.0"
+  },
+  "limits" : "WebKit resets programmatic zoom after processing a height resize in this fixture. The synchronous fitter does not write zoom; actual pinch plus keyboard behavior remains a physical-device check.",
+  "measurements" : [
+    {
+      "contentWidth" : 440,
+      "document" : {
+        "right" : 980,
+        "width" : 440
+      },
+      "fitScale" : 1,
+      "height" : 700,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "baseline-hidden-overflow-440",
+      "pageZoom" : 1,
+      "renderedWidth" : 440,
+      "width" : 440,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 980,
+      "document" : {
+        "right" : 980,
+        "width" : 980
+      },
+      "fitScale" : 0.44897959183673469,
+      "height" : 1559.090909090909,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-hidden-overflow-440",
+      "pageZoom" : 1,
+      "renderedWidth" : 440,
+      "width" : 980,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 980,
+      "document" : {
+        "right" : 980,
+        "width" : 980
+      },
+      "fitScale" : 0.89795918367346939,
+      "height" : 779.5454545454545,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-width-880",
+      "pageZoom" : 1,
+      "renderedWidth" : 880,
+      "width" : 980,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 1366,
+      "document" : {
+        "right" : 980,
+        "width" : 1366
+      },
+      "fitScale" : 1,
+      "height" : 700,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-width-1366",
+      "pageZoom" : 1,
+      "renderedWidth" : 1366,
+      "width" : 1366,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 980,
+      "document" : {
+        "right" : 980,
+        "width" : 980
+      },
+      "fitScale" : 0.32653061224489793,
+      "height" : 2143.75,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-width-320",
+      "pageZoom" : 1,
+      "renderedWidth" : 320,
+      "width" : 980.00000000000011,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 980,
+      "document" : {
+        "right" : 980,
+        "width" : 980
+      },
+      "fitScale" : 0.44897959183673469,
+      "height" : 1559.090909090909,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "fitted-width-440",
+      "pageZoom" : 1,
+      "renderedWidth" : 440,
+      "width" : 980,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 980,
+      "document" : {
+        "right" : 980,
+        "width" : 980
+      },
+      "fitScale" : 0.44897959183673469,
+      "height" : 779.5454545454545,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "height-resize-after-programmatic-zoom-WebKit-may-reset",
+      "pageZoom" : 1,
+      "renderedWidth" : 440,
+      "width" : 980,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 980,
+      "document" : {
+        "right" : 980,
+        "width" : 980
+      },
+      "fitScale" : 0.44897959183673469,
+      "height" : 779.5454545454545,
+      "maximumZoomScale" : 5,
+      "minimumZoomScale" : 1,
+      "name" : "responsive-with-desktop-viewport",
+      "pageZoom" : 1,
+      "renderedWidth" : 440,
+      "width" : 980,
+      "zoomScale" : 1
+    }
+  ],
+  "os" : "27.0",
+  "result" : "PASS",
+  "scope" : "Actual production WorkspaceWebView and SessionHostView with controlled local HTML and test-only DOM geometry. No service account, actual touch pinch, physical keyboard or device rotation.",
+  "tests" : [
+    {
+      "name" : "fictional native input can take keyboard focus",
+      "pass" : true
+    },
+    {
+      "name" : "whole-window privacy cover ends input and owns hardware-key focus",
+      "pass" : true
+    },
+    {
+      "name" : "privacy input dismissal preserves the unsent native draft",
+      "pass" : true
+    },
+    {
+      "name" : "privacy cover protects the full window and accessibility tree",
+      "pass" : true
+    },
+    {
+      "name" : "non-development identity remains unchanged: missing bundle",
+      "pass" : true
+    },
+    {
+      "name" : "non-development identity remains unchanged: dev.profiledesk.profileDesk",
+      "pass" : true
+    },
+    {
+      "name" : "non-development identity remains unchanged: dev.profiledesk.profileDesk.qa",
+      "pass" : true
+    },
+    {
+      "name" : "development uses the configured compatibility suffix with WebKit's own desktop identity",
+      "pass" : true
+    },
+    {
+      "name" : "baseline reproduces clipped fixed child despite native contentSize matching host width",
+      "pass" : true
+    },
+    {
+      "name" : "host clips transformed or pinched content to the privacy-cover area",
+      "pass" : true
+    },
+    {
+      "name" : "real desktop viewport is fitted before initial navigation",
+      "pass" : true
+    },
+    {
+      "name" : "site scale restrictions do not disable native pinch",
+      "pass" : true
+    },
+    {
+      "name" : "Flutter safe area is not applied a second time",
+      "pass" : true
+    },
+    {
+      "name" : "hidden fixed child fits phone without page inspection in production",
+      "pass" : true
+    },
+    {
+      "name" : "fitted phone content fills the host width",
+      "pass" : true
+    },
+    {
+      "name" : "UIKit converts touch coordinates into the desktop viewport",
+      "pass" : true
+    },
+    {
+      "name" : "right-edge native hit testing reaches transformed web view",
+      "pass" : true
+    },
+    {
+      "name" : "native desktop viewport fits actual available width 880",
+      "pass" : true
+    },
+    {
+      "name" : "fixed child fits rotation\/tablet\/split width 880",
+      "pass" : true
+    },
+    {
+      "name" : "native desktop viewport fits actual available width 1366",
+      "pass" : true
+    },
+    {
+      "name" : "fixed child fits rotation\/tablet\/split width 1366",
+      "pass" : true
+    },
+    {
+      "name" : "native desktop viewport fits actual available width 320",
+      "pass" : true
+    },
+    {
+      "name" : "fixed child fits rotation\/tablet\/split width 320",
+      "pass" : true
+    },
+    {
+      "name" : "native desktop viewport fits actual available width 440",
+      "pass" : true
+    },
+    {
+      "name" : "fixed child fits rotation\/tablet\/split width 440",
+      "pass" : true
+    },
+    {
+      "name" : "repeated native layouts do not recursively shrink the view",
+      "pass" : true
+    },
+    {
+      "name" : "native zoom range remains available on user-scalable=no fixture",
+      "pass" : true
+    },
+    {
+      "name" : "programmatic native zoom actually increases scale",
+      "pass" : true
+    },
+    {
+      "name" : "host fitter does not synchronously overwrite native zoom on height-only resize",
+      "pass" : true
+    },
+    {
+      "name" : "height-only resize fits new keyboard-sized host without changing width scale",
+      "pass" : true
+    },
+    {
+      "name" : "responsive document fills the explicit desktop viewport without overflow",
+      "pass" : true
+    },
+    {
+      "name" : "privacy cover stays untransformed and fills physical host bounds",
+      "pass" : true
+    },
+    {
+      "name" : "privacy cover intercepts input across transformed workspace",
+      "pass" : true
+    },
+    {
+      "name" : "disposed fitting ignores later geometry changes",
+      "pass" : true
+    },
+    {
+      "name" : "fitting retains no observer\/task that leaks disposed web view",
+      "pass" : true
+    },
+    {
+      "name" : "fixture bundles the identical production layout resource",
+      "pass" : true
+    },
+    {
+      "name" : "recognized phone panes use actual native width without shrinking text",
+      "pass" : true
+    },
+    {
+      "name" : "page JavaScript cannot see the isolated-world layout API",
+      "pass" : true
+    },
+    {
+      "name" : "fixture list fills phone width and its 16px text remains native size",
+      "pass" : true
+    },
+    {
+      "name" : "recognized phone workspace starts with list rather than detail",
+      "pass" : true
+    },
+    {
+      "name" : "recognized phone bounds follow host width 320",
+      "pass" : true
+    },
+    {
+      "name" : "recognized phone bounds follow host width 375",
+      "pass" : true
+    },
+    {
+      "name" : "recognized phone bounds follow host width 440",
+      "pass" : true
+    },
+    {
+      "name" : "rotation and split width 375 preserve the complete native presentation",
+      "pass" : true
+    },
+    {
+      "name" : "right-edge hit testing remains aligned at width 375",
+      "pass" : true
+    },
+    {
+      "name" : "rotation cover blocks the complete native host at width 375",
+      "pass" : true
+    },
+    {
+      "name" : "rotation and split width 852 preserve the complete native presentation",
+      "pass" : true
+    },
+    {
+      "name" : "right-edge hit testing remains aligned at width 852",
+      "pass" : true
+    },
+    {
+      "name" : "rotation cover blocks the complete native host at width 852",
+      "pass" : true
+    },
+    {
+      "name" : "rotation and split width 375 preserve the complete native presentation",
+      "pass" : true
+    },
+    {
+      "name" : "right-edge hit testing remains aligned at width 375",
+      "pass" : true
+    },
+    {
+      "name" : "rotation cover blocks the complete native host at width 375",
+      "pass" : true
+    },
+    {
+      "name" : "rotation and split width 280 preserve the complete native presentation",
+      "pass" : true
+    },
+    {
+      "name" : "right-edge hit testing remains aligned at width 280",
+      "pass" : true
+    },
+    {
+      "name" : "rotation cover blocks the complete native host at width 280",
+      "pass" : true
+    },
+    {
+      "name" : "rotation and split width 1366 preserve the complete native presentation",
+      "pass" : true
+    },
+    {
+      "name" : "right-edge hit testing remains aligned at width 1366",
+      "pass" : true
+    },
+    {
+      "name" : "rotation cover blocks the complete native host at width 1366",
+      "pass" : true
+    },
+    {
+      "name" : "rotation and split width 440 preserve the complete native presentation",
+      "pass" : true
+    },
+    {
+      "name" : "right-edge hit testing remains aligned at width 440",
+      "pass" : true
+    },
+    {
+      "name" : "rotation cover blocks the complete native host at width 440",
+      "pass" : true
+    },
+    {
+      "name" : "recognized workspace respects keyboard-height resize at native scale",
+      "pass" : true
+    },
+    {
+      "name" : "unknown replacement layout regains complete desktop fit instead of clipping",
+      "pass" : true
+    },
+    {
+      "name" : "explicit Original layout restores desktop fit",
+      "pass" : true
+    },
+    {
+      "name" : "Original layout removes adapter presentation styles",
+      "pass" : true
+    },
+    {
+      "name" : "Chats command keeps unknown structure fully fitted",
+      "pass" : true
+    },
+    {
+      "name" : "restored recognized structure recovers native-size phone presentation",
+      "pass" : true
+    },
+    {
+      "name" : "unrecognized preauthentication page remains fully fitted",
+      "pass" : true
+    },
+    {
+      "name" : "ineligible foreground\/lock ownership blocks structural polling",
+      "pass" : true
+    },
+    {
+      "name" : "eligible late-arriving structural hooks activate phone width without extracting content",
+      "pass" : true
+    },
+    {
+      "name" : "phone fallback transition leaves privacy cover in native coordinates",
+      "pass" : true
+    }
+  ]
+}iOS viewport regression evidence: /Users/LOCAL_USER/Repos/webwhatsapp/build/ios-viewport-20261018T200708Z

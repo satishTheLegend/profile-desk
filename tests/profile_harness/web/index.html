@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Synthetic profile storage fixture</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Profile isolation fixture</h1>
+    <p>Use only fictional markers. This page exercises storage at one HTTPS origin; it does not prove WhatsApp compatibility.</p>
+    <label for="marker">Expected marker for the selected native profile</label>
+    <input id="marker" value="synthetic-01" pattern="synthetic-[a-zA-Z0-9_-]{1,48}" maxlength="58" autocomplete="off" spellcheck="false">
+    <div class="actions">
+      <button id="seed">Write marker to every store</button>
+      <button id="verify">Verify existing storage</button>
+      <button id="reload">Reload page</button>
+      <button id="clear">Clear fixture storage</button>
+      <button id="burst">Run 4-second worker write burst</button>
+    </div>
+    <p id="status" role="status" aria-live="polite">Ready. Verify before writing when checking deletion or isolation.</p>
+    <pre id="report" tabindex="0" aria-label="Storage verification report"></pre>
+    <details><summary>Device test sequence</summary>
+      <ol>
+        <li>Use the QA application identity and the exact same fixture origin for all profiles.</li>
+        <li>Before seeding each new profile, verify that every store is empty. An existing marker is a failure.</li>
+        <li>Seed synthetic-01 through synthetic-10 in the corresponding profiles.</li>
+        <li>Switch away, reopen, and verify each expected marker. Repeat after process termination and device restart.</li>
+        <li>Remove one profile in the native account manager. Open a fresh replacement and verify every store is empty before seeding it. Other profiles must retain their own markers.</li>
+        <li>Record device, OS, provider, app build, origin, timing and actual results in the evidence ledger.</li>
+      </ol>
+    </details>
+  </main>
+</body>
+</html>

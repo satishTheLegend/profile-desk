@@ -1,0 +1,3 @@
+PASS: 374 exact prompt clauses, 70 exact acceptance cases, valid case references and current Markdown view.
+PASS: unchanged Word plan; 337 nonempty paragraphs, 214 data rows and 37 source hyperlinks mapped.
+Coverage verification only; does not certify requirement fulfillment.

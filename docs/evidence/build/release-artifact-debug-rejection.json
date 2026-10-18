@@ -1,0 +1,5 @@
+{
+  "scope": "Unsigned production artifact metadata, known fixture markers, packaged configuration and DEX class inventory; no runtime proof or release approval.",
+  "result": "FAIL",
+  "error": "prohibited fixture/debug path: assets/flutter_assets/isolate_snapshot_data; prohibited fixture/debug path: assets/flutter_assets/kernel_blob.bin; prohibited fixture/debug path: assets/flutter_assets/vm_snapshot_data"
+}

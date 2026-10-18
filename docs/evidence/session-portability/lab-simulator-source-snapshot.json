@@ -1,0 +1,6 @@
+{
+  "tests/session_portability/ios_lab/main.swift": "569a555eac8fd2d744cd45c41114945ecf96ef52d3b6e33cd8386b9d938faeff",
+  "tests/session_portability/ios_lab/StorageClassifier.js": "c0079fd78c6a00ba17ed151d9615e621519fefd2343eea8629bfa12e1c64a80b",
+  "tests/session_portability/ios_lab/Info.plist": "d521005c271d2716798def63cfae5983f84431adcf2ee5443586baea8022ab08",
+  "tests/session_portability/ios_lab/build.py": "cebe3a37ad9b1c0225fcf02cf7cf06504d27c36eec470b344bdab534b2fee9dc"
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:06:34.687Z" hostname="LOCAL_HOST" time="0.044">
+  <properties/>
+  <testcase name="repeatedModeCommandsKeepTheInstalledAdapterAndListReturnDismissesFocus" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.019"/>
+  <testcase name="currentTrustedAttachedViewAcceptsOnlyTypedCommands" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.008"/>
+  <testcase name="staleHandleCannotChangeNewerViewsMode" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.008"/>
+  <testcase name="lockBackgroundUntrustedNavigationAndDetachedHostRejectCommands" classname="dev.profiledesk.session_engine.WorkspaceLayoutOwnershipTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

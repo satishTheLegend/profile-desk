@@ -1,0 +1,48 @@
+{
+  "scope": "Unsigned production artifact metadata, known fixture markers, packaged configuration and DEX class inventory; no runtime proof or release approval.",
+  "verifier_sha256": "38987a7d68c72bb97441f8a676b4e2dcef153770b3270e6eede54c581e6537d3",
+  "known_fixture_markers": [
+    "FakeSessionEngine",
+    "profiledesk_harness_ca",
+    "profiledesk_test_network_security",
+    "harness.profiledesk.invalid",
+    "harness_http_only",
+    "harness_readable",
+    "synthetic-journal-test",
+    "ProfileIsolationInstrumentedTest",
+    "IntegrationTestPlugin",
+    "FLTIntegrationTestRunner",
+    "IntegrationTestIosTest",
+    "plugins.flutter.io/integration_test",
+    "https://10.0.2.2:8443",
+    "https://127.0.0.1:8443",
+    "https://localhost:8443",
+    "https://localhost:8445"
+  ],
+  "artifact_inputs": {
+    "android_apk_sha256": "1b3ff6ac23c2a3fc0d1324f8e86dc80bbcb2465e125b451d8f364d4fc8dbbd8c",
+    "ios_executable_sha256": "3ba9a11ee36a615832119b3d4ff3602b0360eb7cf84d60744019f45d00392245"
+  },
+  "android": {
+    "artifact": "apps/mobile/build/app/outputs/flutter-apk/app-production-release.apk",
+    "sha256": "1b3ff6ac23c2a3fc0d1324f8e86dc80bbcb2465e125b451d8f364d4fc8dbbd8c",
+    "bytes": 54479557,
+    "package": "dev.profiledesk.profile_desk",
+    "debuggable": false,
+    "allow_backup": false,
+    "cleartext": false,
+    "backup_resources": {
+      "backup_rules": "res/Qq.xml",
+      "data_extraction_rules": "res/4j.xml"
+    },
+    "signature": "unsigned (expected)",
+    "known_fixture_marker_scan": "PASS",
+    "zip_entries_scanned": 89,
+    "dex_test_class_scan": "PASS",
+    "dex_mapping_used": true,
+    "mapping_sha256": "4ce32411a893dde2c7c1dd9da423b12c7e257d65e452e4ad8920729e44c4920b",
+    "aot_library_present": true
+  },
+  "result": "FAIL",
+  "error": "known fixture marker 'IntegrationTestPlugin' in Runner; known fixture marker 'FLTIntegrationTestRunner' in Runner; known fixture marker 'IntegrationTestIosTest' in Runner; known fixture marker 'plugins.flutter.io/integration_test' in Runner"
+}

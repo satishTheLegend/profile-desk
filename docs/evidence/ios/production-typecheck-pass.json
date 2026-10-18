@@ -1,0 +1,22 @@
+{
+  "recordedAt": "2026-10-17T22:28:33.780060+00:00",
+  "result": "PASS",
+  "validation": "swiftc -typecheck -warnings-as-errors",
+  "target": "arm64-apple-ios17.0-simulator",
+  "sdk": "Xcode 27.1 iPhoneSimulator SDK",
+  "scope": "All production iOS plugin Swift sources plus Pigeon bridge; compile evidence, not runtime evidence",
+  "sourceSHA256": {
+    "packages/session_engine/ios/session_engine/Sources/session_engine/BoundWebSession.swift": "637c20860641a4493e2a30406718cdb7d4a58eb1fe37465ee32c7e2be0f075fb",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/InstallationBinding.swift": "e0b351473e5986e762f0c389301e0285024751b7a800c7e6176e53b9adcda338",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/Messages.g.swift": "222de9d78a7a45228687373cf8a1f8211e0c9bfe171b2c60a268df458c2ad4e4",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/NativeDiagnostics.swift": "25de8c7e119e013e78b04485e5af93549347b7f19a94a67ed3017caf0951f859",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/NativeLockState.swift": "21acf0e525d900606b4d49c077d538096a2eeca195d5fb10683d05d6752bbc8d",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/NativeTransfers.swift": "5a14192839e76eac2ae4167c1e9432c86772df7003de1db3a89431f132f507bf",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/ProfileRegistry.swift": "4db8203409a19fb6925c00a9b4edf276e219145b07ed6d19e7d3ef78169d9464",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/SessionEnginePlugin.swift": "cbbe78e0804d8fa4c1b33c2baafb4a36b3e313a89a8d8a46beae0becfab8ac2a",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/TransferFiles.swift": "b6cbe946947c00d01f948a48cae506a1570c3a1342f56d61ca8d7d4bda67fcdc",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/WebKitBootstrap.swift": "513c05fc4e091ffe259449ec5e9b7797b16de750d795b2b5c9d8b5c24019bab4",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/WindowPrivacyCover.swift": "7316b5f9bf5e544bcdf34b8f9ae9b174c7e86a8771205aa4d17fda208b248033",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/WorkspaceURLPolicy.swift": "222d1bfb4ed63400389ff2068e2e37caae09bc2fe78ddb2f90ba75b18351976d"
+  }
+}

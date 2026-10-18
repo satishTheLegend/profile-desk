@@ -1,0 +1,146 @@
+{
+  "result": "PASS",
+  "count": 31,
+  "checks": [
+    {
+      "name": "empty owned fixture returns complete counts without claiming portability",
+      "pass": true
+    },
+    {
+      "name": "known structured values complete without reading record contents into report",
+      "pass": true
+    },
+    {
+      "name": "nested extractable and nonextractable keys are counted separately",
+      "pass": true
+    },
+    {
+      "name": "arrayBuffer contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "typedArray contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "date contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "map contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "set contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "blob contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "cyclic references terminate without recursion failure",
+      "pass": true
+    },
+    {
+      "name": "local and session storage use entry counts only",
+      "pass": true
+    },
+    {
+      "name": "no key operation, cookie read, blob read or web-storage value read occurred",
+      "pass": true
+    },
+    {
+      "name": "every scan transaction was explicitly readonly",
+      "pass": true
+    },
+    {
+      "name": "report excludes database/store names, record keys and synthetic private values",
+      "pass": true
+    },
+    {
+      "name": "report contains only declared status and numeric count fields",
+      "pass": true
+    },
+    {
+      "name": "repeated scan preserves database/store/record counts",
+      "pass": true
+    },
+    {
+      "name": "unsupported values produce inconclusive rather than a portability success",
+      "pass": true
+    },
+    {
+      "name": "excessive nesting is bounded and inconclusive",
+      "pass": true
+    },
+    {
+      "name": "visited-node limit is bounded and inconclusive",
+      "pass": true
+    },
+    {
+      "name": "database-count limit rejects before opening a database",
+      "pass": true
+    },
+    {
+      "name": "database removed between discovery/open yields inconclusive",
+      "pass": true
+    },
+    {
+      "name": "raced missing database was not recreated",
+      "pass": true
+    },
+    {
+      "name": "overlapping synthetic scans both reached deferred discovery",
+      "pass": true
+    },
+    {
+      "name": "starting a new scan cannot revive the superseded scan",
+      "pass": true
+    },
+    {
+      "name": "late cancellation of the previous token preserves the new scan",
+      "pass": true
+    },
+    {
+      "name": "unresponsive storage discovery ends at the fixed deadline",
+      "pass": true
+    },
+    {
+      "name": "foreign origin is refused before storage scanning",
+      "pass": true
+    },
+    {
+      "name": "non-HTTPS service origin is refused",
+      "pass": true
+    },
+    {
+      "name": "nondefault service port is refused",
+      "pass": true
+    },
+    {
+      "name": "all page requests were fulfilled by the owned fixture with DNS disabled",
+      "pass": true
+    },
+    {
+      "name": "owned browser exits and its temporary profile is removed",
+      "pass": true
+    }
+  ],
+  "cleanup": {
+    "processExited": true,
+    "profileRemoved": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.84",
+    "revision": "@5869fe313571d75152b77813cf0a4ee26a4e6df0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.25"
+  },
+  "classifierSHA256": "c0079fd78c6a00ba17ed151d9615e621519fefd2343eea8629bfa12e1c64a80b",
+  "runnerSHA256": "ccf725b878de43a1bc2f73b45f4124cf6ea0e2f0fecb2985a1bfabe7843d0e8c",
+  "fulfilledRequests": 4,
+  "scope": "Exact bundled classifier in an isolated Chrome world with owned synthetic IndexedDB records. All requests locally fulfilled; no real service, account, QR, credentials, browser profile, iOS deployment or device access.",
+  "limits": "Classifier behavior only. This does not prove iOS behavior, real WhatsApp storage characteristics, session archive completeness or restored authentication."
+}

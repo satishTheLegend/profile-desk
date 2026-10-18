@@ -1,0 +1,230 @@
+{
+  "result": "PASS",
+  "count": 52,
+  "checks": [
+    {
+      "name": "empty owned fixture returns complete counts without claiming portability",
+      "pass": true
+    },
+    {
+      "name": "known structured values complete without reading record contents into report",
+      "pass": true
+    },
+    {
+      "name": "successful coverage separates inventory, visits and full scans",
+      "pass": true
+    },
+    {
+      "name": "nested extractable and nonextractable keys are counted separately",
+      "pass": true
+    },
+    {
+      "name": "key metadata is fixed numeric HMAC, secret and sign histograms",
+      "pass": true
+    },
+    {
+      "name": "arrayBuffer contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "typedArray contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "date contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "map contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "set contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "blob contributes only a type count",
+      "pass": true
+    },
+    {
+      "name": "cyclic references terminate without recursion failure",
+      "pass": true
+    },
+    {
+      "name": "local and session storage use entry counts only",
+      "pass": true
+    },
+    {
+      "name": "no key operation, cookie read, blob read or web-storage value read occurred",
+      "pass": true
+    },
+    {
+      "name": "every scan transaction was explicitly readonly",
+      "pass": true
+    },
+    {
+      "name": "report excludes database/store names, record keys and synthetic private values",
+      "pass": true
+    },
+    {
+      "name": "report contains only declared schema and numeric count fields",
+      "pass": true
+    },
+    {
+      "name": "repeated scan preserves progress, type counts and key observations",
+      "pass": true
+    },
+    {
+      "name": "unsupported values produce inconclusive rather than a portability success",
+      "pass": true
+    },
+    {
+      "name": "same synthetic key in two records is reported as two observations, not deduplicated identities",
+      "pass": true
+    },
+    {
+      "name": "unknown key metadata maps only to numeric Other categories",
+      "pass": true
+    },
+    {
+      "name": "metadata classification never calls cryptographic key operations",
+      "pass": true
+    },
+    {
+      "name": "excessive nesting is bounded and inconclusive",
+      "pass": true
+    },
+    {
+      "name": "partial traversal never marks the failing record, store or database completed",
+      "pass": true
+    },
+    {
+      "name": "visited-node limit is bounded and inconclusive",
+      "pass": true
+    },
+    {
+      "name": "a partially classified node-limited record is started but not completed",
+      "pass": true
+    },
+    {
+      "name": "extended scan retains the 2000-record cap without automatic escalation",
+      "pass": true
+    },
+    {
+      "name": "large earlier stores cannot starve the later small key-holding store",
+      "pass": true
+    },
+    {
+      "name": "small-store-first traversal completes one store and honestly marks two sampled prefixes",
+      "pass": true
+    },
+    {
+      "name": "remaining budget is allocated to every remaining store without a second prefix",
+      "pass": true
+    },
+    {
+      "name": "cursor requests stop at quota without fetching an extra record or end cursor",
+      "pass": true
+    },
+    {
+      "name": "fair-prefix report contains no record identifiers or store names",
+      "pass": true
+    },
+    {
+      "name": "scan leaves all source counts, primitive values and the stored nonextractable key intact",
+      "pass": true
+    },
+    {
+      "name": "count changes between inventory and visits use the current same-transaction count",
+      "pass": true
+    },
+    {
+      "name": "version changes after inventory are inconclusive without retrying a stale descriptor",
+      "pass": true
+    },
+    {
+      "name": "schema mismatch is explicit and never marked as full coverage",
+      "pass": true
+    },
+    {
+      "name": "database deleted after inventory is neither recreated nor reported scanned",
+      "pass": true
+    },
+    {
+      "name": "extended scan retains the 64-store cap with discovered coverage reported honestly",
+      "pass": true
+    },
+    {
+      "name": "database-count limit retains 12 while reporting all discovered candidates",
+      "pass": true
+    },
+    {
+      "name": "database removed between discovery/open yields inconclusive",
+      "pass": true
+    },
+    {
+      "name": "raced missing database was not recreated",
+      "pass": true
+    },
+    {
+      "name": "overlapping synthetic scans both reached deferred discovery",
+      "pass": true
+    },
+    {
+      "name": "starting a new scan cannot revive the superseded scan",
+      "pass": true
+    },
+    {
+      "name": "late cancellation of the previous token preserves the new scan",
+      "pass": true
+    },
+    {
+      "name": "manual matching-token cancellation discards a late discovery callback",
+      "pass": true
+    },
+    {
+      "name": "unresponsive storage discovery ends at the thirty-second cooperative deadline",
+      "pass": true
+    },
+    {
+      "name": "callbacks arriving after deadline cannot change the completed report",
+      "pass": true
+    },
+    {
+      "name": "foreign origin is refused before storage scanning",
+      "pass": true
+    },
+    {
+      "name": "non-HTTPS service origin is refused",
+      "pass": true
+    },
+    {
+      "name": "nondefault service port is refused",
+      "pass": true
+    },
+    {
+      "name": "all page requests were fulfilled by the owned fixture with DNS disabled",
+      "pass": true
+    },
+    {
+      "name": "owned browser exits and its temporary profile is removed",
+      "pass": true
+    }
+  ],
+  "cleanup": {
+    "processExited": true,
+    "profileRemoved": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.84",
+    "revision": "@5869fe313571d75152b77813cf0a4ee26a4e6df0",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.25"
+  },
+  "classifierSHA256": "935aa9fd45c6abf984a63e3f309d45ff95908e708b1c29028f3405728df0af5b",
+  "runnerSHA256": "02cd409efc737db3fa029d6d5dde4911c5835e3933e96e5105f4f23a2ea11471",
+  "fulfilledRequests": 4,
+  "scope": "Exact bundled classifier in an isolated Chrome world with owned synthetic IndexedDB records. All requests locally fulfilled; no real service, account, QR, credentials, browser profile, iOS deployment or device access.",
+  "limits": "Classifier behavior only. This does not prove iOS behavior, real WhatsApp storage characteristics, session archive completeness or restored authentication."
+}

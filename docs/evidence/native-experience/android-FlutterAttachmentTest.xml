@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.FlutterAttachmentTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:06:34.638Z" hostname="LOCAL_HOST" time="0.046">
+  <properties/>
+  <testcase name="lateOldPluginDetachAndLifecycleCallbacksCannotDetachReplacement" classname="dev.profiledesk.session_engine.FlutterAttachmentTest" time="0.024"/>
+  <testcase name="queuedOldAttachmentMutationCannotChangeTheReplacementRegistry" classname="dev.profiledesk.session_engine.FlutterAttachmentTest" time="0.016"/>
+  <testcase name="replacementFlutterEngineStartsFreshOrderingWithoutRetainingOldOwner" classname="dev.profiledesk.session_engine.FlutterAttachmentTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

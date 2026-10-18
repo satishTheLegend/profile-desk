@@ -1,0 +1,25 @@
+{
+  "sourceFiles": 7,
+  "sourceHashesMatch": true,
+  "changedSources": [],
+  "assertions": 37,
+  "allAssertionsPass": true,
+  "result": "PASS_WITH_LIMITATIONS",
+  "limitations": [
+    {
+      "capability": "storedCryptoKeyPositiveControl",
+      "reason": "DataCloneError in this disposable ad-hoc simulator app; no persisted-key roundtrip was proven.",
+      "status": "UNAVAILABLE"
+    }
+  ],
+  "cleanup": {
+    "serverStopped": true,
+    "simulatorDeleted": true,
+    "temporaryCertificateDeleted": true
+  },
+  "remainingOwnedSimulators": 0,
+  "compilerWarningsAsErrors": true,
+  "compilerLogEmpty": true,
+  "actualServiceTested": false,
+  "physicalDeviceTouched": false
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.profiledesk.session_engine.AccountSetupArchiveTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-18T20:33:35.627Z" hostname="LOCAL_HOST" time="1.052">
+  <properties/>
+  <testcase name="parserRejectsExcludedFieldsMissingKeysDuplicateKeysAndTrailingData" classname="dev.profiledesk.session_engine.AccountSetupArchiveTest" time="0.914"/>
+  <testcase name="boundedUtf8RejectsMalformedAndOversizedInput" classname="dev.profiledesk.session_engine.AccountSetupArchiveTest" time="0.011"/>
+  <testcase name="unicodeNamesAreTrimmedBoundedAndUnique" classname="dev.profiledesk.session_engine.AccountSetupArchiveTest" time="0.007"/>
+  <testcase name="parserRequiresExactTypesVersionColorsThemeAndRelinking" classname="dev.profiledesk.session_engine.AccountSetupArchiveTest" time="0.005"/>
+  <testcase name="emptyOneAndTenRoundTripWithoutIdentityOrAuthentication" classname="dev.profiledesk.session_engine.AccountSetupArchiveTest" time="0.008"/>
+  <testcase name="hostileNestingIsRejectedByStreamingSchemaWithoutRecursiveParsing" classname="dev.profiledesk.session_engine.AccountSetupArchiveTest" time="0.006"/>
+  <testcase name="tooManyAccountsAreRejected" classname="dev.profiledesk.session_engine.AccountSetupArchiveTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/LOCAL_USER/Repos/webwhatsapp/tests/device_flows/smoke_android_release.py", line 110, in <module>
+    welcome = assert_welcome(adb, output, remote_ui)
+  File "/Users/LOCAL_USER/Repos/webwhatsapp/tests/device_flows/smoke_android_release.py", line 56, in assert_welcome
+    raise RuntimeError(f"Candidate welcome accessibility check failed: {last_error}")
+RuntimeError: Candidate welcome accessibility check failed: Welcome heading was absent

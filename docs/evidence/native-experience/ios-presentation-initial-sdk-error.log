@@ -1,0 +1,31 @@
+/Users/LOCAL_USER/Repos/webwhatsapp/packages/session_engine/ios/session_engine/Sources/session_engine/WorkspaceWebView.swift:225:35: error: cannot convert value of type '@Sendable (Result<Any, any Error>, Self) -> Void' to expected argument type '@MainActor @Sendable (Result<Any, any Error>) -> Void'
+223 |                 // WebKit cannot cancel an in-flight evaluation. This callback
+224 |                 // holds no WebView and loses its result box when the wait ends.
+225 |                 evaluateJavaScript(expression, in: nil, in: Self.layoutWorld) { [weak pending] value, error in
+    |                                   `- error: cannot convert value of type '@Sendable (Result<Any, any Error>, Self) -> Void' to expected argument type '@MainActor @Sendable (Result<Any, any Error>) -> Void'
+226 |                     let state: WorkspacePresentation
+227 |                     switch error == nil ? value as? String : nil {
+
+/Users/LOCAL_USER/Repos/webwhatsapp/packages/session_engine/ios/session_engine/Sources/session_engine/WorkspaceWebView.swift:225:103: error: cannot infer type of closure parameter 'error' without a type annotation
+223 |                 // WebKit cannot cancel an in-flight evaluation. This callback
+224 |                 // holds no WebView and loses its result box when the wait ends.
+225 |                 evaluateJavaScript(expression, in: nil, in: Self.layoutWorld) { [weak pending] value, error in
+    |                                                                                                       `- error: cannot infer type of closure parameter 'error' without a type annotation
+226 |                     let state: WorkspacePresentation
+227 |                     switch error == nil ? value as? String : nil {
+
+/Users/LOCAL_USER/Repos/webwhatsapp/packages/session_engine/ios/session_engine/Sources/session_engine/WorkspaceWebView.swift:227:49: error: cast from 'Result<Any, any Error>' to unrelated type 'String' always fails
+225 |                 evaluateJavaScript(expression, in: nil, in: Self.layoutWorld) { [weak pending] value, error in
+226 |                     let state: WorkspacePresentation
+227 |                     switch error == nil ? value as? String : nil {
+    |                                                 `- error: cast from 'Result<Any, any Error>' to unrelated type 'String' always fails
+228 |                     case "original": state = .original
+229 |                     case "list": state = .list
+
+/Users/LOCAL_USER/Repos/webwhatsapp/packages/session_engine/ios/session_engine/Sources/session_engine/WorkspaceWebView.swift:242:15: error: initializer for conditional binding must have Optional type, not 'URL'
+240 |         try Task.checkCancellation()
+241 |         guard !stopped, modeRevision == revision, canObserveLayout?() == true,
+242 |               let url, WorkspaceURLPolicy.isWorkspace(url) else { throw SessionFailure.staleOperation }
+    |               `- error: initializer for conditional binding must have Optional type, not 'URL'
+243 |         return result
+244 |     }

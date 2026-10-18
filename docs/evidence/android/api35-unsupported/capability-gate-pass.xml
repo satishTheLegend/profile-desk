@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="1" failures="0" errors="0" skipped="0" time="0.977" timestamp="2026-10-17T21:28:49" hostname="localhost">
+  <testsuite name="dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest" tests="1" failures="0" errors="0" skipped="0" time="0.226" timestamp="2026-10-17T21:28:49" hostname="localhost">
+    <properties>
+      <property name="device" value="profile_desk_qa_api35(AVD) - 15" />
+      <property name="flavor" value="" />
+      <property name="project" value=":session_engine" />
+    </properties>
+    <testcase name="capabilityGateMatchesProviderAndRejectsUnsupportedAllocation" classname="dev.profiledesk.session_engine.ProfileIsolationInstrumentedTest" time="0.226" />
+  </testsuite>
+</testsuites>

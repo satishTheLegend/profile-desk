@@ -1,0 +1,106 @@
+{
+  "scope": "Bounded static review of verified original nine assets, two mapped workers, eight LockScreen dependencies, and four mapped drawer dependencies. No client execution, account data or device access.",
+  "status": "CONDITIONAL_DISABLED_ONLY_DESIGN_NOT_RUNTIME_PROOF",
+  "newFetchManifest": "lock-drawer-final-fetch.json",
+  "definitions": "retained-disabled-lock-final.json",
+  "facts": [
+    {
+      "id": "local-read",
+      "modules": [
+        "WAWebPermanentStorage",
+        "WAWebLocalStorage",
+        "WAWebUserPrefsBase",
+        "WAWebUserPrefsStore",
+        "WAWebUserPrefsMeUser",
+        "WAWebUserPrefsScreenLock"
+      ],
+      "fact": "Known PN identity selects the per-user hashed preference. PermanentStorage.getItem synchronously reads localStorage on cache miss; JSON parsing is synchronous. No async hydration gate is required for this particular local preference. The raw getter preserves missing/null/string states; enabled getter defaults absence to zero and parseInt-coerces. Require raw numeric zero and enabled exactly false; missing or string zero fails."
+    },
+    {
+      "id": "critical-sync",
+      "modules": [
+        "WAWebUserPrefsAppStateSync",
+        "WAWebModelStorage",
+        "WAWebUserPrefsIndexedDBStorage"
+      ],
+      "fact": "CriticalDataSynced exact true comes from a distinct hydrated IndexedDB preference cache. It is useful readiness evidence but does not establish local lock-pref presence, freshness or mounted frontend lock state."
+    },
+    {
+      "id": "disable",
+      "modules": [
+        "WAWebPasscodeRemoval.react",
+        "WAWebScreenLockDrawer.react",
+        "WAWebUserPrefsInfoStore"
+      ],
+      "fact": "Removal awaits passcode-based Noise unwrap, key validation, rewrite without cached passcode wrapping, removal of lock salt/IV/iteration state, then a 400ms delay; only successful UI callback writes numeric zero. No default-zero initialization writer was found in reviewed modules."
+    },
+    {
+      "id": "enable",
+      "modules": [
+        "WAWebPasscodeSetup.react",
+        "WAWebScreenLockDrawer.react",
+        "WAWebUserPrefsInfoStore"
+      ],
+      "fact": "Setup awaits lockNoiseInfo and 400ms delay before writing positive duration; there is an in-flight interval when the previous duration can still be zero. A retained interactive document can therefore have an enable operation pending despite raw zero."
+    },
+    {
+      "id": "lock-paths",
+      "modules": [
+        "WAWebStreamModel",
+        "WAWebKeyboardRun",
+        "WAWebConfirmLogoutDialogV2.react",
+        "WAWebConfirmLogoutModal.react",
+        "WAWebAppLockConfirmationDialog.react",
+        "WAWebLockScreenResolver"
+      ],
+      "fact": "Reviewed automatic timer rechecks duration !=0 at fire; keyboard and both logout upsells check enabled. Post-enable confirmation calls resolver without checking duration. Resolver itself is not gated. Current zero alone cannot rule out an already-started lock operation or stale confirmation callback."
+    },
+    {
+      "id": "timer-summary",
+      "modules": [
+        "WAWebScreenLockTimerOptions"
+      ],
+      "fact": "Summary accepts numeric zero without mutation; an unknown nonzero timer value is normalized by writing a positive default. This is another reviewed writer, not a remote mutation."
+    },
+    {
+      "id": "settings-sync",
+      "modules": [
+        "WAWebSettingsSync",
+        "WAWebSettingsSyncConst",
+        "WAWebSettingsSyncBridge",
+        "WAWebSettingsSyncHelpers"
+      ],
+      "fact": "The reviewed generic remote settings mapping enumerates app and per-chat preferences but contains no screen-lock duration/passcode setting. This bounds evidence to this mapping; it does not prove that every missing backend branch cannot affect local state."
+    },
+    {
+      "id": "cache-freshness",
+      "modules": [
+        "WAWebPermanentStorage",
+        "WAWebUserPrefsStore"
+      ],
+      "fact": "Default getUser reads a cached value after first read. No general cross-document localStorage invalidation for lock settings was found; storage mutation outside the owned document must invalidate native eligibility or be excluded by exclusive store ownership."
+    }
+  ],
+  "recommendation": {
+    "eligibleCandidate": [
+      "Fresh owned official-origin document with one exclusive profile/context; no official interactive settings or lock flow has occurred in this document",
+      "Known current PN identity internally, exact raw numeric duration zero and enabled exactly false",
+      "Reviewed main-ready, Stream MAIN, connected socket and critical-sync checks; account/document/generation checks before projection and after every awaited operation",
+      "Single native/official interactive owner. Opening official fallback clears native content before input is enabled; no concurrent hidden settings controls",
+      "Latch document ineligible after any lock/settings transition, official interaction, unknown gate, navigation, background, account change or storage-owner change; re-arm only through a fresh document and a newly satisfied gate"
+    ],
+    "reason": "Fresh-document provenance excludes the concretely observed async setup and stale confirmation windows. It is a stronger lifecycle invariant than polling current preference values.",
+    "notEstablished": [
+      "A public current-mounted-screen unlocked getter",
+      "A complete catalogue of dynamic backend branches or remote lock mutations",
+      "Live current-version behavior or atomicity between JavaScript state and native display",
+      "Full native compatibility from static facts alone"
+    ],
+    "failClosed": "Enabled, absent, malformed, string-zero, inherited interactive document, pending/unknown transition, unknown module/version or nonexclusive storage stays official. Do not set preference zero or request passcode/key material. This candidate requires independent source review plus synthetic lifecycle/race tests before any live activation."
+  },
+  "backup": {
+    "normalBrowserFinalSalt": "Previously mapped WAWebHandleSuccess reads companion_enc_static from official success stanza and passes it to final-key generators.",
+    "worm": "No new consumer of getWormEarKey, worm_ear or WormEar was found in the four drawer dependencies. Existing key-store derivation is not a usage/schema mapping; full payload migration remains unresolved."
+  },
+  "noUniversalClaim": true
+}

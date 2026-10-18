@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "serial": "emulator-5582",
+  "observed_at": "2026-10-18T04:21:11.642741+05:30",
+  "android_api": "36",
+  "context": "Optimized production APK, temporary local test signing, empty welcome only",
+  "unsigned_apk_sha256": "370e6c515cb4d3f61a0516736f793171f5cd1a3983dcec6f0d4f1349f7839b9f",
+  "test_signed_apk_sha256": "815e1e0be28b7c5d389545aa497ae1e43766d2641cf56cbcd39401a039fcb517",
+  "launch": "Starting: Intent { cmp=dev.profiledesk.profile_desk/.MainActivity }\nStatus: ok\nLaunchState: COLD\nActivity: dev.profiledesk.profile_desk/.MainActivity\nTotalTime: 1468\nWaitTime: 1478\nComplete\n",
+  "alive_after_seconds": 3,
+  "welcome_accessibility": {
+    "expected_heading": "Set up your workspace",
+    "observed": true,
+    "scope": "Candidate-package accessibility nodes only; empty welcome"
+  },
+  "screenshot_scope": "FLAG_SECURE may produce a black capture; screenshot is not visual proof of welcome rendering",
+  "inspection": {
+    "exact_candidate_pid": "3291",
+    "socket_present": true,
+    "target_count": 0,
+    "targets": [],
+    "reported_package": "dev.profiledesk.profile_desk",
+    "provider": "Chrome/133.0.6943.137"
+  },
+  "inspection_scope": "No inspectable candidate page targets at empty welcome; no WebView was opened and active-page policy was not exercised",
+  "release_signing": false,
+  "service_validation": false,
+  "temporary_key_removed": true,
+  "empty_test_installation_removed": true,
+  "inspection_forward_removed": true,
+  "remote_accessibility_dump_removed": true
+}

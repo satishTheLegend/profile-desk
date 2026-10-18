@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "syntheticOnly": true,
+  "realServiceAccessed": false,
+  "physicalDeviceTouched": false,
+  "phaseCount": 6,
+  "assertions": 92,
+  "standardXcodeInstallationResolvesFixtureCloneFailure": true,
+  "destinationVerifiedAfterAppTerminationAndOwnedSimulatorReboot": true,
+  "originalSourcePreserved": true,
+  "allStoreCleanupChecksPass": true,
+  "originalWrapperKeysExported": false,
+  "syntheticPlaintextTransferPersisted": false,
+  "scope": "Two synthetic AES-CTR registration wrappers only; not a complete service session or production import.",
+  "sourceHashesMatch": true
+}

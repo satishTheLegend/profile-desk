@@ -1,0 +1,46 @@
+{
+  "assertions" : 2,
+  "checks" : [
+    {
+      "name" : "Control uses a secure owned HTTPS context",
+      "pass" : true
+    },
+    {
+      "name" : "Control named store is removed through the public API",
+      "pass" : true
+    }
+  ],
+  "durationSeconds" : 7.0344569683074951,
+  "observations" : [
+    {
+      "keychain" : {
+        "addStatus" : -34018,
+        "deleteStatus" : -34018,
+        "readStatus" : -34018,
+        "valueMatched" : false
+      }
+    },
+    {
+      "aesCTR" : {
+        "errorName" : "DataCloneError",
+        "persisted" : false
+      },
+      "aesGCM" : {
+        "errorName" : "DataCloneError",
+        "persisted" : false
+      },
+      "secureContext" : true
+    }
+  ],
+  "openedStoreLabels" : [
+    "control"
+  ],
+  "osVersion" : "26.5",
+  "payloadOrKeyBytesInReport" : false,
+  "phase" : "baseline",
+  "processIdentifier" : 39201,
+  "realServiceAccessed" : false,
+  "recordedAt" : "2026-10-18T20:01:50Z",
+  "result" : "PASS",
+  "syntheticOnly" : true
+}

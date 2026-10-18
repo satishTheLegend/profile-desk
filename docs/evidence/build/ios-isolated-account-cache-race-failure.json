@@ -1,0 +1,25 @@
+{
+  "test_ids": [
+    "AT-A01",
+    "AT-A02",
+    "AT-A10",
+    "AT-D01"
+  ],
+  "result": "FAIL",
+  "context": "Dedicated iOS27 simulator and disposable QA app; synthetic alias, no pairing or page inspection",
+  "runner": "local Codex CLI",
+  "started_at": "2026-10-18T04:28:10.148048+05:30",
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+  "device_type": "com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro",
+  "simulator_id": "DC382C6D-B87F-47ED-AE79-A5FE4D73F96C",
+  "command": [
+    "python3",
+    "tests/device_flows/run_shell_integration.py",
+    "-d",
+    "DC382C6D-B87F-47ED-AE79-A5FE4D73F96C"
+  ],
+  "error": "CalledProcessError: Command '['python3', 'tests/device_flows/run_shell_integration.py', '-d', 'DC382C6D-B87F-47ED-AE79-A5FE4D73F96C']' returned non-zero exit status 1.",
+  "owned_simulator_removed": true,
+  "duration_seconds": 117.103,
+  "finished_at": "2026-10-18T04:30:07.252209+05:30"
+}

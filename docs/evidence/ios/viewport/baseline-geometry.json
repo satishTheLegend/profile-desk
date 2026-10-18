@@ -1,0 +1,59 @@
+{
+  "measurements" : [
+    {
+      "contentWidth" : 1000,
+      "document" : {
+        "innerWidth" : 440,
+        "scrollWidth" : 1000,
+        "visualScale" : 1,
+        "visualWidth" : 440
+      },
+      "name" : "baseline-fixed-440",
+      "pageZoom" : 1,
+      "width" : 440,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 440,
+      "document" : {
+        "innerWidth" : 1000,
+        "scrollWidth" : 1000,
+        "visualScale" : 1,
+        "visualWidth" : 1000
+      },
+      "name" : "manual-pageZoom-0.44",
+      "pageZoom" : 0.44,
+      "width" : 440,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 440,
+      "document" : {
+        "innerWidth" : 1000,
+        "scrollWidth" : 1000,
+        "visualScale" : 1,
+        "visualWidth" : 1000
+      },
+      "name" : "rotated-880-same-pageZoom",
+      "pageZoom" : 0.44,
+      "width" : 880,
+      "zoomScale" : 1
+    },
+    {
+      "contentWidth" : 880,
+      "document" : {
+        "innerWidth" : 1000,
+        "scrollWidth" : 1000,
+        "visualScale" : 1,
+        "visualWidth" : 1000
+      },
+      "name" : "manual-pageZoom-0.88",
+      "pageZoom" : 0.88,
+      "width" : 880,
+      "zoomScale" : 1
+    }
+  ],
+  "os" : "27.0",
+  "result" : "PASS",
+  "scope" : "Controlled local HTML only; geometry and test-only DOM measurements."
+}

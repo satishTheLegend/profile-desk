@@ -1,0 +1,199 @@
+Monitoring boot status for Profile Desk Isolated Shell Final (DC382C6D-B87F-47ED-AE79-A5FE4D73F96C).
+[2026-10-17 22:58:11 +0000] Status=1, isTerminal=NO, Elapsed=00:01.
+	Waiting on BackBoard
+
+[2026-10-17 22:58:12 +0000] Status=2, isTerminal=NO, Elapsed=00:01.
+	Waiting on Data Migration
+		Reason:(null)
+		Migration Elapsed:00:00 seconds
+
+[2026-10-17 22:58:12 +0000] Status=2, isTerminal=NO, Elapsed=00:02.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.MobileContainerManager.ContainerMigrator (ContainerMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:00 seconds
+
+[2026-10-17 22:58:13 +0000] Status=2, isTerminal=NO, Elapsed=00:03.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:01 seconds
+
+[2026-10-17 22:58:14 +0000] Status=2, isTerminal=NO, Elapsed=00:04.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:02 seconds
+
+[2026-10-17 22:58:15 +0000] Status=2, isTerminal=NO, Elapsed=00:05.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:03 seconds
+
+[2026-10-17 22:58:16 +0000] Status=2, isTerminal=NO, Elapsed=00:06.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:04 seconds
+
+[2026-10-17 22:58:17 +0000] Status=2, isTerminal=NO, Elapsed=00:07.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:05 seconds
+
+[2026-10-17 22:58:18 +0000] Status=2, isTerminal=NO, Elapsed=00:08.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:06 seconds
+
+[2026-10-17 22:58:19 +0000] Status=2, isTerminal=NO, Elapsed=00:09.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:07 seconds
+
+[2026-10-17 22:58:20 +0000] Status=2, isTerminal=NO, Elapsed=00:10.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:08 seconds
+
+[2026-10-17 22:58:21 +0000] Status=2, isTerminal=NO, Elapsed=00:11.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:09 seconds
+
+[2026-10-17 22:58:22 +0000] Status=2, isTerminal=NO, Elapsed=00:12.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:10 seconds
+
+[2026-10-17 22:58:23 +0000] Status=2, isTerminal=NO, Elapsed=00:13.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.-0LaunchServicesMigrator (00LaunchServicesMigrator.migrator, user-agnostic)
+		Migration Elapsed:00:11 seconds
+
+[2026-10-17 22:58:25 +0000] Status=2, isTerminal=NO, Elapsed=00:14.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.securityd.KeychainMigrator (KeychainMigrator.migrator, user-agnostic) (Concurrent: Running plugin com.apple.appleaccount.mergebuddyprovisioningresponse.migrator (MergeBuddyProvisioningResponse.migrator, concurrent after com.apple.-0LaunchServicesMigrator))
+		Migration Elapsed:00:12 seconds
+
+[2026-10-17 22:58:27 +0000] Status=2, isTerminal=NO, Elapsed=00:16.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.managedconfiguration.migrator (MCProfile.migrator, user-agnostic)
+		Migration Elapsed:00:13 seconds
+
+[2026-10-17 22:58:28 +0000] Status=2, isTerminal=NO, Elapsed=00:17.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.managedconfiguration.migrator (MCProfile.migrator, user-agnostic)
+		Migration Elapsed:00:15 seconds
+
+[2026-10-17 22:58:28 +0000] Status=2, isTerminal=NO, Elapsed=00:18.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.managedconfiguration.migrator (MCProfile.migrator, user-agnostic)
+		Migration Elapsed:00:15 seconds
+
+[2026-10-17 22:58:29 +0000] Status=2, isTerminal=NO, Elapsed=00:19.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.managedconfiguration.migrator (MCProfile.migrator, user-agnostic)
+		Migration Elapsed:00:16 seconds
+
+[2026-10-17 22:58:29 +0000] Status=2, isTerminal=NO, Elapsed=00:19.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.MobileSafari.migrator (MobileSafari.migrator)
+		Migration Elapsed:00:17 seconds
+
+[2026-10-17 22:58:30 +0000] Status=2, isTerminal=NO, Elapsed=00:20.
+	Waiting on Data Migration
+		Reason:Running plugin com.apple.MobileSafari.migrator (MobileSafari.migrator)
+		Migration Elapsed:00:18 seconds
+
+[2026-10-17 22:58:31 +0000] Status=4294967295, isTerminal=YES, Elapsed=00:21.
+	Finished
+
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  petitparser 7.0.2 (7.1.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+6 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Analyzing shell_native_test.dart...                             
+No issues found! (ran in 4.1s)
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart
+Running Xcode build...                                          
+Xcode build done.                                           43.9s
+00:00 +0: real native engine: cold shell, allocate, open, detach and scoped removal
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: an object with length of <1>
+  Actual: WhereIterable<AccountProfile>:[]
+   Which: has length of <0>
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart:63:9)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart line 63
+The test description was:
+  real native engine: cold shell, allocate, open, detach and scoped removal
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:02 +0 -1: real native engine: cold shell, allocate, open, detach and scoped removal [E]
+  Test failed. See exception logs above.
+  The test description was: real native engine: cold shell, allocate, open, detach and scoped removal
+  
+00:02 +0 -1: (tearDownAll)
+00:02 +0 -1: Some tests failed.
+
+Failing tests:
+  /Users/LOCAL_USER/Repos/webwhatsapp/build/qa-shell-workspace/apps/mobile/integration_test/shell_native_test.dart: real native engine: cold shell, allocate, open, detach and scoped removal
+Verified disposable shell fixture identities are absent; the test may install/remove only those fixture identities.
+Verified both disposable fixture identities absent after cleanup.
+Traceback (most recent call last):
+  File "/Users/LOCAL_USER/Repos/webwhatsapp/tests/device_flows/run_shell_integration.py", line 341, in <module>
+    main()
+    ~~~~^^
+  File "/Users/LOCAL_USER/Repos/webwhatsapp/tests/device_flows/run_shell_integration.py", line 337, in main
+    run_owned_test(app, ownership)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/LOCAL_USER/Repos/webwhatsapp/tests/device_flows/run_shell_integration.py", line 295, in run_owned_test
+    subprocess.run(["flutter", "test", "--no-pub", "integration_test/shell_native_test.dart", "--flavor", "qa", "-d", ownership.device_id],
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   cwd=app, check=True, timeout=1200)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['flutter', 'test', '--no-pub', 'integration_test/shell_native_test.dart', '--flavor', 'qa', '-d', 'DC382C6D-B87F-47ED-AE79-A5FE4D73F96C']' returned non-zero exit status 1.
+{
+  "test_ids": [
+    "AT-A01",
+    "AT-A02",
+    "AT-A10",
+    "AT-D01"
+  ],
+  "result": "FAIL",
+  "context": "Dedicated iOS27 simulator and disposable QA app; synthetic alias, no pairing or page inspection",
+  "runner": "local Codex CLI",
+  "started_at": "2026-10-18T04:28:10.148048+05:30",
+  "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+  "device_type": "com.apple.CoreSimulator.SimDeviceType.iPhone-18-Pro",
+  "simulator_id": "DC382C6D-B87F-47ED-AE79-A5FE4D73F96C",
+  "error": "CalledProcessError: Command '['python3', 'tests/device_flows/run_shell_integration.py', '-d', 'DC382C6D-B87F-47ED-AE79-A5FE4D73F96C']' returned non-zero exit status 1.",
+  "owned_simulator_removed": true,
+  "duration_seconds": 117.103,
+  "finished_at": "2026-10-18T04:30:07.252209+05:30"
+}
+Traceback (most recent call last):
+  File "/Users/LOCAL_USER/Repos/webwhatsapp/build/run_ios_shell_smoke.py", line 22, in <module>
+    subprocess.run(command,cwd=root,check=True,timeout=1500)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['python3', 'tests/device_flows/run_shell_integration.py', '-d', 'DC382C6D-B87F-47ED-AE79-A5FE4D73F96C']' returned non-zero exit status 1.

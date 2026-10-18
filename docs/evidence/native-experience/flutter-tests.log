@@ -1,0 +1,100 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  petitparser 7.0.2 (7.1.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.3 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+6 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart
+00:00 +0: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/native_messaging_test.dart: display models reject oversized, duplicate and unavailable payloads
+00:00 +1: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/native_messaging_test.dart: late chat snapshot cannot cross a profile generation
+00:00 +2: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/native_messaging_test.dart: wrong response ownership fails closed for list and message pages
+00:00 +3: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/native_messaging_test.dart: late history cannot replace another conversation or disposed state
+00:00 +4: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/native_messaging_test.dart: drafts follow profile and chat; lock discards all private content
+00:00 +5: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +6: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +7: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +8: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +9: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +10: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +11: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +12: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +13: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +14: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +15: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +16: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +17: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +18: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +19: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +20: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +21: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +22: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +23: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +24: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +25: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +26: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +27: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +28: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +29: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +30: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +31: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +32: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: first launch explains separate primary device before setup (variant: TargetPlatform.linux)
+00:00 +33: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/native_messaging_test.dart: service lock error removes native titles, messages and draft fields
+00:00 +34: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account tiles adapt to width and large text without truncating actions (variant: TargetPlatform.linux)
+00:00 +35: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account tiles adapt to width and large text without truncating actions (variant: TargetPlatform.linux)
+00:00 +36: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account tiles adapt to width and large text without truncating actions (variant: TargetPlatform.linux)
+00:00 +37: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account tiles adapt to width and large text without truncating actions (variant: TargetPlatform.linux)
+00:00 +38: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account tiles adapt to width and large text without truncating actions (variant: TargetPlatform.linux)
+00:00 +39: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart: workspace integration removes Back ownership immediately on app lock (variant: TargetPlatform.linux)
+00:01 +40: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart: workspace integration removes Back ownership immediately on app lock (variant: TargetPlatform.linux)
+00:01 +41: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart: workspace integration removes Back ownership immediately on app lock (variant: TargetPlatform.linux)
+00:01 +42: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart: workspace integration removes Back ownership immediately on app lock (variant: TargetPlatform.linux)
+00:01 +43: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart: workspace integration removes Back ownership immediately on app lock (variant: TargetPlatform.linux)
+00:01 +44: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart: workspace integration removes Back ownership immediately on app lock (variant: TargetPlatform.linux)
+00:01 +45: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart: workspace integration removes Back ownership immediately on app lock (variant: TargetPlatform.linux)
+00:01 +46: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_back_handler_test.dart: workspace integration removes Back ownership immediately on app lock (variant: TargetPlatform.linux)
+00:01 +47: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: account manager rejects eleventh slot in visible controls (variant: TargetPlatform.linux)
+00:01 +48: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: account manager rejects eleventh slot in visible controls (variant: TargetPlatform.linux)
+00:01 +49: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: account manager rejects eleventh slot in visible controls (variant: TargetPlatform.linux)
+00:01 +50: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: account manager rejects eleventh slot in visible controls (variant: TargetPlatform.linux)
+00:01 +51: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: tile reordering preserves account identities and labeled touch targets (variant: TargetPlatform.linux)
+00:01 +52: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/native_messaging_test.dart: host refresh updates messages without replacing conversation or draft
+00:01 +53: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: partial setup keeps its reserved slot (variant: TargetPlatform.linux)
+00:01 +54: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/shell_test.dart: partial setup keeps its reserved slot (variant: TargetPlatform.linux)
+00:01 +55: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account form stays usable above the keyboard with large text and keeps validation (variant: TargetPlatform.linux)
+00:01 +56: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account form stays usable above the keyboard with large text and keeps validation (variant: TargetPlatform.linux)
+00:01 +57: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account form stays usable above the keyboard with large text and keeps validation (variant: TargetPlatform.linux)
+00:01 +58: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_tiles_test.dart: account form stays usable above the keyboard with large text and keeps validation (variant: TargetPlatform.linux)
+00:01 +59: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:01 +60: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:01 +61: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:01 +62: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:02 +63: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:02 +64: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:02 +65: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:02 +66: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:02 +67: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:02 +68: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/account_setup_screen_test.dart: appearance reconciles after the import route is removed
+00:02 +69: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/support_ui_test.dart: tablet workspace footer opens a reachable account selector (variant: TargetPlatform.linux)
+00:02 +70: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/support_ui_test.dart: tablet workspace footer opens a reachable account selector (variant: TargetPlatform.linux)
+00:02 +71: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/support_ui_test.dart: tablet workspace footer opens a reachable account selector (variant: TargetPlatform.linux)
+00:02 +72: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/support_ui_test.dart: tablet workspace footer opens a reachable account selector (variant: TargetPlatform.linux)
+00:02 +73: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/support_ui_test.dart: tablet workspace footer opens a reachable account selector (variant: TargetPlatform.linux)
+00:02 +74: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/support_ui_test.dart: tablet workspace footer opens a reachable account selector (variant: TargetPlatform.linux)
+00:02 +75: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/support_ui_test.dart: tablet workspace footer opens a reachable account selector (variant: TargetPlatform.linux)
+00:02 +76: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles open only the chosen available profile (variant: TargetPlatform.linux)
+00:02 +77: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles open only the chosen available profile (variant: TargetPlatform.linux)
+00:02 +78: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles open only the chosen available profile (variant: TargetPlatform.linux)
+00:02 +79: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles open only the chosen available profile (variant: TargetPlatform.linux)
+00:02 +80: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles open only the chosen available profile (variant: TargetPlatform.linux)
+00:02 +81: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles open only the chosen available profile (variant: TargetPlatform.linux)
+00:02 +82: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles open only the chosen available profile (variant: TargetPlatform.linux)
+00:03 +83: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles open only the chosen available profile (variant: TargetPlatform.linux)
+00:03 +84: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/support_ui_test.dart: privacy preferences fit a narrow screen at double text size (variant: TargetPlatform.linux)
+00:03 +85: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles and selector fit narrow screens at large text (variant: TargetPlatform.linux)
+00:03 +86: /Users/LOCAL_USER/Repos/webwhatsapp/apps/mobile/test/workspace_tiles_test.dart: workspace tiles and selector fit narrow screens at large text (variant: TargetPlatform.linux)
+00:03 +87: All tests passed!

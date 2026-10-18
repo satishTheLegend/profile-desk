@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "checks": [
+    "actual mismatched dSYM UUID rejection before publication",
+    "interrupted replacement removes old manifest",
+    "unrelated directory file retained",
+    "successful manifest lists only exact three outputs",
+    "private stage cleanup"
+  ]
+}

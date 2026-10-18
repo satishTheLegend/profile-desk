@@ -1,0 +1,5 @@
+# Keep command/test evidence byte-preserving; console padding is intentional.
+docs/evidence/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+# Pigeon29 emits a trailing space; regeneration consistency takes precedence.
+packages/session_engine/android/src/main/kotlin/dev/profiledesk/session_engine/Messages.g.kt whitespace=-blank-at-eol
+*.csv text eol=lf

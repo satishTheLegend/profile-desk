@@ -1,0 +1,10 @@
+:root { color-scheme: light dark; font: 100%/1.5 system-ui, sans-serif; }
+body { margin: 0; }
+main { margin: auto; max-width: 46rem; padding: 1rem; }
+input, button { font: inherit; padding: .7rem; border: 1px solid #888; border-radius: .35rem; }
+input { display: block; box-sizing: border-box; width: 100%; margin: .4rem 0 1rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+button { cursor: pointer; }
+button:disabled { opacity: .6; cursor: wait; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid #888; border-radius: .35rem; padding: 1rem; min-height: 5rem; }
+li { margin-block: .5rem; }

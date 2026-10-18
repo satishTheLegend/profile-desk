@@ -1,0 +1,27 @@
+{
+  "sameSwiftSourceSHA256": "51a8eaa6f5fa1263b6bb704036396f831b0309e9f557c130e9c409654f473906",
+  "identityBuiltAndPackagedByStandardXcodeTarget": true,
+  "manualIdentityEntitlementPatch": false,
+  "controls": {
+    "baseline": {
+      "observedLinkedSimulatorEntitlements": {},
+      "linkedDERMatchesGeneratedInput": true,
+      "linkedDERPresent": false,
+      "hostSignatureEntitlements": {},
+      "adHocSignatureVerified": true,
+      "executableSHA256": "c169d6a9a9bde3fa8ec7bc5d0370642243ab1a8603942e3fb91dd26eed55ce2a"
+    },
+    "identity": {
+      "observedLinkedSimulatorEntitlements": {
+        "application-identifier": "MD6DKTN62T.dev.profiledesk.syntheticRegistration"
+      },
+      "linkedDERMatchesGeneratedInput": true,
+      "linkedDERPresent": true,
+      "hostSignatureEntitlements": {},
+      "adHocSignatureVerified": true,
+      "executableSHA256": "b32485981ea4230f963864dbc03717ec07c3c7cb4a6766a51b089e723054f16b"
+    }
+  },
+  "adHocSimulatorOnly": true,
+  "appleDevelopmentPrivateKeyUsed": false
+}
