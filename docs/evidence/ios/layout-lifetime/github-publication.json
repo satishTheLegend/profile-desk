@@ -1,0 +1,39 @@
+{
+  "repository": "https://github.com/satishTheLegend/profile-desk",
+  "visibility": "PUBLIC",
+  "publishedBranches": [
+    "main"
+  ],
+  "codeCommit": "03446797b8507127298b605528dee015a5137d58",
+  "author": {
+    "name": "satish sharma",
+    "email": "satishsh973@outlook.com",
+    "login": "satishTheLegend"
+  },
+  "soleAuthorAndCommitterVerified": true,
+  "coAuthorTrailerPresent": false,
+  "ci": {
+    "conclusion": "success",
+    "headSha": "03446797b8507127298b605528dee015a5137d58",
+    "startedAt": "2026-10-19T10:09:19Z",
+    "status": "completed",
+    "updatedAt": "2026-10-19T10:14:25Z",
+    "url": "https://github.com/satishTheLegend/profile-desk/actions/runs/39235384168",
+    "workflowName": "Source and Android checks"
+  },
+  "localVerification": {
+    "viewportAssertions": 109,
+    "engineAssertions": 59,
+    "emptyOriginAssertions": 138,
+    "flutterNativeShellTests": 1,
+    "shellInputHashes": 255,
+    "unsignedProductionArtifactInspection": "PASS"
+  },
+  "productLimits": [
+    "Live native messaging port remains unregistered.",
+    "Complete session/data archive and authenticated cold restore remain unfinished.",
+    "Owner explicitly retained restored-session deployment gate."
+  ],
+  "iphoneDeployed": false,
+  "macShutdown": false
+}

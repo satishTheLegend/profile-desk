@@ -1,6 +1,6 @@
 # Public repository preparation
 
-Published at [satishTheLegend/profile-desk](https://github.com/satishTheLegend/profile-desk) with the project owner as sole commit author and committer, without co-author trailers. Code commit `5440a55` passes public Linux CI. No device deployment or shutdown is recorded.
+Published at [satishTheLegend/profile-desk](https://github.com/satishTheLegend/profile-desk) with the project owner as sole commit author and committer, without co-author trailers. Code commit `0344679` passes [public Linux CI](https://github.com/satishTheLegend/profile-desk/actions/runs/39235384168). Its additional local iOS checks and synthetic-origin proof are recorded in [the current evidence](evidence/ios/layout-lifetime/README.md). No device deployment or shutdown is recorded.
 
 Public text evidence replaces personal home-directory prefixes with
 `/Users/LOCAL_USER`, standalone local usernames with `LOCAL_USER`, and host names
