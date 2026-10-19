@@ -1,0 +1,10 @@
+/Users/LOCAL_USER/Repos/webwhatsapp/packages/session_engine/ios/NativeTests/ViewportHarness/main.swift:353:18: error: weak variable 'released' was never mutated; consider changing to 'let' constant [#VariableNeverMutated::WeakMutability]
+351 |         expect(canceledLayout && canceledStatus && Date().timeIntervalSince(stopped) < 0.5,
+352 |                "stopFitting releases every pending layout and status wait without waiting for the renderer")
+353 |         weak var released = retiring
+    |                  `- error: weak variable 'released' was never mutated; consider changing to 'let' constant [#VariableNeverMutated::WeakMutability]
+354 |         retiring!.stopLoading(); retiring!.removeFromSuperview(); retiring = nil
+355 |         await pause(100)
+
+[#VariableNeverMutated]: <https://docs.swift.org/compiler/documentation/diagnostics/variable-never-mutated>
+[#WeakMutability]: <https://docs.swift.org/compiler/documentation/diagnostics/weak-mutability>

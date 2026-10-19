@@ -95,5 +95,9 @@ PY
   fi
   sleep 1
 done
+if [ -f "$container/Documents/progress.json" ]; then
+  cp "$container/Documents/progress.json" "$output_root/progress.json"
+  cat "$output_root/progress.json"
+fi
 printf 'Viewport regression timed out.\n' >&2
 exit 1

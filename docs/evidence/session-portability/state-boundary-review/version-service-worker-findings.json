@@ -1,0 +1,149 @@
+{
+  "kind": "bounded-public-static-source-review",
+  "status": "MAPPED_WITH_PLATFORM_AND_SNAPSHOT_LIMITS",
+  "scope": {
+    "accountDataAccess": false,
+    "officialCodeExecuted": false,
+    "serviceWorkerRegistered": false,
+    "serviceWorkerExecuted": false,
+    "networkFinished": true,
+    "entryRequests": 1,
+    "staticDependenciesFetched": 1,
+    "entryBytes": 13291,
+    "staticBytes": 6025005,
+    "entryBodyRetained": false,
+    "dynamicTokensRetained": false,
+    "sourceCacheOnlyPublicStaticJS": true
+  },
+  "evidence": {
+    "entry": "service-worker-entry-evidence.json",
+    "assets": "service-worker-assets.json",
+    "definitions": "retained-version-service-worker.json",
+    "entryURL": "https://web.whatsapp.com/sw.js",
+    "staticURL": "https://static.whatsapp.net/rsrc.php/v4/yN/r/oZdAVSi2ND3.js",
+    "staticSHA256": "eb56ccf08508943db5d6baf21d1cdb04345e8bc48ceb1aee952bcbae3d331561"
+  },
+  "runtimeIdentity": {
+    "modules": [
+      "WAWebBuildConstants",
+      "StaticSiteData"
+    ],
+    "facts": [
+      "WAWebBuildConstants exports VERSION_PRIMARY, VERSION_SECONDARY, VERSION_TERTIARY, VERSION_BASE and VERSION_STR as scalar properties, plus Windows-specific helpers and other origin/build properties. These version fields are not getter functions.",
+      "The same 1500-byte WAWebBuildConstants definition occurs in the original frontend, backend and service-worker bundles. Its shared module SHA256 is 6fa9be24d333f531b09ed962fa9fe1d7e6b6ce47792b4e77397955bcacfb80b6.",
+      "For either gate 26258 or 26259, VERSION_BASE uses 2.3000.<SiteData.client_revision>; otherwise it is 3.0.0. Suffix is empty, .i or .d according to those gates; Windows may append its separate build. Therefore VERSION_STR alone is not a unique revision authority.",
+      "StaticSiteData maps request parameter names; it does not provide the runtime numeric client revision. SiteData is supplied through dynamic bootstrap modules.",
+      "The reviewed service-worker entry declares public client_revision 1050806504 and imports the exact retained static dependency. The entry body includes dynamic metadata and was discarded."
+    ],
+    "serviceWorkerEntryClientRevision": 1050806504,
+    "revisionScope": "Only this service-worker entry and its directly referenced asset are bound by this observation. It does not establish the numeric revision of previously fetched frontend/backend assets or any installed/live account.",
+    "recommendation": {
+      "classification": "Design inference, not implemented or runtime-tested",
+      "text": "A future fixed adapter should require an explicitly supported numeric SiteData.client_revision and verified module/export contract, with unknown or changed identities failing closed. A generic VERSION_STR such as 3.0.0.d or the service-worker revision alone must not authorize an unrelated frontend bundle."
+    }
+  },
+  "registration": {
+    "modules": [
+      "WAWebAppBootstrap",
+      "WAWebAppSwInitializer",
+      "WAWebServiceWorkerSupport",
+      "WAWebPwaDocumentMetadataUtils",
+      "WAWebSwUpdater"
+    ],
+    "facts": [
+      "AppBootstrap initializes /sw.js with scope /. Registration checks serviceWorker support and absence of the current controller, then uses updateViaCache all.",
+      "An AB-configured Safari standalone-PWA path unregisters registrations; PWA detection is display-mode standalone. This is conditional and is not a universal WKWebView exclusion.",
+      "ServiceWorkerSupport alive checks only navigator.serviceWorker.controller. No controller does not prove no registration, worker lifetime, or future claim.",
+      "SW install handlers are followed by skipWaiting; activate claims clients. updateSw updates registration/controller state but does not drain all persistent writers."
+    ]
+  },
+  "backgroundWrites": {
+    "classification": "Conditional source paths, not observed execution in ProfileDesk WKWebView",
+    "modules": [
+      "WAWebSwPushHandler",
+      "WAWebSwPeriodicSyncHandler",
+      "WAWebInitializeWorkerBackendSw",
+      "WAWebPushNotificationsGatingUtils",
+      "WAWebSubscribePushManagerAction",
+      "WAWebSubscribePushManagerActionUtils"
+    ],
+    "push": {
+      "conditions": [
+        "canSupportOfflineNotifications rejects recognized Safari versions below 16 and parsing errors.",
+        "Offline resume requires persisted worker treatment, Notification.permission granted, a non-null registration.pushManager.getSubscription() result, no window clients, no active communications, and a non-aborted resume signal.",
+        "Frontend subscription eligibility additionally requires enabled offline notifications, canEnableOfflineNotifications and screen lock disabled. Actual subscription also requires available browser registration/pushManager APIs and provider settings/configuration.",
+        "Calls use a distinct payload/handler branch; those are not evidence that the normal offline-resume branch always runs."
+      ],
+      "writes": [
+        "The eligibility read initializes WorkerStorage and can clear persisted offline-resume treatment when permission/subscription is missing.",
+        "initializeDb loads schema versions and initializes Signal, Model, Worker, Offd and FTS storage.",
+        "handlePushNotification checks stored versions/settings, increments persistent offlinePushCount, initializes encryption salt and may start the backend worker in passive mode."
+      ],
+      "reachability": "This static review does not establish PushManager/Notification support, granted permissions, a subscription, treatment state, or push delivery for the app WKWebView. Do not label this path active on iPhone from source presence."
+    },
+    "periodic": {
+      "conditions": [
+        "canSupportPeriodicBackgroundSync returns false for recognized Safari, Firefox and Chrome below 80.",
+        "The handler additionally requires justknob 2337 false, the background-sync tag, no in-progress work or communications, and no window clients."
+      ],
+      "writes": [
+        "When eligible, it initializes the same application stores and starts notification/backend processing."
+      ],
+      "reachability": "The reviewed browser gate excludes recognized Safari. No periodicSync delivery was observed or proved on WKWebView."
+    }
+  },
+  "swOwnedStorage": {
+    "modules": [
+      "WAWebSw",
+      "WAWebSwObjectStores",
+      "WAWebSwCacheHelper",
+      "WAWebSwStickerHandler",
+      "WAWebSwNotificationClickHandler"
+    ],
+    "facts": [
+      "Sw creates a CacheHelper for wa-stickers as part of handler initialization; the constructor calls caches.open. Thus cache creation/opening is possible independently of a user sticker request.",
+      "SwObjectStores opens the sw IndexedDB database at version 2 with prefs, pp and stickers. Its helpers expose readwrite transactions, put/delete/clear; reads also use readwrite transactions. Upgrade code recreates stores. These helpers must not be invoked as harmless read-only export utilities.",
+      "CacheHelper exposes cache writes/deletes/reset/cleanup. fetchAndPut starts a cache put without awaiting it. Cache mutation is therefore not covered by a communications-only completion promise.",
+      "Notification click handling has fixed action routing. Its no-window path can initialize ModelStorage and update engagement before opening a window. A click is a user interaction, not proof of an autonomous idle write."
+    ]
+  },
+  "lifecycleBarrier": {
+    "modules": [
+      "WAWebSwStopCommsHandler",
+      "WAWebSwOfflineResumeState",
+      "WAWebSwInterruptOfflineResume"
+    ],
+    "candidate": "STOP_COMMS",
+    "observed": "The action cancels the current offline-resume AbortController and awaits interruptOfflineResume. When an offline process stage exists, the latter interrupts the resume manager and may await WAComms.stopComms.",
+    "insufficient": [
+      "STOP_COMMS does not call blockOfflineResume; it does not establish an irreversible block against future push work.",
+      "No all-database close, all-cache flush, complete worker shutdown or registration suspension contract is shown in these definitions.",
+      "The database-version-change listener calls blockOfflineResume, but deliberately forcing a schema/version change is not an established safe backup barrier and is not recommended.",
+      "A closed/destroyed view, no controller, or communications stopped must not be equated with a globally consistent origin snapshot."
+    ],
+    "coldProcessProposal": "A fresh native process with an inert importer could avoid starting official document code. Whether prior WebProcesses/service workers and persistent writes have stopped, and whether all mutable stores are consistent, requires platform evidence and an explicit capture design. This review provides no such guarantee."
+  },
+  "swMessageRouting": {
+    "modules": [
+      "WAWebSwBase",
+      "WAWebSWBus",
+      "WAWebSWBusActions"
+    ],
+    "facts": [
+      "SwBase selects a fixed matching handler for each action; it is not a generic arbitrary function evaluator.",
+      "Page SWBus responses check the current service-worker controller source; envelopes carry action, message and VERSION_STR. This version field inherits the non-uniqueness limitation above."
+    ],
+    "privacyReview": "Detailed fixed-handler and per-document callback/lock-ownership review is owned by native_messaging_ui under build/native-chat-public-review/fresh-view-lock-ownership. This report does not authorize native content projection."
+  },
+  "remainingUnknowns": [
+    "Exact live frontend revision and compatibility contract for any future adapter.",
+    "Actual WKWebView background capabilities and worker/process persistence under the proposed native lifecycle.",
+    "A consistent capture/import boundary across mutable protocol stores, persisted action queues, CacheStorage and all live writers.",
+    "An independent authenticated session-and-information restore proof."
+  ],
+  "claimsExcluded": [
+    "No proof that complete migration is universally impossible.",
+    "No claim that every SW branch is active on iOS.",
+    "No full backup implementation, native adapter activation, account operation or deployment occurred."
+  ]
+}

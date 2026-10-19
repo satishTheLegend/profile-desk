@@ -1,0 +1,153 @@
+{
+  "assertions" : 23,
+  "checks" : [
+    {
+      "name" : "source exact bootstrap environment: locationMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: originMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: effectiveOriginMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: baseURIMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: secureContext",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: cryptoAvailable",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: serviceWorkerRegistrationReadSucceeded",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: serviceWorkerRegistrationCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: resourceCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: scriptElementCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: childFrameCount",
+      "pass" : true
+    },
+    {
+      "name" : "source has no unexpected navigation",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source contains one fictional record",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source verifies plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source verifies typedDataMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source verifies localStorageMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source verifies keyMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source verifies originalKeyExportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source source-only sentinel isolation",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source bounded ciphertextDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source bounded typedDataDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Cold source encrypted bytes remain unchanged",
+      "pass" : true
+    },
+    {
+      "name" : "Cold process opens only its designated named store",
+      "pass" : true
+    }
+  ],
+  "observations" : [
+    {
+      "environment" : {
+        "baseURIMatches" : true,
+        "childFrameCount" : 0,
+        "cryptoAvailable" : true,
+        "effectiveOriginMatches" : true,
+        "locationMatches" : true,
+        "originMatches" : true,
+        "resourceCount" : 0,
+        "scriptElementCount" : 0,
+        "secureContext" : true,
+        "serviceWorkerRegistrationCount" : 0,
+        "serviceWorkerRegistrationReadSucceeded" : true
+      },
+      "stage" : "cold-source"
+    },
+    {
+      "stage" : "cold-source",
+      "verification" : {
+        "ciphertextDigest" : "0055e80af8c56110855058e42366e89b5dbb2193fbc70243f723157cb224f9e0",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : true,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    },
+    {
+      "coldState" : {
+        "ciphertextDigest" : "0055e80af8c56110855058e42366e89b5dbb2193fbc70243f723157cb224f9e0",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : true,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    }
+  ],
+  "openedStoreLabels" : [
+    "source"
+  ],
+  "originalKeyExported" : false,
+  "phase" : "cold-source",
+  "processIdentifier" : 63527,
+  "processInstanceID" : "73CEBEF5-B6AD-4FD1-9FF0-9A28DD8A01D9",
+  "remoteClientLoaded" : false,
+  "result" : "PASS",
+  "syntheticOnly" : true,
+  "transferPersisted" : false
+}

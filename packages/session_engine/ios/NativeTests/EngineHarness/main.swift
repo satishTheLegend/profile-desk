@@ -193,11 +193,87 @@ final class Checks {
         expect(try await !cancelled.value, "cancelled export reports false")
         expect(try FileManager.default.contentsOfDirectory(atPath: host.archiveRoot.path).isEmpty, "cancelled export removes private staging")
     }
-    func run() async {
+    func readinessLifetime(in host: UIView) async {
+        let registrar = Registrar()
+        SessionEnginePlugin.register(with: registrar)
+        guard let plugin = registrar.published as? SessionEnginePlugin else {
+            expect(false, "readiness fixture obtains a registered engine without opening a service view")
+            return
+        }
+        defer { (plugin as FlutterPlugin).detachFromEngine?(for: registrar) }
+        let world = WKContentWorld.world(name: "dev.profiledesk.workspace-layout")
+        let fixture = "<meta name='viewport' content='width=device-width'><p>Synthetic readiness lifetime</p>"
+        for transition in ["navigation replacement", "navigation failure", "navigation cancellation", "disposal"] {
+            let config = WKWebViewConfiguration()
+            config.websiteDataStore = .nonPersistent()
+            let web = WorkspaceWebView(frame: CGRect(x: 0, y: 0, width: 440, height: 700), configuration: config)
+            host.addSubview(web)
+            func loadToken() async -> WKNavigation? {
+                let token = web.loadHTMLString(fixture, baseURL: URL(string: "https://web.whatsapp.com/")!)
+                for _ in 0..<100 {
+                    if !web.isLoading, web.url != nil { break }
+                    try? await Task.sleep(for: .milliseconds(50))
+                }
+                try? await Task.sleep(for: .milliseconds(100))
+                return token
+            }
+            // Distinct real local-HTML navigation tokens exercise identity
+            // rejection. Delegate callbacks below are deliberately controlled.
+            guard let oldNavigation = await loadToken(), let replacement = await loadToken() else {
+                expect(false, "readiness fixture creates local navigation tokens")
+                web.stopFitting(); web.stopLoading(); web.removeFromSuperview()
+                continue
+            }
+            let loaded = !web.isLoading && web.url == URL(string: "https://web.whatsapp.com/")!
+            expect(loaded, "\(transition) fixture finished its supplied local HTML at the expected origin")
+            guard loaded else {
+                web.stopFitting(); web.stopLoading(); web.removeFromSuperview()
+                continue
+            }
+            _ = try? await web.evaluateJavaScript("""
+                globalThis.fixtureModeCalls=0;globalThis.fixtureStructureCalls=0;
+                Object.defineProperty(globalThis,'__profileDeskLayout',{configurable:true,value:Object.freeze({
+                  supportsStructure(){globalThis.fixtureStructureCalls++;const end=performance.now()+1000;while(performance.now()<end){};return true;},
+                  setMode(){globalThis.fixtureModeCalls++;},dispose(){}
+                })});void 0;
+                """, in: nil, contentWorld: world)
+            var session: BoundWebSession? = BoundWebSession(handle: handle(50), webView: web, engine: plugin)
+            session!.webView(web, didStartProvisionalNavigation: oldNavigation)
+            session!.webView(web, didFinish: oldNavigation)
+            try? await Task.sleep(for: .milliseconds(30))
+            switch transition {
+            case "navigation replacement": session!.webView(web, didStartProvisionalNavigation: replacement)
+            case "navigation failure": session!.webView(web, didFail: oldNavigation, withError: URLError(.cannotLoadFromNetwork))
+            case "navigation cancellation": session!.webView(web, didFailProvisionalNavigation: oldNavigation, withError: URLError(.cancelled))
+            default: session!.dispose()
+            }
+            session!.webView(web, didFinish: oldNavigation)
+            weak var released: BoundWebSession?
+            released = session
+            session = nil
+            try? await Task.sleep(for: .milliseconds(100))
+            expect(released == nil, "\(transition) releases BoundWebSession before the delayed layout reply")
+            // This query is queued behind the actual delayed renderer reply.
+            // A canceled readiness operation must not enqueue its next setMode.
+            try? await Task.sleep(for: .milliseconds(1100))
+            let structureCalls = try? await web.evaluateJavaScript("globalThis.fixtureStructureCalls", in: nil, contentWorld: world)
+            expect(structureCalls as? Int == 1, "\(transition) began exactly one real readiness evaluation before cancellation")
+            let calls = try? await web.evaluateJavaScript("globalThis.fixtureModeCalls", in: nil, contentWorld: world)
+            expect(calls as? Int == 0, "\(transition) prevents a late readiness callback from dispatching another layout command")
+            expect(released == nil, "\(transition) late callback cannot resurrect the released session")
+            web.navigationDelegate = nil
+            web.stopFitting(); web.stopLoading(); web.removeFromSuperview()
+        }
+        // These sessions intentionally are not engine.current. We test actual
+        // task lifetime and command sequencing, not event delivery rejected by
+        // the engine's independent owns(handle) guard. No service URL is loaded.
+    }
+    func run(in host: UIView) async {
         await registration()
+        await readinessLifetime(in: host)
         do { try await pickerCallbacks() } catch { expect(false, "picker fixture threw \(type(of: error))") }
         do { try await archiveCallbacks() } catch { expect(false, "archive fixture threw \(type(of: error))") }
-        let value: [String: Any] = ["result": results.allSatisfy { $0["pass"] as? Bool == true } ? "PASS" : "FAIL", "tests": results, "count": results.count, "os": UIDevice.current.systemVersion, "scope": "Actual production registration/detach and picker callbacks; registrar/presentation doubles; no service account or media delivery.", "timestamp": ISO8601DateFormatter().string(from: Date())]
+        let value: [String: Any] = ["result": results.allSatisfy { $0["pass"] as? Bool == true } ? "PASS" : "FAIL", "tests": results, "count": results.count, "os": UIDevice.current.systemVersion, "scope": "Actual production registration/detach, readiness task lifetime and picker callbacks; registrar/presentation doubles and controlled local HTML/navigation callbacks. Readiness sessions are not engine.current, so owned readiness event delivery is not tested. No service account or media delivery.", "timestamp": ISO8601DateFormatter().string(from: Date())]
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("result.json")
         try! JSONSerialization.data(withJSONObject: value, options: [.prettyPrinted, .sortedKeys]).write(to: url, options: .atomic)
     }
@@ -218,8 +294,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene); window.rootViewController = UIViewController(); window.makeKeyAndVisible(); self.window = window
     }
     func sceneDidBecomeActive(_ scene: UIScene) {
-        guard !started else { return }; started = true
-        Task { @MainActor in await Checks().run() }
+        guard !started, let host = window?.rootViewController?.view else { return }; started = true
+        Task { @MainActor in await Checks().run(in: host) }
     }
 }
 UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, NSStringFromClass(AppDelegate.self))

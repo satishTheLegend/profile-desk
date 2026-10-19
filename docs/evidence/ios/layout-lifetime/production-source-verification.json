@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "inputCount": 83,
+  "changed": [],
+  "scope": "Recorded native/plugin/Flutter/config inputs; not full compiler input attestation."
+}

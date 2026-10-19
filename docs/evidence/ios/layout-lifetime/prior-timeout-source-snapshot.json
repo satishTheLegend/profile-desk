@@ -1,0 +1,23 @@
+{
+  "../layout/workspace_layout.js": "1e627bfb4ec4ebdcbd46f5dc463fd930a81df7c1ab984e12e3083168077773cd",
+  "NativeTests/ViewportHarness/Info.plist": "a9101481de5890d170c70566a4b9985b85efbbc79f5538c8f52cf233af594eea",
+  "NativeTests/ViewportHarness/README.md": "b88e458347b6e41b3536f96dff8f82700194b789ad445d23c360015051c4e22c",
+  "NativeTests/ViewportHarness/main.swift": "6199912417f395417ddda39158785ac4bbbb082ceb8fbb616fd475a71f5832bc",
+  "session_engine/Sources/session_engine/AccountSetupArchive.swift": "7992035c18a0f5656012d845271e5caebb9fbc82e4f6790677428edfb7d1f3e6",
+  "session_engine/Sources/session_engine/BoundWebSession.swift": "8b4b39b76f072c591d45ceda82a1458dca08391efca0bc6242c5137a3cf6c23e",
+  "session_engine/Sources/session_engine/ImportAllocationJournal.swift": "24dff3339c104028a9079e126bc73dd51bfe5f9b1400459ff9225c461f36b11c",
+  "session_engine/Sources/session_engine/InstallationBinding.swift": "e0b351473e5986e762f0c389301e0285024751b7a800c7e6176e53b9adcda338",
+  "session_engine/Sources/session_engine/Messages.g.swift": "c973401fd6239186f53014066e808fd3d0337294e617282bbaf1ac2d46c4bd70",
+  "session_engine/Sources/session_engine/NativeAccountArchives.swift": "611dc65ea0d897a3fbefc03fa5b933161021450cb85a335b61fbfe80b78d659c",
+  "session_engine/Sources/session_engine/NativeDiagnostics.swift": "25de8c7e119e013e78b04485e5af93549347b7f19a94a67ed3017caf0951f859",
+  "session_engine/Sources/session_engine/NativeLockState.swift": "21acf0e525d900606b4d49c077d538096a2eeca195d5fb10683d05d6752bbc8d",
+  "session_engine/Sources/session_engine/NativeTransfers.swift": "a31e26c90ec5199fb9fd59af7fa3648ddfcdff02f1a1d921903bfdc76837c8ba",
+  "session_engine/Sources/session_engine/ProfileRegistry.swift": "cc0cbfe2eb8c3d139ce096f8f97d9d141e93b656f226565adb9376b526a24b28",
+  "session_engine/Sources/session_engine/SessionEnginePlugin.swift": "300c9f95752b62386c57c4678ef4005abbd8edcfb8bbbf486cabd3cddb8113f2",
+  "session_engine/Sources/session_engine/TransferFiles.swift": "b6cbe946947c00d01f948a48cae506a1570c3a1342f56d61ca8d7d4bda67fcdc",
+  "session_engine/Sources/session_engine/WebKitBootstrap.swift": "513c05fc4e091ffe259449ec5e9b7797b16de750d795b2b5c9d8b5c24019bab4",
+  "session_engine/Sources/session_engine/WindowPrivacyCover.swift": "575b2964ce71e8370d06809b54c0e11b1ae121be04705372c7a0af77c5213ed8",
+  "session_engine/Sources/session_engine/WorkspaceBrowserPolicy.swift": "282499717b84be592ec1f26893c29b0665a8d2901674710cf331052ccb488d04",
+  "session_engine/Sources/session_engine/WorkspaceURLPolicy.swift": "222d1bfb4ed63400389ff2068e2e37caae09bc2fe78ddb2f90ba75b18351976d",
+  "session_engine/Sources/session_engine/WorkspaceWebView.swift": "bcd1ba23903b1fab2593893f90ddd2fbefcf04a1f500b0e12e4d73431c342858"
+}

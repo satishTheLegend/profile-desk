@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "syntheticOnly": true,
+  "realServiceAccessed": false,
+  "physicalDeviceTouched": false,
+  "remoteClientLoaded": false,
+  "scope": "Public loadHTMLString empty-origin synthetic import only; no source quiescence or authenticated restore proof.",
+  "installedExecutableMatchesBuiltApp": true,
+  "coldProcessesDistinct": true,
+  "coldProcessesOpenOnlyDesignatedNamedStore": true,
+  "ownedSimulatorRebootBeforeColdVerification": true,
+  "phaseCount": 4,
+  "assertions": 138,
+  "sourceHashesMatch": true
+}

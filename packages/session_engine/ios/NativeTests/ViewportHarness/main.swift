@@ -8,7 +8,26 @@ final class Checks: NSObject, WKNavigationDelegate {
     var tests = [[String: Any]]()
     var measurements = [[String: Any]]()
     var identityMeasurement = [String: Any]()
-    func expect(_ condition: Bool, _ name: String) { tests.append(["name": name, "pass": condition]) }
+    private let startedAt = ProcessInfo.processInfo.systemUptime
+    private var stage = "created"
+    private var loadNumber = 0
+    private func persistProgress() {
+        // Fixture labels and counts only: never persist page content or accounts.
+        let value: [String: Any] = ["stage": stage, "count": tests.count,
+            "elapsedSeconds": ProcessInfo.processInfo.systemUptime - startedAt,
+            "lastAssertion": tests.last ?? [:],
+            "failedCount": tests.filter { $0["pass"] as? Bool != true }.count]
+        let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent("progress.json")
+        if let data = try? JSONSerialization.data(withJSONObject: value, options: [.prettyPrinted, .sortedKeys]) {
+            try? data.write(to: url, options: .atomic)
+        }
+    }
+    func checkpoint(_ name: String) { stage = name; persistProgress() }
+    func expect(_ condition: Bool, _ name: String) {
+        tests.append(["name": name, "pass": condition])
+        persistProgress()
+    }
     func pause(_ milliseconds: Int = 600) async { try? await Task.sleep(for: .milliseconds(milliseconds)) }
     func configuration() -> WKWebViewConfiguration {
         let value = WKWebViewConfiguration()
@@ -26,14 +45,18 @@ final class Checks: NSObject, WKNavigationDelegate {
         """
     }
     func load(_ web: WKWebView, html: String, baseURL: URL? = nil) async {
+        loadNumber += 1
+        checkpoint("local HTML load \(loadNumber) started")
         web.loadHTMLString(html, baseURL: baseURL)
         for _ in 0..<75 {
             if !web.isLoading && web.scrollView.contentSize.width > 0 { break }
             await pause(200)
         }
         await pause()
+        checkpoint("local HTML load \(loadNumber) completed")
     }
     func measure(_ web: WKWebView, _ name: String) async -> (width: Double, right: Double) {
+        checkpoint("fixture measurement \(name)")
         await pause()
         let value = (try? await web.evaluateJavaScript("({width:innerWidth,right:document.getElementById('fixture').getBoundingClientRect().right})")) as? [String: Double] ?? [:]
         measurements.append(["name": name, "width": web.bounds.width, "height": web.bounds.height,
@@ -43,6 +66,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         return (value["width"] ?? -1, value["right"] ?? -2)
     }
     func phoneLayout(in host: UIView) async {
+        checkpoint("phone layout started")
         let native = SessionHostView(frame: CGRect(x: 0, y: 0, width: 440, height: 700))
         host.addSubview(native)
         let web = WorkspaceWebView(frame: .zero, configuration: configuration())
@@ -140,6 +164,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         waiting.stopFitting(); waiting.stopLoading(); waiting.removeFromSuperview(); waitingHost.removeFromSuperview()
     }
     func presentationStatus(in host: UIView) async {
+        checkpoint("presentation status started")
         let native = SessionHostView(frame: CGRect(x: 0, y: 0, width: 440, height: 700))
         host.addSubview(native)
         let web = WorkspaceWebView(frame: .zero, configuration: configuration())
@@ -173,6 +198,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         // Production exposes no evaluator, handler or page-to-native bridge.
         let world = WKContentWorld.world(name: "dev.profiledesk.workspace-layout")
         func reply(_ expression: String, delayMilliseconds: Int = 0) async {
+            checkpoint("presentation override install with \(delayMilliseconds)ms delay")
             let delay = delayMilliseconds > 0 ? "const end=performance.now()+\(delayMilliseconds);while(performance.now()<end){};" : ""
             _ = try? await web.evaluateJavaScript("""
                 Object.defineProperty(globalThis,'__profileDeskLayout',{configurable:true,value:Object.freeze({
@@ -184,11 +210,13 @@ final class Checks: NSObject, WKNavigationDelegate {
             ("'menu'", .menu), ("'detail'", .detail), ("'unavailable'", .unavailable)]
         for (expression, expected) in states {
             await reply(expression)
+            checkpoint("presentation enum \(expected)")
             let result = try? await web.workspacePresentation()
             expect(result == expected, "presentation accepts the fixed structural enum \(expected)")
         }
         for expression in ["null", "42", "({state:'detail'})", "'unexpected fixture text'"] {
             await reply(expression)
+            checkpoint("malformed presentation enum")
             let result = try? await web.workspacePresentation()
             expect(result == .unavailable, "malformed fixture presentation is reduced to unavailable")
         }
@@ -197,6 +225,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         catch { expect(true, "ineligible ownership rejects presentation before evaluation") }
         web.canObserveLayout = { true }
         await reply("'detail'", delayMilliseconds: 300)
+        checkpoint("presentation eligibility cancellation")
         let changedEligibility = Task { @MainActor in
             do { _ = try await web.workspacePresentation(); return false } catch { return true }
         }
@@ -204,6 +233,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         web.canObserveLayout = { false }
         expect(await changedEligibility.value, "lock or foreground ownership loss discards the pending presentation")
         web.canObserveLayout = { true }
+        checkpoint("presentation mode cancellation")
         let changedMode = Task { @MainActor in
             do { _ = try await web.workspacePresentation(); return false } catch { return true }
         }
@@ -212,6 +242,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         expect(await changedMode.value, "mode revision discards an older presentation reply")
         for transition in ["background and foreground", "lock and unlock", "cover and reveal"] {
             await reply("'detail'", delayMilliseconds: 300)
+            checkpoint("presentation \(transition)")
             let roundTrip = Task { @MainActor in
                 do { _ = try await web.workspacePresentation(); return false } catch { return true }
             }
@@ -224,6 +255,7 @@ final class Checks: NSObject, WKNavigationDelegate {
             expect(await roundTrip.value, "\(transition) round trip cannot restore an earlier query's ownership")
         }
         await reply("'detail'", delayMilliseconds: 300)
+        checkpoint("presentation navigation cancellation")
         let navigationRoundTrip = Task { @MainActor in
             do { _ = try await web.workspacePresentation(); return false } catch { return true }
         }
@@ -233,6 +265,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         web.navigationStarted()
         expect(await navigationRoundTrip.value, "navigation round trip cannot restore an older presentation query")
         await reply("'detail'", delayMilliseconds: 300)
+        checkpoint("presentation task cancellation")
         let canceled = Task { @MainActor in
             do { _ = try await web.workspacePresentation(); return false }
             catch is CancellationError { return true }
@@ -242,6 +275,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         canceled.cancel()
         expect(await canceled.value, "task cancellation drops the pending presentation continuation")
         await reply("'detail'", delayMilliseconds: 3000)
+        checkpoint("presentation two-second deadline")
         let started = Date()
         let timedOut = try? await web.workspacePresentation()
         let elapsed = Date().timeIntervalSince(started)
@@ -251,6 +285,7 @@ final class Checks: NSObject, WKNavigationDelegate {
         // completed continuation twice nor contaminate a subsequent query.
         await pause(1400)
         await reply("'menu'")
+        checkpoint("presentation late callback recovery")
         let next = try? await web.workspacePresentation()
         expect(timedOut == .unavailable && next == .menu,
                "late fixture reply is ignored and the next presentation query works")
@@ -262,8 +297,116 @@ final class Checks: NSObject, WKNavigationDelegate {
         catch { expect(true, "stopped view rejects presentation") }
         web.stopLoading(); web.removeFromSuperview(); native.removeFromSuperview()
     }
+    func layoutEvaluationLifetime(in host: UIView) async {
+        checkpoint("layout evaluation lifetime started")
+        let world = WKContentWorld.world(name: "dev.profiledesk.workspace-layout")
+        let fixture = "<meta name='viewport' content='width=device-width'><p>Owned lifetime fixture</p>"
+        let native = SessionHostView(frame: CGRect(x: 0, y: 0, width: 440, height: 700))
+        host.addSubview(native)
+        let web = WorkspaceWebView(frame: .zero, configuration: configuration())
+        native.attach(web)
+        native.covered = false
+        // Suppress periodic structural probes while each explicit command is
+        // held. The actual production evaluator and renderer callback are used.
+        web.canObserveLayout = { false }
+        await load(web, html: fixture, baseURL: URL(string: "https://web.whatsapp.com/")!)
+        func install(_ held: String = "", milliseconds: Int = 0) async {
+            checkpoint("layout override install \(held.isEmpty ? "normal" : held) with \(milliseconds)ms delay")
+            _ = try? await web.evaluateJavaScript("""
+                Object.defineProperty(globalThis,'__profileDeskLayout',{configurable:true,value:Object.freeze({
+                  supportsStructure(){if('\(held)'==='structure'){const end=performance.now()+\(milliseconds);while(performance.now()<end){}}return true;},
+                  setMode(){if('\(held)'==='mode'){const end=performance.now()+\(milliseconds);while(performance.now()<end){}}},
+                  showList(){if('\(held)'==='list'){const end=performance.now()+\(milliseconds);while(performance.now()<end){}}},
+                  presentation(){return Object.freeze({state:'list'});},dispose(){}
+                })});void 0;
+                """, in: nil, contentWorld: world)
+        }
+        func perform(_ operation: String) async throws {
+            if operation == "list" { try await web.showList() }
+            else { try await web.applyPresentationLayout() }
+        }
+        for operation in ["structure", "mode", "list"] {
+            web.setPresentationLayout(operation == "mode" ? .original : .phone)
+            await install(operation, milliseconds: 3000)
+            checkpoint("layout \(operation) two-second deadline")
+            let started = Date()
+            do { try await perform(operation); expect(false, "\(operation) rejects a withheld renderer completion") }
+            catch { expect((error as? SessionFailure) == .unavailable, "\(operation) returns a fixed timeout failure") }
+            let elapsed = Date().timeIntervalSince(started)
+            expect(elapsed >= 1.8 && elapsed < 2.8, "\(operation) wait ends at the two-second native deadline")
+            // The actual callback arrives after the native timeout. A second
+            // resume would crash the checked continuation; a new call must work.
+            await pause(1400)
+            await install()
+            checkpoint("layout \(operation) late callback recovery")
+            do { try await perform(operation); expect(true, "\(operation) late completion cannot resume twice or poison the next call") }
+            catch { expect(false, "\(operation) recovers after a late completion") }
+        }
+        for operation in ["structure", "mode", "list"] {
+            web.setPresentationLayout(operation == "mode" ? .original : .phone)
+            await install(operation, milliseconds: 1000)
+            checkpoint("layout \(operation) task cancellation")
+            let pending = Task { @MainActor in
+                do { try await perform(operation); return false }
+                catch is CancellationError { return true }
+                catch { return false }
+            }
+            await pause(30)
+            let started = Date()
+            pending.cancel()
+            let canceled = await pending.value
+            expect(canceled && Date().timeIntervalSince(started) < 0.5,
+                   "\(operation) task cancellation releases its native wait before the renderer returns")
+            await pause(1100)
+        }
+        web.stopFitting(); web.stopLoading(); web.removeFromSuperview(); native.removeFromSuperview()
+
+        // Exercise synchronous disposal with two pending waits, then release
+        // the native view while the synthetic renderer remains busy.
+        var retiring: WorkspaceWebView? = WorkspaceWebView(frame: CGRect(x: 0, y: 0, width: 440, height: 700), configuration: configuration())
+        host.addSubview(retiring!)
+        retiring!.canObserveLayout = { true }
+        await load(retiring!, html: fixture, baseURL: URL(string: "https://web.whatsapp.com/")!)
+        checkpoint("layout retirement override install")
+        _ = try? await retiring!.evaluateJavaScript("""
+            Object.defineProperty(globalThis,'__profileDeskLayout',{configurable:true,value:Object.freeze({
+              supportsStructure(){const end=performance.now()+1000;while(performance.now()<end){};return true;},
+              setMode(){},presentation(){const end=performance.now()+1000;while(performance.now()<end){};return Object.freeze({state:'detail'});},dispose(){}
+            })});void 0;
+            """, in: nil, contentWorld: world)
+        checkpoint("layout retirement starts two pending operations")
+        let layout = Task { @MainActor [weak retiring] in
+            guard let retiring else { return false }
+            do { try await retiring.applyPresentationLayout(); return false }
+            catch { return (error as? SessionFailure) == .staleOperation }
+        }
+        let status = Task { @MainActor [weak retiring] in
+            guard let retiring else { return false }
+            do { _ = try await retiring.workspacePresentation(); return false }
+            catch { return (error as? SessionFailure) == .staleOperation }
+        }
+        await pause(30)
+        let stopped = Date()
+        checkpoint("layout retirement synchronous stop")
+        retiring!.stopFitting()
+        let canceledLayout = await layout.value
+        let canceledStatus = await status.value
+        expect(canceledLayout && canceledStatus && Date().timeIntervalSince(stopped) < 0.5,
+               "stopFitting releases every pending layout and status wait without waiting for the renderer")
+        weak var released: WorkspaceWebView?
+        released = retiring
+        retiring!.stopLoading(); retiring!.removeFromSuperview(); retiring = nil
+        await pause(100)
+        expect(released == nil, "late layout callbacks do not retain the retired WKWebView")
+        await pause(1100)
+        expect(released == nil, "retired native view stays released during delayed renderer work")
+    }
+
     func run(in host: UIView) async {
+        checkpoint("viewport harness started")
         await presentationStatus(in: host)
+        await layoutEvaluationLifetime(in: host)
+        checkpoint("privacy and keyboard fixture")
         if let window = host.window {
             let input = UITextField(frame: CGRect(x: 20, y: 20, width: 240, height: 48))
             input.text = "Owned unsent native draft"
@@ -280,6 +423,7 @@ final class Checks: NSObject, WKNavigationDelegate {
             privacy.removeFromSuperview(); input.removeFromSuperview()
         } else { expect(false, "native privacy fixture has a visible window") }
         let os = ProcessInfo.processInfo.operatingSystemVersion
+        checkpoint("browser identity fixture")
         for bundle in [nil, "dev.profiledesk.profileDesk", "dev.profiledesk.profileDesk.qa"] as [String?] {
             expect(WorkspaceBrowserPolicy.applicationName(bundleIdentifier: bundle, operatingSystem: os) == nil,
                    "non-development identity remains unchanged: \(bundle ?? "missing bundle")")
@@ -315,6 +459,7 @@ final class Checks: NSObject, WKNavigationDelegate {
                "development uses the configured compatibility suffix with WebKit's own desktop identity")
         identityView.stopFitting(); identityView.stopLoading(); identityView.removeFromSuperview()
 
+        checkpoint("desktop viewport geometry fixture")
         let baseline = WKWebView(frame: CGRect(x: 0, y: 0, width: 440, height: 700), configuration: configuration())
         baseline.scrollView.contentInsetAdjustmentBehavior = .never
         host.addSubview(baseline)
@@ -403,6 +548,7 @@ final class Checks: NSObject, WKNavigationDelegate {
 
         await phoneLayout(in: host)
 
+        checkpoint("writing final result")
         let value: [String: Any] = ["result": tests.allSatisfy { $0["pass"] as? Bool == true } ? "PASS" : "FAIL",
             "count": tests.count, "tests": tests, "measurements": measurements, "identityMeasurement": identityMeasurement, "os": UIDevice.current.systemVersion,
             "scope": "Actual production WorkspaceWebView and SessionHostView with controlled local HTML and test-only DOM geometry. No service account, actual touch pinch, physical keyboard or device rotation.",

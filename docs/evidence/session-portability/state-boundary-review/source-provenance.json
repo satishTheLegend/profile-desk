@@ -1,0 +1,90 @@
+{
+  "scope": "Public static source metadata only. No official source, dynamic bootstrap values, cookies, account/session values or key material included.",
+  "assets": [
+    {
+      "sourceManifest": "same-browser-backend-assets.json",
+      "sha256": "c09c8b426b30cb50f3c983dd7c656382ea4f002a24e0da3c85ae4b594362a5d0",
+      "totalBytes": 5743129,
+      "assets": [
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/yA/r/-CdGRzkBY84.js",
+          "sha256": "f52241442dde0bf9371dd2db922dfbf84bd9bba4d49b63edca4210cbe21da82a",
+          "bytes": 303594,
+          "moduleCount": 232
+        },
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/ys/r/IcEjZlh5WtmbwVQvfDoLpjkBzLOJCDNX7G3NHv3ZMCbW7rZQrzh2svrSH9dHNYl7qgWUUKocWarAuGWGFXil8x1Q7KJoSQKFgmFMfFojoJHipk9EXi1dMiJApbiWL4VgRlwL1xb3-XOhxLxbF8dTOsL9IeCwamb14RsoK.js",
+          "sha256": "3c1e2b45826906d14e3d287db10418eb4d5946ab020076a9e85f66c5c7efcec8",
+          "bytes": 1615723,
+          "moduleCount": 664
+        },
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7v5MxUYnB37TY8n25bRLdLj0-JlVyyCKie055uHffiVVnrD8JZd6Hf7G-3JxydoVi51iKsn8dh0KRxhmf9npstv9ZJJ4oEKtT5ZP17R_g10IG7RbmtPZeCQ-89G50LRWEaogAg0zpqMTKfF_23LEffI1_XLzAWDo_lWkSfS9mHu-dK8Ckb0pXIL6h44njz38UwnbXpeWSjRoJd0kUaRmEPMHPtinhC4sM8pHXEUBy57olT7s-X.js",
+          "sha256": "9e10fb4c3f49dc65b875f4d8a273dbe5d692451089e1bd743ee46356e656d173",
+          "bytes": 3823812,
+          "moduleCount": 1702
+        }
+      ]
+    },
+    {
+      "sourceManifest": "same-browser-queue-assets.json",
+      "sha256": "9fb97875fc5dcb9cbaa479256a3746971d8c9de2b2c03e32b5ec55a7798682b9",
+      "totalBytes": 1462982,
+      "assets": [
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/yY/r/QtG3JCvbF1p.js",
+          "sha256": "bbed25de50229a7e8d591d5d7bea6f711ee56972b3672904b37275af157a44fa",
+          "bytes": 172081,
+          "moduleCount": 70
+        },
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/yK/r/eVznebq_3AI.js",
+          "sha256": "ce4f79eefbee2304dcc5bb9b484836da990e17c1da2574b9d9dec44c2cb29793",
+          "bytes": 590452,
+          "moduleCount": 411
+        },
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/yi/r/fp_8kBNAp0r.js",
+          "sha256": "b643fd58f0198fa761b41df76f8908e2e840b5a807bf0f96b5831bcdec52166f",
+          "bytes": 33043,
+          "moduleCount": 4
+        },
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4i7_14/yG/l/en_GB-j/F5V-I52_BKr.js",
+          "sha256": "0343b08780f61aad48ec263edaed7b92a6d095f3a79e4787e44056ed39f51d9e",
+          "bytes": 547259,
+          "moduleCount": 426
+        },
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/yP/r/oww_ZssU3DX.js",
+          "sha256": "d806d5a88e865a49812d0de40d3373d32e9edfcd849c46e8e1e36519c52a5a37",
+          "bytes": 61391,
+          "moduleCount": 33
+        },
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/yY/r/MX5mCxei3Gy.js",
+          "sha256": "17f012df8262626ee2ecd1a9be1d34c479dd75bc821bc7e7ab140829bb952e30",
+          "bytes": 58756,
+          "moduleCount": 36
+        }
+      ]
+    },
+    {
+      "sourceManifest": "service-worker-assets.json",
+      "sha256": "83cac28164627ae0c81b39a058e63a34f08b7d6871834e59c8580376e1784b07",
+      "totalBytes": 6025005,
+      "assets": [
+        {
+          "url": "https://static.whatsapp.net/rsrc.php/v4/yN/r/oZdAVSi2ND3.js",
+          "sha256": "eb56ccf08508943db5d6baf21d1cdb04345e8bc48ceb1aee952bcbae3d331561",
+          "bytes": 6025005,
+          "moduleCount": 2797
+        }
+      ]
+    }
+  ],
+  "reviewManifests": {
+    "retained-worm-ear.json": "67e0d12976ab0a0c3769efe3dd5e396f6b770ccb5e45451cc6e7b47d4f69e533",
+    "retained-version-service-worker.json": "f753c91d0afdb546a0e4fb3eecf265a92c387dca7b574ce2e3c090d4aef62bec"
+  }
+}

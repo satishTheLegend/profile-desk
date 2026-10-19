@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "inputCount": 255,
+  "changed": [],
+  "fixtureTestSHA256": "0510a9e0f2df5aaf672679be8ce12c37ef4ad194fec58a3e5feea1ff1499c2ea",
+  "scope": "Current root sources match the original source inventory copied by the isolated QA runner. This is not full compiler-input attestation or authenticated readiness proof."
+}

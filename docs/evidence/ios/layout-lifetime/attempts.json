@@ -1,0 +1,15 @@
+{
+  "previousAttempts": [
+    {
+      "path": "build/ios-viewport-20261019T095457Z/build.log",
+      "sha256": "fb5f3e232b61015a88c60b72539be61e48f59459c909d813df2b0651e1ba903b",
+      "note": "Fixture compiler warning treated as error; weak local declaration corrected before native execution."
+    },
+    {
+      "path": "build/ios-viewport-20261019T095709Z/source-snapshot.json",
+      "sha256": "7d11517bae7d9db909673c6ecb32f51bfe867db19e950bfa253b64db9986edad",
+      "note": "Expanded fixture exceeded its60-second runner watchdog without final report or matching app crash report. No progress capture then; cause remains unproved."
+    }
+  ],
+  "final": "Unchanged production core passes109 viewport assertions after diagnostic-only fixture/runner additions. Existing watchdog remains60 seconds; no timeout assertion was relaxed."
+}

@@ -1,0 +1,31 @@
+{
+  "priorRuns": [
+    {
+      "run": "session-origin-bootstrap-20261019T093932Z",
+      "result": "FAIL",
+      "assertions": 0,
+      "sourceHashesMatch": true,
+      "resultSHA256": "45073df917e398fe5c12d1c7295cc0f93052715d33810414fcb9c3ebeab35ec6"
+    },
+    {
+      "run": "session-origin-bootstrap-20261019T094049Z",
+      "result": "FAIL",
+      "assertions": 84,
+      "sourceHashesMatch": false,
+      "resultSHA256": "d2d7d1ae933bfe5f2eb64ebbf73e0eaef688a51b2428d8a6d3475259e43998b0"
+    },
+    {
+      "run": "session-origin-bootstrap-20261019T094334Z",
+      "result": "PASS",
+      "assertions": 138,
+      "sourceHashesMatch": true,
+      "resultSHA256": "5f935407bdfb3a74ce5759928cf8ba689a6146c40f90c4b429456701570c2913"
+    }
+  ],
+  "notes": [
+    "First attempt failed SDK compilation before creating a Simulator; callback overload and generic Void inference corrected.",
+    "Second attempt failed source LocalStorage verification after view/store-session replacement. Cleanup crashed inside WebKit store-removal run-loop dispatch; the owned Simulator was deleted. Diagnostic source edits begun after the bootstrap failure made that run report sourceHashesMatch false.",
+    "The next controlled fixture retained both named native store objects across view replacements and initialized WebKit with an inert nonpersistent WebView before every phase, including cleanup. All138 assertions passed with unchanged sources.",
+    "Final run repeats all138 assertions and clarifies that cold processes open only their designated named store in addition to the inert ephemeral initialization. It does not isolate the sole cause of the second attempt failure."
+  ]
+}

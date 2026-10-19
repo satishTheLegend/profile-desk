@@ -1,6 +1,6 @@
 # Profile Desk native experience implementation plan
 
-> For agentic workers: execute the assigned units with explicit file ownership and independent review. Preserve other workers' edits. The user's existing direction selects autonomous implementation without routine stage-approval prompts. No commits, publication or product deployment are implied.
+> For agentic workers: execute the assigned units with explicit file ownership and independent review. Preserve other workers' edits. The user's existing direction selects autonomous implementation without routine stage-approval prompts. Later instructions explicitly authorize public publication with sole owner authorship. Product deployment and subsequent shutdown remain conditional on demonstrated session restore; the owner retained that condition on 19 October 2026.
 
 **Goal:** deliver actual native messaging and session-preserving backup/restore inside Profile Desk, with an official linking/fallback surface.
 
@@ -84,6 +84,7 @@ Files: canonical `packages/session_engine/layout/workspace_layout.js`, `tests/wo
 - [x] Dismiss native keyboard on list return without reading/changing draft content; test stale view and draft preservation.
 - [x] Add bounded typed layout-state feedback, explicit Original recovery and owned Android Back. Keyboard hides first, detail returns to list, menu provides guidance, and root/nested routing remains ordinary. Route hide, lifecycle/lock/cover/navigation round trips permanently invalidate pending replies.
 - [x] Run browser, native viewport/resource and ownership checks: 73 browser cases, 94 iOS viewport/privacy/status assertions, resource-loader checks and 57 Android unit tests pass. Actual service selectors remain separately unverified until owner-operated testing.
+- [x] Bound every awaited iOS structural evaluation, cancel pending waits on retirement and track readiness-task ownership. Delayed real renderer replies, timeout recovery, task cancellation and weak native release pass [109 viewport and 59 engine assertions](evidence/ios/layout-lifetime/README.md); unsigned production rebuild/artifact inspection passes. This is not a worker-destruction or capture-barrier proof.
 
 ## Task 5: Synthetic native semantic-state migration
 
@@ -100,7 +101,9 @@ Ownership: new `tests/session_portability/registration/` and `build/session-regi
 This remains a blocking implementation gate rather than a claim of a finished format.
 
 - [ ] Establish exact version-pinned coverage for required mutable Signal state, Noise, screen-lock layers, preferences/caches and encrypted application data; classify local conversation/media coverage separately.
-- [ ] Prove a consistent capture strategy and empty-origin restore before the official client starts. Unknown required state rejects the entire selected export.
+- [x] Establish the synthetic empty-origin destination capability before remote client startup. Public WKWebView loading, effective origin, LocalStorage/typed IndexedDB, fresh nonextractable wrapping keys, source preservation and independent cold process/reboot pass [138 assertions](evidence/session-portability/origin-bootstrap/README.md). This is not a service-session proof.
+- [x] Map the known Worm consumer and service-worker mutation/version boundaries from public source. [Review](evidence/session-portability/state-boundary-review/README.md) identifies pending-action replay, conditional background writers and non-unique version strings; complete payload coverage remains open.
+- [ ] Prove an all-writer source capture strategy and complete service payload restore before the official client starts. Unknown required state rejects the entire selected export; the synthetic empty-origin primitive above supplies only one prerequisite.
 - [ ] Select and review a concrete bounded authenticated-encryption/KDF container and recovery UX using current native primitives, then implement native-only archive code and tamper/wrong-secret/resource-limit tests.
 - [ ] Implement sequential multi-profile export, file-provider operations, cancellation, source preservation and native-owned sensitive staging cleanup.
 - [ ] Implement fresh-profile import journal, whole-batch commit/rollback and process-interruption recovery; never reuse original profile identity as restore proof.
@@ -123,6 +126,6 @@ Files: `apps/mobile/lib/features/backup/`, workspace navigation, existing setup 
 
 Native messaging components and their thirty interaction/fault cases are implemented; the full mobile suite passes 87 tests. The production port is not registered, so this does not yet provide live native WhatsApp conversations. A source-backed text path exists, but positive service-unlock state and relock transitions remain unproved; socket state/defaulted lock settings are insufficient. Typed lock-error purging and native keyboard privacy issues found by independent review are fixed.
 
-Fallback/browser checks pass 73 cases; final iOS viewport/privacy/status checks pass 94 with unchanged input/package hashes. SwiftPM resource delivery passes. Native full-window protection exists on both platforms, with actual service/widget integration still required. A narrow synthetic registration-wrapper migration passes 125 assertions, including thirty invalid-input controls, across cold process/reboot with source preservation. Twenty-four encrypted columns across fourteen application schemas are mapped in public source, while Worm key consumers, the final-salt restore/bootstrap barrier, complete payload consistency and authenticated restore remain open. Normal-browser final salt and FTS blind-index consumers are mapped; safe complete migration is not yet proved.
+Fallback/browser checks pass 73 cases; the latest iOS viewport/privacy/lifetime fixture passes 109 and engine/callback fixture passes 59, with unchanged recorded inputs and another unsigned production artifact check. SwiftPM resource delivery passes. Native full-window protection exists on both platforms, with actual service/widget integration still required. A narrow synthetic registration-wrapper migration passes 125 assertions, including thirty invalid-input controls, across cold process/reboot with source preservation. The separate empty-origin import capability passes 138 assertions. Twenty-four encrypted columns across fourteen application schemas, normal-browser final salt, FTS blind indexes and the known Worm pending-action consumer are mapped. Complete version-pinned payload coverage, consistent capture, queue replay, fresh final-key readiness and authenticated restore remain open.
 
 No new product deployment or verified authenticated restore. Every unchecked item is required/open, not implicitly skipped. [Current evidence and limits](evidence/native-experience/README.md). A blocked platform/service capability must be recorded with evidence and user-visible consequences rather than silently replaced by a narrower feature.

@@ -1,0 +1,406 @@
+{
+  "scope": "Static public source only. No official source executed, no account or session accessed, no network in this review. Definitions from different assets are retained separately; cross-build equivalence is not assumed.",
+  "facts": [
+    {
+      "id": "per-database-close-is-not-shutdown",
+      "finding": "Storage.purge -> Idb.reset -> Dexie.delete is destructive. Idb.close closes only one handle. lock/transact covers selected stores in one database; no all-context barrier.",
+      "references": [
+        {
+          "name": "WAWebIdb",
+          "sourceSHA256": "0782fc8299443203b519be3202930ac94d94bb0e9912fa8da5c4d2bdf9328e03",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7uN7SVKPHZW.js",
+          "sourceByteOffset": 279684,
+          "moduleSHA256": "75b7a96c6de5db76d7acba2b17e7038077a0ed9a5ade544ffff2247b42951c15"
+        },
+        {
+          "name": "WAWebStorage",
+          "sourceSHA256": "0782fc8299443203b519be3202930ac94d94bb0e9912fa8da5c4d2bdf9328e03",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7uN7SVKPHZW.js",
+          "sourceByteOffset": 349039,
+          "moduleSHA256": "de4150df544b10bc91f1ee8e5f31502c5266b7207d5c0f793fb8bff852f4c634"
+        },
+        {
+          "name": "WAWebModelStorageInitialize",
+          "sourceSHA256": "0782fc8299443203b519be3202930ac94d94bb0e9912fa8da5c4d2bdf9328e03",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7uN7SVKPHZW.js",
+          "sourceByteOffset": 725029,
+          "moduleSHA256": "75ecd8a4ce4586b6085bf8c6692bc32973221654568f0a16cd963aaac5c30571"
+        },
+        {
+          "name": "WAWebIdb",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1497605,
+          "moduleSHA256": "31d538436631f412c0d6c06370b7fb0e41656d81f7f30308f73b4ad760b4c679"
+        },
+        {
+          "name": "WAWebStorage",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1577952,
+          "moduleSHA256": "194ebbacae006058efab0ed1f5f06eebf23ab0be9130c1f869bfcb89b5800ff8"
+        },
+        {
+          "name": "WAWebModelStorageInitialize",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 3271291,
+          "moduleSHA256": "75ecd8a4ce4586b6085bf8c6692bc32973221654568f0a16cd963aaac5c30571"
+        }
+      ]
+    },
+    {
+      "id": "transaction-counter-is-not-global-generation",
+      "finding": "Module-local counter increments transaction starts including reads. It does not mark committed writes or aggregate workers, LocalStorage, CacheStorage or cookies.",
+      "references": [
+        {
+          "name": "WAWebIdbTransactionCounter",
+          "sourceSHA256": "0782fc8299443203b519be3202930ac94d94bb0e9912fa8da5c4d2bdf9328e03",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7uN7SVKPHZW.js",
+          "sourceByteOffset": 279357,
+          "moduleSHA256": "fcc7e49b26afb24e558db10ae4190d67bd92b98bc3bd00a5de26688407e77210"
+        },
+        {
+          "name": "WAWebIdbTransactionCounter",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1497276,
+          "moduleSHA256": "78470686d58f6a8c8fc58c8cc0f035cd1f482991562f2d6d44cb1732de017079"
+        }
+      ]
+    },
+    {
+      "id": "signal-writeback-is-narrow",
+      "finding": "Flush takes four local semaphores and writes selected dirty cache tables in one transaction, but does not prohibit later tasks. Memory mode skips persistence. OneQueue wrapper catches flush errors and resolves.",
+      "references": [
+        {
+          "name": "WAWebSignalProtocolStoreUnifiedApi",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 3321519,
+          "moduleSHA256": "d8be87016095da480e61b90b1e97d7702dd75376b087e465b91a79994bff8867"
+        },
+        {
+          "name": "WAWebSignalStoreOneQueueFlushable",
+          "sourceSHA256": "a372ca6e403abc6446a707b85405891c7ee4308caac3c048cafb7ee196ad6335",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yv/r/c5kcMtWKu5z.js",
+          "sourceByteOffset": 669452,
+          "moduleSHA256": "286d2cb7502760b0a78939ca7f790e7434523fefa598056cf3f37cbf520c4a12"
+        }
+      ]
+    },
+    {
+      "id": "worker-close-is-abrupt",
+      "finding": "Main-thread portal close calls terminate. Worker portal close calls self.close. Kill-switch acquisition triggers automatic restart. No storage flush acknowledgement or writer-freeze token appears in these lifecycle handlers.",
+      "references": [
+        {
+          "name": "WAWebStartBackendWorker",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 4937806,
+          "moduleSHA256": "ae534ed8f85c6e1f3fb25d38de848f9d7cb9676970145e80ca2d1c64d63af523"
+        },
+        {
+          "name": "WAWebBackendWorkerV2",
+          "sourceSHA256": "3c1e2b45826906d14e3d287db10418eb4d5946ab020076a9e85f66c5c7efcec8",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/ys/r/IcEjZlh5WtmbwVQvfDoLpjkBzLOJCDNX7G3NHv3ZMCbW7rZQrzh2svrSH9dHNYl7qgWUUKocWarAuGWGFXil8x1Q7KJoSQKFgmFMfFojoJHipk9EXi1dMiJApbiWL4VgRlwL1xb3-XOhxLxbF8dTOsL9IeCwamb14RsoK.js",
+          "sourceByteOffset": 1574456,
+          "moduleSHA256": "213d45c619b0ac35d40f6459a5f709d8923784e717e61a54828479652b459493"
+        }
+      ]
+    },
+    {
+      "id": "worker-owns-initialized-storage",
+      "finding": "workerInit.setup initializes key store, ModelStorage and IndexedDB preferences cache; preference synchronization is fireAndForget. setDbFinalKey awaits a dispatcher that itself launches derivation without awaiting final readiness.",
+      "references": [
+        {
+          "name": "WAWebBackendWorkerV2",
+          "sourceSHA256": "3c1e2b45826906d14e3d287db10418eb4d5946ab020076a9e85f66c5c7efcec8",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/ys/r/IcEjZlh5WtmbwVQvfDoLpjkBzLOJCDNX7G3NHv3ZMCbW7rZQrzh2svrSH9dHNYl7qgWUUKocWarAuGWGFXil8x1Q7KJoSQKFgmFMfFojoJHipk9EXi1dMiJApbiWL4VgRlwL1xb3-XOhxLxbF8dTOsL9IeCwamb14RsoK.js",
+          "sourceByteOffset": 1574456,
+          "moduleSHA256": "213d45c619b0ac35d40f6459a5f709d8923784e717e61a54828479652b459493"
+        }
+      ]
+    },
+    {
+      "id": "comms-stop-is-not-storage-fence",
+      "finding": "Worker routes expose stop/pause/reset/close sockets. Socket loops stop or close; in-flight work, page queues and other storage owners are not jointly fenced.",
+      "references": [
+        {
+          "name": "WAComms",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1186112,
+          "moduleSHA256": "15668fd471cd56619e6e2177b1856b6e3ecbb3fbd7799925088cab2c6461a54b"
+        },
+        {
+          "name": "WAWebCommsBackendWorkerHandlers",
+          "sourceSHA256": "3c1e2b45826906d14e3d287db10418eb4d5946ab020076a9e85f66c5c7efcec8",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/ys/r/IcEjZlh5WtmbwVQvfDoLpjkBzLOJCDNX7G3NHv3ZMCbW7rZQrzh2svrSH9dHNYl7qgWUUKocWarAuGWGFXil8x1Q7KJoSQKFgmFMfFojoJHipk9EXi1dMiJApbiWL4VgRlwL1xb3-XOhxLxbF8dTOsL9IeCwamb14RsoK.js",
+          "sourceByteOffset": 1562334,
+          "moduleSHA256": "e29e9de98fabca73d5ed2b2dc94c730f4da22d4ae9cd8b1c8e92b808a1b1226c"
+        }
+      ]
+    },
+    {
+      "id": "one-queue-does-not-freeze-writers",
+      "finding": "Single-concurrency scheduler flushes registered flushables sequentially. Enqueue remains available; a flush timer and later tasks remain. isPendingAcksEmpty covers only two ACK arrays.",
+      "references": [
+        {
+          "name": "WAOneQueue",
+          "sourceSHA256": "a372ca6e403abc6446a707b85405891c7ee4308caac3c048cafb7ee196ad6335",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yv/r/c5kcMtWKu5z.js",
+          "sourceByteOffset": 72681,
+          "moduleSHA256": "3176a4f7d6604d6fbf9f3d5387c0610985ce1e29eeacb186241224ad96cae427"
+        },
+        {
+          "name": "WAWebOneQueue",
+          "sourceSHA256": "a372ca6e403abc6446a707b85405891c7ee4308caac3c048cafb7ee196ad6335",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yv/r/c5kcMtWKu5z.js",
+          "sourceByteOffset": 670189,
+          "moduleSHA256": "38c6515edbe1a64f249d42d3f17b5e8b9d3b7cd5b5404bbe205ea7e0689c78f1"
+        }
+      ]
+    },
+    {
+      "id": "promise-wait-is-not-permanent-quiescence",
+      "finding": "waitUntilResolved retries if the tail promise changes but logs and resolves after ten attempts. No admission lock prevents a new task after a stable observed tail.",
+      "references": [
+        {
+          "name": "WAWebPromiseQueue",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 5546003,
+          "moduleSHA256": "4e647ef86ce537a3af7d9886fc211d8065fc16074a677a67cd2d8a538f0c2386"
+        },
+        {
+          "name": "WAPromiseQueue",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 5698650,
+          "moduleSHA256": "a791196564da6a88244a39abbcfc5fa7a99d17b9c0406da13650b47a94b66d89"
+        }
+      ]
+    },
+    {
+      "id": "document-flushed-is-render-timing",
+      "finding": "documentFlushed resolves after requestAnimationFrame then setTimeout. It is not an IndexedDB/persistence or worker-drain API.",
+      "references": [
+        {
+          "name": "WAWebDocumentFlushed",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 4125609,
+          "moduleSHA256": "9c0ad3298815c8e176290ceb9250c619f5d60cd8580f228cc40c805392d900e8"
+        }
+      ]
+    },
+    {
+      "id": "persisted-job-waits-are-per-job",
+      "finding": "waitUntilPersisted/waitUntilCompleted bridge a requested job; other fireAndForget/create/delete/load job routes remain available. No global stop acknowledgement.",
+      "references": [
+        {
+          "name": "WAWebPersistedJobManagerWorkerBridge",
+          "sourceSHA256": "3c1e2b45826906d14e3d287db10418eb4d5946ab020076a9e85f66c5c7efcec8",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/ys/r/IcEjZlh5WtmbwVQvfDoLpjkBzLOJCDNX7G3NHv3ZMCbW7rZQrzh2svrSH9dHNYl7qgWUUKocWarAuGWGFXil8x1Q7KJoSQKFgmFMfFojoJHipk9EXi1dMiJApbiWL4VgRlwL1xb3-XOhxLxbF8dTOsL9IeCwamb14RsoK.js",
+          "sourceByteOffset": 1572450,
+          "moduleSHA256": "03a1cefa0d7e225196661bd42ad41baea8d1a18e683582a32bf0be158b419ad7"
+        }
+      ]
+    },
+    {
+      "id": "persisted-queue-open-starts-actions",
+      "finding": "ensurePersistedQueuesOpen waits for Worm key, opens/binds the database, then starts deletion, key-share and resend drains. Opening through this convenience initializer is not a passive export/import step.",
+      "references": [
+        {
+          "name": "WAWebPersistedQueues",
+          "sourceSHA256": "17f012df8262626ee2ecd1a9be1d34c479dd75bc821bc7e7ab140829bb952e30",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yY/r/MX5mCxei3Gy.js",
+          "sourceByteOffset": 56344,
+          "moduleSHA256": "35c81dd9a0afd261091b44f0341eb32550a0f96ae98efe65245381fd238609f7"
+        }
+      ]
+    },
+    {
+      "id": "ordinary-bootstrap-already-mutates",
+      "finding": "Previously mapped ordinary AppBootstrap guest/logout recovery, cookie/reload writes and service-worker registration precede remote readiness. LaunchSocket starts FTS/optional backend and initializes key stores before normal socket start.",
+      "references": [
+        {
+          "name": "WAWebDbEncryptionKey",
+          "sourceSHA256": "0782fc8299443203b519be3202930ac94d94bb0e9912fa8da5c4d2bdf9328e03",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7uN7SVKPHZW.js",
+          "sourceByteOffset": 218603,
+          "moduleSHA256": "a45b6fa3d335c886de35dc1154b9622f1cc7905c5628e3a01eb9713c5d9770bb"
+        },
+        {
+          "name": "WAWebModelStorageInitialize",
+          "sourceSHA256": "0782fc8299443203b519be3202930ac94d94bb0e9912fa8da5c4d2bdf9328e03",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7uN7SVKPHZW.js",
+          "sourceByteOffset": 725029,
+          "moduleSHA256": "75ecd8a4ce4586b6085bf8c6692bc32973221654568f0a16cd963aaac5c30571"
+        },
+        {
+          "name": "WAWebDbEncryptionKey",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1482320,
+          "moduleSHA256": "37127e359ab1590b31cb63443d6ef7e58c2797d85c9c3d0869ed1bba3ef1ba7b"
+        },
+        {
+          "name": "WAWebModelStorageInitialize",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 3271291,
+          "moduleSHA256": "75ecd8a4ce4586b6085bf8c6692bc32973221654568f0a16cd963aaac5c30571"
+        },
+        {
+          "name": "WAWebStartBackend",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 4993043,
+          "moduleSHA256": "8ce0ea31e6d37befafc174430e5a0d1c529f1bdafd0067946592e806fcfbba23"
+        }
+      ]
+    },
+    {
+      "id": "cross-store-noise-iv-write-order",
+      "finding": "Noise setter persists new IVs before encrypted Noise payload. LocalStorage/CacheStorage/IDB mirrors do not share one transaction; PermanentStorage launches an unawaited IDB write. Intermediate snapshots can mix generations.",
+      "references": [
+        {
+          "name": "WAWebPermanentStorage",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1640139,
+          "moduleSHA256": "570325a03bb704a6b7077f1453291b11e44ad43009ab05228b1316e5fa535089"
+        },
+        {
+          "name": "WAWebUserPrefsMultiDevice",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1721782,
+          "moduleSHA256": "885bf888b92298afa7cd6102f6184edf85a151b4b7e9dc7db5e3dad122544b82"
+        },
+        {
+          "name": "WAWebUserPrefsInfoStore",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 5266975,
+          "moduleSHA256": "2512817d2aa160105301559a3e144cfda70c08139d0d4433e19d968270cc1cf0"
+        }
+      ]
+    },
+    {
+      "id": "convenience-getters-can-mutate",
+      "finding": "Read helpers may request screen-lock passcodes, generate salt, remove invalid preferences, or repair missing data. Do not use them as a presumed side-effect-free archive scan.",
+      "references": [
+        {
+          "name": "WAWebUserPrefsCacheStorage",
+          "sourceSHA256": "0782fc8299443203b519be3202930ac94d94bb0e9912fa8da5c4d2bdf9328e03",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7uN7SVKPHZW.js",
+          "sourceByteOffset": 704574,
+          "moduleSHA256": "dedbcd47348d825415980e579b96131fc91b6cc9708b863f2204f9d8d3ead032"
+        },
+        {
+          "name": "WAWebUserPrefsBase",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1660464,
+          "moduleSHA256": "daeb24beb2926c4ed216f0891cef3bad05d4215b89177a4626a61ed21499234f"
+        },
+        {
+          "name": "WAWebUserPrefsCacheStorage",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1710809,
+          "moduleSHA256": "dedbcd47348d825415980e579b96131fc91b6cc9708b863f2204f9d8d3ead032"
+        },
+        {
+          "name": "WAWebUserPrefsLocalStorage",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1712553,
+          "moduleSHA256": "b0d7e9749d32ab0efebd84d2c8b1b0ebfc849ddc93d56042c17fafb12df0faab"
+        },
+        {
+          "name": "WAWebUserPrefsScreenLock",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 5262411,
+          "moduleSHA256": "bfc542f4909cbf11faf6778261bb681e89695900e01b15bd8119f2abba6c4235"
+        },
+        {
+          "name": "WAWebUserPrefsInfoStore",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 5266975,
+          "moduleSHA256": "2512817d2aa160105301559a3e144cfda70c08139d0d4433e19d968270cc1cf0"
+        }
+      ]
+    },
+    {
+      "id": "key-init-creates-and-caches",
+      "finding": "init may generate missing base/FTS/Worm rows and retains runtime key caches. generateFinalDbEncryptionAndFtsKey does not itself await all final derivations. A resolved worker setup promise is not proof of correct imported final keys.",
+      "references": [
+        {
+          "name": "WAWebDbEncryptionKey",
+          "sourceSHA256": "0782fc8299443203b519be3202930ac94d94bb0e9912fa8da5c4d2bdf9328e03",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4/yB/r/7uN7SVKPHZW.js",
+          "sourceByteOffset": 218603,
+          "moduleSHA256": "a45b6fa3d335c886de35dc1154b9622f1cc7905c5628e3a01eb9713c5d9770bb"
+        },
+        {
+          "name": "WAWebDbEncryptionKey",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 1482320,
+          "moduleSHA256": "37127e359ab1590b31cb63443d6ef7e58c2797d85c9c3d0869ed1bba3ef1ba7b"
+        }
+      ]
+    },
+    {
+      "id": "worker-suspension-not-destruction",
+      "finding": "Page visibility or paused UI is not an all-worker writer barrier. The cached main-side service-worker bus has event.waitUntil/message-channel paths; actual service-worker body/lifetime shutdown is not established in this source set.",
+      "references": [
+        {
+          "name": "WAWebSWBus",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 521644,
+          "moduleSHA256": "f5746ee1823b816f08366f81404b2d48ae52e680b3eefe374ea1ef1592036dd4"
+        },
+        {
+          "name": "WAWebServiceWorkerSupport",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 523786,
+          "moduleSHA256": "6b3ed8f5c97829418fee69e4bb493db95349e04dd36b9f48a344c341d3e689b0"
+        },
+        {
+          "name": "WebWorker",
+          "sourceSHA256": "84f08a25b43cefd2b1c888d5c5782f6cc6d20ae34339f35c4e211447c2cf101b",
+          "sourceURL": "https://static.whatsapp.net/rsrc.php/v4iE-s4/yi/l/en_GB-j/XBz8_xoTzNZrI_iwiHiz6-LURmPiI602ANHBEz0Yw--S0xGPxmSfdRqj0-JlVyyCKivPoNOcnoIGJ9pSju1shzqGe055uHffiVV79Hx3QB4rGJ9wOG39rwPJY7eCiYMDba8_QYPIhFkC6EvG-3JxydoVi5qdanqTWsR1ekBzLOJCDNX71iKsn8dh0KRG3NHv3ZMCbW.js",
+          "sourceByteOffset": 2313533,
+          "moduleSHA256": "f3f3822f2d0f8a80b3e236412aaadf262971e715e84e54092f24fca06c17f251"
+        }
+      ]
+    }
+  ],
+  "candidateDestinationBoundary": [
+    "Independent empty native named profile",
+    "Fixed app-owned origin bootstrap, with no official source or existing service-worker registration",
+    "Validated schema, full required data and fresh key-family rewrap completed before remote code starts",
+    "Close import transactions and dispose all importer contexts and caches",
+    "First official client load only after successful import commit"
+  ],
+  "missingGates": [
+    "Public API synthetic proof of origin, secure-context and same-origin storage initialization before any remote client (new origin_bootstrap fixture; not yet run by this agent)",
+    "Complete all-writer stop/drain boundary including page, backend worker, FTS worker, service worker, timer/job queues and mirrored preference/cookie writes",
+    "Semantically complete archive inventory and all key-family rewrap/reindex rules including pending-action replay policy",
+    "A global committed mutation generation or equivalent atomic capture proof; current transaction count, schema version, row count and repeated digests are insufficient by themselves",
+    "Independent authentic linked-session restore after cold process restart without relinking; no such gate has been passed by this review"
+  ],
+  "officialSourceExecuted": false,
+  "realAccountAccessed": false,
+  "originalReviewSHA256": "70357b68e41e6d24506aca6eaf697b56934a9a8b3a0bd2297e9bd6bf6c7f65e4",
+  "subsequentEvidence": "The empty-origin capability has since passed138 assertions; the separate version-service-worker review adds SW body evidence. Earlier reviewer scope/unknowns below remain historical to that source review, not final probe status."
+}

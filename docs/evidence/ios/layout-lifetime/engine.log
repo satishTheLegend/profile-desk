@@ -1,0 +1,246 @@
+dev.profiledesk.engine-regression: 66739
+{
+  "count" : 59,
+  "os" : "27.0",
+  "result" : "PASS",
+  "scope" : "Actual production registration\/detach, readiness task lifetime and picker callbacks; registrar\/presentation doubles and controlled local HTML\/navigation callbacks. Readiness sessions are not engine.current, so owned readiness event delivery is not tested. No service account or media delivery.",
+  "tests" : [
+    {
+      "name" : "first engine registers channel and platform view",
+      "pass" : true
+    },
+    {
+      "name" : "plugin publishes instance for Flutter detach callback",
+      "pass" : true
+    },
+    {
+      "name" : "second live engine cannot create another account view owner",
+      "pass" : true
+    },
+    {
+      "name" : "unrelated registrar cannot detach active engine",
+      "pass" : true
+    },
+    {
+      "name" : "owned detach removes old channel handlers",
+      "pass" : true
+    },
+    {
+      "name" : "detached old plugin rejects calls",
+      "pass" : true
+    },
+    {
+      "name" : "detached transfer control rejects stale caller",
+      "pass" : true
+    },
+    {
+      "name" : "detached help request cannot open external UI",
+      "pass" : true
+    },
+    {
+      "name" : "detached capability request rejects stale caller",
+      "pass" : true
+    },
+    {
+      "name" : "detached archive picker rejects stale caller",
+      "pass" : true
+    },
+    {
+      "name" : "detached archive export rejects stale caller",
+      "pass" : true
+    },
+    {
+      "name" : "detached layout control rejects stale caller",
+      "pass" : true
+    },
+    {
+      "name" : "detached list control rejects stale caller",
+      "pass" : true
+    },
+    {
+      "name" : "new engine registers after old engine detaches",
+      "pass" : true
+    },
+    {
+      "name" : "late old detach cannot clear new engine",
+      "pass" : true
+    },
+    {
+      "name" : "replacement engine detaches cleanly",
+      "pass" : true
+    },
+    {
+      "name" : "navigation replacement fixture finished its supplied local HTML at the expected origin",
+      "pass" : true
+    },
+    {
+      "name" : "navigation replacement releases BoundWebSession before the delayed layout reply",
+      "pass" : true
+    },
+    {
+      "name" : "navigation replacement began exactly one real readiness evaluation before cancellation",
+      "pass" : true
+    },
+    {
+      "name" : "navigation replacement prevents a late readiness callback from dispatching another layout command",
+      "pass" : true
+    },
+    {
+      "name" : "navigation replacement late callback cannot resurrect the released session",
+      "pass" : true
+    },
+    {
+      "name" : "navigation failure fixture finished its supplied local HTML at the expected origin",
+      "pass" : true
+    },
+    {
+      "name" : "navigation failure releases BoundWebSession before the delayed layout reply",
+      "pass" : true
+    },
+    {
+      "name" : "navigation failure began exactly one real readiness evaluation before cancellation",
+      "pass" : true
+    },
+    {
+      "name" : "navigation failure prevents a late readiness callback from dispatching another layout command",
+      "pass" : true
+    },
+    {
+      "name" : "navigation failure late callback cannot resurrect the released session",
+      "pass" : true
+    },
+    {
+      "name" : "navigation cancellation fixture finished its supplied local HTML at the expected origin",
+      "pass" : true
+    },
+    {
+      "name" : "navigation cancellation releases BoundWebSession before the delayed layout reply",
+      "pass" : true
+    },
+    {
+      "name" : "navigation cancellation began exactly one real readiness evaluation before cancellation",
+      "pass" : true
+    },
+    {
+      "name" : "navigation cancellation prevents a late readiness callback from dispatching another layout command",
+      "pass" : true
+    },
+    {
+      "name" : "navigation cancellation late callback cannot resurrect the released session",
+      "pass" : true
+    },
+    {
+      "name" : "disposal fixture finished its supplied local HTML at the expected origin",
+      "pass" : true
+    },
+    {
+      "name" : "disposal releases BoundWebSession before the delayed layout reply",
+      "pass" : true
+    },
+    {
+      "name" : "disposal began exactly one real readiness evaluation before cancellation",
+      "pass" : true
+    },
+    {
+      "name" : "disposal prevents a late readiness callback from dispatching another layout command",
+      "pass" : true
+    },
+    {
+      "name" : "disposal late callback cannot resurrect the released session",
+      "pass" : true
+    },
+    {
+      "name" : "old picker cancellation completes exactly once",
+      "pass" : true
+    },
+    {
+      "name" : "stale cancellation cannot cancel replacement owner",
+      "pass" : true
+    },
+    {
+      "name" : "current picker delivers one result",
+      "pass" : true
+    },
+    {
+      "name" : "current result stays in replacement profile staging",
+      "pass" : true
+    },
+    {
+      "name" : "current file bytes preserved",
+      "pass" : true
+    },
+    {
+      "name" : "duplicate current callback cannot complete twice",
+      "pass" : true
+    },
+    {
+      "name" : "old picker cancellation completes exactly once",
+      "pass" : true
+    },
+    {
+      "name" : "stale result cannot complete replacement owner",
+      "pass" : true
+    },
+    {
+      "name" : "current picker delivers one result",
+      "pass" : true
+    },
+    {
+      "name" : "current result stays in replacement profile staging",
+      "pass" : true
+    },
+    {
+      "name" : "current file bytes preserved",
+      "pass" : true
+    },
+    {
+      "name" : "duplicate current callback cannot complete twice",
+      "pass" : true
+    },
+    {
+      "name" : "archive cancellation completes once without metadata",
+      "pass" : true
+    },
+    {
+      "name" : "stale archive callbacks cannot finish replacement picker",
+      "pass" : true
+    },
+    {
+      "name" : "current archive callback returns validated metadata only",
+      "pass" : true
+    },
+    {
+      "name" : "archive import releases its operation",
+      "pass" : true
+    },
+    {
+      "name" : "locked archive callback cannot reveal preview metadata",
+      "pass" : true
+    },
+    {
+      "name" : "archive export stages only one owned directory",
+      "pass" : true
+    },
+    {
+      "name" : "export stages the reviewed allowlisted JSON",
+      "pass" : true
+    },
+    {
+      "name" : "export success follows owned document-picker completion",
+      "pass" : true
+    },
+    {
+      "name" : "successful export removes private staging",
+      "pass" : true
+    },
+    {
+      "name" : "cancelled export reports false",
+      "pass" : true
+    },
+    {
+      "name" : "cancelled export removes private staging",
+      "pass" : true
+    }
+  ],
+  "timestamp" : "2026-10-19T10:00:14Z"
+}iOS engine regression evidence: /Users/LOCAL_USER/Repos/webwhatsapp/build/ios-engine-20261019T095930Z

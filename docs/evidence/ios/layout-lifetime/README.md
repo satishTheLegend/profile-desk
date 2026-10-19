@@ -1,0 +1,15 @@
+# Bounded layout and readiness lifetime verification
+
+19 October 2026. The actual production iOS classes pass [109 viewport/privacy/lifetime assertions](viewport-result.json) and [59 engine/callback assertions](engine-result.json) in separate owned iOS 27 Simulator fixtures. All recorded inputs match current source; packaged layout bytes match the canonical resource. Owned Simulator cleanup passes. [Independent review and limits](review.json).
+
+Fixed structural operations now use exact-once completion with a two-second native deadline, task cancellation and weak WebKit callback capture. Disposal/navigation/mode replacement invalidates pending work. List recovery checks its revision after applying phone layout and resumes observation after a failed/canceled command only when its phone revision remains current. Readiness tasks are tracked and canceled on navigation replacement, failure, cancellation and disposal; stale callbacks cannot publish readiness or enqueue another layout command.
+
+The fixtures deliberately hold the renderer beyond the native deadline, then verify late-result handling, recovery, cancellation before renderer return, simultaneous pending layout/status disposal and weak native-view/session release. Readiness positive controls establish an actual structural evaluation was in flight; those manually constructed sessions are not `engine.current`, so they do not certify owned readiness-event delivery. Only controlled local HTML and fictional input are used; no remote client or real account is loaded.
+
+The optimized unsigned production rebuild and [artifact inspection](release-artifact-checks.json) pass. [83 recorded native/plugin/Flutter/config inputs](production-source-verification.json) remain unchanged; that count is a hash inventory, not 83 test assertions or full compiler-input attestation. The unsigned app is retained under ignored `artifacts/ios-layout-lifetime-20261019/`.
+
+The [actual Flutter/native shell integration](shell-result.json) also passes its allocation/open/detach/management flow, with [255 copied source hashes matching](shell-source-verification.json) and both owned fixture identities absent after cleanup. Only its fresh dedicated Simulator was removed. This test does not wait for authenticated readiness or inspect page content; it does not close the readiness-event ownership or restored-login acceptance gates.
+
+[Earlier attempts](attempts.json) retain a fixture compiler diagnostic and a 60-second whole-fixture timeout. Its cause was not demonstrated. After adding progress capture, the same production core passes the final fixture with the original watchdog and assertions unchanged. Diagnostics expose elapsed time, fixture stage and synthetic assertion counts for any future timeout.
+
+These changes bound **native waiting and retention**. They do not cancel already-dispatched JavaScript, prove WebProcess/service-worker destruction, establish a consistent storage snapshot or demonstrate authenticated session restore. Development build 5 predates this change and has not been installed. Deployment and shutdown remain held by the owner's restored-session requirement.

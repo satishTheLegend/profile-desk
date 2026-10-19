@@ -60,6 +60,8 @@ final class BoundWebSession: NSObject, WKNavigationDelegate, WKUIDelegate {
     private weak var engine: SessionEnginePlugin?
     private var disposed = false
     private var activeNavigation: WKNavigation?
+    private var readinessTask: Task<Void, Never>?
+    private var readinessTaskID: UUID?
 
     init(handle: ViewHandle, webView: WKWebView, engine: SessionEnginePlugin) {
         self.handle = handle; self.webView = webView; self.engine = engine
@@ -69,14 +71,34 @@ final class BoundWebSession: NSObject, WKNavigationDelegate, WKUIDelegate {
         webView.allowsBackForwardNavigationGestures = false
         webView.scrollView.keyboardDismissMode = .interactive
     }
-    func load(_ request: URLRequest) { ready = false; activeNavigation = webView.load(request) }
-    func reload() { ready = false; activeNavigation = webView.reload() }
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        activeNavigation = navigation; ready = false
+    private func cancelReadiness() {
+        readinessTask?.cancel(); readinessTask = nil
+        readinessTaskID = nil
+    }
+    private func replaceNavigation() {
+        cancelReadiness()
+        ready = false
         (webView as? WorkspaceWebView)?.navigationStarted()
+    }
+    func load(_ request: URLRequest) {
+        guard !disposed else { return }
+        replaceNavigation()
+        activeNavigation = webView.load(request)
+    }
+    func reload() {
+        guard !disposed else { return }
+        replaceNavigation()
+        activeNavigation = webView.reload()
+    }
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        guard !disposed else { return }
+        replaceNavigation()
+        activeNavigation = navigation
     }
     func dispose() {
         guard !disposed else { return }; disposed = true
+        cancelReadiness()
+        activeNavigation = nil; ready = false
         (webView as? WorkspaceWebView)?.stopFitting()
         webView.stopLoading()
         webView.closeAllMediaPresentations(completionHandler: nil)
@@ -88,15 +110,26 @@ final class BoundWebSession: NSObject, WKNavigationDelegate, WKUIDelegate {
         engine = nil
     }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        guard !disposed, navigation === activeNavigation, let url = webView.url, WorkspaceURLPolicy.isWorkspace(url) else { return }
-        Task { @MainActor [weak self] in
-            guard let self, !self.disposed else { return }
+        guard !disposed, let navigation, navigation === activeNavigation,
+              let url = webView.url, WorkspaceURLPolicy.isWorkspace(url) else { return }
+        cancelReadiness()
+        let taskID = UUID()
+        readinessTaskID = taskID
+        readinessTask = Task { @MainActor [weak self, weak webView] in
+            defer {
+                if let self, self.readinessTaskID == taskID {
+                    self.readinessTask = nil; self.readinessTaskID = nil
+                }
+            }
+            guard !Task.isCancelled, self?.disposed == false, self?.readinessTaskID == taskID else { return }
             do {
                 if let workspace = webView as? WorkspaceWebView { try await workspace.applyPresentationLayout() }
-                guard !self.disposed, navigation === self.activeNavigation else { return }
+                guard !Task.isCancelled, let self, !self.disposed,
+                      self.readinessTaskID == taskID, navigation === self.activeNavigation else { return }
                 self.engine?.sessionReady(self)
             } catch {
-                guard !self.disposed, navigation === self.activeNavigation else { return }
+                guard !Task.isCancelled, let self, !self.disposed,
+                      self.readinessTaskID == taskID, navigation === self.activeNavigation else { return }
                 self.engine?.sessionFailed(self, code: "layoutUnavailable")
             }
         }
@@ -104,10 +137,17 @@ final class BoundWebSession: NSObject, WKNavigationDelegate, WKUIDelegate {
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) { if navigation === activeNavigation { failed(error) } }
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) { if navigation === activeNavigation { failed(error) } }
     private func failed(_ error: Error) {
-        guard !disposed, (error as NSError).code != NSURLErrorCancelled else { return }
+        guard !disposed else { return }
+        replaceNavigation()
+        activeNavigation = nil
+        guard (error as NSError).code != NSURLErrorCancelled else { return }
         engine?.sessionFailed(self, code: "navigationFailed")
     }
-    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) { engine?.sessionFailed(self, code: "rendererTerminated") }
+    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        guard !disposed else { return }
+        replaceNavigation(); activeNavigation = nil
+        engine?.sessionFailed(self, code: "rendererTerminated")
+    }
 
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         guard !disposed, engine?.owns(handle) == true, let url = navigationAction.request.url else { decisionHandler(.cancel); return }
@@ -143,7 +183,11 @@ final class BoundWebSession: NSObject, WKNavigationDelegate, WKUIDelegate {
         completionHandler(.performDefaultHandling, nil)
     }
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? { nil }
-    func webViewDidClose(_ webView: WKWebView) { engine?.sessionFailed(self, code: "windowClosed") }
+    func webViewDidClose(_ webView: WKWebView) {
+        guard !disposed else { return }
+        replaceNavigation(); activeNavigation = nil
+        engine?.sessionFailed(self, code: "windowClosed")
+    }
 
     func webView(_ webView: WKWebView, requestMediaCapturePermissionFor origin: WKSecurityOrigin, initiatedByFrame frame: WKFrameInfo, type: WKMediaCaptureType, decisionHandler: @escaping (WKPermissionDecision) -> Void) {
         // Conditional capture remains disabled until device/service evidence clears its gate.

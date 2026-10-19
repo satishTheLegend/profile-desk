@@ -1,0 +1,31 @@
+{
+  "assertions" : 3,
+  "checks" : [
+    {
+      "name" : "Owned source store removed through public API",
+      "pass" : true
+    },
+    {
+      "name" : "Owned destination store removed through public API",
+      "pass" : true
+    },
+    {
+      "name" : "Only owned content-rule identifier removed",
+      "pass" : true
+    }
+  ],
+  "observations" : [
+
+  ],
+  "openedStoreLabels" : [
+
+  ],
+  "originalKeyExported" : false,
+  "phase" : "cleanup",
+  "processIdentifier" : 63589,
+  "processInstanceID" : "AC1EE16D-BA34-47FD-8946-778FBD64CC07",
+  "remoteClientLoaded" : false,
+  "result" : "PASS",
+  "syntheticOnly" : true,
+  "transferPersisted" : false
+}

@@ -1,0 +1,151 @@
+{
+  "scope": "Static public source only; no account/session/device/key operations. Nine new exact public assets acquired after one anonymous same-browser code-loader response. No official JavaScript executed.",
+  "sourceManifests": [
+    "same-browser-backend-assets.json",
+    "same-browser-queue-assets.json",
+    "retained-worm-ear.json"
+  ],
+  "status": "WORM_EAR_CONSUMER_AND_ENVELOPE_MAPPED_NOT_FULL_RESTORE_PROOF",
+  "consumer": {
+    "module": "WAWebPersistedQueues",
+    "functions": [
+      "ensurePersistedQueuesOpen",
+      "requestKeyShareNow",
+      "runGroupMsgResendQueued",
+      "runUserMsgResendQueued"
+    ],
+    "dbName": "persisted_queues",
+    "dbAlias": "wa_web_persisted_queues",
+    "keyFlow": "waitForWormEarKey -> getWormEarKey -> openWAWormQueueDatabase(encKey) -> makeWAWormEarSyncDriver -> new WormEarSync(schema, alias, masterKey, options)",
+    "stateFamilies": [
+      {
+        "store": "addonDeletion",
+        "role": "pending local add-on deletion for parent message keys",
+        "primaryKey": "queueId",
+        "hashedPrimaryKey": true
+      },
+      {
+        "store": "resendGroupMsg",
+        "role": "pending group-message resend action metadata",
+        "primaryKey": "queueId",
+        "hashedPrimaryKey": false
+      },
+      {
+        "store": "resendUserMsg",
+        "role": "pending user-message resend action metadata",
+        "primaryKey": "queueId",
+        "hashedPrimaryKey": false
+      },
+      {
+        "store": "sendRequestedKeyShare",
+        "role": "pending sync-key share action; entity can contain keyData",
+        "primaryKey": "queueId",
+        "hashedPrimaryKey": false
+      }
+    ],
+    "allFourSecure": true,
+    "scopeLimit": "This is the only direct getWormEarKey callsite found in all reviewed source variants. It proves this consumer, not absence of other future/conditional consumers. It does not identify media-cache encryption."
+  },
+  "masterDerivation": {
+    "module": "WAWebDbEncryptionKey",
+    "db": "wawc_db_enc",
+    "store": "worm_ear_keys",
+    "base": "nonextractable HKDF CryptoKey with deriveBits usage; generated from 128 random bytes",
+    "derived": "HKDF SHA-256, salt decoded companion_enc_static, info UTF-8 worm-ear-v1, 256 output bits",
+    "readiness": "waitForWormEarKey can resolve after derivation error; getWormEarKey still throws if missing. generateFinalDbEncryptionAndFtsKey itself resolves before async derivations finish."
+  },
+  "keychain": {
+    "store": "_worm_ear_",
+    "primaryKey": "version",
+    "fields": [
+      "version",
+      "clientKey",
+      "expiration",
+      "keyHash",
+      "salt"
+    ],
+    "clientKey": "32 random bytes",
+    "salt": "random secretbox nonce concatenated with secretbox(random 32-byte salt, nonce, 32-byte master key)",
+    "keyHash": "first 5 characters of Base64(SHA-256(master)); diagnostic comparison, not standalone cryptographic integrity",
+    "versionKey": "HKDF SHA-256(clientKey, unwrapped salt, Binary.build(UTF-8 worm-ear-v2, one uint8 version), 32 bytes)",
+    "rotation": "prepareNewKeyVersion uses default TTL 6*30*24*3600 seconds; init/resetKeyChain accepts ordered versions; latest numerical version used to encrypt",
+    "extraStore": "_worm_db_version_ stores schema_hash and creation_ts; driver computes SHA-256(JSON.stringify(application schema plus system schema))"
+  },
+  "recordFormat": {
+    "module": "WormEar",
+    "encryptedProperty": "_encryptedContent",
+    "envelope": "Binary.build(format byte 1, uint8 key version, fresh secretbox nonce, secretbox(MessagePack entity, nonce, version key))",
+    "primitive": "WACryptoPrimitives.secretbox export through cr:8712; reviewed corpus contains tweetnacl-fast wrapper / tweetnacl-1.0.3-fast with 32-byte key, 24-byte nonce and 16-byte overhead. Runtime binding/shape must still be checked by any compatibility adapter.",
+    "encoding": "WormEncoding MessagePack, ignoreUndefined:true; custom extension tags 0 ArrayBuffer, 1 Uint8Array, 2 BigInt as decimal string, 3 Set",
+    "indexing": "Primary/index fields copied outside ciphertext. Numeric keys pass through; other encrypted fields use HMAC-SHA256(master, MessagePack(field)). nonEncryptedFields bypass hashing; ordered queueId remains clear. Full entity, including its original IDs, is inside ciphertext.",
+    "versionLimits": "Binary.build encodes numbers with writeUint8; versions outside uint8 range cannot be silently coerced. Decrypt reads second envelope byte; adapter should validate exact supported envelope/schema."
+  },
+  "internalAPIs": [
+    {
+      "name": "new WormEarSync(schema, dbAlias, masterKey, options)",
+      "effect": "in-memory crypto object; verifies master byteLength equals secretbox.keyLength"
+    },
+    {
+      "name": "ear.init(versionRecords, {eventFlow?})",
+      "effect": "unwraps version salts and builds in-memory version keys; no database access in method"
+    },
+    {
+      "name": "ear.maybeDecrypt(record, store, reason, eventFlow?, options?)",
+      "effect": "decrypts known secure entity; throws malformed/missing key/decryption error"
+    },
+    {
+      "name": "ear.maybeEncrypt(entity, store, eventFlow?)",
+      "effect": "fresh nonce encryption and primary/index field hashing"
+    },
+    {
+      "name": "ear.prepareNewKeyVersion()",
+      "effect": "generates new random clientKey, wrapped salt, expiration and short key hash; caller assigns version"
+    },
+    {
+      "name": "WormIDbStore.readAll/readIndex/readByKeyRange",
+      "effect": "decrypt through maybeDecrypt; called under driver transaction"
+    },
+    {
+      "name": "WormIDbStore.bulkPut/bulkAdd",
+      "effect": "encrypt through maybeEncrypt before IDB write"
+    },
+    {
+      "name": "WormDatabase.runInTransaction(stores, mode, callback, operationName)",
+      "effect": "per-database transaction; no cross-database snapshot guarantee"
+    }
+  ],
+  "unsafeForBackupInitialization": [
+    {
+      "module": "WAWebPersistedQueues",
+      "reason": "ensurePersistedQueuesOpen opens/upgrades database, binds stores, then immediately starts addon-deletion, key-share and message-resend drains."
+    },
+    {
+      "module": "WormIDbDriverEarSync",
+      "reason": "Opening/init may upgrade schema and loadKeychain uses readwrite transaction, rotates expired keys."
+    },
+    {
+      "module": "WormQueueDatabase",
+      "reason": "onTransactionError for DecryptionError schedules a readwrite deletion of the corrupt entity or entire affected store. This is not a pure read-only export failure handler."
+    },
+    {
+      "module": "WormDump",
+      "reason": "Default output redacts field values; not a complete data export."
+    }
+  ],
+  "migrationInference": {
+    "possible": "Known entities can in principle be decrypted with a captured source keychain/master and re-encrypted with a fresh destination master/keychain, without exporting the original nonextractable HKDF base key.",
+    "necessary": "Rebuild all master-dependent primary/index hashes and ciphertext under a matching destination schema/keychain. Simply copying encrypted rows or old wrapped salts to a fresh master fails.",
+    "alternative": "Rewrapping version salt under a fresh master while retaining clientKey/version preserves the derived content key, but primary/index hashes still require recomputation. This is a design inference, not tested code.",
+    "pendingActionRisk": "A copied old queue row may trigger resend/key-share/deletion again when the official client opens. WAWebRecoverableQueue records before operation and acknowledges after; action and local acknowledgment are not one remote/local atomic transaction. Never label arbitrary queue replay harmless or silently omit queues while claiming a full archive.",
+    "completeArchiveBoundary": "Need explicit queue snapshot/replay policy, consistent mutable Signal/application state, all supported schema branches, fresh key/salt bootstrap ordering, and actual independent restored-auth proof. This mapping resolves one encryption-format gap only."
+  },
+  "nextSyntheticChecks": [
+    "Owned generated source/destination masters and keychains; no provider APIs or real keys.",
+    "All four known schema shapes: numeric and hashed fields, preserved ordered queueId, ArrayBuffer/Uint8Array/BigInt/Set round trip.",
+    "Fresh destination ciphertext/nonces and hashes; source rows/keychain unchanged; cold reopen verifies semantic equality.",
+    "Wrong key/salt, tampered ciphertext, unsupported format/version/schema reject before destination commit.",
+    "Trap queue-drain/scheduler/network paths; never call ensurePersistedQueuesOpen for an export fixture.",
+    "Pending-queue replay requires its own design and tests; cryptographic round trip is not delivery-idempotency proof."
+  ],
+  "noRuntimeOrAuthClaim": true
+}

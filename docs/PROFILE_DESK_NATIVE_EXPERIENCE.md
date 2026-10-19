@@ -63,7 +63,7 @@ The static source review proves one narrow format: Signal registration identity 
 
 Additional dependencies include HKDF base keys, Noise credentials, mutable Signal tables, application encryption, preferences/cache state, screen-lock layers and potentially media. All must be mapped before enabling full export. An enabled website screen lock must be honored; the adapter cannot bypass it.
 
-The native probe must first reproduce wrapper persistence and independent destination cold reopening with synthetic data. The earlier ad hoc WebKit `DataCloneError` remains an unresolved platform-fixture issue until diagnosed; it is neither a success nor evidence that the real client cannot store keys.
+The native probe reproduces wrapper persistence and independent destination cold reopening with synthetic data: 125 assertions include thirty invalid-input controls and source preservation. Ordinary Xcode Simulator packaging resolved the earlier hand-packaged fixture's Keychain/`DataCloneError` issue. This narrow proof does not establish a complete service session or physical-device restore.
 
 Archive orchestration must validate the complete selected batch before offering a file, encrypt native-owned payloads with a reviewed recovery-secret format, and reject unsupported/inconsistent/oversized state. Import authenticates the archive before allocating fresh profiles, restores before the official client boots, and commits only after all required stages succeed. An owned recovery journal may reclaim only newly staged stores; existing profiles are never overwrite/cleanup targets. Exact cryptographic container choices are a separate gated implementation task after payload feasibility, not an invented completed format.
 

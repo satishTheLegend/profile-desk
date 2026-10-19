@@ -4,12 +4,18 @@ import WebKit
 /// A renderer callback cannot keep a waiting task or its WebView alive after the
 /// deadline. Every path drops the continuation before resuming it exactly once.
 @MainActor
-private final class WorkspacePresentationResult {
-    private var continuation: CheckedContinuation<WorkspacePresentation, Error>?
-    private var result: Result<WorkspacePresentation, Error>?
+private final class WorkspaceLayoutResult {
+    enum Value {
+        case structure(Bool), command, presentation(WorkspacePresentation)
+    }
+    private var continuation: CheckedContinuation<Value, Error>?
+    private var result: Result<Value, Error>?
     private var deadline: Task<Void, Never>?
+    let isPresentation: Bool
 
-    func install(_ continuation: CheckedContinuation<WorkspacePresentation, Error>) {
+    init(isPresentation: Bool) { self.isPresentation = isPresentation }
+
+    func install(_ continuation: CheckedContinuation<Value, Error>) {
         if let result { continuation.resume(with: result) }
         else { self.continuation = continuation }
     }
@@ -18,17 +24,67 @@ private final class WorkspacePresentationResult {
         guard result == nil else { return }
         deadline = Task { @MainActor [weak self] in
             do { try await Task.sleep(for: .seconds(2)) } catch { return }
-            self?.finish(.success(.unavailable))
+            guard let self else { return }
+            self.finish(self.isPresentation ? .success(.presentation(.unavailable)) : .failure(SessionFailure.unavailable))
         }
     }
 
-    func finish(_ result: Result<WorkspacePresentation, Error>) {
+    func finish(_ result: Result<Value, Error>) {
         guard self.result == nil else { return }
         self.result = result
         let pending = continuation
         continuation = nil
         deadline?.cancel(); deadline = nil
         pending?.resume(with: result)
+    }
+}
+
+/// Only fixed structural operations can cross the isolated-world boundary.
+private enum WorkspaceLayoutOperation {
+    case structure, mode(WorkspaceLayout), list, presentation
+
+    var isPresentation: Bool {
+        if case .presentation = self { return true }
+        return false
+    }
+
+    var expression: String {
+        switch self {
+        case .structure: return "globalThis.__profileDeskLayout?.supportsStructure() === true;"
+        case .mode(let layout):
+            let mode = layout == .phone ? "phone" : "original"
+            return "globalThis.__profileDeskLayout?.setMode('\(mode)');void 0;"
+        case .list: return "globalThis.__profileDeskLayout?.showList();void 0;"
+        case .presentation:
+            return """
+                (() => {
+                  const state = globalThis.__profileDeskLayout?.presentation?.()?.state;
+                  return state === 'original' || state === 'list' || state === 'menu' ||
+                    state === 'detail' || state === 'unavailable' ? state : 'unavailable';
+                })()
+                """
+        }
+    }
+
+    @MainActor
+    func decode(_ evaluation: Result<Any, Error>) -> Result<WorkspaceLayoutResult.Value, Error> {
+        guard case .success(let response) = evaluation else {
+            return isPresentation ? .success(.presentation(.unavailable)) : .failure(SessionFailure.unavailable)
+        }
+        switch self {
+        case .structure: return .success(.structure(response as? Bool == true))
+        case .mode, .list: return .success(.command)
+        case .presentation:
+            let state: WorkspacePresentation
+            switch response as? String {
+            case "original": state = .original
+            case "list": state = .list
+            case "menu": state = .menu
+            case "detail": state = .detail
+            default: state = .unavailable
+            }
+            return .success(.presentation(state))
+        }
     }
 }
 
@@ -48,6 +104,7 @@ final class WorkspaceWebView: WKWebView {
     private var structureTimer: Timer?
     private var structureProbe: Task<Void, Never>?
     private var structureProbeID: UUID?
+    private var pendingEvaluations = [UUID: WorkspaceLayoutResult]()
     // The engine supplies current-view, foreground and lock ownership checks.
     var canObserveLayout: (() -> Bool)?
     private static let layoutWorld = WKContentWorld.world(name: "dev.profiledesk.workspace-layout")
@@ -107,6 +164,7 @@ final class WorkspaceWebView: WKWebView {
         guard !stopped else { return }
         presentationLayout = layout
         modeRevision += 1
+        cancelEvaluations()
         stopStructureObservation()
         refit()
     }
@@ -121,6 +179,7 @@ final class WorkspaceWebView: WKWebView {
         guard !stopped else { return }
         invalidatePresentationEligibility()
         modeRevision += 1
+        cancelEvaluations()
         recognizedPhoneStructure = false
         stopStructureObservation()
         refit()
@@ -134,11 +193,9 @@ final class WorkspaceWebView: WKWebView {
             guard !stopped, modeRevision == revision else { throw SessionFailure.staleOperation }
             if supported != recognizedPhoneStructure { recognizedPhoneStructure = supported; refit() }
         }
-        let mode = presentationLayout == .phone ? "phone" : "original"
         // Only this fixed enum is interpolated. No selector, URL or source enters
         // from Flutter. Discard the adapter's bounded internal status object.
-        _ = try await evaluateJavaScript("globalThis.__profileDeskLayout?.setMode('\(mode)');void 0;",
-                                         in: nil, contentWorld: Self.layoutWorld)
+        _ = try await evaluateLayout(.mode(presentationLayout))
         guard !stopped, modeRevision == revision else { throw SessionFailure.staleOperation }
         if presentationLayout == .phone { startStructureObservation() }
     }
@@ -146,9 +203,8 @@ final class WorkspaceWebView: WKWebView {
     private func supportsPhoneStructure() async throws -> Bool {
         // A fixed boolean reports only structural availability, never page text,
         // HTML, identities, credentials or a serialized DOM.
-        let value = try await evaluateJavaScript("globalThis.__profileDeskLayout?.supportsStructure() === true;",
-                                                in: nil, contentWorld: Self.layoutWorld)
-        return value as? Bool == true
+        guard case .structure(let supported) = try await evaluateLayout(.structure) else { return false }
+        return supported
     }
 
     private func startStructureObservation() {
@@ -191,33 +247,46 @@ final class WorkspaceWebView: WKWebView {
     func showList() async throws {
         guard !stopped, hasLayoutAdapter,
               let url, WorkspaceURLPolicy.isWorkspace(url) else { throw SessionFailure.blocked }
-        modeRevision += 1
+        let needsPhoneLayout = presentationLayout != .phone
+        if needsPhoneLayout { setPresentationLayout(.phone) }
+        else {
+            modeRevision += 1
+            cancelEvaluations()
+            stopStructureObservation()
+        }
+        let revision = modeRevision
+        let eligibility = presentationEligibilityEpoch
+        defer {
+            // A timed-out/canceled command must not permanently stop fitting a
+            // still-current phone view. Never restart a replaced/stopped view.
+            if !stopped, modeRevision == revision, presentationLayout == .phone { startStructureObservation() }
+        }
         // Native input dismissal preserves the official client's draft contents.
         endEditing(true)
-        if presentationLayout != .phone {
-            setPresentationLayout(.phone)
-            try await applyPresentationLayout()
-        }
-        guard !stopped, presentationLayout == .phone else { throw SessionFailure.staleOperation }
-        _ = try await evaluateJavaScript("globalThis.__profileDeskLayout?.showList();void 0;", in: nil, contentWorld: Self.layoutWorld)
+        if needsPhoneLayout { try await applyPresentationLayout() }
+        guard !stopped, modeRevision == revision, presentationEligibilityEpoch == eligibility,
+              presentationLayout == .phone else { throw SessionFailure.staleOperation }
+        _ = try await evaluateLayout(.list)
+        guard presentationEligibilityEpoch == eligibility else { throw SessionFailure.staleOperation }
     }
 
     func workspacePresentation() async throws -> WorkspacePresentation {
         try Task.checkCancellation()
         guard !stopped, hasLayoutAdapter, canObserveLayout?() == true,
               let url, WorkspaceURLPolicy.isWorkspace(url) else { throw SessionFailure.staleOperation }
+        guard case .presentation(let state) = try await evaluateLayout(.presentation) else { return .unavailable }
+        return state
+    }
+
+    private func evaluateLayout(_ operation: WorkspaceLayoutOperation) async throws -> WorkspaceLayoutResult.Value {
+        try Task.checkCancellation()
+        guard !stopped, hasLayoutAdapter, let url, WorkspaceURLPolicy.isWorkspace(url) else { throw SessionFailure.staleOperation }
         let revision = modeRevision
         let eligibility = presentationEligibilityEpoch
-        let pending = WorkspacePresentationResult()
-        // The result is one structural enum. This fixed isolated-world expression
-        // cannot return text, HTML, identities, selectors or serialized page data.
-        let expression = """
-            (() => {
-              const state = globalThis.__profileDeskLayout?.presentation?.()?.state;
-              return state === 'original' || state === 'list' || state === 'menu' ||
-                state === 'detail' || state === 'unavailable' ? state : 'unavailable';
-            })()
-            """
+        let identifier = UUID()
+        let pending = WorkspaceLayoutResult(isPresentation: operation.isPresentation)
+        pendingEvaluations[identifier] = pending
+        defer { pendingEvaluations.removeValue(forKey: identifier) }
         let result = try await withTaskCancellationHandler {
             try await withCheckedThrowingContinuation { continuation in
                 pending.install(continuation)
@@ -225,41 +294,42 @@ final class WorkspaceWebView: WKWebView {
                 pending.startDeadline()
                 // WebKit cannot cancel an in-flight evaluation. This callback
                 // holds no WebView and loses its result box when the wait ends.
-                evaluateJavaScript(expression, in: nil, in: Self.layoutWorld) { [weak pending] evaluation in
-                    let value: String?
-                    switch evaluation {
-                    case .success(let response): value = response as? String
-                    case .failure: value = nil
-                    }
-                    let state: WorkspacePresentation
-                    switch value {
-                    case "original": state = .original
-                    case "list": state = .list
-                    case "menu": state = .menu
-                    case "detail": state = .detail
-                    default: state = .unavailable
-                    }
-                    pending?.finish(.success(state))
+                evaluateJavaScript(operation.expression, in: nil, in: Self.layoutWorld) { [weak pending] evaluation in
+                    pending?.finish(operation.decode(evaluation))
                 }
             }
         } onCancel: {
             Task { @MainActor in pending.finish(.failure(CancellationError())) }
         }
         try Task.checkCancellation()
-        guard !stopped, modeRevision == revision, presentationEligibilityEpoch == eligibility,
-              canObserveLayout?() == true,
+        guard !stopped, modeRevision == revision,
               let url = self.url, WorkspaceURLPolicy.isWorkspace(url) else { throw SessionFailure.staleOperation }
+        if operation.isPresentation {
+            guard presentationEligibilityEpoch == eligibility, canObserveLayout?() == true else { throw SessionFailure.staleOperation }
+        }
         return result
+    }
+
+    private func cancelEvaluations(presentationOnly: Bool = false) {
+        let pending = pendingEvaluations.filter { !presentationOnly || $0.value.isPresentation }
+        for (identifier, evaluation) in pending {
+            pendingEvaluations.removeValue(forKey: identifier)
+            evaluation.finish(.failure(SessionFailure.staleOperation))
+        }
     }
 
     /// Losing foreground, unlock or reveal eligibility permanently invalidates
     /// an earlier query, even if the same view becomes eligible before it replies.
-    func invalidatePresentationEligibility() { presentationEligibilityEpoch += 1 }
+    func invalidatePresentationEligibility() {
+        presentationEligibilityEpoch += 1
+        cancelEvaluations(presentationOnly: true)
+    }
 
     func stopFitting() {
         guard !stopped else { return }
         invalidatePresentationEligibility()
         stopped = true
+        cancelEvaluations()
         stopStructureObservation()
         canObserveLayout = nil
         if hasLayoutAdapter {

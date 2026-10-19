@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "independentReview": true,
+  "productionFiles": {
+    "packages/session_engine/ios/session_engine/Sources/session_engine/WorkspaceWebView.swift": "bcd1ba23903b1fab2593893f90ddd2fbefcf04a1f500b0e12e4d73431c342858",
+    "packages/session_engine/ios/session_engine/Sources/session_engine/BoundWebSession.swift": "8b4b39b76f072c591d45ceda82a1458dca08391efca0bc6242c5137a3cf6c23e"
+  },
+  "findingsFixed": [
+    "List observation resumes after timeout/cancellation only for its current phone revision.",
+    "List command rejects changed revision/eligibility after applying phone layout.",
+    "Readiness fixture proves completed local loading and actual in-flight structural evaluation.",
+    "Retirement fixture does not claim both delayed renderer callbacks completed."
+  ],
+  "limits": [
+    "Engine readiness fixture does not own engine.current and does not certify readiness-event delivery.",
+    "Native deadlines/cancellation do not terminate already-dispatched JavaScript or prove WebProcess/storage-worker shutdown.",
+    "No real account, message, QR, credential or physical device accessed."
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "tests/session_portability/origin_bootstrap/Info.plist": "a3c1a8eeba269d7f04b63fab0b14145e287a7af254ec9a1becbbe4b9e71e9e96",
+  "tests/session_portability/origin_bootstrap/OriginBootstrapProbe.xcodeproj/project.pbxproj": "0dae97e8bf359a1409b4be90aa342ceb4388e0e8a24473a8b9dc186191f1dc97",
+  "tests/session_portability/origin_bootstrap/OriginBootstrapProbe.xcodeproj/xcshareddata/xcschemes/ProfileDeskOriginBootstrapProbe.xcscheme": "fd9d860cc1048e9ea7a3d04afcab058db91958d7f914aeccd482fedbb0649f63",
+  "tests/session_portability/origin_bootstrap/README.md": "5c7ef4347cab85c9797314323d5355fbc3196c2bd745e34a704164d053ba4ae3",
+  "tests/session_portability/origin_bootstrap/main.swift": "f6c4cdbb656d31b2e289b483d327eef956693de14b023e61f457409fced2febc",
+  "tests/session_portability/origin_bootstrap/run.py": "eb83155ffb83a36e0d96b9ab5f92cefce69a073c46628109f1968f57b5eab895",
+  "tests/session_portability/origin_bootstrap/web/probe.js": "fb51f5af688f2be14bb9fd92412057c181aa012ba18e419eee04fffbf620b9ad"
+}

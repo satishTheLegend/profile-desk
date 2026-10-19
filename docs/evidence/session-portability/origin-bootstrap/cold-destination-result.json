@@ -1,0 +1,149 @@
+{
+  "assertions" : 22,
+  "checks" : [
+    {
+      "name" : "destination exact bootstrap environment: locationMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: originMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: effectiveOriginMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: baseURIMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: secureContext",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: cryptoAvailable",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: serviceWorkerRegistrationReadSucceeded",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: serviceWorkerRegistrationCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: resourceCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: scriptElementCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: childFrameCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination has no unexpected navigation",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination contains one fictional record",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination verifies plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination verifies typedDataMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination verifies localStorageMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination verifies keyMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination verifies originalKeyExportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination source-only sentinel isolation",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination bounded ciphertextDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Cold destination bounded typedDataDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Cold process opens only its designated named store",
+      "pass" : true
+    }
+  ],
+  "observations" : [
+    {
+      "environment" : {
+        "baseURIMatches" : true,
+        "childFrameCount" : 0,
+        "cryptoAvailable" : true,
+        "effectiveOriginMatches" : true,
+        "locationMatches" : true,
+        "originMatches" : true,
+        "resourceCount" : 0,
+        "scriptElementCount" : 0,
+        "secureContext" : true,
+        "serviceWorkerRegistrationCount" : 0,
+        "serviceWorkerRegistrationReadSucceeded" : true
+      },
+      "stage" : "cold-destination"
+    },
+    {
+      "stage" : "cold-destination",
+      "verification" : {
+        "ciphertextDigest" : "9ec3dc881fe6c8ff1fc412b39ad17de44ea23f8ffb3cf43ead81c0d9f4dac057",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : false,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    },
+    {
+      "coldState" : {
+        "ciphertextDigest" : "9ec3dc881fe6c8ff1fc412b39ad17de44ea23f8ffb3cf43ead81c0d9f4dac057",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : false,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    }
+  ],
+  "openedStoreLabels" : [
+    "destination"
+  ],
+  "originalKeyExported" : false,
+  "phase" : "cold-destination",
+  "processIdentifier" : 63466,
+  "processInstanceID" : "0A52B5EE-D806-4981-A6B2-9ADA566BB5BF",
+  "remoteClientLoaded" : false,
+  "result" : "PASS",
+  "syntheticOnly" : true,
+  "transferPersisted" : false
+}

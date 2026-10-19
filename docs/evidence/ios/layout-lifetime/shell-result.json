@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "scope": "Isolated simulator real Flutter/native shell; no account linking or message action",
+  "sourceFiles": 255,
+  "fixtureTestSHA256": "0510a9e0f2df5aaf672679be8ce12c37ef4ad194fec58a3e5feea1ff1499c2ea",
+  "ownedSimulatorDeleted": true
+}

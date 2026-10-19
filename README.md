@@ -4,6 +4,8 @@ A Flutter Android/iOS foreground workspace for up to ten separately stored brows
 
 Latest work: [native messaging components, readable phone navigation and session-migration research](docs/PROFILE_DESK_NATIVE_EXPERIENCE_PLAN.md). The Flutter chat list, messages and composer are implemented and tested with fictional fixtures; the live WhatsApp adapter is not enabled. Account setup files contain names, colors, order and appearance and require linking again. Complete session/data backup and authenticated restore remain unimplemented and unverified. [Current testing evidence and limits](docs/evidence/native-experience/README.md).
 
+Latest iOS checks pass 109 viewport/lifetime and 59 engine assertions; an independent empty-origin storage migration passes 138 synthetic assertions. These establish component capabilities, not restored WhatsApp login. Deployment remains held until that requirement is demonstrated.
+
 ## Run locally
 
 Tested: Flutter3.47.5/Dart3.13.4, JDK17, Android SDK36+, Xcode27.1. Android requires API29+ **and** runtime AndroidX WebKit multi-profile/scoped-deletion support; iOS requires17+.

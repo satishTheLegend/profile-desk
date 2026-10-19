@@ -1,0 +1,527 @@
+{
+  "assertions" : 90,
+  "checks" : [
+    {
+      "name" : "Source and destination use independent named stores",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: locationMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: originMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: effectiveOriginMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: baseURIMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: secureContext",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: cryptoAvailable",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: serviceWorkerRegistrationReadSucceeded",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: serviceWorkerRegistrationCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: resourceCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: scriptElementCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: childFrameCount",
+      "pass" : true
+    },
+    {
+      "name" : "source has no unexpected navigation",
+      "pass" : true
+    },
+    {
+      "name" : "Source begins empty before writes",
+      "pass" : true
+    },
+    {
+      "name" : "Source contains one fictional record",
+      "pass" : true
+    },
+    {
+      "name" : "Source verifies plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Source verifies typedDataMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Source verifies localStorageMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Source verifies keyMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Source verifies originalKeyExportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Source source-only sentinel isolation",
+      "pass" : true
+    },
+    {
+      "name" : "Source bounded ciphertextDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Source bounded typedDataDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Only bounded fictional values cross the in-memory transfer",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: locationMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: originMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: effectiveOriginMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: baseURIMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: secureContext",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: cryptoAvailable",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: serviceWorkerRegistrationReadSucceeded",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: serviceWorkerRegistrationCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: resourceCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: scriptElementCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: childFrameCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination has no unexpected navigation",
+      "pass" : true
+    },
+    {
+      "name" : "Independent destination begins empty before import",
+      "pass" : true
+    },
+    {
+      "name" : "Destination contains one fictional record",
+      "pass" : true
+    },
+    {
+      "name" : "Destination verifies plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Destination verifies typedDataMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Destination verifies localStorageMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Destination verifies keyMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Destination verifies originalKeyExportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Destination source-only sentinel isolation",
+      "pass" : true
+    },
+    {
+      "name" : "Destination bounded ciphertextDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Destination bounded typedDataDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Destination ciphertext differs after fresh-key wrapping",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: locationMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: originMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: effectiveOriginMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: baseURIMatches",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: secureContext",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: cryptoAvailable",
+      "pass" : true
+    },
+    {
+      "name" : "destination exact bootstrap environment: serviceWorkerRegistrationReadSucceeded",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: serviceWorkerRegistrationCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: resourceCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: scriptElementCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination inert bootstrap environment: childFrameCount",
+      "pass" : true
+    },
+    {
+      "name" : "destination has no unexpected navigation",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination contains one fictional record",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination verifies plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination verifies typedDataMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination verifies localStorageMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination verifies keyMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination verifies originalKeyExportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination source-only sentinel isolation",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination bounded ciphertextDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Fresh-view destination bounded typedDataDigest",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: locationMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: originMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: effectiveOriginMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: baseURIMatches",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: secureContext",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: cryptoAvailable",
+      "pass" : true
+    },
+    {
+      "name" : "source exact bootstrap environment: serviceWorkerRegistrationReadSucceeded",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: serviceWorkerRegistrationCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: resourceCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: scriptElementCount",
+      "pass" : true
+    },
+    {
+      "name" : "source inert bootstrap environment: childFrameCount",
+      "pass" : true
+    },
+    {
+      "name" : "source has no unexpected navigation",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source contains one fictional record",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source verifies plaintextMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source verifies typedDataMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source verifies localStorageMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source verifies keyMatches",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source verifies originalKeyExportRejected",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source source-only sentinel isolation",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source bounded ciphertextDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Preserved source bounded typedDataDigest",
+      "pass" : true
+    },
+    {
+      "name" : "Source encrypted bytes are unchanged after restore",
+      "pass" : true
+    }
+  ],
+  "observations" : [
+    {
+      "environment" : {
+        "baseURIMatches" : true,
+        "childFrameCount" : 0,
+        "cryptoAvailable" : true,
+        "effectiveOriginMatches" : true,
+        "locationMatches" : true,
+        "originMatches" : true,
+        "resourceCount" : 0,
+        "scriptElementCount" : 0,
+        "secureContext" : true,
+        "serviceWorkerRegistrationCount" : 0,
+        "serviceWorkerRegistrationReadSucceeded" : true
+      },
+      "stage" : "source-empty-origin"
+    },
+    {
+      "stage" : "source-seed-fictional-data",
+      "verification" : {
+        "ciphertextDigest" : "0055e80af8c56110855058e42366e89b5dbb2193fbc70243f723157cb224f9e0",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : true,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    },
+    {
+      "sourceState" : {
+        "ciphertextDigest" : "0055e80af8c56110855058e42366e89b5dbb2193fbc70243f723157cb224f9e0",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : true,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    },
+    {
+      "environment" : {
+        "baseURIMatches" : true,
+        "childFrameCount" : 0,
+        "cryptoAvailable" : true,
+        "effectiveOriginMatches" : true,
+        "locationMatches" : true,
+        "originMatches" : true,
+        "resourceCount" : 0,
+        "scriptElementCount" : 0,
+        "secureContext" : true,
+        "serviceWorkerRegistrationCount" : 0,
+        "serviceWorkerRegistrationReadSucceeded" : true
+      },
+      "stage" : "destination-empty-origin"
+    },
+    {
+      "stage" : "destination-import-before-remote-client",
+      "verification" : {
+        "ciphertextDigest" : "9ec3dc881fe6c8ff1fc412b39ad17de44ea23f8ffb3cf43ead81c0d9f4dac057",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : false,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    },
+    {
+      "destinationState" : {
+        "ciphertextDigest" : "9ec3dc881fe6c8ff1fc412b39ad17de44ea23f8ffb3cf43ead81c0d9f4dac057",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : false,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    },
+    {
+      "environment" : {
+        "baseURIMatches" : true,
+        "childFrameCount" : 0,
+        "cryptoAvailable" : true,
+        "effectiveOriginMatches" : true,
+        "locationMatches" : true,
+        "originMatches" : true,
+        "resourceCount" : 0,
+        "scriptElementCount" : 0,
+        "secureContext" : true,
+        "serviceWorkerRegistrationCount" : 0,
+        "serviceWorkerRegistrationReadSucceeded" : true
+      },
+      "stage" : "destination-fresh-view"
+    },
+    {
+      "stage" : "destination-fresh-view",
+      "verification" : {
+        "ciphertextDigest" : "9ec3dc881fe6c8ff1fc412b39ad17de44ea23f8ffb3cf43ead81c0d9f4dac057",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : false,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    },
+    {
+      "environment" : {
+        "baseURIMatches" : true,
+        "childFrameCount" : 0,
+        "cryptoAvailable" : true,
+        "effectiveOriginMatches" : true,
+        "locationMatches" : true,
+        "originMatches" : true,
+        "resourceCount" : 0,
+        "scriptElementCount" : 0,
+        "secureContext" : true,
+        "serviceWorkerRegistrationCount" : 0,
+        "serviceWorkerRegistrationReadSucceeded" : true
+      },
+      "stage" : "source-preservation-fresh-view"
+    },
+    {
+      "stage" : "source-preservation-fresh-view",
+      "verification" : {
+        "ciphertextDigest" : "0055e80af8c56110855058e42366e89b5dbb2193fbc70243f723157cb224f9e0",
+        "keyMatches" : true,
+        "localStorageMatches" : true,
+        "originalKeyExportRejected" : true,
+        "plaintextMatches" : true,
+        "recordCount" : 1,
+        "sourceSentinelPresent" : true,
+        "typedDataDigest" : "1740f884a8d09002bb62157c18381cd524310f5f79384c93a20af776ad64bf26",
+        "typedDataMatches" : true
+      }
+    }
+  ],
+  "openedStoreLabels" : [
+    "source",
+    "destination",
+    "destination",
+    "source"
+  ],
+  "originalKeyExported" : false,
+  "phase" : "bootstrap",
+  "processIdentifier" : 63117,
+  "processInstanceID" : "2120FF8C-664C-4C10-BA91-06A49ADBCB35",
+  "remoteClientLoaded" : false,
+  "result" : "PASS",
+  "syntheticOnly" : true,
+  "transferPersisted" : false
+}
